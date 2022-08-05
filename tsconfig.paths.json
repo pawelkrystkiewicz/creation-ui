@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components": ["./components"],
+      "@components/*": ["./components/*"],
+      "@src": ["."],
+      "@src/*": ["./*"],
+      "@tests": ["./tests"],
+      "@tests/*": ["./tests/*"],
+      "@ui": ["./ui"],
+      "@ui/*": ["./ui/*"],
+      "@utils": ["./utils"],
+      "@utils/*": ["./utils/*"],
+      "@assets": ["./assets"],
+      "@assets/*": ["./assets/*"]
+    }
+  }
+}

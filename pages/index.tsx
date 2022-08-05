@@ -1,8 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Button from '../components/button/button'
+import { SearchIcon } from '@heroicons/react/outline'
 
 const Home: NextPage = () => {
+  const ButtonIcon = <SearchIcon className="h-4 w-4" />
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
@@ -11,60 +14,66 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className="flex gap-3 m-5">
+          <Button loading size="lg" color={"indigo"}>
+            Hello
+          </Button>
+          <Button loading variant="outlined" size="lg" color={"indigo"}>
+            World
+          </Button>
+          <Button loading variant="text" size="lg" color={"indigo"}>
+            Enter
+          </Button>
+        </div>
+        <div className="flex gap-3 m-5">
+          <Button loading>Hello</Button>
+          <Button loading variant="outlined">
+            Click me
+          </Button>
+          <Button loading variant="text" color={"red"}>
+            Link
+          </Button>
+        </div>
+        <div className="flex gap-3 m-5">
+          <Button size="sm">Hello</Button>
+          <Button size="sm" variant="outlined">
+            Click me
+          </Button>
+          <Button size="sm" variant="text">
+            Link
+          </Button>
+        </div>
+        <div className="flex gap-3 m-5">
+          <Button>Hello</Button>
+          <Button variant="outlined">Click me</Button>
+          <Button variant="text">Link</Button>
+        </div>
+        <div className="flex gap-3 m-5">
+          <Button size="lg">Hello</Button>
+          <Button size="lg" variant="outlined">
+            Click me
+          </Button>
+          <Button size="lg" variant="text">
+            Link
+          </Button>
+        </div>
+        <div className="flex gap-3 m-5">
+          <Button rounded="rounded">Hello</Button>
+          <Button rounded="rounded" variant="outlined">
+            Click me
+          </Button>
+          <Button rounded="rounded" variant="text">
+            Link
+          </Button>
+        </div>
+        <div className="flex gap-3 m-5">
+          <Button rounded="circle">{ButtonIcon}</Button>
+          <Button rounded="circle" variant="outlined">
+            {ButtonIcon}
+          </Button>
+          <Button rounded="circle" variant="text">
+            {ButtonIcon}
+          </Button>
         </div>
       </main>
 
@@ -73,10 +82,8 @@ const Home: NextPage = () => {
           className="flex items-center justify-center gap-2"
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          rel="noopener noreferrer">
+          Powered by <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </a>
       </footer>
     </div>
