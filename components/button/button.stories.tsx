@@ -1,6 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Button from '@components/button/button'
+import Icon from '@components/icons/icon'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -36,4 +37,25 @@ export const Small = ButtonTemplate.bind({})
 Small.args = {
   size: 'sm',
   children: 'Button',
+}
+
+export const IconLeft = ButtonTemplate.bind({})
+IconLeft.args = {
+  iconLeft: <Icon icon="search" />,
+  children: 'Search',
+  variant: 'outlined',
+}
+
+export const IconRight = ButtonTemplate.bind({})
+IconRight.args = {
+  iconRight: <Icon icon="access_alarm" />,
+  children: 'Alarm',
+  variant: 'outlined',
+}
+export const IconRightAndLoading = ButtonTemplate.bind({})
+IconRightAndLoading.args = {
+  iconRight: <Icon icon="access_alarm" />,
+  children: 'Alarm',
+  variant: 'outlined',
+  loading: true,
 }

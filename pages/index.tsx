@@ -1,11 +1,11 @@
+import Icon from '@components/icons/icon'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Button from '../components/button/button'
-import { SearchIcon } from '@heroicons/react/outline'
 
 const Home: NextPage = () => {
-  const ButtonIcon = <SearchIcon className="h-4 w-4" />
+  const ButtonIcon = <Icon icon="search" />
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
@@ -14,14 +14,19 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+        <div>
+          Material Icons
+          <br />
+          <Icon icon="search" />
+        </div>
         <div className="flex gap-3 m-5">
-          <Button loading size="lg" color={"indigo"}>
+          <Button loading size="lg" color={'indigo'}>
             Hello
           </Button>
-          <Button loading variant="outlined" size="lg" color={"indigo"}>
+          <Button loading variant="outlined" size="lg" color={'indigo'}>
             World
           </Button>
-          <Button loading variant="text" size="lg" color={"indigo"}>
+          <Button loading variant="text" size="lg" color={'indigo'}>
             Enter
           </Button>
         </div>
@@ -30,7 +35,7 @@ const Home: NextPage = () => {
           <Button loading variant="outlined">
             Click me
           </Button>
-          <Button loading variant="text" color={"red"}>
+          <Button loading variant="text" color={'red'}>
             Link
           </Button>
         </div>
@@ -58,8 +63,10 @@ const Home: NextPage = () => {
           </Button>
         </div>
         <div className="flex gap-3 m-5">
-          <Button rounded="rounded">Hello</Button>
-          <Button rounded="rounded" variant="outlined">
+          <Button rounded="rounded" iconLeft={ButtonIcon}>
+            Hello
+          </Button>
+          <Button rounded="rounded" variant="outlined" iconRight={ButtonIcon}>
             Click me
           </Button>
           <Button rounded="rounded" variant="text">

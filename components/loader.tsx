@@ -1,6 +1,4 @@
-import { getSize } from '@src/utils/get-size'
 import clsx from 'clsx'
-import { settings } from './settings'
 import { ElementColor, ElementSize } from './types'
 
 interface LoaderProps {
@@ -18,22 +16,18 @@ interface LoaderProps {
   size?: ElementSize
 }
 
-const sizes: Record<ElementSize, number> = {
-  sm: 4,
-  md: 5,
-  lg: 6,
+const sizes: Record<ElementSize, string> = {
+  sm: 'h-4 w-4',
+  md: 'h-5 w-5',
+  lg: 'h-6 w-6',
 }
 
-export const Loader = ({ color = settings.color, size = 'md', white }: LoaderProps) => {
+export const Loader = ({ size = 'md', white }: LoaderProps) => {
   return (
     <div className="flex justify-center items-center">
       <svg
         aria-hidden="true"
-        className={clsx(
-          `mr-2 text-gray-200 animate-spin`,
-          getSize(sizes[size]),
-          !white ? `fill-${color}-600` : 'fill-white',
-        )}
+        className={clsx(`mr-2 text-gray-200 animate-spin`, sizes[size], !white ? `fill-blue-600` : 'fill-white')}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
