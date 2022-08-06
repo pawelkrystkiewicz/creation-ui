@@ -2,7 +2,13 @@ import clsx from 'clsx'
 import { MaterialIcon } from './type'
 
 interface IconProps {
+  /**
+   * Icon name from Material Icons collection
+   */
   icon: MaterialIcon
+  /**
+   * Additional class names
+   */
   className?: string
 }
 
