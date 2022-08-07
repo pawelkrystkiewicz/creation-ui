@@ -13,7 +13,9 @@
       "@utils": ["./utils"],
       "@utils/*": ["./utils/*"],
       "@assets": ["./assets"],
-      "@assets/*": ["./assets/*"]
+      "@assets/*": ["./assets/*"],
+      "@models": ["./models"],
+      "@models/*": ["./models/*"]
     }
   }
 }
