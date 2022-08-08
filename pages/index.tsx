@@ -26,19 +26,27 @@ const Home: NextPage = () => {
       description: 'Icons with Material Icons font',
       link: '/icon',
     },
+    {
+      title: 'Checkbox',
+      description: 'Checkbox component',
+      link: '/checkbox',
+    },
   ]
 
   return (
     <>
-      <h1 className="flex align-center gap-5">
-        <Logo size="xl" />
-        {config.appName}
-      </h1>
-      <div>Design System</div>
+      <div id="header">
+        <h1 className="flex align-center gap-5">
+          <Logo size="xl" />
+          {config.appName}
+        </h1>
+        <span className="text-sm">Design System</span>
+      </div>
+      <p>Comprehensive list of UI components for React built with Tailwind</p>
       <div className="flex flex-col items-start">
         <div>
           <h2>Components</h2>
-          <p>This is my design system elements. Here is the list of available components</p>
+          <p>List of available components</p>
         </div>
         <div>
           {elements.map(({ title, description, link }) => (

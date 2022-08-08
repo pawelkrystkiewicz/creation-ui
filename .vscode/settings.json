@@ -7,5 +7,12 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/node_modules": false
-  }
+  },
+  "grammarly.selectors": [
+    {
+      "language": "typescriptreact",
+      "scheme": "file",
+      "pattern": "pages/index.tsx"
+    }
+  ]
 }

@@ -12,6 +12,8 @@
       "@ui/*": ["./ui/*"],
       "@utils": ["./utils"],
       "@utils/*": ["./utils/*"],
+      "@hooks": ["./hooks"],
+      "@hooks/*": ["./hooks/*"],
       "@assets": ["./assets"],
       "@assets/*": ["./assets/*"],
       "@models": ["./models"],

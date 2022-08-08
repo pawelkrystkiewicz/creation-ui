@@ -1,6 +1,7 @@
 import { Loader } from '@components/loader'
 import { settings } from '@components/settings'
 import { ElementSize } from '@components/types'
+import { useId } from '@src/hooks/use-id'
 import cx from 'classnames'
 import React from 'react'
 import { ButtonProps, ButtonShape, ButtonVariants, ColorPower } from './types'
@@ -52,6 +53,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       iconRight,
       className,
       color = settings.color,
+      id,
       ...props
     },
     ref,
@@ -72,8 +74,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const isContained = variant === 'contained'
     const sizeCollection = isCircle ? sizesCircle : sizes
 
+    const componentId = useId(id)
+
     return (
       <button
+        id={componentId}
         ref={ref}
         disabled={loading}
         {...props}

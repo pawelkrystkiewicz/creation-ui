@@ -1,11 +1,12 @@
 const config = {
-  appName: 'Design System Components',
+  appName: 'Gemini UI',
   createdBy: 'ChunkCreations',
   author: {
     name: 'Paweł Krystkiewicz',
     email: 'pawelkrystkiewicz@outlook.com',
     github: 'pawelkrystkiewicz',
   },
+  version: '0.1.0',
 }
 
 export type Config = typeof config
