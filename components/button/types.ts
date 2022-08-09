@@ -1,7 +1,7 @@
 import React from 'react'
-import { ElementColor, ElementSize } from '../types'
-export type ButtonShape = 'default' | 'rounded' | 'circle'
-export type ButtonVariants = 'contained' | 'outlined' | 'text'
+import { ElementColor, ElementSize, ElementVariants } from '../types'
+export type ButtonShape = 'default' | 'circle'
+
 
 export type ButtonProps = React.ComponentProps<'button'> & {
   /**
@@ -15,7 +15,7 @@ export type ButtonProps = React.ComponentProps<'button'> & {
   /**
    * What variant should button be ?
    */
-  variant?: ButtonVariants
+  variant?: ElementVariants
   /**
    * How large should the button be?
    */

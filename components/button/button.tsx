@@ -1,10 +1,10 @@
 import { Loader } from '@components/loader'
 import { settings } from '@components/settings'
-import { ElementSize } from '@components/types'
+import { ElementSize, ElementVariants } from '@components/types'
 import { useId } from '@src/hooks/use-id'
 import cx from 'classnames'
 import React from 'react'
-import { ButtonProps, ButtonShape, ButtonVariants, ColorPower } from './types'
+import { ButtonProps, ButtonShape } from './types'
 
 const sizes: Record<ElementSize, string> = {
   sm: 'px-3 py-1 text-sm',
@@ -19,7 +19,6 @@ const sizesCircle: Record<ElementSize, string> = {
 
 const roundness: Record<ButtonShape, string> = {
   default: settings.roundness.default,
-  rounded: settings.roundness.max,
   circle: 'rounded-full',
 }
 
@@ -58,7 +57,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref,
   ) => {
-    const variants: Record<ButtonVariants, string> = {
+    const variants: Record<ElementVariants, string> = {
       contained: cx(['text-white', 'bg-blue-600', 'hover:bg-blue-700', 'focus:bg-blue-700', 'active:bg-blue-800']),
       outlined: cx([`border`, `border-blue-600`, `text-blue-600`, `hover:bg-blue-50`, `active:bg-blue-100`]),
       text: cx([

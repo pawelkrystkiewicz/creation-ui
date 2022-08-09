@@ -12,6 +12,7 @@ const Home: NextPage = () => {
         <Switch size="sm" />
         <Switch size="md" />
         <Switch size="lg" />
+        {/* <Switch size="sm" disabled/> */}
       </div>
     </>
   )

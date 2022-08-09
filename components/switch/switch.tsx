@@ -2,6 +2,7 @@ import { useState } from 'react'
 import * as HeadlessUI from '@headlessui/react'
 import clsx from 'clsx'
 import { ElementSize } from '@components/types'
+import { disabledStateClasses } from '@components/shared-classes'
 
 interface SwitchProps {
   /**
@@ -23,7 +24,6 @@ const sizeMap: Record<ElementSize, Record<'body' | 'circle', string>> = {
 const staticClassesBody = [
   'relative',
   'inline-flex',
-
   'shrink-0',
   'cursor-pointer',
   'rounded-full',
@@ -41,7 +41,6 @@ const staticClassesBody = [
 const staticClassesCircle = [
   'pointer-events-none',
   'inline-block',
-
   'transform',
   'rounded-full',
   'bg-white',
@@ -68,7 +67,7 @@ const Switch = ({ checked, size = 'sm', ...props }: SwitchProps) => {
     <HeadlessUI.Switch
       checked={enabled}
       onChange={setEnabled}
-      className={clsx(enabledColors, staticClassesBody, sizeClass.body)}>
+      className={clsx(enabledColors, staticClassesBody, sizeClass.body, disabledStateClasses)}>
       <span className="sr-only">Use setting</span>
       <span aria-hidden="true" className={clsx(enabledCirclePosition, staticClassesCircle, sizeClass.circle)} />
     </HeadlessUI.Switch>

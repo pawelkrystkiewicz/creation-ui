@@ -22,3 +22,4 @@ export type ElementColor =
   | 'zinc'
 
 export type ElementTheme = 'dark' | 'light'
+export type ElementVariants = 'contained' | 'outlined' | 'text'

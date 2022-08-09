@@ -31,6 +31,11 @@ const Home: NextPage = () => {
       description: 'Checkbox component',
       link: '/checkbox',
     },
+    {
+      title: 'Text Input ',
+      description: 'Text Input component',
+      link: '/inputs/text',
+    },
   ]
 
   return (

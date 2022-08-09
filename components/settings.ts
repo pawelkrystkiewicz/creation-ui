@@ -1,4 +1,4 @@
-import { ElementColor } from "./types";
+import { ElementColor } from './types'
 
 export const settings = {
   roundness: {
@@ -14,6 +14,9 @@ export const settings = {
     lg: 1024,
     xl: 1280,
     xl2: 1536,
+  },
+  defaultTexts: {
+    invalidInput: 'Input invalid',
   },
 }
 

@@ -52,15 +52,11 @@ const Home: NextPage = () => {
         </Button>
       </div>
       <div className="flex gap-3 m-5">
-        <Button rounded="rounded" iconLeft={ButtonIcon}>
-          Hello
-        </Button>
-        <Button rounded="rounded" variant="outlined" iconRight={ButtonIcon}>
+        <Button iconLeft={ButtonIcon}>Hello</Button>
+        <Button variant="outlined" iconRight={ButtonIcon}>
           Click me
         </Button>
-        <Button rounded="rounded" variant="text">
-          Link
-        </Button>
+        <Button variant="text">Link</Button>
       </div>
       <div className="flex gap-3 m-5">
         <Button rounded="circle">{ButtonIcon}</Button>
