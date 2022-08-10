@@ -2,13 +2,14 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Button from '@components/button/button'
 import Icon from '@components/icon/icon'
+import { ELEMENT_SIZES } from '@components/types'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {},
+  argTypes: { size: { control: { type: 'select', options: ELEMENT_SIZES } } },
 } as ComponentMeta<typeof Button>
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

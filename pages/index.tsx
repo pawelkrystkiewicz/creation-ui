@@ -36,6 +36,11 @@ const Home: NextPage = () => {
       description: 'Text Input component',
       link: '/inputs/text',
     },
+    {
+      title: 'TextArea ',
+      description: 'TextArea component',
+      link: '/inputs/textarea',
+    },
   ]
 
   return (
@@ -53,7 +58,7 @@ const Home: NextPage = () => {
           <h2>Components</h2>
           <p>List of available components</p>
         </div>
-        <div>
+        <div className="overflow-y-auto max-h-64 w-full">
           {elements.map(({ title, description, link }) => (
             <div key={link} className="flex flex-col items-start">
               <Link href={link}>

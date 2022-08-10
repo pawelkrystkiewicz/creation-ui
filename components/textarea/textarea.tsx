@@ -4,7 +4,7 @@ import { ElementSize } from '@components/types'
 import { useId } from '@src/hooks/use-id'
 import clsx from 'clsx'
 import React, { ForwardedRef, forwardRef } from 'react'
-import { InputProps } from './types'
+import { TextAreaProps } from './textarea.types'
 
 const staticClassNames = [
   'block',
@@ -26,7 +26,7 @@ const readOnlyClass = ['text-gray-700', 'bg-gray-100']
 const fullWidthClass = ['w-full']
 const requiredClass = ["after:content-['*']", 'after:ml-0.5', 'after:text-red-500']
 
-const Input = forwardRef<HTMLInputElement, InputProps>(
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (
     {
       loading,
@@ -38,12 +38,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       iconLeft,
       iconRight,
       size = 'md',
-      type = 'text',
       className,
       id,
       ...props
     },
-    ref: ForwardedRef<HTMLInputElement>,
+    ref: ForwardedRef<HTMLTextAreaElement>,
   ) => {
     const componentId = useId(id)
 
@@ -55,7 +54,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {label}
         </label>
         <div className="mt-1">
-          <input
+          <textarea
             ref={ref}
             id={componentId}
             className={clsx(
@@ -67,7 +66,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               props.readOnly && readOnlyClass,
             )}
             {...props}
-            type={type}
           />
         </div>
         {helperText && <div className={clsx('text-gray-500 mt-1', sizes[size])}>{helperText}</div>}
@@ -80,6 +78,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   },
 )
 
-Input.displayName = 'Input'
+TextArea.displayName = 'Input'
 
-export default Input
+export default TextArea

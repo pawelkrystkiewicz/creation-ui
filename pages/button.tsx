@@ -9,13 +9,13 @@ const Home: NextPage = () => {
     <>
       <NavigationTitle />
       <div className="flex gap-3 m-5">
-        <Button loading size="lg" color={'indigo'}>
+        <Button loading size="lg" color={'blue'}>
           Hello
         </Button>
-        <Button loading variant="outlined" size="lg" color={'indigo'}>
+        <Button loading variant="outlined" size="lg" color={'blue'}>
           World
         </Button>
-        <Button loading variant="text" size="lg" color={'indigo'}>
+        <Button loading variant="text" size="lg" color={'blue'}>
           Enter
         </Button>
       </div>
