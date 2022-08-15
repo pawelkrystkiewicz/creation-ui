@@ -1,7 +1,6 @@
 import { Logo } from '@components/logo/logo'
 import config from '@root/config'
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
@@ -10,6 +9,11 @@ const Home: NextPage = () => {
       title: 'Button',
       description: 'Button component',
       link: '/button',
+    },
+    {
+      title: 'Button toggle group',
+      description: 'Button toggle group component',
+      link: '/button-toggle-group',
     },
     {
       title: 'Spinner',
@@ -78,13 +82,14 @@ const Home: NextPage = () => {
           <h2>Components</h2>
           <p>List of available components</p>
         </div>
-        <div className="overflow-y-auto max-h-64 w-full">
+        <div className="overflow-y-auto max-h-96 w-full">
           {elements.map(({ title, description, link }) => (
             <div key={link} className="flex flex-col items-start">
               <Link href={link}>
-                <b>{title}</b>
+                <div>
+                  <b>{title}</b> - <span className="text-sm">{description}</span>
+                </div>
               </Link>
-              <span className="text-sm">{description}</span>
             </div>
           ))}
         </div>

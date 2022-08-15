@@ -29,3 +29,6 @@ export type ElementSize = typeof ELEMENT_SIZES[number]
 export type ElementColor = typeof ELEMENT_COLORS[number]
 export type ElementTheme = typeof ELEMENT_THEMES[number]
 export type ElementVariants = typeof ELEMENT_VARIANTS[number]
+
+
+export type GetComponentProps<T> = T extends React.ComponentType<infer P> | React.Component<infer P> ? P : never
