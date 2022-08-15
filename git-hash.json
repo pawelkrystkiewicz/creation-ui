@@ -1,0 +1,22 @@
+{
+  "shortHash": "b7bef7f",
+  "hash": "b7bef7f8bfef6edf2e2c2562ee8d1560bc1f639e",
+  "subject": "feat: add radio button (single)",
+  "sanitizedSubject": "feat-add-radio-button-single",
+  "body": "",
+  "authoredOn": "1660565631",
+  "committedOn": "1660565720",
+  "author": {
+    "name": "pawelkrystkiewicz",
+    "email": "pawelkrystkiewicz@outlook.com"
+  },
+  "committer": {
+    "name": "Pawel Krystkiewicz",
+    "email": "pawelkrystkiewicz@outlook.com"
+  },
+  "notes": "",
+  "branch": "master",
+  "tags": [],
+  "version": "0.0.2",
+  "timestamp": "2022-08-15T12:24:15.898Z"
+}

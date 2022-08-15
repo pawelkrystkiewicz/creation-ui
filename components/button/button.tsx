@@ -1,7 +1,7 @@
 import { Loader } from '@components/loader'
 import { settings } from '@components/settings'
 import { ElementSize, ElementVariants } from '@components/types'
-import { useId } from '@src/hooks/use-id'
+import { useId } from '@root/hooks/use-id'
 import cx from 'classnames'
 import React from 'react'
 import { ButtonProps, ButtonShape } from './types'

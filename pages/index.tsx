@@ -1,5 +1,5 @@
 import { Logo } from '@components/logo/logo'
-import config from '@src/config'
+import config from '@root/config'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -40,6 +40,26 @@ const Home: NextPage = () => {
       title: 'TextArea ',
       description: 'TextArea component',
       link: '/inputs/textarea',
+    },
+    {
+      title: 'Popover',
+      description: 'Popover component',
+      link: '/popover',
+    },
+    {
+      title: 'Radio',
+      description: 'Radio component',
+      link: '/radio',
+    },
+    {
+      title: 'Timeline Horizontal',
+      description: 'Timeline Horizontal component',
+      link: '/timeline-horizontal',
+    },
+    {
+      title: 'Table',
+      description: 'Table',
+      link: '/table',
     },
   ]
 

@@ -1,8 +1,10 @@
 import { Logo } from '@components/logo/logo'
-import config from '@src/config'
+import { Version } from '@components/version'
+import config from '@root/config'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import '../styles/globals.css'
+import '../styles/timeline.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -29,6 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <a className="flex items-center justify-center gap-2 text-sm" href="/" rel="noopener noreferrer">
           <Logo size="sm" /> {config.createdBy} &copy; {new Date().getFullYear()}
         </a>
+        <Version />
       </footer>
     </div>
   )

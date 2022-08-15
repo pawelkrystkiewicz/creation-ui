@@ -1,6 +1,8 @@
 # Gemini UI
 Design System
 
+Gemini is a library of React UI components built with Tailwind CSS to get you started building websites faster and more efficiently.
+
 ### With Material Icons
 
 Provided via `.material-icons` class inside `span` element.
@@ -157,7 +159,7 @@ Component sizes:
   * 3 variants:
     - [X] text
     - [X] outlined (secondary)
-    - [x] contained (primary)
+    - [X] contained (primary)
 
   * 3 roundness levels:
     - [x] default (slightly rounded)
@@ -188,7 +190,8 @@ Component sizes:
   <summary><b>Buttons group</b></summary>
 
 * Must have
-  - [ ] display buttons in group
+  - [x] display buttons in group
+  - [x] buttons have proper roundness and     removed inner border
 * Should have
   - [ ] ?
 * Could have
@@ -230,7 +233,7 @@ Component sizes:
   <summary><b>TextArea</b></summary>
 
 * Must have
-  - [ ] ?
+  - [X] have text area component
 * Should have
   - [ ] ?
 * Could have
@@ -239,31 +242,6 @@ Component sizes:
   - [ ] ?
 </details>
 
-<details>
-  <summary><b>Password</b></summary>
-
-* Must have
-  - [ ] ?
-* Should have
-  - [ ] ?
-* Could have
-  - [ ] ?
-* Won't have
-  - [ ] ?
-</details>
-
-<details>
-  <summary><b>Email</b></summary>
-
-* Must have
-  - [ ] ?
-* Should have
-  - [ ] ?
-* Could have
-  - [ ] ?
-* Won't have
-  - [ ] ?
-</details>
 
 <details>
   <summary><b>Number</b></summary>
@@ -380,13 +358,13 @@ Component sizes:
   <summary><b>Checkbox</b></summary>
 
 * Must have
-  - [ ] visible checked
-  - [ ] visible unchecked
-  - [ ] disabled
-  - [ ] focus
+  - [X] visible checked
+  - [X] visible unchecked
+  - [X] disabled
+  - [X] focus
 * Should have
-  - [ ] indeterminate state
-  - [ ] active
+  - [X] indeterminate state
+  - [X] active
 * Could have
   - [ ] ?
 * Won't have
@@ -397,7 +375,7 @@ Component sizes:
   <summary><b>Switch</b></summary>
 
 * Must have
-  - [ ] ?
+  - [X] switch component exists
 * Should have
   - [ ] ?
 * Could have
@@ -570,9 +548,11 @@ Component sizes:
   - [ ] ?
 </details>
 
+### Special Components
 
+<details>
+  <summary><b>System Events Timeline</b></summary>
 
-***
 * Must have
   - [ ] ?
 * Should have
@@ -581,3 +561,7 @@ Component sizes:
   - [ ] ?
 * Won't have
   - [ ] ?
+</details>
+
+
+

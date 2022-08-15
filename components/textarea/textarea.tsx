@@ -1,7 +1,7 @@
 import { settings } from '@components/settings'
 import { disabledStateClasses } from '@components/shared-classes'
 import { ElementSize } from '@components/types'
-import { useId } from '@src/hooks/use-id'
+import { useId } from '@root/hooks/use-id'
 import clsx from 'clsx'
 import React, { ForwardedRef, forwardRef } from 'react'
 import { TextAreaProps } from './textarea.types'

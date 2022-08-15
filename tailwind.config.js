@@ -87,6 +87,9 @@ module.exports = {
           },
         },
       },
+      gridTemplateColumns: {
+        '96': 'repeat(96, 1fr)',
+      },
       animation: {
         // Dropdown menu
         'scale-in': 'scale-in 0.2s ease-in-out',

@@ -1,5 +1,5 @@
 import { ElementSize } from '@components/types'
-import { useId } from '@src/hooks/use-id'
+import { useId } from '@root/hooks/use-id'
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 

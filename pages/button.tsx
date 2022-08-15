@@ -1,3 +1,4 @@
+import ButtonGroup from '@components/button/button.group'
 import Icon from '@components/icon/icon'
 import { NavigationTitle } from '@components/navigation/navigation'
 import type { NextPage } from 'next'
@@ -66,6 +67,18 @@ const Home: NextPage = () => {
         <Button rounded="circle" variant="text">
           {ButtonIcon}
         </Button>
+      </div>
+      <div className="flex flex-col gap-3 m-5">
+        <ButtonGroup>
+          <Button variant="outlined">Pizza</Button>
+          <Button variant="outlined">Burger</Button>
+          <Button variant="outlined">Fries</Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button>Pizza</Button>
+          <Button>Burger</Button>
+          <Button>Fries</Button>
+        </ButtonGroup>
       </div>
     </>
   )

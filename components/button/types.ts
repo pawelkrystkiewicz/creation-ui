@@ -2,7 +2,6 @@ import React from 'react'
 import { ElementColor, ElementSize, ElementVariants } from '../types'
 export type ButtonShape = 'default' | 'circle'
 
-
 export type ButtonProps = React.ComponentProps<'button'> & {
   /**
    * Is button loading?
@@ -33,6 +32,8 @@ export type ButtonProps = React.ComponentProps<'button'> & {
    */
   color?: ElementColor
 }
+
+export type ButtonGroupProps = React.ComponentProps<'div'> & {}
 
 export type ColorPower = {
   default: number | string

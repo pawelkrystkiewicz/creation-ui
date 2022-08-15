@@ -1,0 +1,68 @@
+
+.container {
+  resize: horizontal;
+  overflow: auto;
+  width: 60%;
+  min-width: 100px;
+  margin: 0px auto;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.ruler {
+  margin: 20px 0px;
+  background-color: rgb(255, 255, 223);
+  height: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+
+.ruler-cell {
+  position: relative;
+  height: 100%;
+  width: calc(100% - 20px);
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  background-repeat: no-repeat;
+  background-size:
+    100% 1px,
+    1px 8px,
+    1px 8px,
+    1px 8px,
+    1px 8px;
+  background-position:
+    0% center,
+    20% center,
+    40% center,
+    60% center,
+    80% center;
+  background-image:
+    linear-gradient(gray, gray),
+    linear-gradient(gray, gray),
+    linear-gradient(gray, gray),
+    linear-gradient(gray, gray),
+    linear-gradient(gray, gray);
+}
+
+.ruler-cell span {
+  position: absolute;
+  top: -15px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.zero {
+  left: 0;
+  /* transform: translateX(-50%); */
+  display: none;
+}
+
+.number {
+  right: 0;
+  /* transform: translateX(50%); */
+}
+
+.ruler-cell:first-child .zero {
+  display: block;
+}

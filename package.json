@@ -1,11 +1,14 @@
 {
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "next dev",
     "build": "next build",
     "start:prod": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "amend": "git commit --amend --no-edit",
+    "git:last-hash": "node ./scripts/get-last-git-hash.mjs"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
@@ -18,6 +21,7 @@
     "@types/uuid": "^8.3.4",
     "classnames": "^2.3.1",
     "clsx": "^1.2.1",
+    "git-last-commit": "^1.0.1",
     "next": "latest",
     "postcss-loader": "^7.0.1",
     "react": "18.1.0",
@@ -42,7 +46,9 @@
     "@types/react-dom": "18.0.5",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
+    "husky": "^8.0.0",
     "postcss": "^8.4.14",
+    "pretty-quick": "^3.1.3",
     "storybook-addon-next": "^1.6.7",
     "storybook-addon-outline": "^1.4.2",
     "storybook-addon-turbo-build": "^1.1.0",

@@ -1,0 +1,33 @@
+import { NavigationTitle } from '@components/navigation/navigation'
+import { events } from '@components/special/fakeData'
+import TimelineHorizontal from '@components/special/timeline-horizontal'
+import { Schedule, TimelineEvent } from '@components/special/types'
+import type { NextPage } from 'next'
+
+const Home: NextPage = () => {
+  const timelineEvents: TimelineEvent[] = events.map(
+    ({ event: { eventShortName, color }, eventRegisterUUID, eventRegisteredAt }) => ({
+      title: eventShortName,
+      color,
+      id: eventRegisterUUID,
+      time: eventRegisteredAt.toString(),
+    }),
+  )
+
+  const schedule: Schedule = {
+    color: '#ff0000',
+    start: '2022-08-13T06:00:00.000Z',
+    end: '2022-08-13T14:00:00.000Z',
+  }
+
+  return (
+    <>
+      <NavigationTitle />
+      <div>
+        <TimelineHorizontal events={timelineEvents} schedule={schedule} />
+      </div>
+    </>
+  )
+}
+
+export default Home
