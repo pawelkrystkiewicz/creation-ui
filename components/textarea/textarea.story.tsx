@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import TextArea from './textarea'
+import TextArea from '.'
 import { TextAreaProps } from './textarea.types'
 import { ELEMENT_SIZES } from '@components/types'
 

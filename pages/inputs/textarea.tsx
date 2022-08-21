@@ -1,6 +1,6 @@
 import Input from '@components/input'
 import { NavigationTitle } from '@components/navigation/navigation'
-import TextArea from '@components/textarea/textarea'
+import TextArea from '@components/textarea'
 import type { NextPage } from 'next'
 import { useState } from 'react'
 

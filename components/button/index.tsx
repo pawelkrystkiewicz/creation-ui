@@ -4,7 +4,7 @@ import { ElementSize, ElementVariants } from '@components/types'
 import { useId } from '@root/hooks/use-id'
 import cx from 'classnames'
 import React from 'react'
-import { ButtonProps, ButtonShape } from './types'
+import { ButtonProps, ButtonShape } from './button.types'
 
 const sizes: Record<ElementSize, string> = {
   sm: 'px-3 py-1 text-sm',

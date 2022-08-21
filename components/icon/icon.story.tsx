@@ -1,4 +1,4 @@
-import Icon from '@components/icon/icon'
+import Icon from '@components/icon'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {

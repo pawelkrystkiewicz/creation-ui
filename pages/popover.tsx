@@ -1,6 +1,6 @@
 import { Loader } from '@components/loader'
 import { NavigationTitle } from '@components/navigation/navigation'
-import Popover from '@components/popover/popover'
+import Popover from '@components/popover'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {

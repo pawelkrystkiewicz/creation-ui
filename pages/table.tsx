@@ -1,5 +1,5 @@
 import { NavigationTitle } from '@components/navigation/navigation'
-import Table from '@components/table/table'
+import Table from '@components/table'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {

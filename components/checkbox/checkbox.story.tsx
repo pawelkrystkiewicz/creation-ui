@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { ELEMENT_SIZES } from '@components/types'
-import Checkbox from './checkbox'
+import Checkbox from '.'
 
 export default {
   title: 'Checkbox',

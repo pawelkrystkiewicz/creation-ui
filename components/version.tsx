@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import gitHash from '@root/git-hash.json'
 import { CommitInfo } from '@root/models/system'
-import Popover from './popover/popover'
+import Popover from './popover'
 
 interface VersionProps {
   classNameOverride?: string

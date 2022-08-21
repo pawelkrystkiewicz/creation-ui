@@ -1,5 +1,5 @@
 import { NavigationTitle } from '@components/navigation/navigation'
-import Radio from '@components/radio/radio'
+import Radio from '@components/radio'
 import { ElementSize } from '@components/types'
 import type { NextPage } from 'next'
 
