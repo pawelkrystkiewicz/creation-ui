@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Radio from './radio'
+import Radio from '.'
 import { RadioProps } from './radio.types'
 import { ELEMENT_SIZES } from '@components/types'
 

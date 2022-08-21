@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { MaterialIcon } from './type'
+import { MaterialIcon } from './icon.type'
 
 interface IconProps {
   /**

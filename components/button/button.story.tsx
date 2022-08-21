@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Button from '@components/button/button'
-import Icon from '@components/icon/icon'
+import Button from '@components/button'
+import Icon from '@components/icon'
 import { ELEMENT_SIZES } from '@components/types'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

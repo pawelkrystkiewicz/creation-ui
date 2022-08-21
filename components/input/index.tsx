@@ -4,7 +4,7 @@ import { ElementSize } from '@components/types'
 import { useId } from '@root/hooks/use-id'
 import clsx from 'clsx'
 import React, { ForwardedRef, forwardRef } from 'react'
-import { InputProps } from './types'
+import { InputProps } from './input.types'
 
 const staticClassNames = [
   'block',

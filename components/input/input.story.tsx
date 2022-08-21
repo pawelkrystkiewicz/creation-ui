@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Input from './'
-import { InputProps } from './types'
+import Input from '.'
+import { InputProps } from './input.types'
 import { ELEMENT_SIZES } from '@components/types'
 
 export default {

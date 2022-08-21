@@ -1,8 +1,8 @@
 import ButtonGroup from '@components/button/button.group'
-import Icon from '@components/icon/icon'
+import Icon from '@components/icon'
 import { NavigationTitle } from '@components/navigation/navigation'
 import type { NextPage } from 'next'
-import Button from '../components/button/button'
+import Button from '../components/button'
 
 const Home: NextPage = () => {
   const ButtonIcon = <Icon icon="search" />

@@ -1,7 +1,7 @@
-import Icon from '@components/icon/icon'
+import Icon from '@components/icon'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import Button from '@components/button/button'
+import Button from '@components/button'
 
 export const NavigationTitle = () => {
   const router = useRouter()

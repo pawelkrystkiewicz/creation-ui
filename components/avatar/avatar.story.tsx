@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Avatar from './index'
-import Props, { AVATAR_VARIANTS } from './types'
+import Avatar from '.'
+import Props, { AVATAR_VARIANTS } from './avatar.types'
 import { ELEMENT_SIZES } from '@components/types'
 
 export default {

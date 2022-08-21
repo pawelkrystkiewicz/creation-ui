@@ -1,4 +1,4 @@
-import Icon from '@components/icon/icon'
+import Icon from '@components/icon'
 import { icons } from '@components/icon/list-of-icons'
 import { NavigationTitle } from '@components/navigation/navigation'
 import type { NextPage } from 'next'

@@ -1,7 +1,7 @@
-import Checkbox from '@components/checkbox/checkbox'
-import Icon from '@components/icon/icon'
+import Checkbox from '@components/checkbox'
+import Icon from '@components/icon'
 import { NavigationTitle } from '@components/navigation/navigation'
-import Switch from '@components/switch/switch'
+import Switch from '@components/switch'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {

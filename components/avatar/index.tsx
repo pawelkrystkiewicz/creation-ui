@@ -1,7 +1,7 @@
 import { ElementSize } from '@components/types'
 import clsx from 'clsx'
 import React, { forwardRef } from 'react'
-import Props, { AvatarVariant } from './types'
+import Props, { AvatarVariant } from './avatar.types'
 
 const staticClassNames = ['inline-block', 'ring-2', 'ring-white']
 

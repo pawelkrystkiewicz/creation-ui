@@ -1,6 +1,6 @@
 import { settings } from '@components/settings'
 import cx from 'classnames'
-import { ButtonGroupProps } from './types'
+import { ButtonGroupProps } from './button.types'
 
 // prettier-ignore
 const commonStaticClasses: string[] = [
