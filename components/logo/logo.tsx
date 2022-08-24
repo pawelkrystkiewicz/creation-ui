@@ -1,5 +1,5 @@
 import { ElementSize } from '@components/types'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import Image from 'next/image'
 
 type LogoSizes = ElementSize | 'xl'
@@ -29,6 +29,6 @@ export const Logo = ({ size = 'sm', className }: LogoProps) => (
     width={sizeMap[size]}
     height={sizeMap[size]}
     layout={'fixed'}
-    className={classNames('h-auto w-auto rounded-full', className)}
+    className={clsx('h-auto w-auto rounded-full', className)}
   />
 )

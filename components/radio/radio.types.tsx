@@ -11,11 +11,11 @@ export type RadioProps = Omit<React.ComponentProps<'input'>, 'size'> & {
    */
   label?: React.ReactNode
   /**
-   * Helper text
+   * Helper text #TODO
    */
   helperText?: React.ReactNode
   /**
-   * Text to be displayed when input is invalid
+   * Text to be displayed when input is invalid #TODO
    */
   invalidInputText?: React.ReactNode
 }

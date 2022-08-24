@@ -2,7 +2,7 @@ import { Loader } from '@components/loader'
 import { settings } from '@components/settings'
 import { ElementSize, ElementVariants } from '@components/types'
 import { useId } from '@root/hooks/use-id'
-import cx from 'classnames'
+import clsx from 'clsx'
 import React from 'react'
 import { ButtonProps, ButtonShape } from './button.types'
 
@@ -58,9 +58,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref,
   ) => {
     const variants: Record<ElementVariants, string> = {
-      contained: cx(['text-white', 'bg-blue-600', 'hover:bg-blue-700', 'focus:bg-blue-700', 'active:bg-blue-800']),
-      outlined: cx([`border`, `border-blue-600`, `text-blue-600`, `hover:bg-blue-50`, `active:bg-blue-100`]),
-      text: cx([
+      contained: clsx(['text-white', 'bg-blue-600', 'hover:bg-blue-700', 'focus:bg-blue-700', 'active:bg-blue-800']),
+      outlined: clsx([`border`, `border-blue-600`, `text-blue-600`, `hover:bg-blue-50`, `active:bg-blue-100`]),
+      text: clsx([
         'bg-white',
         'text-blue-600',
         'hover:bg-blue-50',
@@ -81,8 +81,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         disabled={loading}
         {...props}
-        className={cx(commonStaticClasses, variants[variant], roundness[rounded], sizeCollection[size], className)}>
-        <>{loading ? <Loader size={size} white={isContained} /> : iconLeft}</>
+        className={clsx(commonStaticClasses, variants[variant], roundness[rounded], sizeCollection[size], className)}>
+        <>{loading ? <Loader size={size} white={isContained} /> :null}</>
+        <>{iconLeft}</>
         <>{children}</>
         <>{iconRight}</>
       </button>

@@ -73,5 +73,6 @@ const Switch = ({ checked, size = 'sm', ...props }: SwitchProps) => {
     </HeadlessUI.Switch>
   )
 }
+Switch.displayName = "_Switch";
 
 export default Switch

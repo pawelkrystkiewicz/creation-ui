@@ -65,6 +65,11 @@ const Home: NextPage = () => {
       description: 'Table',
       link: '/table',
     },
+    {
+      title: 'Tooltips',
+      description: 'Tooltips',
+      link: '/tooltips',
+    },
   ]
 
   return (

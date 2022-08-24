@@ -12,6 +12,6 @@ interface IconProps {
   className?: string
 }
 
-const Icon = ({ icon, className }: IconProps) => <span className={clsx('material-icons', className)}>{icon}</span>
+const Icon = ({ icon, className }: IconProps) => <div className={clsx('material-icons', className)}>{icon}</div>
 
 export default Icon

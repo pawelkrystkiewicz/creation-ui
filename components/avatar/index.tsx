@@ -14,7 +14,7 @@ const sizes: Record<ElementSize, string> = {
 const variants: Record<AvatarVariant, string> = {
   circle: 'rounded-full',
   rounded: 'rounded-lg',
-  square: 'rounded',
+  square: '',
 }
 
 const Input = forwardRef<HTMLDivElement, Props>(({ variant = 'circle', size = 'md', className, ...props }, ref) => {

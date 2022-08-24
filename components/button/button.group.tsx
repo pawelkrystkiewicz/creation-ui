@@ -1,5 +1,5 @@
 import { settings } from '@components/settings'
-import cx from 'classnames'
+import clsx from 'clsx'
 import { ButtonGroupProps } from './button.types'
 
 // prettier-ignore
@@ -10,7 +10,7 @@ const commonStaticClasses: string[] = [
 
 const ButtonGroup = ({ color = settings.color, children, className, ...props }: ButtonGroupProps) => {
   return (
-    <div {...props} className={cx(commonStaticClasses, className)}>
+    <div {...props} className={clsx(commonStaticClasses, className)}>
       {children}
     </div>
   )
