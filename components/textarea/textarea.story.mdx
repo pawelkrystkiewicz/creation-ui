@@ -1,23 +1,29 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import Checkbox from './'
+import TextArea from './'
 
-<Meta title="MDX/Checkbox" component={Checkbox} />
+<Meta title="MDX/TextArea" component={TextArea} />
 
-export const Template = args => <Checkbox {...args} />
+export const Template = args => <TextArea {...args} />
 export const defaultProps = {
-  size: 'sm',
-  label: 'Option',
+  label: 'TextArea',
+  placeholder: 'Placeholder',
   disabled: false,
   helperText: undefined,
-  error: undefined,
+  invalidTextAreaText: undefined,
 }
 
-# Checkbox
+# TextArea
+
+## TODO
+- [ ] Allow to change resize directions by props
+- [ ] minRows
+- [ ] maxRows
+
 
 <br />
 
 <Story
-  name="Checkbox"
+  name="TextArea"
   args={{
     ...defaultProps,
   }}>
@@ -28,9 +34,9 @@ export const defaultProps = {
 
 ## Sizes
 
-Checkbox as all the other components uses 3 basic sizes:
+TextArea as all the other components uses 3 basic sizes:
 
-- `sm`.
+- `sm`
 - `md`
 - `lg`
 
@@ -78,6 +84,7 @@ Checkbox as all the other components uses 3 basic sizes:
       label: 'Read only',
       readOnly: 'true',
       checked: true,
+      value: 'I am read only',
     }}>
     {Template.bind({})}
   </Story>
@@ -95,10 +102,11 @@ Checkbox as all the other components uses 3 basic sizes:
     args={{
       ...defaultProps,
       label: 'Disabled',
+      placeholder: 'I am disabled, you cannot edit me',
       disabled: true,
     }}>
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable of={Checkbox} />
+<ArgsTable of={TextArea} />

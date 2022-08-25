@@ -14,6 +14,7 @@ const staticClassNames = [
   'shadow-sm',
   'focus:ring-blue-500',
   'focus:border-blue-500',
+  'resize'
 ]
 
 const sizes: Record<ElementSize, string> = {
@@ -32,7 +33,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       loading,
       fullWidth,
       helperText,
-      invalidInputText,
+      error,
       label,
       variant = 'contained',
       iconLeft,
@@ -71,7 +72,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         {helperText && <div className={clsx('text-gray-500 mt-1', sizes[size])}>{helperText}</div>}
 
         <span className={clsx('mt-2 invisible peer-invalid:visible text-red-600', sizes[size])}>
-          {invalidInputText ?? settings.defaultTexts.invalidInput ?? ''}'
+          {error ?? settings.defaultTexts.invalidInput ?? ''}'
         </span>
       </div>
     )

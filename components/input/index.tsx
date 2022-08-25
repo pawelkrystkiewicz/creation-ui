@@ -32,7 +32,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       loading,
       fullWidth,
       helperText,
-      invalidInputText,
+      error,
       label,
       variant = 'contained',
       iconLeft,
@@ -73,7 +73,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {helperText && <div className={clsx('text-gray-500 mt-1', sizes[size])}>{helperText}</div>}
 
         <span className={clsx('mt-2 invisible peer-invalid:visible text-red-600', sizes[size])}>
-          {invalidInputText ?? settings.defaultTexts.invalidInput ?? ''}'
+          {error ?? settings.defaultTexts.invalidInput ?? ''}'
         </span>
       </div>
     )

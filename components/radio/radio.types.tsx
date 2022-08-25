@@ -17,5 +17,5 @@ export type RadioProps = Omit<React.ComponentProps<'input'>, 'size'> & {
   /**
    * Text to be displayed when input is invalid #TODO
    */
-  invalidInputText?: React.ReactNode
+  error?: React.ReactNode
 }

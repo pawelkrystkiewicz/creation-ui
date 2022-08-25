@@ -1,23 +1,23 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import Checkbox from './'
+import Input from './'
 
-<Meta title="MDX/Checkbox" component={Checkbox} />
+<Meta title="MDX/Input" component={Input} />
 
-export const Template = args => <Checkbox {...args} />
+export const Template = args => <Input {...args} />
 export const defaultProps = {
-  size: 'sm',
-  label: 'Option',
+  label: 'Input',
+  placeholder: 'Placeholder',
   disabled: false,
   helperText: undefined,
   error: undefined,
 }
 
-# Checkbox
+# Input
 
 <br />
 
 <Story
-  name="Checkbox"
+  name="Input"
   args={{
     ...defaultProps,
   }}>
@@ -28,9 +28,9 @@ export const defaultProps = {
 
 ## Sizes
 
-Checkbox as all the other components uses 3 basic sizes:
+Input as all the other components uses 3 basic sizes:
 
-- `sm`.
+- `sm`
 - `md`
 - `lg`
 
@@ -78,6 +78,7 @@ Checkbox as all the other components uses 3 basic sizes:
       label: 'Read only',
       readOnly: 'true',
       checked: true,
+      value: 'I am read only',
     }}>
     {Template.bind({})}
   </Story>
@@ -95,10 +96,11 @@ Checkbox as all the other components uses 3 basic sizes:
     args={{
       ...defaultProps,
       label: 'Disabled',
+      placeholder: 'I am disabled, you cannot edit me',
       disabled: true,
     }}>
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable of={Checkbox} />
+<ArgsTable of={Input} />

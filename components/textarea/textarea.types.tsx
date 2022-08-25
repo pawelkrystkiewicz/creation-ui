@@ -37,5 +37,5 @@ export type TextAreaProps = Omit<React.ComponentProps<'textarea'>, 'size'> & {
   /**
    * Text to be displayed when input is invalid
    */
-  invalidInputText?: React.ReactNode
+  error?: React.ReactNode
 }

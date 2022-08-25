@@ -5,7 +5,7 @@ import { selector } from './radio.classes'
 import { RadioProps } from './radio.types'
 
 const Radio = forwardRef<HTMLInputElement, RadioProps>((props, ref: ForwardedRef<HTMLInputElement>) => {
-  const { helperText, invalidInputText, label, size = 'md', className, id, ...rest } = props
+  const { helperText, error, label, size = 'md', className, id, ...rest } = props
   const componentId = useId(id)
 
   return (
