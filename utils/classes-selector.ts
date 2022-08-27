@@ -1,5 +1,7 @@
 import { getDefinedProps } from '@root/utils/pick-defined-props'
+import clsx from 'clsx'
 import _, { get, keys } from 'lodash'
+import { twMerge } from 'tailwind-merge'
 
 export type Classes = {
   base: string[]
@@ -17,7 +19,8 @@ export type Classes = {
 
 export const classesSelector =
   (classes: Record<string, Classes>) =>
-  <T = any>(part: string, props: T) => {
+  <T = any>(props: T) =>
+  (part: string): string => {
     /**
      * @description : Returns the wrapper className
      */
@@ -41,5 +44,7 @@ export const classesSelector =
     return _.flow(
       _.partialRight(_.map, (path: string) => get(classes, path, [])),
       _.flattenDeep,
+      clsx,
+      twMerge,
     )(paths)
   }

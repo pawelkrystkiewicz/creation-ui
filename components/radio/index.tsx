@@ -7,17 +7,10 @@ import { RadioProps } from './radio.types'
 const Radio = forwardRef<HTMLInputElement, RadioProps>((props, ref: ForwardedRef<HTMLInputElement>) => {
   const { helperText, error, label, size = 'md', className, id, ...rest } = props
   const componentId = useId(id)
-
+  const styles = selector(props)
   return (
-    <div className={clsx(selector('wrapper', props))}>
-      <input
-        ref={ref}
-        className={clsx(selector('input', props))}
-        type="radio"
-        name={componentId}
-        id={componentId}
-        {...rest}
-      />
+    <div className={styles('wrapper')}>
+      <input ref={ref} className={styles('input')} type="radio" name={componentId} id={componentId} {...rest} />
       {label && (
         <label className="inline-block text-gray-800" htmlFor={componentId}>
           {label}

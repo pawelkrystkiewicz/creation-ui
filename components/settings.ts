@@ -18,6 +18,14 @@ export const settings = {
   defaultTexts: {
     invalidInput: 'Input invalid',
   },
+  zIndex: {
+    base: 'z-0',
+    dropdowns: 'z-10',
+    tooltips: 'z-20',
+    overlays: 'z-30',
+    modals: 'z-40',
+    notifications: 'z-50',
+  },
 }
 
 // https://tailwindcss.com/docs/responsive-design
