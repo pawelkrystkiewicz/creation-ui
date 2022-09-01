@@ -1,4 +1,4 @@
-import { Loader } from '@components/loader'
+import Loader from '@components/loader'
 import { NavigationTitle } from '@components/navigation/navigation'
 import Popover from '@components/popover'
 import type { NextPage } from 'next'

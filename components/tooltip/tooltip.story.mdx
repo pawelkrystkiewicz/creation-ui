@@ -1,0 +1,81 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import Tooltip from './'
+import Icon from '@components/icon'
+
+<Meta title="MDX/Tooltip" component={Tooltip} />
+
+export const Template = args => (
+  <Tooltip {...args}>
+    <div className="m-20">Text</div>
+  </Tooltip>
+)
+
+export const defaultProps = {
+  content: (
+    <div className="flex">
+      Hello&nbsp;
+      <Icon icon="info" className="text-xs" />
+    </div>
+  ),
+  placement: 'top',
+}
+
+# Tooltip
+
+Tooltip component
+
+<br />
+
+<Story
+  name="Main"
+  args={{
+    ...defaultProps,
+  }}>
+  {Template.bind({})}
+</Story>
+
+<br />
+
+## Placement
+
+Each button needs to have set size:
+
+- `top`
+- `bottom`
+- `right`
+- `left`
+
+<br />
+
+<Canvas>
+  <Story
+    name="Top"
+    args={{
+      ...defaultProps,
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Bottom"
+    args={{
+      ...defaultProps,
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Left"
+    args={{
+      ...defaultProps,
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Right"
+    args={{
+      ...defaultProps,
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Tooltip} />

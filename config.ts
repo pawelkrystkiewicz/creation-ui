@@ -1,5 +1,5 @@
 const config = {
-  appName: 'Gemini UI',
+  appName: 'Astro UI',
   createdBy: 'ChunkCreations',
   author: {
     name: 'Paweł Krystkiewicz',

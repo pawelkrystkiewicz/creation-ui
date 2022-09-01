@@ -1,33 +1,14 @@
-import clsx from 'clsx'
-import { ElementColor, ElementSize } from './types'
+import { twMerge } from 'tailwind-merge'
+import { selector } from './loader.classes'
+import { LoaderProps } from './loader.types'
 
-interface LoaderProps {
-  /**
-   * Use white loader
-   */
-  white?: boolean
-  /**
-   * What color to use for the loader.
-   */
-  color?: ElementColor
-  /**
-   * How large should the button be?
-   */
-  size?: ElementSize
-}
-
-const sizes: Record<ElementSize, string> = {
-  sm: 'h-4 w-4',
-  md: 'h-5 w-5',
-  lg: 'h-6 w-6',
-}
-
-export const Loader = ({ size = 'md', white }: LoaderProps) => {
+const Loader = (props: LoaderProps) => {
+  const classes = selector(props)
   return (
-    <div className="flex justify-center items-center">
+    <div className={twMerge(classes('wrapper'), props.className)}>
       <svg
         aria-hidden="true"
-        className={clsx(`mr-2 text-gray-200 animate-spin`, sizes[size], !white ? `fill-blue-600` : 'fill-white')}
+        className={classes('icon')}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -44,3 +25,9 @@ export const Loader = ({ size = 'md', white }: LoaderProps) => {
     </div>
   )
 }
+
+Loader.defaultProps = {
+  size: 'md',
+}
+
+export default Loader

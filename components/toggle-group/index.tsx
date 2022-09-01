@@ -1,4 +1,5 @@
 import { RadioGroup } from '@headlessui/react'
+import { twMerge } from 'tailwind-merge'
 import { selector } from './toggle-group.classes'
 import { ToggleGroupOption, ToggleGroupProps } from './toggle-group.types'
 
@@ -7,7 +8,7 @@ const ToggleGroup = (props: ToggleGroupProps) => {
   const styles = selector(props)
   return (
     <div className={styles('wrapper')}>
-      <RadioGroup className={(styles('group'), className)} {...rest}>
+      <RadioGroup className={twMerge(styles('group'), className)} {...rest}>
         <RadioGroup.Label className={styles('title')}>{title}</RadioGroup.Label>
         <div className={styles('option')}>
           {options.map(({ label, value, disabled }: ToggleGroupOption) => (

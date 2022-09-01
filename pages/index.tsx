@@ -70,6 +70,11 @@ const Home: NextPage = () => {
       description: 'Tooltips',
       link: '/tooltips',
     },
+    {
+      title: 'Loading Overlay',
+      description: 'Loading Overlay',
+      link: '/loading-overlay',
+    },
   ]
 
   return (

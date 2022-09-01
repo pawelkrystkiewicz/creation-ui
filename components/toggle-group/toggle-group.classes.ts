@@ -2,7 +2,7 @@ import { classesSelector } from '@root/utils/classes-selector'
 
 const classes = {
   wrapper: {
-    base: ['bg-gray-50', 'w-fit', 'px-0.5', 'py-0.5', 'rounded-lg', 'relative', 'border', 'border-gray-300', 'flex'],
+    base: ['bg-gray-50', 'w-fit', 'rounded', 'relative', 'border', 'border-gray-300', 'flex'],
     required: [],
     readOnly: ['select-none'],
     disabled: ['select-none'],
@@ -24,7 +24,7 @@ const classes = {
     },
   },
   option: {
-    base: ['flex', 'gap-2', 'flex-nowrap'],
+    base: ['flex', 'flex-nowrap'],
     required: [],
     readOnly: ['select-none'],
     disabled: ['select-none'],
@@ -42,33 +42,30 @@ const classes = {
     size: {
       sm: ['-top-5'],
       md: ['-top-6'],
-      lg: ['-top-6'],
+      lg: ['-top-7'],
     },
   },
   options: {
     base: [
+      'p-2',
       'cursor-pointer',
       'focus:outline-none',
-      'bg-white',
-      'border-gray-200',
       'text-gray-900',
-      'hover:bg-gray-50',
-      'border',
-      'rounded',
+      'hover:bg-gray-100',
+      'border-r',
+      'last:border-b-0',
       'flex',
       'flex-nowrap',
       'items-center',
       'justify-center',
-      'font-medium',
       'uppercase',
-      'px-2',
       'shadow-none',
     ],
     required: [],
     readOnly: ['select-none'],
     disabled: ['opacity-25', 'cursor-not-allowed'],
-    active: ['ring-2', 'ring-offset-2', 'ring-blue-500'],
-    checked: ['!bg-blue-600', '!border-transparent', '!text-white', 'hover:!bg-blue-700', '!shadow'],
+    active: [],
+    checked: ['!bg-gray-300/50'],
     size: {
       sm: [],
       md: [],

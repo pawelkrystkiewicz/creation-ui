@@ -1,4 +1,4 @@
-import { Loader } from '@components/loader'
+import Loader from '@components/loader'
 import { settings } from '@components/settings'
 import { ElementSize, ElementVariants } from '@components/types'
 import { useId } from '@root/hooks/use-id'
