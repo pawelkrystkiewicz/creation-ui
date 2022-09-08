@@ -1,10 +1,10 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import Autocomplete from './'
+import Select from './'
 import Icon from '@components/icon'
 
-<Meta title="MDX/Autocomplete" component={Autocomplete} />
+<Meta title="MDX/Select" component={Select} />
 
-export const Template = args => <Autocomplete {...args} />
+export const Template = args => <Select {...args} />
 export const options = [
   { id: 1, value: 'Wade Cooper' },
   { id: 2, value: 'Arlene Mccoy' },
@@ -14,14 +14,14 @@ export const options = [
   { id: 6, value: 'Hellen Schmidt' },
 ]
 
-# Autocomplete
+# Select
 
 <Story
-  name="Autocomplete"
+  name="Select"
   args={{
     options,
     fullwidth: true,
-    label: 'Autocomplete',
+    label: 'Select',
   }}>
   {Template.bind({})}
 </Story>
@@ -30,7 +30,7 @@ export const options = [
 
 ## Sizes
 
-Autocomplete as all the other components uses 3 basic sizes:
+Select as all the other components uses 3 basic sizes:
 
 - `sm`.
 - `md`
@@ -70,7 +70,7 @@ Autocomplete as all the other components uses 3 basic sizes:
 
 ## Variants
 
-Autocomplete can have different variants that will change their look:
+Select can have different variants that will change their look:
 
 - `contained`
 - `outlined`
@@ -116,6 +116,7 @@ Autocomplete can have different variants that will change their look:
   <Story
     name="Read only"
     args={{
+      options,
       label: 'Read only',
       readOnly: true,
       checked: true,
@@ -125,6 +126,7 @@ Autocomplete can have different variants that will change their look:
   <Story
     name="Required"
     args={{
+      options,
       label: 'Required',
       required: true,
     }}>
@@ -133,6 +135,7 @@ Autocomplete can have different variants that will change their look:
   <Story
     name="Disabled"
     args={{
+      options,
       label: 'Disabled',
       disabled: true,
     }}>
@@ -141,6 +144,7 @@ Autocomplete can have different variants that will change their look:
   <Story
     name="Error"
     args={{
+      options,
       label: 'Error',
       error: 'Invalid input',
     }}>
@@ -148,4 +152,4 @@ Autocomplete can have different variants that will change their look:
   </Story>
 </Canvas>
 
-<ArgsTable of={Autocomplete} />
+<ArgsTable of={Select} />

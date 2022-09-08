@@ -1,3 +1,4 @@
+import { AutocompleteOptionsType } from './autocomplete/autocomplete.types'
 import { ElementColor } from './types'
 
 export const settings = {
@@ -25,6 +26,10 @@ export const settings = {
     overlays: 'z-30',
     modals: 'z-40',
     notifications: 'z-50',
+  },
+  f: {
+    getLimitTextDefault: (more: number) => `+${more}`,
+    defaultOptionFormatter: (option?: AutocompleteOptionsType) => (option?.value ? `${option.value}` : ''),
   },
 }
 

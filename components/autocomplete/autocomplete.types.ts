@@ -1,3 +1,4 @@
+import SelectOption from '@components/shared/option'
 import React from 'react'
 
 export type AutocompleteOptionsType = { id: string | number; value: string | number | null } | any | null

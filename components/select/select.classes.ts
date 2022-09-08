@@ -9,7 +9,7 @@ import { classesSelector } from '@root/utils/classes-selector'
 
 export const classes = {
   wrapper: {
-    base: ['w-full'],
+    base: ['min-w-fit'],
     fullWidth: ['w-full'],
     required: [],
     readOnly: readOnlyStateClasses,
@@ -20,23 +20,18 @@ export const classes = {
       lg: ['h-16'],
     },
   },
-  option: {
-    base: ['relative', 'cursor-pointer', 'select-none', 'py-2', 'px-4', 'text-gray-900'],
-    fullWidth: [],
-    required: [],
-    readOnly: readOnlyStateClasses,
-    disabled: disabledStateClasses,
-    size: sizes,
-    selected: ['bg-blue-100'],
-    active: ['bg-blue-500', '!text-white'],
-  },
+
   options: dropdownListClasses,
   label: {
     base: ['flex', 'items-center'],
     required: ["after:content-['*']", 'after:ml-0.5', 'after:text-red-500'],
     readOnly: readOnlyStateClasses,
     disabled: disabledStateClasses,
-    size: sizes,
+    size: {
+      sm: [...sizes.sm, 'mb-0'],
+      md: [...sizes.md, 'mb-0.5'],
+      lg: [...sizes.lg, 'mb-1'],
+    },
   },
   helperText: {
     base: ['text-gray-500', 'mt-1'],
@@ -51,13 +46,17 @@ export const classes = {
     readOnly: readOnlyStateClasses,
     disabled: disabledStateClasses,
   },
-  input: {
-    base: baseInputClasses,
+  button: {
+    base: ['relative', 'cursor-pointer', 'py-2', 'pl-3', 'pr-10', ...baseInputClasses],
     fullWidth: ['w-full'],
     required: [],
     readOnly: readOnlyStateClasses,
     disabled: disabledStateClasses,
-    size: sizes,
+    size: {
+      sm: [...sizes.sm, 'w-24'],
+      md: [...sizes.md, 'w-24'],
+      lg: [...sizes.lg, 'w-24'],
+    },
   },
 }
 export const selector = classesSelector(classes)

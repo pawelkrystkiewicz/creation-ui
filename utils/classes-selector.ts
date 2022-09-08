@@ -5,15 +5,15 @@ import { twMerge } from 'tailwind-merge'
 
 export type Classes = {
   base: string[]
-  required: string[]
-  readOnly: string[]
-  disabled: string[]
+  required?: string[]
+  readOnly?: string[]
+  disabled?: string[]
   active?: string[]
   checked?: string[]
   size?: {
-    sm: string[]
-    md: string[]
-    lg: string[]
+    sm?: string[]
+    md?: string[]
+    lg?: string[]
   }
 }
 
