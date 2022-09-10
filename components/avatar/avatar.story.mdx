@@ -128,4 +128,39 @@ Avatar comes in 3 different shapes and as all the other components uses 3 basic 
   </Story>
 </Canvas>
 
+## With notification badge
+
+<Canvas>
+  <Story
+    name="With dot notifications"
+    args={{
+      ...defaultProps,
+      variant: 'circle',
+      size: 'sm',
+      badge: { type: 'dot' },
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With 5 notifications"
+    args={{
+      ...defaultProps,
+      variant: 'circle',
+      size: 'md',
+      badge: { type: 'count', count: 5 },
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With 99 notifications"
+    args={{
+      ...defaultProps,
+      variant: 'square',
+      size: 'md',
+      badge: { type: 'count', count: 99 },
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
 <ArgsTable of={Avatar} />

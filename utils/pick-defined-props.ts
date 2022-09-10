@@ -1,4 +1,4 @@
-import _, { isNil, omitBy, pick, values } from 'lodash'
+import _, { pick, values } from 'lodash'
 
 export const getDefinedProps = (props: any): any =>
   _.omitBy(props, v => (typeof v === 'string' ? false : v === true ? false : true))
