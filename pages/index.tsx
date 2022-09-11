@@ -75,6 +75,11 @@ const Home: NextPage = () => {
       description: 'Loading Overlay',
       link: '/loading-overlay',
     },
+    {
+      title: 'Modal',
+      description: '',
+      link: '/modal',
+    },
   ]
 
   return (

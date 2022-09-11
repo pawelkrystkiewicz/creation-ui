@@ -1,6 +1,10 @@
+import { settings } from '@components/settings'
 import { classesSelector } from '@root/utils/classes-selector'
 
 const classes = {
+  wrapper: {
+    base: ['relative'],
+  },
   img: {
     base: ['inline-block', 'ring-2', 'ring-white'],
     variant: {
@@ -14,25 +18,48 @@ const classes = {
       lg: ['h-20', 'w-20'],
     },
   },
-  notifications: {
-    base: [],
+  badgePulse: {
+    base: ['absolute', 'rounded-full', 'opacity-75', 'animate-ping', 'bg-red-400', 'p-3'],
     badge: {
-      base: [],
-      count: [
-        'inline-flex ',
-        'items-center',
-        'justify-center',
-        'px-2',
-        'py-1',
-        'mr-2',
-        'text-xs',
-        'font-bold',
-        'leading-none',
-        'text-red-100',
-        'bg-red-600',
-        'rounded-full',
-      ],
-      dot: ['inline-block', 'w-2', 'h-2', 'mr-2', 'bg-red-600', 'rounded-full'],
+      type: {
+        count: [],
+        dot: ['left-0', 'bottom-0', '!p-1.5'],
+      },
+    },
+  },
+  notifications: {
+    base: [
+      'relative',
+      '-bottom-3',
+      '-right-3',
+      'rounded-full',
+      'bg-red-600',
+      'text-red-100',
+      'absolute',
+      'p-1.5',
+      'm-2',
+      'outline',
+      'outline-white',
+      'text-sm',
+      'inline-flex',
+      settings.zIndex.dropdowns,
+    ],
+    badge: {
+      // pulse: ['animate-ping', 'bg-red-600', 'opacity-75'],
+      placement: {
+        horizontal: {
+          top: ['-top-3'],
+          bottom: ['-bottom-3'],
+        },
+        vertical: {
+          right: ['-right-3'],
+          left: ['-left-3'],
+        },
+      },
+      type: {
+        count: ['items-center', 'justify-center', 'leading-none', 'w-6', 'h-6'],
+        dot: ['w-3', 'h-3'],
+      },
     },
   },
 }

@@ -137,7 +137,7 @@ Avatar comes in 3 different shapes and as all the other components uses 3 basic 
       ...defaultProps,
       variant: 'circle',
       size: 'sm',
-      badge: { type: 'dot' },
+      badge: { type: 'dot', placement: { horizontal: 'right', vertical: 'top' } },
     }}>
     {Template.bind({})}
   </Story>
@@ -147,7 +147,7 @@ Avatar comes in 3 different shapes and as all the other components uses 3 basic 
       ...defaultProps,
       variant: 'circle',
       size: 'md',
-      badge: { type: 'count', count: 5 },
+      badge: { type: 'count', count: 5, placement: { horizontal: 'right', vertical: 'top' } },
     }}>
     {Template.bind({})}
   </Story>
@@ -157,7 +157,29 @@ Avatar comes in 3 different shapes and as all the other components uses 3 basic 
       ...defaultProps,
       variant: 'square',
       size: 'md',
-      badge: { type: 'count', count: 99 },
+      badge: { type: 'count', count: 99, placement: { horizontal: 'left', vertical: 'bottom' } },
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With 99 notifications pulsing"
+    args={{
+      ...defaultProps,
+      variant: 'square',
+      size: 'md',
+      badgePulse: true,
+      badge: { type: 'count', count: 99, placement: { horizontal: 'left', vertical: 'top' }, pulse: true },
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With dot notifications pulsing"
+    args={{
+      ...defaultProps,
+      variant: 'circle',
+      size: 'sm',
+      badgePulse: true,
+      badge: { type: 'dot', pulse: true, placement: { horizontal: 'right', vertical: 'top' } },
     }}>
     {Template.bind({})}
   </Story>

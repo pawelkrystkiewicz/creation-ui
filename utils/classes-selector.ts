@@ -1,6 +1,6 @@
-import { getDefinedProps } from '@root/utils/pick-defined-props'
 import clsx from 'clsx'
-import _, { get, keys } from 'lodash'
+import { flatten } from 'flat'
+import { get, keys, partialRight, map, flow, flattenDeep } from 'lodash'
 import { twMerge } from 'tailwind-merge'
 
 export type Classes = {
@@ -32,32 +32,48 @@ export type Classes = {
 export const classesSelector =
   (classes: Record<string, Classes>) =>
   <T = any>(props: T) =>
-  (part: string): string => {
+  (part: string, classNames?: string | string[]): string => {
     /**
      * @description : Returns the wrapper className
      */
     // whitelist of props that values create path
-    const whitelist = ['size', 'orientation', 'variant', 'badge']
+    const whitelist = [
+      'size',
+      'orientation',
+      'variant',
+      'badge.type',
+      'badge.placement.horizontal',
+      'badge.placement.vertical',
+      'placement.horizontal',
+      'placement.vertical',
+    ]
     /**
      * Pick defined props from props object
      */
-    console.log((props as any)?.badge)
-    const paths = _.flow(
-      getDefinedProps, // czy na pewno zostawia "badge" w spokoju?
+    const debug = (args: any): any => {
+      // console.log(args)
+      return args
+    }
+
+    const paths = flow(
+      flatten as any,
+      debug,
       keys,
-      _.partialRight(
-        _.map,
-        (key: string) => `${part}.${key}${whitelist.includes(key) ? `.${(props as any)[key]}` : ''}`,
+      partialRight(
+        map,
+        (key: string) => `${part}.${key}${whitelist.includes(key) ? `.${get(props as any, key.split('.'))}` : ''}`,
       ),
     )({ ...props, 'base': true })
-    console.log(paths)
+
     /**
      * Pick classNames values from classes object
      */
-    return _.flow(
-      _.partialRight(_.map, (path: string) => get(classes, path, [])),
-      _.flattenDeep,
+    const result = flow(
+      partialRight(map, (path: string) => get(classes, path, [])),
+      flattenDeep,
       clsx,
       twMerge,
     )(paths)
+
+    return twMerge(result, classNames)
   }

@@ -9,7 +9,6 @@ const hours = new Array(25).fill(0).map((_, idx) => ({
   hour: idx,
   start: idx === 0 ? 1 : idx * 4,
 }))
-console.log(hours)
 
 const TimelineHorizontal = ({ className, events, schedule }: TimelineHorizontalProps) => {
   const [now, setNow] = useState(new Date().toISOString())
@@ -23,7 +22,7 @@ const TimelineHorizontal = ({ className, events, schedule }: TimelineHorizontalP
       clearInterval(interval)
     }
   }, [])
-  console.log(now)
+
   return (
     <>
       <div className={clsx('w-full grid grid-cols-96 grid-rows-4  bg-slate-200 h-10', roundness, className)}>

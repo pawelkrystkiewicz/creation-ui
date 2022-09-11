@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(path.join(__filename, '..'))
-console.log(__dirname)
 
 git.getLastCommit((err, commit = { hash: 'n/a' }) => {
   if (err) {

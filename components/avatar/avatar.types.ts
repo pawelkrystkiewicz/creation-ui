@@ -1,11 +1,11 @@
 import React from 'react'
-import { ElementSize } from '@components/types'
+import { ElementPlacement, ElementSize } from '@components/types'
 
 export const AVATAR_VARIANTS = ['circle', 'rounded', 'square'] as const
 
 export type AvatarVariant = typeof AVATAR_VARIANTS[number]
 
-export type Badge =
+export type Badge = { placement?: ElementPlacement } & (
   | {
       type: 'dot'
       count: null
@@ -14,6 +14,7 @@ export type Badge =
       type: 'count'
       count: number
     }
+)
 
 type AvatarProps = Omit<React.ComponentProps<'img'>, 'size'> & {
   /**
@@ -32,5 +33,9 @@ type AvatarProps = Omit<React.ComponentProps<'img'>, 'size'> & {
    * Notification badge
    */
   badge?: Badge
+  /**
+   * Notification badge pulsing?
+   */
+  badgePulse?: Badge
 }
 export default AvatarProps
