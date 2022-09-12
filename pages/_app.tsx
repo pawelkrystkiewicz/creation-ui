@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import '../styles/globals.css'
 import '../styles/timeline.css'
+import '../styles/date-picker.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

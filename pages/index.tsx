@@ -80,6 +80,11 @@ const Home: NextPage = () => {
       description: '',
       link: '/modal',
     },
+    {
+      title: 'DatePicker',
+      description: 'Date and Time Pickers',
+      link: '/date-pickers',
+    },
   ]
 
   return (

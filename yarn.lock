@@ -1647,7 +1647,7 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@popperjs/core@^2.5.4", "@popperjs/core@^2.6.0":
+"@popperjs/core@^2.5.4", "@popperjs/core@^2.6.0", "@popperjs/core@^2.9.2":
   version "2.11.6"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
@@ -3106,6 +3106,16 @@
   integrity sha512-iHAFGaVOrWi00/q7oBybggGsz5TOmwOW4M1H9sT7i9lly4qFC8XOgsdf6jUsoaOz2sknFHALEtZqCoDbokdJ2Q==
   dependencies:
     "@types/react" "*"
+
+"@types/react-datepicker@^4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@types/react-datepicker/-/react-datepicker-4.4.2.tgz#13ab25a5fff7f3da4c5380c471efd8b38f53010e"
+  integrity sha512-g8DhWvYmaIMLzVrIEVLXncylyImyBaoPsEUr3yR13JDaaHoebhDorqnVv4tLkNGa8SjBB8SAOQvxD5jaPNBX8A==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
+    "@types/react" "*"
+    date-fns "^2.0.1"
+    react-popper "^2.2.5"
 
 "@types/react-dom@18.0.5":
   version "18.0.5"
@@ -4625,6 +4635,11 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.2.6:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
+
 clean-css@^4.2.3:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.4.tgz#733bf46eba4e607c6891ea57c24a989356831178"
@@ -5185,6 +5200,11 @@ cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha512-NJGVKPS81XejHcLhaLJS7plab0fK3slPh11mESeeDq2W4ZI5kUKK/LRRdVDvjJseojbPB7ZwjnyOybg3Igea/A==
+
+date-fns@^2.0.1, date-fns@^2.24.0:
+  version "2.29.2"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.2.tgz#0d4b3d0f3dff0f920820a070920f0d9662c51931"
+  integrity sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0:
   version "2.6.9"
@@ -9956,6 +9976,18 @@ react-colorful@^5.1.2:
   resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.6.1.tgz#7dc2aed2d7c72fac89694e834d179e32f3da563b"
   integrity sha512-1exovf0uGTGyq5mXQT0zgQ80uvj2PCwvF8zY1RN9/vbJVSjSo3fsB/4L3ObbF7u70NduSiK4xu4Y6q1MHoUGEw==
 
+react-datepicker@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-4.8.0.tgz#11b8918d085a1ce4781eee4c8e4641b3cd592010"
+  integrity sha512-u69zXGHMpxAa4LeYR83vucQoUCJQ6m/WBsSxmUMu/M8ahTSVMMyiyQzauHgZA2NUr9y0FUgOAix71hGYUb6tvg==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
+    classnames "^2.2.6"
+    date-fns "^2.24.0"
+    prop-types "^15.7.2"
+    react-onclickoutside "^6.12.0"
+    react-popper "^2.2.5"
+
 react-docgen-typescript@^2.1.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-2.2.2.tgz#4611055e569edc071204aadb20e1c93e1ab1659c"
@@ -10044,6 +10076,11 @@ react-merge-refs@^1.0.0:
   resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-1.1.0.tgz#73d88b892c6c68cbb7a66e0800faa374f4c38b06"
   integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
 
+react-onclickoutside@^6.12.0:
+  version "6.12.2"
+  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.12.2.tgz#8e6cf80c7d17a79f2c908399918158a7b02dda01"
+  integrity sha512-NMXGa223OnsrGVp5dJHkuKxQ4czdLmXSp5jSV9OqiCky9LOpPATn3vLldc+q5fK3gKbEHvr7J1u0yhBh/xYkpA==
+
 react-popper-tooltip@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/react-popper-tooltip/-/react-popper-tooltip-3.1.1.tgz#329569eb7b287008f04fcbddb6370452ad3f9eac"
@@ -10053,7 +10090,7 @@ react-popper-tooltip@^3.1.1:
     "@popperjs/core" "^2.5.4"
     react-popper "^2.2.4"
 
-react-popper@^2.2.4:
+react-popper@^2.2.4, react-popper@^2.2.5:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-2.3.0.tgz#17891c620e1320dce318bad9fede46a5f71c70ba"
   integrity sha512-e1hj8lL3uM+sgSR4Lxzn5h1GxBlpa4CQz0XLF8kx4MDrDRWY0Ena4c97PUeSX9i5W3UAfDP0z0FXCTQkoXUl3Q==
