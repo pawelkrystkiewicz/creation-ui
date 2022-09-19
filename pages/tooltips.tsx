@@ -1,11 +1,10 @@
 import { NavigationTitle } from '@components/navigation/navigation'
-import Radio from '@components/radio'
 import Tooltip from '@components/tooltip'
 import { ElementSize } from '@components/types'
 import type { NextPage } from 'next'
-import { Button } from '..'
+import Button from '@components/button'
 
-const Home: NextPage = () => {
+const TooltipPage: NextPage = () => {
   const examples = [
     {
       label: 'Example 1',
@@ -35,4 +34,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default TooltipPage

@@ -1,5 +1,5 @@
 const config = {
-  appName: 'Astro UI',
+  appName: 'React Design System',
   createdBy: 'ChunkCreations',
   author: {
     name: 'Paweł Krystkiewicz',
