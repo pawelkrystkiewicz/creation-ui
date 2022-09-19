@@ -6,7 +6,7 @@ import type { NextPage } from 'next'
 const Home: NextPage = () => {
   return (
     <>
-      <NavigationTitle />
+
       <div
         className="flex flex-wrap gap-5 w-full
           h-[80vh] overflow-y-auto

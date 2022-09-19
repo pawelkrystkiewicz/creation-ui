@@ -35,7 +35,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <NavigationTitle />
+
       <div>
         {variants.map(({ props }, idx) => (
           <div className="w-full" key={idx}>

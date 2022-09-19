@@ -22,7 +22,7 @@ const Home: NextPage = () => {
   }, [startDate])
   return (
     <>
-      <NavigationTitle />
+
       <div>
         <DatePicker
           selectsRange={true as any}

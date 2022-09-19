@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <NavigationTitle />
+
       <div className="flex flex-col gap-5 prose-sm">
         {variants.map(({ title, props }) => (
           <div className="relative w-full bg-white shadow-md rounded-lg p-3 overflow-clip">

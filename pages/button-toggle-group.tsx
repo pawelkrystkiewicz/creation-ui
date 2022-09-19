@@ -49,7 +49,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <NavigationTitle />
+
       <div className="flex flex-col gap-3">
         <h2>Date range</h2>
         <ToggleGroup options={options} value={value} onChange={setValue} size="sm" title="Select a time period" />

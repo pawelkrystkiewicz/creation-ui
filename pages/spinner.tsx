@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <NavigationTitle />
+
       <div>
         {variants.map(({ title, props }) => (
           <div className='w-10'>

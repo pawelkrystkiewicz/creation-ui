@@ -21,7 +21,7 @@ class MyDocument extends Document {
 
           {/* <script src="/static/theme.js" /> */}
         </Head>
-        <body className="h-screen min-h-screen">
+        <body>
           <Main />
           <NextScript />
         </body>

@@ -1,5 +1,3 @@
-import { Logo } from '@components/logo/logo'
-import config from '@root/config'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 
@@ -89,20 +87,13 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div id="header">
-        <h1 className="flex align-center gap-5">
-          <Logo size="xl" />
-          {config.appName}
-        </h1>
-        <span className="text-sm">Design System</span>
-      </div>
       <p>Comprehensive list of UI components for React built with Tailwind</p>
       <div className="flex flex-col items-start">
         <div>
-          <h2>Components</h2>
+          <h2 className='font-semibold text-2xl mt-3 mb-1'>Components</h2>
           <p>List of available components</p>
         </div>
-        <div className="overflow-y-auto max-h-96 w-full">
+        <div className="overflow-y-auto max-h-[50vh] w-full mt-1">
           {elements.map(({ title, description, link }) => (
             <div key={link} className="flex flex-col items-start">
               <Link href={link}>

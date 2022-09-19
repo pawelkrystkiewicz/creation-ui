@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   const ButtonIcon = <Icon icon="search" />
   return (
     <>
-      <NavigationTitle />
+
       <div className="flex gap-3 m-5">
         <Button loading size="lg" color={'blue'}>
           Hello

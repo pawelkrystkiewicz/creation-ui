@@ -1,4 +1,3 @@
-import { NavigationTitle } from '@components/navigation/navigation'
 import { events } from '@components/special/fakeData'
 import TimelineHorizontal from '@components/special/timeline-horizontal'
 import { Schedule, TimelineEvent } from '@components/special/types'
@@ -20,14 +19,7 @@ const Home: NextPage = () => {
     end: '2022-08-13T14:00:00.000Z',
   }
 
-  return (
-    <>
-      <NavigationTitle />
-      <div>
-        <TimelineHorizontal events={timelineEvents} schedule={schedule} />
-      </div>
-    </>
-  )
+  return <TimelineHorizontal events={timelineEvents} schedule={schedule} />
 }
 
 export default Home

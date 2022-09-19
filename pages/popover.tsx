@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   const Trigger = () => <div>Click me!</div>
   return (
     <>
-      <NavigationTitle />
+
       <div>
         <Popover trigger={Trigger} body={Body} />
       </div>

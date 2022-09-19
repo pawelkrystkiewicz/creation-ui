@@ -22,7 +22,7 @@ const TooltipPage: NextPage = () => {
 
   return (
     <>
-      <NavigationTitle />
+
       <div>
         {examples.map(({ label, size }) => (
           <Tooltip content={label}>

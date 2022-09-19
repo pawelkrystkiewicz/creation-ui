@@ -6,7 +6,7 @@ import type { NextPage } from 'next'
 const Home: NextPage = () => {
   return (
     <>
-      <NavigationTitle />
+
 
       <div className="flex flex-col gap-4">
         <Switch size="sm" />

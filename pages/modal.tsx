@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <NavigationTitle />
+
       <div className="bg-red-400 h-full w-full">
         <Button onClick={onOpen}>Modal</Button>
         <Modal onClose={onClose} open={open}>
