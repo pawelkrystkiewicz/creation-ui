@@ -20,10 +20,9 @@ export const classes = {
       'py-0.5',
       'mb-1',
     ],
-
-    selected: ['bg-blue-100', 'font-medium'],
+    selected: ['bg-blue-500', 'font-medium', '!text-white'],
+    active: ['bg-blue-100', '!text-inherit'],
     readOnly: readOnlyStateClasses,
-    active: ['bg-blue-500', '!text-white'],
     disabled: disabledStateClasses,
   },
   multiple: {

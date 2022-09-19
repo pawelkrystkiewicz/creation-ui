@@ -106,7 +106,7 @@ const Home: NextPage = () => {
           {elements.map(({ title, description, link }) => (
             <div key={link} className="flex flex-col items-start">
               <Link href={link}>
-                <div>
+                <div className="cursor-pointer">
                   <b>{title}</b> - <span className="text-sm">{description}</span>
                 </div>
               </Link>

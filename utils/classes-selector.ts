@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { flatten } from 'flat'
-import { get, keys, partialRight, map, flow, flattenDeep } from 'lodash'
+import { get, keys, partialRight, map, flow, flattenDeep, omitBy, isNil, pickBy, negate } from 'lodash'
 import { twMerge } from 'tailwind-merge'
 
 export type Classes = {
@@ -51,12 +51,13 @@ export const classesSelector =
      * Pick defined props from props object
      */
     const debug = (args: any): any => {
-      // console.log(args)
+      console.debug(args)
       return args
     }
 
     const paths = flow(
       flatten as any,
+      partialRight(pickBy),
       debug,
       keys,
       partialRight(
@@ -64,7 +65,7 @@ export const classesSelector =
         (key: string) => `${part}.${key}${whitelist.includes(key) ? `.${get(props as any, key.split('.'))}` : ''}`,
       ),
     )({ ...props, 'base': true })
-
+    // console.log(paths)
     /**
      * Pick classNames values from classes object
      */
