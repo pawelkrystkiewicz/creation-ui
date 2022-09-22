@@ -3,7 +3,7 @@ import { ElementColor } from './types'
 
 export const settings = {
   roundness: {
-    default: 'rounded',
+    default: 'rounded-md',
     max: 'rounded-3xl',
   },
   color: 'blue' as ElementColor,

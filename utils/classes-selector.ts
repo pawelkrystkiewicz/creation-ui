@@ -46,6 +46,7 @@ export const classesSelector =
       'badge.placement.vertical',
       'placement.horizontal',
       'placement.vertical',
+      'status',
     ]
     /**
      * Pick defined props from props object

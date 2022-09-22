@@ -799,6 +799,7 @@ export const icons = [
   'storage',
   'store',
   'store_mall_directory',
+  'straight',
   'straighten',
   'streetview',
   'strikethrough_s',

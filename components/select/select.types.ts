@@ -64,4 +64,6 @@ export interface SelectProps {
    */
   multiple?: boolean
   highlightSearch?: boolean
+
+  onChange?: (value: SelectOptionsType) => void
 }

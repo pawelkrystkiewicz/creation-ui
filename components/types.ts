@@ -20,7 +20,7 @@ export const ELEMENT_COLORS = [
   'yellow',
   'zinc',
 ]
-
+export const ELEMENT_STATUS = ['active', 'error', 'warning', 'success'] as const
 export const ELEMENT_SIZES = ['sm', 'md', 'lg'] as const
 export const ELEMENT_THEMES = ['dark', 'light'] as const
 export const ELEMENT_VARIANTS = ['contained', 'outlined', 'text'] as const
@@ -28,6 +28,7 @@ export const ELEMENT_ORIENTATION = ['vertical', 'horizontal'] as const
 export const ELEMENT_PLACEMENT_VERTICAL = ['top', 'bottom'] as const
 export const ELEMENT_PLACEMENT_HORIZONTAL = ['right', 'left'] as const
 
+export type ElementStatus = typeof ELEMENT_STATUS[number]
 export type ElementSize = typeof ELEMENT_SIZES[number]
 export type ElementColor = typeof ELEMENT_COLORS[number]
 export type ElementOrientation = typeof ELEMENT_ORIENTATION[number]
