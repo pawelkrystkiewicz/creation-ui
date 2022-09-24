@@ -32,14 +32,21 @@ const Modal = (props: ModalProps) => {
 
   return (
     <Transition appear show={open} as={Fragment}>
-      <Dialog as="div" className={classes('dialog', className)} onClose={onClose} {...rest}>
+      <Dialog
+        as='div'
+        className={classes('dialog', className)}
+        onClose={onClose}
+        {...rest}
+      >
         <Transition.Child as={Fragment} {...transitionProps.overlay}>
           <div className={classes('overlay')} />
         </Transition.Child>
-        <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4 text-center">
+        <div className='fixed inset-0 overflow-y-auto'>
+          <div className='flex min-h-full items-center justify-center p-4 text-center'>
             <Transition.Child as={Fragment} {...transitionProps.modal}>
-              <Dialog.Panel className={classes('panel')}>{children}</Dialog.Panel>
+              <Dialog.Panel className={classes('panel')}>
+                {children}
+              </Dialog.Panel>
             </Transition.Child>
           </div>
         </div>

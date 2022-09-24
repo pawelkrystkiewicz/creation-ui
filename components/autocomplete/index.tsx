@@ -1,3 +1,4 @@
+import React from 'react'
 import Icon from '@components/icon'
 import { settings } from '@components/settings'
 import DropdownChevron from '@components/shared/dropdown-chevron'
@@ -8,7 +9,10 @@ import clsx from 'clsx'
 import { flow, isEmpty } from 'lodash'
 import { ChangeEvent, Fragment, useState } from 'react'
 import { selector } from './autocomplete.classes'
-import { AutocompleteOptionsType, AutocompleteProps } from './autocomplete.types'
+import {
+  AutocompleteOptionsType,
+  AutocompleteProps,
+} from './autocomplete.types'
 
 const Autocomplete = (props: AutocompleteProps) => {
   const {
@@ -36,12 +40,17 @@ const Autocomplete = (props: AutocompleteProps) => {
     query === ''
       ? options
       : options?.filter(option =>
-          option.value.toLowerCase().replace(/\s+/g, '').includes(query.toLowerCase().replace(/\s+/g, '')),
+          option.value
+            .toLowerCase()
+            .replace(/\s+/g, '')
+            .includes(query.toLowerCase().replace(/\s+/g, ''))
         )
 
-  const onSearchChange = (e: ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)
+  const onSearchChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setQuery(e.target.value)
   const resetSearch = (): void => setQuery('')
-  const clearSelection: React.MouseEventHandler<HTMLDivElement> = e => flow(setSelected, resetSearch)(null)
+  const clearSelection: React.MouseEventHandler<HTMLDivElement> = e =>
+    flow(setSelected, resetSearch)(null)
   const classes = selector(props)
 
   const isQuery = !isEmpty(query)
@@ -56,8 +65,8 @@ const Autocomplete = (props: AutocompleteProps) => {
       </label>
       <Combobox value={selected} onChange={setSelected} nullable>
         {({ open }) => (
-          <div className="relative mt-1">
-            <div className="">
+          <div className='relative mt-1'>
+            <div className=''>
               <Combobox.Input
                 id={componentId}
                 disabled={rest.disabled}
@@ -68,30 +77,34 @@ const Autocomplete = (props: AutocompleteProps) => {
               />
               {(isQuery || isSelected) && (
                 <div
-                  className="absolute inset-y-0 right-7 flex items-center pr-2 cursor-pointer"
-                  onClick={clearSelection}>
+                  className='absolute inset-y-0 right-7 flex items-center pr-2 cursor-pointer'
+                  onClick={clearSelection}
+                >
                   <Icon
-                    icon="close"
-                    className={clsx('text-gray-400 ease-in-out duration-300 hover:text-gray-800 !text-base')}
+                    icon='close'
+                    className={clsx(
+                      'text-gray-400 ease-in-out duration-300 hover:text-gray-800 !text-base'
+                    )}
                     aria-label={rest.clearText}
                     title={rest.clearText}
                   />
                 </div>
               )}
-              <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
+              <Combobox.Button className='absolute inset-y-0 right-0 flex items-center pr-2'>
                 <DropdownChevron open={open} />
               </Combobox.Button>
             </div>
             {open && (
               <Transition
                 as={Fragment}
-                leave="transition ease-in duration-100"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-                afterLeave={resetSearch}>
+                leave='transition ease-in duration-100'
+                leaveFrom='opacity-100'
+                leaveTo='opacity-0'
+                afterLeave={resetSearch}
+              >
                 <Combobox.Options static className={classes('options')}>
                   {!filteredOptions?.length ? (
-                    <div className="relative cursor-default text-center select-none py-2 px-4 text-gray-700">
+                    <div className='relative cursor-default text-center select-none py-2 px-4 text-gray-700'>
                       {notFoundText}
                       {/* OR create not found option */}
                     </div>
@@ -100,7 +113,8 @@ const Autocomplete = (props: AutocompleteProps) => {
                       <Combobox.Option
                         key={option.id}
                         // className={({ selected, active }) => selector({ ...props, selected, active })('option')}
-                        value={option}>
+                        value={option}
+                      >
                         {({ selected, active, disabled }) => (
                           // @ts-ignore
                           <Option
@@ -121,7 +135,9 @@ const Autocomplete = (props: AutocompleteProps) => {
         )}
       </Combobox>
       {helperText && <div className={classes('helperText')}>{helperText}</div>}
-      <span className={classes('error')}>{error ?? settings.defaultTexts.invalidInput ?? ''}</span>
+      <span className={classes('error')}>
+        {error ?? settings.defaultTexts.invalidInput ?? ''}
+      </span>
     </div>
   )
 }

@@ -27,8 +27,17 @@ const sizeMap: Record<ElementSize, string> = {
   lg: 'h-6 w-6',
 }
 
-const staticClassNames = ['rounded ', 'border-gray-300', 'text-blue-600', 'focus:ring-blue-500']
-const stateDisabled = ['opacity-50', 'pointer-events-none', 'cursor-not-allowed']
+const staticClassNames = [
+  'rounded ',
+  'border-gray-300',
+  'text-blue-600',
+  'focus:ring-blue-500',
+]
+const stateDisabled = [
+  'opacity-50',
+  'pointer-events-none',
+  'cursor-not-allowed',
+]
 
 const Checkbox = ({
   size = 'sm',
@@ -58,20 +67,25 @@ const Checkbox = ({
 
   return (
     <>
-      <div className="mt-6 flex space-x-2 w-full">
-        <div className="flex items-center h-5">
+      <div className='mt-6 flex space-x-2 w-full'>
+        <div className='flex items-center h-5'>
           <input
             ref={ref}
             id={componentId}
             disabled={disabled}
-            type="checkbox"
+            type='checkbox'
             onChange={handleChange}
-            className={clsx(sizeMap[size], staticClassNames, disabled && stateDisabled, className)}
+            className={clsx(
+              sizeMap[size],
+              staticClassNames,
+              disabled && stateDisabled,
+              className
+            )}
             checked={isChecked}
             {...props}
           />
         </div>
-        <label htmlFor={componentId} className="text-sm select-none">
+        <label htmlFor={componentId} className='text-sm select-none'>
           {label}
         </label>
       </div>

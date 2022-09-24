@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
+    "rootDir": "./",
+    "outDir": "./dist",
     "paths": {
+      "@styles": ["./styles"],
+      "@styles/*": ["./styles/*"],
       "@components": ["./components"],
       "@components/*": ["./components/*"],
       "@root": ["."],
@@ -16,8 +20,8 @@
       "@hooks/*": ["./hooks/*"],
       "@assets": ["./assets"],
       "@assets/*": ["./assets/*"],
-      "@models": ["./models"],
-      "@models/*": ["./models/*"]
+      "@types": ["./types"],
+      "@types/*": ["./types/*"]
     }
   }
 }

@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Container>
       <Head>
         <title>{config.appName}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Suspense fallback={<div>Loading...</div>}>
         <Content>

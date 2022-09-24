@@ -21,13 +21,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-
-      <div className="flex flex-col gap-5 prose-sm">
+      <div className='flex flex-col gap-5 prose-sm'>
         {variants.map(({ title, props }) => (
-          <div className="relative w-full bg-white shadow-md rounded-lg p-3 overflow-clip">
+          <div className='relative w-full bg-white shadow-md rounded-lg p-3 overflow-clip'>
             <LoadingOverlay {...(props as any)} />
-            <h3 className="text-blue-500">{title}</h3>
-            <p className="py-3">
+            <h3 className='text-blue-500'>{title}</h3>
+            <p className='py-3'>
               Caveat: the parent needs to be
               <code>relative</code>
               and have

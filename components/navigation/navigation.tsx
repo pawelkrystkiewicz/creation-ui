@@ -7,9 +7,9 @@ export const NavigationTitle = () => {
   const goBack = () => router.back()
 
   return (
-    <h3 className="flex gap-4 items-center capitalize font-bold text-3xl md:text-5xl">
-      <Button rounded="circle" variant="outlined" onClick={goBack} size="sm">
-        <Icon icon="arrow_back" />
+    <h3 className='flex gap-4 items-center capitalize font-bold text-3xl md:text-5xl'>
+      <Button rounded='circle' variant='outlined' onClick={goBack} size='sm'>
+        <Icon icon='arrow_back' />
       </Button>
       {router.pathname.split('/')[1]}
     </h3>

@@ -35,7 +35,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-
       <div>
         {examples.map(props => (
           <Radio {...props} />

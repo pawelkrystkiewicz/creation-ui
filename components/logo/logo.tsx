@@ -24,8 +24,8 @@ const sizeMap: Record<LogoSizes, number> = {
 
 export const Logo = ({ size = 'sm', className }: LogoProps) => (
   <Image
-    src="/logo.png"
-    alt="Logo"
+    src='/logo.png'
+    alt='Logo'
     width={sizeMap[size]}
     height={sizeMap[size]}
     layout={'fixed'}

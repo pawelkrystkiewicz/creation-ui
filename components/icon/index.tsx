@@ -13,6 +13,8 @@ interface IconProps extends Omit<HTMLProps<HTMLDivElement>, 'className'> {
   className?: string
 }
 
-const Icon = ({ icon, className }: IconProps) => <div className={clsx('material-icons', className)}>{icon}</div>
+const Icon = ({ icon, className }: IconProps) => (
+  <div className={clsx('material-icons', className)}>{icon}</div>
+)
 
 export default Icon

@@ -6,21 +6,24 @@ import type { NextPage } from 'next'
 const Home: NextPage = () => {
   return (
     <>
-
       <div
-        className="flex flex-wrap gap-5 w-full
+        className='flex flex-wrap gap-5 w-full
           h-[80vh] overflow-y-auto
-      ">
+      '
+      >
         {icons.map(icon => (
           <div
-            className="grid grid-rows-2 gap-3
+            className='grid grid-rows-2 gap-3
           place-items-center
            border w-24 h-24 p-3 rounded-md
            hover:bg-blue-100
 
-           ">
+           '
+          >
             <Icon icon={icon} />
-            <span className="text-xs text-center">{icon.split('_').join(' ')}</span>
+            <span className='text-xs text-center'>
+              {icon.split('_').join(' ')}
+            </span>
           </div>
         ))}
       </div>

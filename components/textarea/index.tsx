@@ -14,7 +14,7 @@ const staticClassNames = [
   'shadow-sm',
   'focus:ring-blue-500',
   'focus:border-blue-500',
-  'resize'
+  'resize',
 ]
 
 const sizes: Record<ElementSize, string> = {
@@ -25,7 +25,11 @@ const sizes: Record<ElementSize, string> = {
 
 const readOnlyClass = ['text-gray-700', 'bg-gray-100']
 const fullWidthClass = ['w-full']
-const requiredClass = ["after:content-['*']", 'after:ml-0.5', 'after:text-red-500']
+const requiredClass = [
+  "after:content-['*']",
+  'after:ml-0.5',
+  'after:text-red-500',
+]
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (
@@ -43,18 +47,23 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       id,
       ...props
     },
-    ref: ForwardedRef<HTMLTextAreaElement>,
+    ref: ForwardedRef<HTMLTextAreaElement>
   ) => {
     const componentId = useId(id)
 
     return (
-      <div className="mt-6">
+      <div className='mt-6'>
         <label
           htmlFor={componentId}
-          className={clsx(sizes[size], 'block font-medium text-gray-700', props.required && requiredClass)}>
+          className={clsx(
+            sizes[size],
+            'block font-medium text-gray-700',
+            props.required && requiredClass
+          )}
+        >
           {label}
         </label>
-        <div className="mt-1">
+        <div className='mt-1'>
           <textarea
             ref={ref}
             id={componentId}
@@ -64,19 +73,28 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               sizes[size],
               fullWidth && fullWidthClass,
               className,
-              props.readOnly && readOnlyClass,
+              props.readOnly && readOnlyClass
             )}
             {...props}
           />
         </div>
-        {helperText && <div className={clsx('text-gray-500 mt-1', sizes[size])}>{helperText}</div>}
+        {helperText && (
+          <div className={clsx('text-gray-500 mt-1', sizes[size])}>
+            {helperText}
+          </div>
+        )}
 
-        <span className={clsx('mt-2 invisible peer-invalid:visible text-red-600', sizes[size])}>
+        <span
+          className={clsx(
+            'mt-2 invisible peer-invalid:visible text-red-600',
+            sizes[size]
+          )}
+        >
           {error ?? settings.defaultTexts.invalidInput ?? ''}'
         </span>
       </div>
     )
-  },
+  }
 )
 
 TextArea.displayName = 'Input'

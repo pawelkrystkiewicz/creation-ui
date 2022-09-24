@@ -1,4 +1,7 @@
-import { disabledStateClasses, readOnlyStateClasses } from '@components/shared-classes'
+import {
+  disabledStateClasses,
+  readOnlyStateClasses,
+} from '@components/shared-classes'
 import { classesSelector } from '@root/utils/classes-selector'
 
 export const classes = {
@@ -26,7 +29,15 @@ export const classes = {
     disabled: disabledStateClasses,
   },
   multiple: {
-    base: ['absolute', 'inset-y-0', 'left-0', 'flex', 'items-center', 'pl-3', '!text-blue-400'],
+    base: [
+      'absolute',
+      'inset-y-0',
+      'left-0',
+      'flex',
+      'items-center',
+      'pl-3',
+      '!text-blue-400',
+    ],
     active: ['!text-white'],
   },
 }

@@ -22,28 +22,43 @@ const Home: NextPage = () => {
       props: { disabled: true, label: 'Disabled input', defaultValue },
     },
     {
-      props: { size: 'sm', label: 'Small input fullwidth', fullWidth: true, defaultValue },
+      props: {
+        size: 'sm',
+        label: 'Small input fullwidth',
+        fullWidth: true,
+        defaultValue,
+      },
     },
     {
-      props: { size: 'sm', label: 'Placeholder & required', placeholder: 'I am just a placeholder', required: true },
+      props: {
+        size: 'sm',
+        label: 'Placeholder & required',
+        placeholder: 'I am just a placeholder',
+        required: true,
+      },
     },
   ]
 
   const [input, setInput] = useState(defaultValue)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setInput(e.target.value)
 
   return (
     <>
-
       <div>
         {variants.map(({ props }, idx) => (
-          <div className="w-full" key={idx}>
+          <div className='w-full' key={idx}>
             <Input {...(props as any)} />
           </div>
         ))}
-        <div className="w-full" key={1}>
-          <Input size={'md' as any} onChange={handleChange} value={input} label="Controlled input" />
+        <div className='w-full' key={1}>
+          <Input
+            size={'md' as any}
+            onChange={handleChange}
+            value={input}
+            label='Controlled input'
+          />
         </div>
       </div>
     </>

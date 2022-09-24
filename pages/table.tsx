@@ -31,21 +31,21 @@ type Person = {
 }
 
 const UserCell = ({ person }: { person: Person }) => (
-  <div className="flex items-center">
-    <div className="flex-shrink-0 h-10 w-10">
-      <img className="h-10 w-10 rounded-full" src={person.image} alt="" />
+  <div className='flex items-center'>
+    <div className='flex-shrink-0 h-10 w-10'>
+      <img className='h-10 w-10 rounded-full' src={person.image} alt='' />
     </div>
-    <div className="ml-4">
-      <div className="text-sm font-medium text-gray-900">{person.name}</div>
-      <div className="text-sm text-gray-500">{person.email}</div>
+    <div className='ml-4'>
+      <div className='text-sm font-medium text-gray-900'>{person.name}</div>
+      <div className='text-sm text-gray-500'>{person.email}</div>
     </div>
   </div>
 )
 
 const TitleCell = ({ person }: { person: Person }) => (
   <>
-    <div className="text-sm text-gray-900">{person.title}</div>
-    <div className="text-sm text-gray-500">{person.department}</div>
+    <div className='text-sm text-gray-900'>{person.title}</div>
+    <div className='text-sm text-gray-500'>{person.department}</div>
   </>
 )
 
@@ -104,7 +104,12 @@ const Home: NextPage = () => {
         accessorFn: row => row.status.label,
         enableColumnFilter: false,
         cell({ row: { original } }) {
-          return <StatusBadge label={original.status.label} status={original.status.value as any} />
+          return (
+            <StatusBadge
+              label={original.status.label}
+              status={original.status.value as any}
+            />
+          )
         },
       },
       {
@@ -114,9 +119,10 @@ const Home: NextPage = () => {
         cell(props) {
           return (
             <a
-              href="#"
-              className="text-indigo-600 hover:text-indigo-900"
-              onClick={() => console.log(props.row.original)}>
+              href='#'
+              className='text-indigo-600 hover:text-indigo-900'
+              onClick={() => console.log(props.row.original)}
+            >
               Edit
             </a>
           )

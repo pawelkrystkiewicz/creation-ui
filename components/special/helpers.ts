@@ -1,4 +1,9 @@
-import { Schedule, TimelineEvent, TimelineEventWithDuration, TimelineSchedule } from './types'
+import {
+  Schedule,
+  TimelineEvent,
+  TimelineEventWithDuration,
+  TimelineSchedule,
+} from './types'
 
 export const dateDiffMinutes = (start: string, end: string): number => {
   const diff = Math.abs(new Date(start).getTime() - new Date(end).getTime())
@@ -13,7 +18,9 @@ export const minSinceMidnight = (date: string): number => {
   return diff / (1000 * 60)
 }
 
-export const calculateStartingPoints = (events: TimelineEvent[]): TimelineEventWithDuration[] =>
+export const calculateStartingPoints = (
+  events: TimelineEvent[]
+): TimelineEventWithDuration[] =>
   events.reduce((acc: any = [], event, idx) => {
     const nextEventTime = events[idx + 1]?.time ?? new Date().toISOString()
     const start = Math.floor(minSinceMidnight(event.time) / 15)

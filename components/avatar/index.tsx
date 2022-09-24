@@ -21,7 +21,10 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
             <span
               className={selector({
                 ...props,
-                badge: { ...props.badge, placement: props.badge.placement ?? defaultPlacement },
+                badge: {
+                  ...props.badge,
+                  placement: props.badge.placement ?? defaultPlacement,
+                },
               })('badgePulse')}
             />
           </div>

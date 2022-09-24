@@ -13,7 +13,13 @@ const classes = {
     },
   },
   bar: {
-    base: ['bg-blue-600', 'text-blue-100', 'text-center', 'leading-none', 'rounded-full'],
+    base: [
+      'bg-blue-600',
+      'text-blue-100',
+      'text-center',
+      'leading-none',
+      'rounded-full',
+    ],
     required: [],
     readOnly: [],
     disabled: [],

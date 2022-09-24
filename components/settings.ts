@@ -29,7 +29,8 @@ export const settings = {
   },
   f: {
     getLimitTextDefault: (more: number) => `+${more}`,
-    defaultOptionFormatter: (option?: AutocompleteOptionsType) => (option?.value ? `${option.value}` : ''),
+    defaultOptionFormatter: (option?: AutocompleteOptionsType) =>
+      option?.value ? `${option.value}` : '',
   },
 }
 

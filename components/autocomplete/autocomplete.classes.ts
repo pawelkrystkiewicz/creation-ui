@@ -21,7 +21,14 @@ export const classes = {
     },
   },
   option: {
-    base: ['relative', 'cursor-pointer', 'select-none', 'py-2', 'px-4', 'text-gray-900'],
+    base: [
+      'relative',
+      'cursor-pointer',
+      'select-none',
+      'py-2',
+      'px-4',
+      'text-gray-900',
+    ],
     fullWidth: [],
     required: [],
     readOnly: readOnlyStateClasses,

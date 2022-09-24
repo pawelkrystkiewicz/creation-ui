@@ -2,7 +2,15 @@ import { classesSelector } from '@root/utils/classes-selector'
 
 const classes = {
   wrapper: {
-    base: ['bg-gray-50', 'w-fit', 'rounded', 'relative', 'border', 'border-gray-300', 'flex'],
+    base: [
+      'bg-gray-50',
+      'w-fit',
+      'rounded',
+      'relative',
+      'border',
+      'border-gray-300',
+      'flex',
+    ],
     required: [],
     readOnly: ['select-none'],
     disabled: ['select-none'],

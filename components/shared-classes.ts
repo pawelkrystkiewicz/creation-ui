@@ -24,7 +24,7 @@ export const baseInputClasses = [
   'focus:ring-blue-500',
   'focus:border-blue-500',
   'w-full',
-  'text-left'
+  'text-left',
 ]
 
 export const dropdownListClasses = {

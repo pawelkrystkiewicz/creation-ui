@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import gitHash from '@root/git-hash.json'
-import { CommitInfo } from '@root/models/system'
+import { CommitInfo } from '@root/types/system'
 import Popover from './popover'
 
 interface VersionProps {
@@ -10,17 +10,29 @@ interface VersionProps {
 const zeroPad = (n: number) => n.toString().padStart(2, '0')
 
 export const Version = ({ classNameOverride }: VersionProps) => {
-  const { shortHash, hash, version, timestamp } = gitHash as unknown as CommitInfo
+  const { shortHash, hash, version, timestamp } =
+    gitHash as unknown as CommitInfo
   const date = new Date(timestamp)
 
   const datePL = date.toLocaleString('pl', {})
-  const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()]
-  const [hour, minutes] = [date.getHours(), date.getMinutes(), date.getSeconds()]
+  const [month, day, year] = [
+    date.getMonth(),
+    date.getDate(),
+    date.getFullYear(),
+  ]
+  const [hour, minutes] = [
+    date.getHours(),
+    date.getMinutes(),
+    date.getSeconds(),
+  ]
 
   const formatted = [
     { value: day, formatter: zeroPad },
     { value: month, formatter: zeroPad },
-    { value: year, formatter: (v: any) => String(v).split('').slice(2).join('') },
+    {
+      value: year,
+      formatter: (v: any) => String(v).split('').slice(2).join(''),
+    },
     { value: hour, formatter: zeroPad },
     { value: minutes, formatter: zeroPad },
   ]
@@ -35,14 +47,27 @@ export const Version = ({ classNameOverride }: VersionProps) => {
   ]
 
   return (
-    <div style={{ fontSize: 8 }} className={classNameOverride ? classNameOverride : 'absolute bottom-0 right-0 px-2'}>
-      <span title={'Version'} className={clsx([classNames, 'hover:bg-sky-100', 'hover:ring-sky-200'])}>
+    <div
+      style={{ fontSize: 8 }}
+      className={
+        classNameOverride ? classNameOverride : 'absolute bottom-0 right-0 px-2'
+      }
+    >
+      <span
+        title={'Version'}
+        className={clsx([classNames, 'hover:bg-sky-100', 'hover:ring-sky-200'])}
+      >
         v{version}
       </span>
       -
       <span
         title={`Last commit hash: ${hash}`}
-        className={clsx(classNames, 'hover:bg-orange-100', 'hover:ring-orange-200')}>
+        className={clsx(
+          classNames,
+          'hover:bg-orange-100',
+          'hover:ring-orange-200'
+        )}
+      >
         {shortHash}
       </span>
     </div>

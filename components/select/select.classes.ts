@@ -47,7 +47,14 @@ export const classes = {
     disabled: disabledStateClasses,
   },
   button: {
-    base: ['relative', 'cursor-pointer', 'py-2', 'pl-3', 'pr-10', ...baseInputClasses],
+    base: [
+      'relative',
+      'cursor-pointer',
+      'py-2',
+      'pl-3',
+      'pr-10',
+      ...baseInputClasses,
+    ],
     fullWidth: ['w-full'],
     required: [],
     readOnly: readOnlyStateClasses,

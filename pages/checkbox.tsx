@@ -35,10 +35,9 @@ const Home: NextPage = () => {
 
   return (
     <>
-
       <div>
         {variants.map(({ title, props }) => (
-          <div className="w-full" key={title}>
+          <div className='w-full' key={title}>
             <p>{title}</p>
             <Checkbox {...(props as any)} />
           </div>

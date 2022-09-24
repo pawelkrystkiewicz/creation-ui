@@ -20,12 +20,11 @@ const Home: NextPage = () => {
 
   return (
     <>
-
       <div>
         {variants.map(({ title, props }) => (
           <div className='w-10'>
             <p>{title}</p>
-            <Loader {...props as any} />
+            <Loader {...(props as any)} />
           </div>
         ))}
       </div>

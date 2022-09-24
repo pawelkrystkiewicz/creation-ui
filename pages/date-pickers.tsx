@@ -5,7 +5,9 @@ import { useEffect, useState } from 'react'
 
 const Home: NextPage = () => {
   const [startDate, setStartDate] = useState<Date | null>(new Date())
-  const datePlusOne = startDate ? new Date().setMonth(startDate?.getMonth() + 1) : null
+  const datePlusOne = startDate
+    ? new Date().setMonth(startDate?.getMonth() + 1)
+    : null
   const [endDate, setEndDate] = useState<Date | null>(datePlusOne as any)
   const [dateRange, setDateRange] = useState([null, null])
 
@@ -22,7 +24,6 @@ const Home: NextPage = () => {
   }, [startDate])
   return (
     <>
-
       <div>
         <DatePicker
           selectsRange={true as any}

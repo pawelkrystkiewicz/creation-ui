@@ -25,7 +25,9 @@ const SelectOption = (props: SelectOptionProps) => {
       <span className={classes('option')}>{value}</span>
       {selected ? (
         <span className={classes('multiple')}>
-          {multiple && <Icon icon="check" className="h-5 w-5" aria-hidden="true" />}
+          {multiple && (
+            <Icon icon='check' className='h-5 w-5' aria-hidden='true' />
+          )}
         </span>
       ) : null}
     </>

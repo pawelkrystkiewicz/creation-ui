@@ -30,24 +30,29 @@ const HeaderCell = ({ header, table }: HeaderCellProps) => {
   return (
     <th
       colSpan={header.colSpan}
-      scope="col"
-      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+      scope='col'
+      className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
+    >
       {header.isPlaceholder ? null : (
         <>
           <div
             {...{
-              className: clsx(header.column.getCanSort() ? 'cursor-pointer select-none' : '', 'flex items-center'),
+              className: clsx(
+                header.column.getCanSort() ? 'cursor-pointer select-none' : '',
+                'flex items-center'
+              ),
               onClick: header.column.getToggleSortingHandler(),
-            }}>
+            }}
+          >
             {flexRender(header.column.columnDef.header, header.getContext())}
             {header.column.getIsSorted() && (
               <Icon
-                icon="straight"
+                icon='straight'
                 className={clsx(
                   'text-gray-400 ease-in-out duration-300 hover:text-gray-800',
-                  header.column.getIsSorted() === 'desc' && 'rotate-180',
+                  header.column.getIsSorted() === 'desc' && 'rotate-180'
                 )}
-                aria-hidden="true"
+                aria-hidden='true'
               />
             )}
           </div>
@@ -64,39 +69,62 @@ const HeaderCell = ({ header, table }: HeaderCellProps) => {
 
 export default HeaderCell
 
-function Filter({ column, table }: { column: Column<any, unknown>; table: Table<any> }) {
-  const firstValue = table.getPreFilteredRowModel().flatRows[0]?.getValue(column.id)
+function Filter({
+  column,
+  table,
+}: {
+  column: Column<any, unknown>
+  table: Table<any>
+}) {
+  const firstValue = table
+    .getPreFilteredRowModel()
+    .flatRows[0]?.getValue(column.id)
 
   const columnFilterValue = column.getFilterValue()
 
   const sortedUniqueValues = React.useMemo(
-    () => (typeof firstValue === 'number' ? [] : Array.from(column.getFacetedUniqueValues().keys()).sort()),
-    [column.getFacetedUniqueValues()],
+    () =>
+      typeof firstValue === 'number'
+        ? []
+        : Array.from(column.getFacetedUniqueValues().keys()).sort(),
+    [column.getFacetedUniqueValues()]
   )
 
   return typeof firstValue === 'number' ? (
     <div>
-      <div className="flex space-x-2">
+      <div className='flex space-x-2'>
         <DebouncedInput
-          type="number"
+          type='number'
           min={Number(column.getFacetedMinMaxValues()?.[0] ?? '')}
           max={Number(column.getFacetedMinMaxValues()?.[1] ?? '')}
           value={(columnFilterValue as [number, number])?.[0] ?? ''}
-          onChange={value => column.setFilterValue((old: [number, number]) => [value, old?.[1]])}
-          placeholder={`Min ${column.getFacetedMinMaxValues()?.[0] ? `(${column.getFacetedMinMaxValues()?.[0]})` : ''}`}
-          className="w-24 border shadow rounded"
+          onChange={value =>
+            column.setFilterValue((old: [number, number]) => [value, old?.[1]])
+          }
+          placeholder={`Min ${
+            column.getFacetedMinMaxValues()?.[0]
+              ? `(${column.getFacetedMinMaxValues()?.[0]})`
+              : ''
+          }`}
+          className='w-24 border shadow rounded'
         />
         <DebouncedInput
-          type="number"
+          type='number'
           min={Number(column.getFacetedMinMaxValues()?.[0] ?? '')}
           max={Number(column.getFacetedMinMaxValues()?.[1] ?? '')}
           value={(columnFilterValue as [number, number])?.[1] ?? ''}
-          onChange={value => column.setFilterValue((old: [number, number]) => [old?.[0], value])}
-          placeholder={`Max ${column.getFacetedMinMaxValues()?.[1] ? `(${column.getFacetedMinMaxValues()?.[1]})` : ''}`}
-          className="w-24 border shadow rounded"
+          onChange={value =>
+            column.setFilterValue((old: [number, number]) => [old?.[0], value])
+          }
+          placeholder={`Max ${
+            column.getFacetedMinMaxValues()?.[1]
+              ? `(${column.getFacetedMinMaxValues()?.[1]})`
+              : ''
+          }`}
+          className='w-24 border shadow rounded'
         />
       </div>
-      <div className="h-1" />
+      <div className='h-1' />
     </div>
   ) : (
     <>
@@ -106,14 +134,14 @@ function Filter({ column, table }: { column: Column<any, unknown>; table: Table<
         ))}
       </datalist>
       <DebouncedInput
-        type="text"
+        type='text'
         value={(columnFilterValue ?? '') as string}
         onChange={value => column.setFilterValue(value)}
         placeholder={`Search... (${column.getFacetedUniqueValues().size})`}
-        className="w-36 border shadow rounded"
+        className='w-36 border shadow rounded'
         list={column.id + 'list'}
       />
-      <div className="h-1" />
+      <div className='h-1' />
     </>
   )
 }
@@ -143,5 +171,7 @@ function DebouncedInput({
     return () => clearTimeout(timeout)
   }, [value])
 
-  return <input {...props} value={value} onChange={e => setValue(e.target.value)} />
+  return (
+    <input {...props} value={value} onChange={e => setValue(e.target.value)} />
+  )
 }

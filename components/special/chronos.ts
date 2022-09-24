@@ -25,8 +25,14 @@ export type Employee = Omit<EntityCommonFields, 'color'> & {
   avatar?: string | null
 }
 
-export type EmployeeShort = Pick<Employee, 'employeeUUID' | 'firstName' | 'lastName' | 'avatar'>
-export type EmployeeShortWithLocations = Pick<Employee, 'employeeUUID' | 'firstName' | 'lastName'> & {
+export type EmployeeShort = Pick<
+  Employee,
+  'employeeUUID' | 'firstName' | 'lastName' | 'avatar'
+>
+export type EmployeeShortWithLocations = Pick<
+  Employee,
+  'employeeUUID' | 'firstName' | 'lastName'
+> & {
   locations: Location[]
   avatarLink: string | null
 }
@@ -195,7 +201,10 @@ export type VacationLimit = Omit<EntityCommonFields, 'color'> & {
   vacationLimitDefault: boolean
 }
 
-export type VacationLimitEmployee = Omit<EntityCommonFields, 'color' | 'isActive'> & {
+export type VacationLimitEmployee = Omit<
+  EntityCommonFields,
+  'color' | 'isActive'
+> & {
   hoursPreviousYear: number
   hoursCurrentYear: number
   employeeVacationLimitUUID: string

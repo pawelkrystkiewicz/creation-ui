@@ -19,7 +19,14 @@ const classes = {
     },
   },
   badgePulse: {
-    base: ['absolute', 'rounded-full', 'opacity-75', 'animate-ping', 'bg-red-400', 'p-3'],
+    base: [
+      'absolute',
+      'rounded-full',
+      'opacity-75',
+      'animate-ping',
+      'bg-red-400',
+      'p-3',
+    ],
     badge: {
       type: {
         count: [],

@@ -16,8 +16,11 @@ const ToggleGroup = (props: ToggleGroupProps) => {
               key={value}
               value={value}
               disabled={disabled}
-              className={optionsProps => selector({ ...props, ...optionsProps })('options')}>
-              <RadioGroup.Label as="span">{label}</RadioGroup.Label>
+              className={optionsProps =>
+                selector({ ...props, ...optionsProps })('options')
+              }
+            >
+              <RadioGroup.Label as='span'>{label}</RadioGroup.Label>
             </RadioGroup.Option>
           ))}
         </div>

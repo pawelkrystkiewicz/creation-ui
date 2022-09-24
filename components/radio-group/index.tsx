@@ -15,7 +15,9 @@ const RadioGroupComponent = ({ children, ...props }: RadioGroupProps) => {
       <span className={classes('label')}>{label}</span>
       <div className={classes('children')}>{children}</div>
       {helperText && <div className={classes('helperText')}>{helperText}</div>}
-      <span className={classes('error')}>{error ?? settings.defaultTexts.invalidInput ?? ''}</span>
+      <span className={classes('error')}>
+        {error ?? settings.defaultTexts.invalidInput ?? ''}
+      </span>
     </div>
   )
 }

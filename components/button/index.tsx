@@ -55,11 +55,23 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       id,
       ...props
     },
-    ref,
+    ref
   ) => {
     const variants: Record<ElementVariants, string> = {
-      contained: clsx(['text-white', 'bg-blue-600', 'hover:bg-blue-700', 'focus:bg-blue-700', 'active:bg-blue-800']),
-      outlined: clsx([`border`, `border-blue-600`, `text-blue-600`, `hover:bg-blue-50`, `active:bg-blue-100`]),
+      contained: clsx([
+        'text-white',
+        'bg-blue-600',
+        'hover:bg-blue-700',
+        'focus:bg-blue-700',
+        'active:bg-blue-800',
+      ]),
+      outlined: clsx([
+        `border`,
+        `border-blue-600`,
+        `text-blue-600`,
+        `hover:bg-blue-50`,
+        `active:bg-blue-100`,
+      ]),
       text: clsx([
         'bg-white',
         'text-blue-600',
@@ -81,14 +93,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         disabled={loading}
         {...props}
-        className={clsx(commonStaticClasses, variants[variant], roundness[rounded], sizeCollection[size], className)}>
-        <>{loading ? <Loader size={size} white={isContained} /> :null}</>
+        className={clsx(
+          commonStaticClasses,
+          variants[variant],
+          roundness[rounded],
+          sizeCollection[size],
+          className
+        )}
+      >
+        <>{loading ? <Loader size={size} white={isContained} /> : null}</>
         <>{iconLeft}</>
         <>{children}</>
         <>{iconRight}</>
       </button>
     )
-  },
+  }
 )
 
 Button.displayName = 'Button'

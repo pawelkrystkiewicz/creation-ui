@@ -25,21 +25,31 @@ const Select = (props: SelectProps) => {
 
   return (
     <div className={classes('wrapper')} id={componentId}>
-      <Listbox value={props.value} onChange={props.onChange} disabled={props.disabled} multiple={props.multiple}>
+      <Listbox
+        value={props.value}
+        onChange={props.onChange}
+        disabled={props.disabled}
+        multiple={props.multiple}
+      >
         {({ open }) => (
-          <div className="relative mt-1">
-            {props.label && <Listbox.Label className={classes('label')}>{props.label}</Listbox.Label>}
+          <div className='relative mt-1'>
+            {props.label && (
+              <Listbox.Label className={classes('label')}>
+                {props.label}
+              </Listbox.Label>
+            )}
             <Listbox.Button className={classes('button')}>
-              <span className="block truncate">{props.value}</span>
-              <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+              <span className='block truncate'>{props.value}</span>
+              <span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
                 <DropdownChevron open={open} />
               </span>
             </Listbox.Button>
             <Transition
               as={Fragment}
-              leave="transition ease-in duration-100"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0">
+              leave='transition ease-in duration-100'
+              leaveFrom='opacity-100'
+              leaveTo='opacity-0'
+            >
               <Listbox.Options className={classes('options')}>
                 {props.options?.map(option => (
                   <Listbox.Option key={option.id} value={option}>
@@ -61,7 +71,9 @@ const Select = (props: SelectProps) => {
         )}
       </Listbox>
       {helperText && <div className={classes('helperText')}>{helperText}</div>}
-      <span className={classes('error')}>{error ?? settings.defaultTexts.invalidInput ?? ''}</span>
+      <span className={classes('error')}>
+        {error ?? settings.defaultTexts.invalidInput ?? ''}
+      </span>
     </div>
   )
 }

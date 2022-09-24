@@ -1,9 +1,21 @@
-import { disabledStateClasses, readOnlyStateClasses, sizes } from '@components/shared-classes'
+import {
+  disabledStateClasses,
+  readOnlyStateClasses,
+  sizes,
+} from '@components/shared-classes'
 import { classesSelector } from '@root/utils/classes-selector'
 
 export const classes = {
   wrapper: {
-    base: ['px-2 ', 'inline-flex ', 'text-xs', 'leading-5 ', 'font-semibold ', 'rounded-full', 'w-fit'],
+    base: [
+      'px-2 ',
+      'inline-flex ',
+      'text-xs',
+      'leading-5 ',
+      'font-semibold ',
+      'rounded-full',
+      'w-fit',
+    ],
     fullWidth: [],
     required: [],
     readOnly: readOnlyStateClasses,

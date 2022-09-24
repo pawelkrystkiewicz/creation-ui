@@ -16,7 +16,10 @@ const ProgressBar = (props: ProgressBarProps) => {
 
   return (
     <div className={classes('wrapper')} {...props}>
-      <div className={classes('bar')} style={{ width: formatDisplayValueDefault(value) }}>
+      <div
+        className={classes('bar')}
+        style={{ width: formatDisplayValueDefault(value) }}
+      >
         {showValue && formatDisplayValue(value)}
       </div>
     </div>

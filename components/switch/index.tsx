@@ -60,19 +60,34 @@ const enabledPositionForSize: Record<ElementSize, string> = {
 const Switch = ({ checked, size = 'sm', ...props }: SwitchProps) => {
   const [enabled, setEnabled] = useState(false)
   const enabledColors = enabled ? 'bg-blue-500' : 'bg-gray-300'
-  const enabledCirclePosition = enabled ? enabledPositionForSize[size] : 'translate-x-0'
+  const enabledCirclePosition = enabled
+    ? enabledPositionForSize[size]
+    : 'translate-x-0'
 
   const sizeClass = sizeMap[size]
   return (
     <HeadlessUI.Switch
       checked={enabled}
       onChange={setEnabled}
-      className={clsx(enabledColors, staticClassesBody, sizeClass.body, disabledStateClasses)}>
-      <span className="sr-only">Use setting</span>
-      <span aria-hidden="true" className={clsx(enabledCirclePosition, staticClassesCircle, sizeClass.circle)} />
+      className={clsx(
+        enabledColors,
+        staticClassesBody,
+        sizeClass.body,
+        disabledStateClasses
+      )}
+    >
+      <span className='sr-only'>Use setting</span>
+      <span
+        aria-hidden='true'
+        className={clsx(
+          enabledCirclePosition,
+          staticClassesCircle,
+          sizeClass.circle
+        )}
+      />
     </HeadlessUI.Switch>
   )
 }
-Switch.displayName = "_Switch";
+Switch.displayName = '_Switch'
 
 export default Switch

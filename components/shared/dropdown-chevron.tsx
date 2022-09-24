@@ -7,9 +7,12 @@ interface DropdownChevronProps {
 
 const DropdownChevron = ({ open }: DropdownChevronProps) => (
   <Icon
-    icon="expand_more"
-    className={clsx('text-gray-400 ease-in-out duration-300 hover:text-gray-800', open && '-rotate-180')}
-    aria-hidden="true"
+    icon='expand_more'
+    className={clsx(
+      'text-gray-400 ease-in-out duration-300 hover:text-gray-800',
+      open && '-rotate-180'
+    )}
+    aria-hidden='true'
   />
 )
 

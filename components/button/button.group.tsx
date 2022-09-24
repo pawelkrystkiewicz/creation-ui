@@ -8,7 +8,12 @@ const commonStaticClasses: string[] = [
   'button-group'
 ]
 
-const ButtonGroup = ({ color = settings.color, children, className, ...props }: ButtonGroupProps) => {
+const ButtonGroup = ({
+  color = settings.color,
+  children,
+  className,
+  ...props
+}: ButtonGroupProps) => {
   return (
     <div {...props} className={clsx(commonStaticClasses, className)}>
       {children}

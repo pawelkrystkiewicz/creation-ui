@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './layout/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './layout/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       keyframes: {
@@ -89,7 +93,7 @@ module.exports = {
         },
       },
       gridTemplateColumns: {
-        '96': 'repeat(96, 1fr)',
+        96: 'repeat(96, 1fr)',
       },
       animation: {
         // Dropdown menu
@@ -98,7 +102,8 @@ module.exports = {
         'slide-up': 'slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
         // Tooltip
         'slide-up-fade': 'slide-up-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-        'slide-right-fade': 'slide-right-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+        'slide-right-fade':
+          'slide-right-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
         'slide-down-fade': 'slide-down-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
         'slide-left-fade': 'slide-left-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
         // Navigation menu
@@ -113,8 +118,10 @@ module.exports = {
         'fade-out': 'fade-out 0.2s ease',
         // Toast
         'toast-hide': 'toast-hide 100ms ease-in forwards',
-        'toast-slide-in-right': 'toast-slide-in-right 150ms cubic-bezier(0.16, 1, 0.3, 1)',
-        'toast-slide-in-bottom': 'toast-slide-in-bottom 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'toast-slide-in-right':
+          'toast-slide-in-right 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'toast-slide-in-bottom':
+          'toast-slide-in-bottom 150ms cubic-bezier(0.16, 1, 0.3, 1)',
         'toast-swipe-out': 'toast-swipe-out 100ms ease-out forwards',
       },
     },

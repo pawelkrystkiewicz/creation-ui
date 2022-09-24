@@ -1,4 +1,3 @@
-
 .container {
   resize: horizontal;
   overflow: auto;
@@ -15,7 +14,7 @@
   height: 20px;
   width: 100%;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .ruler-cell {
@@ -25,23 +24,10 @@
   border-left: 1px solid black;
   border-right: 1px solid black;
   background-repeat: no-repeat;
-  background-size:
-    100% 1px,
-    1px 8px,
-    1px 8px,
-    1px 8px,
-    1px 8px;
-  background-position:
-    0% center,
-    20% center,
-    40% center,
-    60% center,
-    80% center;
-  background-image:
-    linear-gradient(gray, gray),
-    linear-gradient(gray, gray),
-    linear-gradient(gray, gray),
-    linear-gradient(gray, gray),
+  background-size: 100% 1px, 1px 8px, 1px 8px, 1px 8px, 1px 8px;
+  background-position: 0% center, 20% center, 40% center, 60% center, 80% center;
+  background-image: linear-gradient(gray, gray), linear-gradient(gray, gray),
+    linear-gradient(gray, gray), linear-gradient(gray, gray),
     linear-gradient(gray, gray);
 }
 

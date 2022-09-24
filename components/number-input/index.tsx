@@ -6,7 +6,13 @@ import { forwardRef } from 'react'
 const classes = ['']
 
 const NumberInput = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
-  return <Input ref={ref as any} {...{ ...props, type: 'number' }} className={clsx(classes)} />
+  return (
+    <Input
+      ref={ref as any}
+      {...{ ...props, type: 'number' }}
+      className={clsx(classes)}
+    />
+  )
 })
 
 NumberInput.displayName = 'NumberInput'

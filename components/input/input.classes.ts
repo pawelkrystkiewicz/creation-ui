@@ -1,4 +1,9 @@
-import { baseInputClasses, disabledStateClasses, readOnlyStateClasses, sizes } from '@components/shared-classes'
+import {
+  baseInputClasses,
+  disabledStateClasses,
+  readOnlyStateClasses,
+  sizes,
+} from '@components/shared-classes'
 import { classesSelector } from '@root/utils/classes-selector'
 
 export const classes = {

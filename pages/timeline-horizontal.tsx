@@ -5,12 +5,16 @@ import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   const timelineEvents: TimelineEvent[] = events.map(
-    ({ event: { eventShortName, color }, eventRegisterUUID, eventRegisteredAt }) => ({
+    ({
+      event: { eventShortName, color },
+      eventRegisterUUID,
+      eventRegisteredAt,
+    }) => ({
       title: eventShortName,
       color,
       id: eventRegisterUUID,
       time: eventRegisteredAt.toString(),
-    }),
+    })
   )
 
   const schedule: Schedule = {

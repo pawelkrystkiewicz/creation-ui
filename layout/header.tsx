@@ -8,14 +8,14 @@ const Header = () => {
   const isMain = router.pathname === '/'
 
   return (
-    <div className="mb-3">
+    <div className='mb-3'>
       {isMain ? (
         <div>
-          <h1 className="flex align-center items-center gap-5 font-bold text-3xl md:text-5xl">
-            <Logo size="xl" />
+          <h1 className='flex align-center items-center gap-5 font-bold text-3xl md:text-5xl'>
+            <Logo size='xl' />
             {config.appName}
           </h1>
-          <span className="text-sm">Design System</span>
+          <span className='text-sm'>Design System</span>
         </div>
       ) : (
         <NavigationTitle />

@@ -88,17 +88,18 @@ const Home: NextPage = () => {
   return (
     <>
       <p>Comprehensive list of UI components for React built with Tailwind</p>
-      <div className="flex flex-col items-start">
+      <div className='flex flex-col items-start'>
         <div>
           <h2 className='font-semibold text-2xl mt-3 mb-1'>Components</h2>
           <p>List of available components</p>
         </div>
-        <div className="overflow-y-auto max-h-[50vh] w-full mt-1">
+        <div className='overflow-y-auto max-h-[50vh] w-full mt-1'>
           {elements.map(({ title, description, link }) => (
-            <div key={link} className="flex flex-col items-start">
+            <div key={link} className='flex flex-col items-start'>
               <Link href={link}>
-                <div className="cursor-pointer">
-                  <b>{title}</b> - <span className="text-sm">{description}</span>
+                <div className='cursor-pointer'>
+                  <b>{title}</b> -{' '}
+                  <span className='text-sm'>{description}</span>
                 </div>
               </Link>
             </div>

@@ -10,14 +10,20 @@ interface PaginationBlockProps extends React.ComponentProps<'button'> {
   disabled?: boolean
 }
 
-const PaginationBlock = ({ value, current, disabled, ...props }: PaginationBlockProps) => (
+const PaginationBlock = ({
+  value,
+  current,
+  disabled,
+  ...props
+}: PaginationBlockProps) => (
   <button
     className={clsx(
       'relative cursor-pointer inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50',
       current && 'z-10 bg-blue-50 border-blue-500 text-blue-600',
-      disabled && 'pointer-events-none',
+      disabled && 'pointer-events-none'
     )}
-    {...props}>
+    {...props}
+  >
     {value}
   </button>
 )
@@ -30,10 +36,13 @@ interface PageSelectorButtonsProps {
   table: Table<any>
 }
 
-const PageSelectorButtons = ({ texts: { next, previous }, table }: PageSelectorButtonsProps) => (
-  <div className="flex gap-2">
+const PageSelectorButtons = ({
+  texts: { next, previous },
+  table,
+}: PageSelectorButtonsProps) => (
+  <div className='flex gap-2'>
     <Button
-      variant="outlined"
+      variant='outlined'
       onClick={() => table.previousPage()}
       disabled={!table.getCanPreviousPage()}
 
@@ -42,7 +51,7 @@ const PageSelectorButtons = ({ texts: { next, previous }, table }: PageSelectorB
       {previous}
     </Button>
     <Button
-      variant="outlined"
+      variant='outlined'
       onClick={() => table.nextPage()}
       disabled={!table.getCanNextPage()}
       // className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
@@ -77,31 +86,53 @@ const PageSelector = ({ table }: PageSelectorProps) => {
   return (
     <>
       <Button
-        iconLeft={<Icon icon="chevron_left" className="h-5 w-5" aria-hidden="true" />}
-        className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+        iconLeft={
+          <Icon icon='chevron_left' className='h-5 w-5' aria-hidden='true' />
+        }
+        className='relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50'
         onClick={() => table.previousPage()}
-        disabled={!table.getCanPreviousPage()}></Button>
+        disabled={!table.getCanPreviousPage()}
+      ></Button>
 
       {!withEllipsis &&
         pagesArray.map(idx => (
-          <PaginationBlock value={idx + 1} current={idx === currentPageIdx} onClick={() => goToPage(idx)} />
+          <PaginationBlock
+            value={idx + 1}
+            current={idx === currentPageIdx}
+            onClick={() => goToPage(idx)}
+          />
         ))}
       {withEllipsis && (
         <>
           {firstPart.map(idx => (
-            <PaginationBlock value={idx + 1} current={idx === currentPageIdx} onClick={() => goToPage(idx)} />
+            <PaginationBlock
+              value={idx + 1}
+              current={idx === currentPageIdx}
+              onClick={() => goToPage(idx)}
+            />
           ))}
-          <PaginationBlock value={showInEllipsis ? currentPageIdx + 1 : '...'} disabled current={showInEllipsis} />
+          <PaginationBlock
+            value={showInEllipsis ? currentPageIdx + 1 : '...'}
+            disabled
+            current={showInEllipsis}
+          />
           {lastPart.map(idx => (
-            <PaginationBlock value={idx + 1} current={idx === currentPageIdx} onClick={() => goToPage(idx)} />
+            <PaginationBlock
+              value={idx + 1}
+              current={idx === currentPageIdx}
+              onClick={() => goToPage(idx)}
+            />
           ))}
         </>
       )}
       <Button
         onClick={() => table.nextPage()}
         disabled={!table.getCanNextPage()}
-        className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-        iconRight={<Icon icon="chevron_right" className="h-5 w-5" aria-hidden="true" />}></Button>
+        className='relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50'
+        iconRight={
+          <Icon icon='chevron_right' className='h-5 w-5' aria-hidden='true' />
+        }
+      ></Button>
     </>
   )
 }
@@ -138,46 +169,58 @@ const Pagination = ({
 
   return (
     <>
-      <div className="px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-        <div className="flex-1 flex justify-between sm:hidden">
+      <div className='px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6'>
+        <div className='flex-1 flex justify-between sm:hidden'>
           <a
-            href="#"
-            className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+            href='#'
+            className='relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50'
+          >
             {texts?.previous}
           </a>
           <a
-            href="#"
-            className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+            href='#'
+            className='ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50'
+          >
             {texts?.next}
           </a>
         </div>
-        <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+        <div className='hidden sm:flex-1 sm:flex sm:items-center sm:justify-between'>
           <div>
-            <p className="text-sm text-gray-700">
+            <p className='text-sm text-gray-700'>
               {texts?.summary
                 .replace('{currentPage}', (currentPageIdx + 1).toString())
                 .replace('{totalPages}', totalPages.toString())}
             </p>
           </div>
-          <div className="flex flex-col">
+          <div className='flex flex-col'>
             {pageSizes && (
               <Select
-                size="sm"
+                size='sm'
                 options={sizes}
                 value={table.getState().pagination.pageSize}
                 onChange={({ value }) => table.setPageSize(value)}
               />
             )}
             {showTotalCount && (
-              <p className="text-xs text-gray-700">
-                {texts?.total?.replace('{resultsCount}', resultsCount.toString())}
+              <p className='text-xs text-gray-700'>
+                {texts?.total?.replace(
+                  '{resultsCount}',
+                  resultsCount.toString()
+                )}
               </p>
             )}
           </div>
           <div>
-            <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-              {pageButtonsVariant === 'numbers' && <PageSelector table={table} />}
-              {pageButtonsVariant === 'buttons' && <PageSelectorButtons table={table} />}
+            <nav
+              className='relative z-0 inline-flex rounded-md shadow-sm -space-x-px'
+              aria-label='Pagination'
+            >
+              {pageButtonsVariant === 'numbers' && (
+                <PageSelector table={table} />
+              )}
+              {pageButtonsVariant === 'buttons' && (
+                <PageSelectorButtons table={table} />
+              )}
             </nav>
           </div>
         </div>
