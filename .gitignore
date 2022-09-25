@@ -15,7 +15,9 @@
 # production
 /build/*
 /dist/*
-.rollup.cache
+.rollup.cache/*
+.parcel.cache/*
+stats.html
 
 # misc
 .DS_Store

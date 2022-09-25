@@ -2,18 +2,19 @@ import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
-import css from 'rollup-plugin-import-css'
 import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
-import tailwind from 'rollup-plugin-tailwindcss'
 import { terser } from 'rollup-plugin-terser'
-
-// files
+import filesize from 'rollup-plugin-filesize'
+import progress from 'rollup-plugin-progress'
+import visualizer from 'rollup-plugin-visualizer'
+import babel from 'rollup-plugin-babel'
+import autoprefixer from 'autoprefixer'
+import path from 'path'
 import pkg from './package.json'
-import tsPaths from './tsconfig.paths.json'
 
-const { outDir } = tsPaths.compilerOptions
-const { main, module, types, name } = pkg
+const { main, module, types, name, styles, files } = pkg
+const outDir = files[0]
 
 if (!outDir) {
   throw new Error('"outDir" is not defined')
@@ -37,40 +38,34 @@ export default [
       },
     ],
     plugins: [
-      external(),
       resolve(),
+      external(),
+      babel({
+        exclude: 'node_modules/**',
+        babelHelpers: 'bundled',
+      }),
       commonjs(),
       typescript(),
-      // tailwind({ input: './styles/globals.css', purge: true }),
-      css({
-        include: ['./styles/*.css'],
-        output: './dist/index.css',
-        alwaysOutput: true,
-      }),
       postcss({
-        plugins: [],
         modules: true,
         minimize: true,
-        extract: true,
+        inject: true,
+        extract: path.resolve(styles),
         extensions: ['.css'],
-        inject: {
-          insertAt: 'top',
-        },
+        sourceMap: true,
         config: {
           path: './postcss.config.js',
         },
       }),
       terser(),
+      progress(),
+      visualizer(),
+      filesize(),
     ],
   },
   {
     input: `${outDir}/esm/index.d.ts`,
     output: [{ file: types, format: 'esm' }],
-    plugins: [dts()],
-  },
-  {
-    input: `${outDir}/esm/index.css`,
-    output: [{ file: `${outDir}/index.css`, format: 'esm' }],
-    plugins: [],
+    plugins: [dts(), progress(), visualizer(), filesize()],
   },
 ]
