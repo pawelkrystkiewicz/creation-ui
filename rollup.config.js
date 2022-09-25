@@ -12,6 +12,7 @@ import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
 import pkg from './package.json'
 import copy from 'rollup-plugin-copy'
+import plugin from 'rollup-plugin-import-css'
 
 const { main, module, types, name, styles, files } = pkg
 const outDir = files[0]
@@ -61,8 +62,15 @@ export default [
       copy({
         targets: [
           {
-            src: [`${outDir}/cjs/index.css`, `${outDir}/cjs/index.css.map`],
+            src: [
+              path.resolve(`${outDir}/cjs/index.css`),
+              path.resolve(`${outDir}/cjs/index.css.map`),
+            ],
             dest: outDir,
+          },
+          {
+            src: './tailwind.config.js',
+            dest: 'dist',
           },
         ],
       }),
@@ -72,8 +80,22 @@ export default [
     ],
   },
   {
-    input: `${outDir}/index.d.ts`,
+    input: `${outDir}/esm/index.d.ts`,
     output: [{ file: types, format: 'esm' }],
+    external: [/\.css$/],
     plugins: [dts(), progress(), visualizer(), filesize()],
+  },
+  {
+    input: `./plugin.js`,
+    output: [{ file: `${outDir}/plugin.js`, format: 'esm' }],
+    plugins: [
+      resolve(),
+      external(),
+      commonjs(),
+      terser(),
+      progress(),
+      visualizer(),
+      filesize(),
+    ],
   },
 ]
