@@ -1,9 +1,8 @@
 import { events } from '@components/special/fakeData'
 import TimelineHorizontal from '@components/special/timeline-horizontal'
 import { Schedule, TimelineEvent } from '@components/special/types'
-import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const Home = () => {
   const timelineEvents: TimelineEvent[] = events.map(
     ({
       event: { eventShortName, color },

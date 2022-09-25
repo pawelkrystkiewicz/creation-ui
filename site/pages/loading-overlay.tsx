@@ -1,8 +1,7 @@
 import LoadingOverlay from '@components/loading-overlay'
 import { NavigationTitle } from '@components/navigation/navigation'
-import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const Home = () => {
   const active = true
   const variants = [
     {

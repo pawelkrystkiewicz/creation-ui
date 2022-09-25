@@ -144,16 +144,20 @@ const Buttons = () => {
     },
   ]
 
-  return set.map(({ label, size, propsChanged, children }, index) => (
-    <div>
-      <div className='font-medium text-3xl mb-3'>{label}</div>
-      <div className='font-light text-sm'>
-        <div>Props Changed</div>
-        {propsChanged.join(' ')}
-      </div>
-      <div className='flex gap-3 '>{children}</div>
-    </div>
-  ))
+  return (
+    <>
+      {set.map(({ label, size, propsChanged, children }, index) => (
+        <div key={index}>
+          <div className='font-medium text-3xl mb-3'>{label}</div>
+          <div className='font-light text-sm'>
+            <div>Props Changed</div>
+            {propsChanged.join(' ')}
+          </div>
+          <div className='flex gap-3 '>{children}</div>
+        </div>
+      ))}
+    </>
+  )
 }
 
 export default Buttons

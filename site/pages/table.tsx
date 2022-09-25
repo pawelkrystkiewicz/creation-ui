@@ -15,7 +15,6 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 import _ from 'lodash'
-import type { NextPage } from 'next'
 
 type Person = {
   name: string
@@ -60,7 +59,7 @@ const TitleCell = ({ person }: { person: Person }) => (
  * 6. add context to avoid passing {table} around
  */
 
-const Home: NextPage = () => {
+const Home = () => {
   const fuzzy: FilterFn<any> = (row, columnId, value, addMeta) => {
     // Rank the item
     const itemRank = rankItem(row.getValue(columnId), value)

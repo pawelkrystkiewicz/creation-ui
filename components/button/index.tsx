@@ -20,26 +20,8 @@ const sizesCircle: Record<ElementSize, string> = {
 
 const roundness: Record<ButtonShape, string> = {
   default: settings.roundness.default,
-  circle: 'rounded-full',
+  circle: 'circle',
 }
-
-const commonStaticClasses: string[] = [
-  'flex',
-  'gap-2',
-  'flex-nowrap',
-  'items-center',
-  'font-medium',
-  'focus:outline-none',
-  'focus:ring-2',
-  'focus:ring-offset-2',
-  'focus:ring-blue-500',
-  'transition',
-  'duration-150',
-  'ease-in-out',
-  'disabled:opacity-50',
-  'disabled:cursor-not-allowed',
-  'disabled:pointer-events-none',
-]
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -59,28 +41,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const variants: Record<ElementVariants, string> = {
-      contained: clsx([
-        'text-white',
-        'bg-blue-600',
-        'hover:bg-blue-700',
-        'focus:bg-blue-700',
-        'active:bg-blue-800',
-      ]),
-      outlined: clsx([
-        `border`,
-        `border-blue-600`,
-        `text-blue-600`,
-        `hover:bg-blue-50`,
-        `active:bg-blue-100`,
-      ]),
-      text: clsx([
-        'bg-white',
-        'text-blue-600',
-        'hover:bg-blue-50',
-        'hover:text-blue-600',
-        'focus:text-blue-600',
-        'active:bg-blue-100',
-      ]),
+      contained: 'button-variant--contained',
+      outlined: 'button-variant--outlined',
+      text: 'button-variant--text',
     }
     const isCircle = rounded === 'circle'
     const isContained = variant === 'contained'

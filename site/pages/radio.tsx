@@ -1,9 +1,8 @@
 import { NavigationTitle } from '@components/navigation/navigation'
 import Radio from '@components/radio'
 import { ElementSize } from '@components/types'
-import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const Home = () => {
   const examples = [
     {
       label: 'Example 1',

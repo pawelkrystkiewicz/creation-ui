@@ -1,10 +1,6 @@
 import Checkbox from '@components/checkbox'
-import Icon from '@components/icon'
-import { NavigationTitle } from '@components/navigation/navigation'
-import Switch from '@components/switch'
-import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const Home = () => {
   const checked = true
   const variants = [
     {

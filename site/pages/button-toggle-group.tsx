@@ -1,11 +1,11 @@
+import Icon from '@components/icon'
 import { NavigationTitle } from '@components/navigation/navigation'
 import ToggleGroup from '@components/toggle-group'
 import { ToggleGroupOption } from '@components/toggle-group/toggle-group.types'
-import type { NextPage } from 'next'
-import { useState } from 'react'
-import { Icon } from '../../dist'
 
-const Home: NextPage = () => {
+import { useState } from 'react'
+
+const Home = () => {
   const options: ToggleGroupOption[] = [
     {
       label: '3 days',

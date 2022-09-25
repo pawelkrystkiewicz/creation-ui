@@ -3,11 +3,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -23,7 +19,7 @@
     "declarationDir": "types",
     "emitDeclarationOnly": true,
     "noEmit": false,
-    "noEmitOnError": false,
+    "noEmitOnError": false
   },
   "references": [
     {
@@ -37,7 +33,5 @@
     "stories/introduction.msx",
     "dist/**/*.d.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

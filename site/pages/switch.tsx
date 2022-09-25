@@ -1,9 +1,8 @@
 import Icon from '@components/icon'
 import { NavigationTitle } from '@components/navigation/navigation'
 import Switch from '@components/switch'
-import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <>
       <div className='flex flex-col gap-4'>

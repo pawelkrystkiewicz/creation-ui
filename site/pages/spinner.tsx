@@ -1,8 +1,7 @@
 import Loader from '@components/loader'
 import { NavigationTitle } from '@components/navigation/navigation'
-import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const Home = () => {
   const variants = [
     {
       title: 'Small',

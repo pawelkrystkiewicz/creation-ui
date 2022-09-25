@@ -1,17 +1,17 @@
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
+import path from 'path'
+import babel from 'rollup-plugin-babel'
 import dts from 'rollup-plugin-dts'
+import filesize from 'rollup-plugin-filesize'
 import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
-import { terser } from 'rollup-plugin-terser'
-import filesize from 'rollup-plugin-filesize'
 import progress from 'rollup-plugin-progress'
+import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
-import babel from 'rollup-plugin-babel'
-import autoprefixer from 'autoprefixer'
-import path from 'path'
 import pkg from './package.json'
+import copy from 'rollup-plugin-copy'
 
 const { main, module, types, name, styles, files } = pkg
 const outDir = files[0]
@@ -45,12 +45,12 @@ export default [
         babelHelpers: 'bundled',
       }),
       commonjs(),
-      typescript({}),
+      typescript({ tsconfig: './tsconfig.json' }),
       postcss({
         modules: true,
         minimize: true,
-        inject: true,
-        extract: path.resolve(styles),
+        inject: false,
+        extract: true,
         extensions: ['.css'],
         sourceMap: true,
         config: {
@@ -58,13 +58,21 @@ export default [
         },
       }),
       terser(),
+      copy({
+        targets: [
+          {
+            src: [`${outDir}/cjs/index.css`, `${outDir}/cjs/index.css.map`],
+            dest: outDir,
+          },
+        ],
+      }),
       progress(),
       visualizer(),
       filesize(),
     ],
   },
   {
-    input: `${outDir}/esm/index.d.ts`,
+    input: `${outDir}/index.d.ts`,
     output: [{ file: types, format: 'esm' }],
     plugins: [dts(), progress(), visualizer(), filesize()],
   },

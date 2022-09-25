@@ -1,9 +1,9 @@
 import Input from '@components/input'
 import { NavigationTitle } from '@components/navigation/navigation'
-import type { NextPage } from 'next'
+
 import { useState } from 'react'
 
-const Home: NextPage = () => {
+const Home = () => {
   const defaultValue = 'Brown fox jumps over the lazy dog'
   const variants = [
     {

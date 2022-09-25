@@ -1,9 +1,9 @@
 import DatePicker from '@components/date-picker'
 import { NavigationTitle } from '@components/navigation/navigation'
-import type { NextPage } from 'next'
+
 import { useEffect, useState } from 'react'
 
-const Home: NextPage = () => {
+const Home = () => {
   const [startDate, setStartDate] = useState<Date | null>(new Date())
   const datePlusOne = startDate
     ? new Date().setMonth(startDate?.getMonth() + 1)

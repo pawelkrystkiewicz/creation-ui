@@ -1,10 +1,10 @@
 import Modal from '@components/modal'
 import Button from '@components/button'
 import { NavigationTitle } from '@components/navigation/navigation'
-import type { NextPage } from 'next'
+
 import { useState } from 'react'
 
-const Home: NextPage = () => {
+const Home = () => {
   const [open, setOpen] = useState(false)
   const onClose = (value: any) => {
     console.log(value)

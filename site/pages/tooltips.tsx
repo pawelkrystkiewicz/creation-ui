@@ -1,10 +1,10 @@
 import { NavigationTitle } from '@components/navigation/navigation'
 import Tooltip from '@components/tooltip'
 import { ElementSize } from '@components/types'
-import type { NextPage } from 'next'
+
 import Button from '@components/button'
 
-const TooltipPage: NextPage = () => {
+const TooltipPage = () => {
   const examples = [
     {
       label: 'Example 1',
