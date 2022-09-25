@@ -3,7 +3,7 @@ import ToggleGroup from '@components/toggle-group'
 import { ToggleGroupOption } from '@components/toggle-group/toggle-group.types'
 import type { NextPage } from 'next'
 import { useState } from 'react'
-import { Icon } from '..'
+import { Icon } from '../../dist'
 
 const Home: NextPage = () => {
   const options: ToggleGroupOption[] = [

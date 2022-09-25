@@ -1,7 +1,6 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 
-const Home: NextPage = () => {
+const Home = () => {
   const elements = [
     {
       title: 'Button',
@@ -96,7 +95,7 @@ const Home: NextPage = () => {
         <div className='overflow-y-auto max-h-[50vh] w-full mt-1'>
           {elements.map(({ title, description, link }) => (
             <div key={link} className='flex flex-col items-start'>
-              <Link href={link}>
+              <Link to={link}>
                 <div className='cursor-pointer'>
                   <b>{title}</b> -{' '}
                   <span className='text-sm'>{description}</span>

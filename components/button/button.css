@@ -1,0 +1,23 @@
+@import '../../styles/globals.css';
+
+.button--base {
+  @apply flex
+  gap-2
+  flex-nowrap
+  items-center
+  transition
+  duration-150
+  ease-in-out
+  cursor-pointer;
+}
+
+.button--base:disabled {
+  @apply opacity-50
+  cursor-not-allowed
+  pointer-events-none;
+}
+
+.button--base:hover {
+  @apply bg-gray-100
+  text-gray-700;
+}

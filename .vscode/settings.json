@@ -14,5 +14,6 @@
       "scheme": "file",
       "pattern": "pages/index.tsx"
     }
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

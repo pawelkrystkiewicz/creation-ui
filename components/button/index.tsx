@@ -5,6 +5,7 @@ import { useId } from '@root/hooks/use-id'
 import clsx from 'clsx'
 import React from 'react'
 import { ButtonProps, ButtonShape } from './button.types'
+import './button.css'
 
 const sizes: Record<ElementSize, string> = {
   sm: 'px-3 py-1 text-sm',
@@ -94,7 +95,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={loading}
         {...props}
         className={clsx(
-          commonStaticClasses,
+          'button-base',
           variants[variant],
           roundness[rounded],
           sizeCollection[size],

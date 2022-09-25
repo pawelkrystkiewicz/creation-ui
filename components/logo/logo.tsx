@@ -1,6 +1,5 @@
 import { ElementSize } from '@components/types'
 import clsx from 'clsx'
-import Image from 'next/image'
 
 type LogoSizes = ElementSize | 'xl'
 
@@ -15,20 +14,17 @@ interface LogoProps {
   className?: string
 }
 
-const sizeMap: Record<LogoSizes, number> = {
-  sm: 20,
-  md: 25,
-  lg: 35,
-  xl: 50,
+const sizeMap: Record<LogoSizes, string> = {
+  sm: 'h-7',
+  md: 'h-15',
+  lg: 'h-24',
+  xl: 'h-28',
 }
 
 export const Logo = ({ size = 'sm', className }: LogoProps) => (
-  <Image
-    src='/logo.png'
+  <img
+    src={'/logo.png'}
     alt='Logo'
-    width={sizeMap[size]}
-    height={sizeMap[size]}
-    layout={'fixed'}
-    className={clsx('h-auto w-auto rounded-full', className)}
+    className={clsx('w-auto rounded-full', className, sizeMap[size])}
   />
 )

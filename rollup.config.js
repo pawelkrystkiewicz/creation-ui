@@ -45,7 +45,7 @@ export default [
         babelHelpers: 'bundled',
       }),
       commonjs(),
-      typescript(),
+      typescript({}),
       postcss({
         modules: true,
         minimize: true,

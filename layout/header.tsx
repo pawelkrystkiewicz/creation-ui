@@ -1,11 +1,11 @@
 import { Logo } from '@components/logo/logo'
 import { NavigationTitle } from '@components/navigation/navigation'
 import config from '@root/config'
-import { useRouter } from 'next/router'
+import { useLocation } from 'react-router-dom'
 
 const Header = () => {
-  const router = useRouter()
-  const isMain = router.pathname === '/'
+  const location = useLocation()
+  const isMain = location.pathname === '/'
 
   return (
     <div className='mb-3'>
