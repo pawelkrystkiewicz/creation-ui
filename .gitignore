@@ -16,7 +16,7 @@
 /build/*
 /dist/*
 .rollup.cache/*
-.parcel.cache/*
+.parcel-cache/*
 stats.html
 
 # misc
