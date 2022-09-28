@@ -1,6 +1,6 @@
-import Icon from '@components/icon'
-import { NavigationTitle } from '@components/navigation/navigation'
-import Switch from '@components/switch'
+import Icon from '@root/lib/components/icon'
+import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import Switch from '@root/lib/components/switch'
 
 const Home = () => {
   return (

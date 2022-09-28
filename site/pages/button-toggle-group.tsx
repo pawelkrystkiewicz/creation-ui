@@ -1,7 +1,7 @@
-import Icon from '@components/icon'
-import { NavigationTitle } from '@components/navigation/navigation'
-import ToggleGroup from '@components/toggle-group'
-import { ToggleGroupOption } from '@components/toggle-group/toggle-group.types'
+import Icon from '@root/lib/components/icon'
+import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import ToggleGroup from '@root/lib/components/toggle-group'
+import { ToggleGroupOption } from '@root/lib/components/toggle-group/toggle-group.types'
 
 import { useState } from 'react'
 

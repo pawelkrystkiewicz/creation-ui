@@ -1,8 +1,10 @@
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
+import autoprefixer from 'autoprefixer'
 import path from 'path'
 import babel from 'rollup-plugin-babel'
+import copy from 'rollup-plugin-copy'
 import dts from 'rollup-plugin-dts'
 import filesize from 'rollup-plugin-filesize'
 import external from 'rollup-plugin-peer-deps-external'
@@ -11,8 +13,6 @@ import progress from 'rollup-plugin-progress'
 import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
 import pkg from './package.json'
-import copy from 'rollup-plugin-copy'
-import plugin from 'rollup-plugin-import-css'
 
 const { main, module, types, name, styles, files } = pkg
 const outDir = files[0]
@@ -20,6 +20,8 @@ const outDir = files[0]
 if (!outDir) {
   throw new Error('"outDir" is not defined')
 }
+
+console.info(`Building packages ${name} into ${outDir}/`)
 
 export default [
   {
@@ -48,42 +50,20 @@ export default [
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       postcss({
-        modules: true,
+        plugins: [autoprefixer()],
         minimize: true,
         inject: false,
         extract: true,
-        extensions: ['.css'],
         sourceMap: true,
         config: {
           path: './postcss.config.js',
         },
       }),
-      terser(),
-      copy({
-        targets: [
-          {
-            src: [
-              path.resolve(`${outDir}/cjs/index.css`),
-              path.resolve(`${outDir}/cjs/index.css.map`),
-            ],
-            dest: outDir,
-          },
-          {
-            src: './tailwind.config.js',
-            dest: 'dist',
-          },
-        ],
-      }),
+      terser({ keep_classnames: true }),
       progress(),
       visualizer(),
       filesize(),
     ],
-  },
-  {
-    input: `${outDir}/esm/index.d.ts`,
-    output: [{ file: types, format: 'esm' }],
-    external: [/\.css$/],
-    plugins: [dts(), progress(), visualizer(), filesize()],
   },
   {
     input: `./plugin.js`,
@@ -92,10 +72,26 @@ export default [
       resolve(),
       external(),
       commonjs(),
-      terser(),
+      terser({ keep_classnames: true }),
       progress(),
       visualizer(),
       filesize(),
+      copy({
+        targets: [
+          {
+            src: [`${outDir}/esm/index.css`, `${outDir}/esm/index.css.map`],
+            dest: outDir,
+          },
+        ],
+        verbose: true,
+        copyOnce: true,
+      }),
     ],
+  },
+  {
+    input: `${outDir}/esm/index.d.ts`,
+    output: [{ file: types, format: 'esm' }],
+    external: [/\.s[ac]ss$/i],
+    plugins: [dts(), progress(), visualizer()],
   },
 ]

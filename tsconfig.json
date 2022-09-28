@@ -3,7 +3,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,7 +20,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "declaration": true,
-    "declarationDir": "types",
+    "declarationDir": "./dist/types.d.ts",
     "emitDeclarationOnly": true,
     "noEmit": false,
     "noEmitOnError": false
@@ -27,11 +31,9 @@
     }
   ],
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "stories/introduction.msx",
-    "dist/**/*.d.ts"
+    "./"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

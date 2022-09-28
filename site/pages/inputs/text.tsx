@@ -1,5 +1,5 @@
-import Input from '@components/input'
-import { NavigationTitle } from '@components/navigation/navigation'
+import Input from '@root/lib/components/input'
+import { NavigationTitle } from '@root/lib/components/navigation/navigation'
 
 import { useState } from 'react'
 

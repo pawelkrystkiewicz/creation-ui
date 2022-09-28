@@ -1,6 +1,6 @@
-import Input from '@components/input'
-import { NavigationTitle } from '@components/navigation/navigation'
-import TextArea from '@components/textarea'
+import Input from '@root/lib/components/input'
+import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import TextArea from '@root/lib/components/textarea'
 
 import { useState } from 'react'
 

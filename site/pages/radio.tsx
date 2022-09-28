@@ -1,6 +1,6 @@
-import { NavigationTitle } from '@components/navigation/navigation'
-import Radio from '@components/radio'
-import { ElementSize } from '@components/types'
+import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import Radio from '@root/lib/components/radio'
+import { ElementSize } from '@root/lib/types'
 
 const Home = () => {
   const examples = [

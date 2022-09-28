@@ -1,6 +1,6 @@
-import ButtonGroup from '@components/button/button.group'
-import Icon from '@components/icon'
-import Button from '../../components/button'
+import ButtonGroup from '@root/lib/components/button/button.group'
+import Icon from '@root/lib/components/icon'
+import Button from '../../lib/components/button'
 
 const Buttons = () => {
   const ButtonIcon = <Icon icon='search' />

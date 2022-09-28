@@ -1,6 +1,6 @@
-import Loader from '@components/loader'
-import { NavigationTitle } from '@components/navigation/navigation'
-import Popover from '@components/popover'
+import Loader from '@root/lib/components/loader'
+import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import Popover from '@root/lib/components/popover'
 
 const Home = () => {
   const Body = () => <div>Hello World</div>

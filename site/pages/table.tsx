@@ -1,7 +1,7 @@
-import StatusBadge from '@components/status-badge'
-import Table from '@components/table'
-import data from '@components/table/mock-data.json'
-import Pagination from '@components/table/pagination'
+import StatusBadge from '@root/lib/components/status-badge'
+import Table from '@root/lib/components/table'
+import data from '@root/lib/components/table/mock-data.json'
+import Pagination from '@root/lib/components/table/pagination'
 import { rankItem } from '@tanstack/match-sorter-utils'
 import {
   FilterFn,

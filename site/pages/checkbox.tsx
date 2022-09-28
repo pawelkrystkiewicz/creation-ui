@@ -1,4 +1,4 @@
-import Checkbox from '@components/checkbox'
+import Checkbox from '@root/lib/components/checkbox'
 
 const Home = () => {
   const checked = true

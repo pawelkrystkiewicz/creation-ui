@@ -1,9 +1,9 @@
 {
   "version": "0.0.1",
   "private": true,
+  "name": "creation-ui",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "name": "creation-ui",
   "types": "dist/index.d.ts",
   "styles": "dist/index.css",
   "files": [
@@ -101,6 +101,7 @@
     "rollup-plugin-typescript-path-mapping": "^1.0.2",
     "rollup-plugin-typescript-paths": "^1.4.0",
     "rollup-plugin-visualizer": "^5.8.1",
+    "sass": "^1.55.0",
     "storybook-addon-next": "^1.6.7",
     "storybook-addon-outline": "^1.4.2",
     "storybook-addon-turbo-build": "^1.1.0",
