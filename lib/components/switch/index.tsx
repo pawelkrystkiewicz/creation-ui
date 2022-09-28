@@ -1,91 +1,43 @@
 import { useState } from 'react'
-import * as HeadlessUI from '@headlessui/react'
+import { Switch as HSwitch } from '@headlessui/react'
 import clsx from 'clsx'
-import { ElementSize } from '@root/lib/types'
-import { disabledStateClasses } from '@root/lib/components/shared-classes'
+import './switch.scss'
+import { SwitchProps } from './switch.types'
+import { useTheme } from '@root/lib/context/theme'
 
-interface SwitchProps {
-  /**
-   * Switch checked state
-   */
-  checked?: boolean
-  /**
-   * Size of the switch
-   */
-  size?: ElementSize
-}
+const Switch = ({ checked, ...props }: SwitchProps) => {
+  const { defaultSize } = useTheme()
+  const { size = defaultSize } = props
 
-const sizeMap: Record<ElementSize, Record<'body' | 'circle', string>> = {
-  sm: { body: 'h-[22px] w-[42px]', circle: 'h-[18px] w-[18px]' },
-  md: { body: 'h-[25px] w-[52px]', circle: 'h-[21px] w-[21px]' },
-  lg: { body: 'h-[28px] w-[57px]', circle: 'h-[25px] w-[25px]' },
-}
-
-const staticClassesBody = [
-  'relative',
-  'inline-flex',
-  'shrink-0',
-  'cursor-pointer',
-  'rounded-full',
-  'border-2',
-  'border-transparent',
-  'transition-colors',
-  'duration-200',
-  'ease-in-out',
-  'focus:outline-none',
-  'focus-visible:ring-2',
-  'focus-visible:ring-white',
-  'focus-visible:ring-opacity-75',
-]
-
-const staticClassesCircle = [
-  'pointer-events-none',
-  'inline-block',
-  'transform',
-  'rounded-full',
-  'bg-white',
-  'shadow-lg',
-  'ring-0',
-  'transition',
-  'duration-200',
-  'ease-in-out',
-]
-
-const enabledPositionForSize: Record<ElementSize, string> = {
-  sm: 'translate-x-5',
-  md: 'translate-x-7',
-  lg: 'translate-x-7',
-}
-
-const Switch = ({ checked, size = 'sm', ...props }: SwitchProps) => {
-  const [enabled, setEnabled] = useState(false)
-  const enabledColors = enabled ? 'bg-blue-500' : 'bg-gray-300'
-  const enabledCirclePosition = enabled
-    ? enabledPositionForSize[size]
-    : 'translate-x-0'
-
-  const sizeClass = sizeMap[size]
   return (
-    <HeadlessUI.Switch
-      checked={enabled}
-      onChange={setEnabled}
-      className={clsx(
-        enabledColors,
-        staticClassesBody,
-        sizeClass.body,
-        disabledStateClasses
-      )}
-    >
-      <span className='sr-only'>Use setting</span>
-      <span
-        aria-hidden='true'
+    <div className={clsx('switch--wrapper', `form-element-spacing--${size}`)}>
+      <div
         className={clsx(
-          enabledCirclePosition,
-          staticClassesCircle,
-          sizeClass.circle
+          `size--${size}`,
+          'element-title',
+          `element-title--${size}`
         )}
-      />
-    </HeadlessUI.Switch>
+      >
+        {props.title}
+      </div>
+      <HSwitch
+        className={clsx(
+          'switch',
+          checked && 'switch-checked',
+          `switch--${size}`
+        )}
+        {...props}
+      >
+        <span
+          aria-hidden='true'
+          className={clsx(
+            'switch--circle',
+            `switch--circle--${size}`,
+            checked && `switch-checked--${size}`
+          )}
+        />
+      </HSwitch>
+    </div>
   )
 }
 Switch.displayName = '_Switch'

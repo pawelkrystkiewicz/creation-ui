@@ -1,15 +1,30 @@
-import Icon from '@root/lib/components/icon'
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
 import Switch from '@root/lib/components/switch'
+import { useState } from 'react'
 
 const Home = () => {
+  const [checked, setChecked] = useState(false)
+  const title = 'This is switch'
   return (
     <>
       <div className='flex flex-col gap-4'>
-        <Switch size='sm' />
-        <Switch size='md' />
-        <Switch size='lg' />
-        {/* <Switch size="sm" disabled/> */}
+        <Switch
+          size='sm'
+          checked={checked}
+          onChange={setChecked}
+          title={title}
+        />
+        <Switch
+          size='md'
+          checked={checked}
+          onChange={setChecked}
+          title={title}
+        />
+        <Switch
+          size='lg'
+          checked={checked}
+          onChange={setChecked}
+          title={title}
+        />
       </div>
     </>
   )

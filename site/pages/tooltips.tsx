@@ -1,4 +1,4 @@
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import { NavigationTitle } from '@root/site/navigation/navigation'
 import Tooltip from '@root/lib/components/tooltip'
 import { ElementSize } from '@root/lib/types'
 

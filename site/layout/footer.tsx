@@ -1,4 +1,4 @@
-import { Logo } from '@root/lib/components/logo/logo'
+import { Logo } from '@root/site/logo/logo'
 import { Version } from '@root/lib/components/version'
 import config from '@root/config'
 

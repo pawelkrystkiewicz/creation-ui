@@ -1,6 +1,6 @@
 import Icon from '@root/lib/components/icon'
 import { icons } from '@root/lib/components/icon/list-of-icons'
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import { NavigationTitle } from '@root/site/navigation/navigation'
 
 const Home = () => {
   return (

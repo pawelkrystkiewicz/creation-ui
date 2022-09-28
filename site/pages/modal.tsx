@@ -1,6 +1,6 @@
 import Modal from '@root/lib/components/modal'
 import Button from '@root/lib/components/button'
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import { NavigationTitle } from '@root/site/navigation/navigation'
 
 import { useState } from 'react'
 

@@ -1,14 +1,21 @@
-import { twMerge } from 'tailwind-merge'
-import { selector } from './loader.classes'
+import { useTheme } from '../../context/theme'
 import { LoaderProps } from './loader.types'
+import './loader.scss'
+import clsx from 'clsx'
 
 const Loader = (props: LoaderProps) => {
-  const classes = selector(props)
+  const { defaultSize } = useTheme()
+  const { size = defaultSize, className, white } = props
+
   return (
-    <div className={twMerge(classes('wrapper'), props.className)}>
+    <div className={clsx('loader', className)}>
       <svg
         aria-hidden='true'
-        className={classes('icon')}
+        className={clsx(
+          'loader-icon',
+          `loader-size--${size}`,
+          white && 'loader-icon--white'
+        )}
         viewBox='0 0 100 101'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
@@ -22,13 +29,8 @@ const Loader = (props: LoaderProps) => {
           fill='currentFill'
         />
       </svg>
-      <span className='sr-only'>Loading...</span>
     </div>
   )
-}
-
-Loader.defaultProps = {
-  size: 'md',
 }
 
 export default Loader

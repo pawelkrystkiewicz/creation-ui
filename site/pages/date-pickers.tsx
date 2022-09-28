@@ -1,5 +1,5 @@
 import DatePicker from '@root/lib/components/date-picker'
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import { NavigationTitle } from '@root/site/navigation/navigation'
 
 import { useEffect, useState } from 'react'
 

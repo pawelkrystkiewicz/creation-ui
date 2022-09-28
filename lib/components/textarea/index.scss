@@ -1,0 +1,23 @@
+@import url(https://fonts.bunny.net/css?family=plus-jakarta-sans:200,200i,300,300i,400,400i,500,600,800);
+/* @layer reset, defaults, patterns, components, utilities, overrides; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+button,
+input {
+  @apply focus:outline-none
+  focus:ring-2
+  focus:ring-offset-2
+  focus:ring-blue-500;
+}
+
+.circle {
+  @apply rounded-full;
+}

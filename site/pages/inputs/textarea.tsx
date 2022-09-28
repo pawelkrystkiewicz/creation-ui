@@ -1,5 +1,5 @@
 import Input from '@root/lib/components/input'
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import { NavigationTitle } from '@root/site/navigation/navigation'
 import TextArea from '@root/lib/components/textarea'
 
 import { useState } from 'react'

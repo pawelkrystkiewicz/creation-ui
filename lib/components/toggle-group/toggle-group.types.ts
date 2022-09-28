@@ -15,4 +15,5 @@ export type RadioGroupOptionProps = GetComponentProps<typeof RadioGroup.Option>
 export type ToggleGroupProps = RadioGroupProps & {
   options: ToggleGroupOption[]
   title?: string
+  required?: boolean
 }

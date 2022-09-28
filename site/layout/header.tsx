@@ -1,5 +1,5 @@
-import { Logo } from '@root/lib/components/logo/logo'
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import { Logo } from '@root/site/logo/logo'
+import { NavigationTitle } from '@root/site/navigation/navigation'
 import config from '@root/config'
 import { useLocation } from 'react-router-dom'
 

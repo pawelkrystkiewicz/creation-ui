@@ -1,5 +1,4 @@
 import Icon from '@root/lib/components/icon'
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
 import ToggleGroup from '@root/lib/components/toggle-group'
 import { ToggleGroupOption } from '@root/lib/components/toggle-group/toggle-group.types'
 
@@ -58,7 +57,7 @@ const Home = () => {
           size='sm'
           title='Select a time period'
         />
-        <ToggleGroup
+        {/* <ToggleGroup
           options={options}
           value={value}
           onChange={setValue}
@@ -72,9 +71,9 @@ const Home = () => {
           size='lg'
           title='Select a time period'
           required={true}
-        />
+        /> */}
       </div>
-      <div className='flex flex-col gap-3'>
+      {/* <div className='flex flex-col gap-3'>
         <h2>Styles</h2>
         <ToggleGroup
           options={styling}
@@ -97,7 +96,7 @@ const Home = () => {
           size='lg'
           title='Select style'
         />
-      </div>
+      </div> */}
     </>
   )
 }

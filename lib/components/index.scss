@@ -9,7 +9,6 @@ html {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-
 button,
 input {
   @apply focus:outline-none
@@ -20,4 +19,68 @@ input {
 
 .circle {
   @apply rounded-full;
+}
+
+.size {
+  &--sm {
+    @apply text-sm sm:text-xs;
+  }
+
+  &--md {
+    @apply text-base sm:text-sm;
+  }
+
+  &--lg {
+    @apply text-lg sm:text-base;
+  }
+}
+
+.form-element-spacing {
+  &--sm {
+    @apply mt-4;
+  }
+
+  &--md {
+    @apply mt-5;
+  }
+
+  &--lg {
+    @apply mt-6;
+  }
+}
+
+.element {
+  &-disabled {
+    @apply cursor-not-allowed opacity-25;
+  }
+
+  &-read-only {
+    @apply cursor-not-allowed;
+  }
+
+  &-active {
+    @apply text-blue-600;
+  }
+  &-selected {
+    @apply bg-gray-300/50;
+  }
+  &-required {
+    @apply after:content-['*'] after:ml-0.5 after:text-red-500;
+  }
+
+  &-title {
+    @apply text-gray-700 pb-1;
+
+    &--sm {
+      @apply pb-1;
+    }
+
+    &--md {
+      @apply pb-1;
+    }
+
+    &--lg {
+      @apply pb-1;
+    }
+  }
 }

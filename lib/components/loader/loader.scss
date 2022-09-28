@@ -1,0 +1,27 @@
+@import '../index.scss';
+
+.loader {
+  @apply flex justify-center items-center select-none;
+
+  &-icon {
+    @apply mr-2 text-gray-200 animate-spin fill-blue-600;
+  }
+
+  &-icon--white {
+    @apply fill-white text-gray-300;
+  }
+
+  &-size {
+    &--sm {
+      @apply w-4 h-4;
+    }
+
+    &--md {
+      @apply w-5 h-5;
+    }
+
+    &--lg {
+      @apply w-6 h-6;
+    }
+  }
+}

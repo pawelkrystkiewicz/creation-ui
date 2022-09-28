@@ -1,5 +1,5 @@
 import LoadingOverlay from '@root/lib/components/loading-overlay'
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import { NavigationTitle } from '@root/site/navigation/navigation'
 
 const Home = () => {
   const active = true

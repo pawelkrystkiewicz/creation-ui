@@ -1,0 +1,86 @@
+@import '../index.scss';
+
+.switch {
+  @apply bg-gray-300 translate-x-0
+  relative
+  inline-flex
+  shrink-0
+  cursor-pointer
+  rounded-full
+  border-2
+  border-transparent
+  transition-colors
+  duration-200
+  ease-in-out
+  focus:outline-none
+  focus-visible:ring-2
+  focus-visible:ring-white
+  focus-visible:ring-opacity-75;
+
+  &--sm {
+    @apply h-[22px] w-[42px];
+  }
+  &--md {
+    @apply h-[25px] w-[52px];
+  }
+  &--lg {
+    @apply h-[28px] w-[57px];
+  }
+
+  &-checked {
+    @apply bg-blue-500;
+
+    &--sm {
+      @apply translate-x-5;
+    }
+    &--md {
+      @apply translate-x-7;
+    }
+    &--lg {
+      @apply translate-x-7;
+    }
+  }
+
+  &_required {
+    @apply element-required;
+  }
+  &_read-only {
+    @apply element-read-only;
+  }
+  &_disabled {
+    @apply element-disabled;
+  }
+  &_active {
+    @apply element-active;
+  }
+  &_checked {
+    @apply element-selected;
+  }
+
+  &--circle {
+    @apply pointer-events-none
+    inline-block
+    transform
+    rounded-full
+    bg-white
+    shadow-lg
+    ring-0
+    transition
+    duration-200
+    ease-in-out;
+
+    &--sm {
+      @apply h-[18px] w-[18px];
+    }
+    &--md {
+      @apply h-[21px] w-[21px];
+    }
+    &--lg {
+      @apply h-[25px] w-[25px];
+    }
+  }
+
+  &--wrapper {
+    @apply flex flex-col;
+  }
+}

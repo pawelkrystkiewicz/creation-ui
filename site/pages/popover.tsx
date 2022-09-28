@@ -1,5 +1,5 @@
 import Loader from '@root/lib/components/loader'
-import { NavigationTitle } from '@root/lib/components/navigation/navigation'
+import { NavigationTitle } from '@root/site/navigation/navigation'
 import Popover from '@root/lib/components/popover'
 
 const Home = () => {

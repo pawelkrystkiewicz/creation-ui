@@ -15,10 +15,10 @@ interface LogoProps {
 }
 
 const sizeMap: Record<LogoSizes, string> = {
-  sm: 'h-7',
-  md: 'h-15',
-  lg: 'h-24',
-  xl: 'h-28',
+  sm: 'h-8',
+  md: 'h-10',
+  lg: 'h-12',
+  xl: 'h-14',
 }
 
 export const Logo = ({ size = 'sm', className }: LogoProps) => (
