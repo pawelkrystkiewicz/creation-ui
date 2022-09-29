@@ -24,7 +24,7 @@
     @apply h-[25px] w-[52px];
   }
   &--lg {
-    @apply h-[28px] w-[57px];
+    @apply h-[29px] w-[57px];
   }
 
   &-checked {
@@ -41,24 +41,8 @@
     }
   }
 
-  &_required {
-    @apply element-required;
-  }
-  &_read-only {
-    @apply element-read-only;
-  }
-  &_disabled {
-    @apply element-disabled;
-  }
-  &_active {
-    @apply element-active;
-  }
-  &_checked {
-    @apply element-selected;
-  }
-
   &--circle {
-    @apply pointer-events-none
+    @apply
     inline-block
     transform
     rounded-full
@@ -78,9 +62,5 @@
     &--lg {
       @apply h-[25px] w-[25px];
     }
-  }
-
-  &--wrapper {
-    @apply flex flex-col;
   }
 }

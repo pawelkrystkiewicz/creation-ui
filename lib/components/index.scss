@@ -9,78 +9,134 @@ html {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-button,
-input {
-  @apply focus:outline-none
-  focus:ring-2
-  focus:ring-offset-2
-  focus:ring-blue-500;
-}
-
-.circle {
-  @apply rounded-full;
-}
-
-.size {
+.text-size {
   &--sm {
-    @apply text-sm sm:text-xs;
-  }
-
-  &--md {
     @apply text-base sm:text-sm;
   }
 
-  &--lg {
+  &--md {
     @apply text-lg sm:text-base;
   }
-}
-
-.form-element-spacing {
-  &--sm {
-    @apply mt-4;
-  }
-
-  &--md {
-    @apply mt-5;
-  }
 
   &--lg {
-    @apply mt-6;
+    @apply text-xl sm:text-lg;
   }
 }
 
-.element {
-  &-disabled {
-    @apply cursor-not-allowed opacity-25;
+.form-element {
+  @apply disabled:opacity-25
+  disabled:cursor-not-allowed;
+
+  &--loader {
+    @apply absolute right-0 top-1/2 transform -translate-y-1/2;
   }
 
-  &-read-only {
-    @apply cursor-not-allowed;
+  &--input {
+    @apply disabled:opacity-25
+    disabled:cursor-not-allowed
+    read-only:cursor-not-allowed
+    block
+    w-full
+    shadow-sm
+    rounded-md
+    focus:ring
+    focus:ring-opacity-50
+    border-gray-300
+    invalid:ring-red-200
+    invalid:border-red-500;
+    &:focus {
+      @apply border-blue-300 ring-blue-200
+      invalid:ring-red-200
+      invalid:border-red-500;
+    }
   }
 
-  &-active {
-    @apply text-blue-600;
+  &--checkbox {
+    @apply disabled:opacity-25
+    disabled:cursor-not-allowed
+    read-only:cursor-not-allowed
+    rounded
+    text-blue-600
+    border-gray-300
+    shadow-sm
+    focus:border-blue-300
+    focus:ring
+    focus:ring-offset-0
+    focus:ring-blue-200
+    focus:ring-opacity-50
+    cursor-pointer;
+
+    &-sm {
+      @apply h-4 w-4;
+    }
+    &-md {
+      @apply h-5 w-5;
+    }
+    &-lg {
+      @apply h-6 w-6;
+    }
   }
-  &-selected {
+
+  &--iem-selected {
     @apply bg-gray-300/50;
   }
-  &-required {
+
+  &--label {
+    @apply peer-required:after:content-['*']
+    peer-required:after:ml-0.5
+    peer-required:after:text-red-500
+    text-gray-700 select-none;
+
+    &--checkbox {
+      @apply inline-flex items-center cursor-pointer;
+    }
+
+    &-sm {
+      @apply mb-1;
+    }
+
+    &-md {
+      @apply mb-1;
+    }
+
+    &-lg {
+      @apply mb-1;
+    }
+  }
+
+  &--error {
+    @apply invisible peer-invalid:visible text-red-600;
+  }
+
+  &--wrapper {
+    @apply flex flex-col gap-1 relative;
+    &-row {
+      @apply flex gap-2 items-center;
+    }
+  }
+  &--read-only {
+    @apply cursor-not-allowed pointer-events-none;
+  }
+  &--required {
     @apply after:content-['*'] after:ml-0.5 after:text-red-500;
   }
+}
 
-  &-title {
-    @apply text-gray-700 pb-1;
-
-    &--sm {
-      @apply pb-1;
-    }
-
-    &--md {
-      @apply pb-1;
-    }
-
-    &--lg {
-      @apply pb-1;
-    }
-  }
+.overlay {
+  @apply absolute
+top-0
+bottom-0
+left-0
+right-0
+h-full
+w-full
+bg-gray-700/50
+transition
+duration-200
+ease-in
+flex
+justify-center
+place-items-center
+select-none
+overflow-clip;
 }

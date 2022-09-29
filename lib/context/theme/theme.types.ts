@@ -2,6 +2,7 @@ import { AutocompleteOptionsType } from '@root/lib/components/autocomplete/autoc
 import {
   Breakpoints,
   ElementColor,
+  ElementPosition,
   ElementSize,
   ElementTheme,
   ElementVariants,
@@ -29,6 +30,8 @@ export type Theme = {
   black: string
   defaultRoundness: string
   defaultSize: ElementSize
+  defaultDrawerSize: number | string
+  defaultDrawerPosition: ElementPosition
   defaultVariant: ElementVariants
   leading: string
   fontFamily: string

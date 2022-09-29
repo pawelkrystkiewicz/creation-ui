@@ -1,30 +1,40 @@
-import { useState } from 'react'
 import { Switch as HSwitch } from '@headlessui/react'
+import { useTheme } from '@root/lib/context/theme'
 import clsx from 'clsx'
 import './switch.scss'
 import { SwitchProps } from './switch.types'
-import { useTheme } from '@root/lib/context/theme'
 
 const Switch = ({ checked, ...props }: SwitchProps) => {
   const { defaultSize } = useTheme()
-  const { size = defaultSize } = props
+  const { size = defaultSize, required, readOnly } = props
 
   return (
-    <div className={clsx('switch--wrapper', `form-element-spacing--${size}`)}>
-      <div
+    <div
+      className={clsx(
+        'form-element--wrapper',
+        `text-size--${size}`,
+        readOnly && 'form-element--read-only'
+      )}
+    >
+      <span
         className={clsx(
-          `size--${size}`,
-          'element-title',
-          `element-title--${size}`
+          'form-element--label',
+          `form-element--label-${size}`,
+          required && 'form-element--required'
         )}
       >
-        {props.title}
-      </div>
+        {props.label}
+      </span>
       <HSwitch
+        aria-required={required}
         className={clsx(
+          'peer',
+          'form-element',
+          'form-element--input--checkbox ',
           'switch',
+          `switch--${size}`,
           checked && 'switch-checked',
-          `switch--${size}`
+          readOnly && 'form-element--read-only'
         )}
         {...props}
       >

@@ -27,6 +27,7 @@ export const ELEMENT_VARIANTS = ['contained', 'outlined', 'text'] as const
 export const ELEMENT_ORIENTATION = ['vertical', 'horizontal'] as const
 export const ELEMENT_PLACEMENT_VERTICAL = ['top', 'bottom'] as const
 export const ELEMENT_PLACEMENT_HORIZONTAL = ['right', 'left'] as const
+export const ELEMENT_POSITION = ['top', 'bottom', 'right', 'left'] as const
 export const BREAKPOINTS = ['xs', 'sm', 'md', 'lg', 'xl', 'xl2'] as const
 
 export type Breakpoints = typeof BREAKPOINTS[number]
@@ -39,6 +40,7 @@ export type ElementVariants = typeof ELEMENT_VARIANTS[number]
 export type ElementPlacementHorizontal =
   typeof ELEMENT_PLACEMENT_HORIZONTAL[number]
 export type ElementPlacementVertical = typeof ELEMENT_PLACEMENT_VERTICAL[number]
+export type ElementPosition = typeof ELEMENT_POSITION[number]
 export type ElementPlacement = {
   horizontal: ElementPlacementHorizontal
   vertical: ElementPlacementVertical

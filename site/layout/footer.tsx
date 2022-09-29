@@ -3,7 +3,7 @@ import { Version } from '@root/lib/components/version'
 import config from '@root/config'
 
 const Footer = () => (
-  <footer className='flex py-3 w-full items-center justify-center border-t absolute bottom-0'>
+  <footer className='flex py-3 w-full items-center justify-center border-t absolute bottom-0 -z-0'>
     <a
       className='flex items-center justify-center gap-2 text-sm'
       href='/'

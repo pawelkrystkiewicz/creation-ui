@@ -62,15 +62,10 @@ export const classesSelector =
     /**
      * Pick defined props from props object
      */
-    const debug = (args: any): any => {
-      console.debug(args)
-      return args
-    }
 
     const paths = flow(
       flatten as any,
       partialRight(pickBy),
-      debug,
       keys,
       partialRight(
         map,

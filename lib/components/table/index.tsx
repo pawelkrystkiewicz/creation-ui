@@ -1,6 +1,7 @@
 import HeaderCell from './header-cell'
 import RowCell from './row-cell'
 import { TableProps } from './table.types'
+import './table.scss'
 
 const Table = ({ table }: TableProps) => {
   return (

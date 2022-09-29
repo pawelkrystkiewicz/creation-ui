@@ -8,7 +8,7 @@ const Home = () => {
   const defaultValue = 'Brown fox jumps over the lazy dog'
   const variants = [
     {
-      props: { size: 'sm', label: 'Small input', defaultValue },
+      props: { size: 'sm', label: 'Small input', defaultValue, loading: true },
     },
     {
       props: { size: 'md', label: 'Medium input', defaultValue },

@@ -1,10 +1,9 @@
 import Button from '@root/lib/components/button'
 import Icon from '@root/lib/components/icon'
 import Select from '@root/lib/components/select'
-import { SelectProps } from '@root/lib/components/select/select.types'
 import { Table } from '@tanstack/react-table'
 import clsx from 'clsx'
-
+import './table.scss'
 interface PaginationBlockProps extends React.ComponentProps<'button'> {
   current?: boolean
   disabled?: boolean

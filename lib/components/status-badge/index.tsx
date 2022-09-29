@@ -1,16 +1,23 @@
-import { StatusBadgeProps } from './status-badge.types'
-import { selector } from './status-badge.classes'
+import { useTheme } from '@root/lib/context/theme'
 import clsx from 'clsx'
+import { StatusBadgeProps } from './status-badge.types'
+import './status-badge.scss'
 
 const StatusBadge = (props: StatusBadgeProps) => {
-  const classes = selector(props)
-  console.log(classes('wrapper'))
-  return <span className={classes('wrapper')}>{props.label}</span>
-}
+  const { defaultSize } = useTheme()
+  const { label, status, size = defaultSize } = props
 
-StatusBadge.defaultProps = {
-  size: 'sm',
-  status: 'active',
+  return (
+    <span
+      className={clsx(
+        'status-badge',
+        `text-size--${size}`,
+        status && `status-badge--${status}`
+      )}
+    >
+      {label ?? status}
+    </span>
+  )
 }
 
 export default StatusBadge

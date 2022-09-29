@@ -18,6 +18,8 @@ const theme: Theme = {
   fontFamilyMonospace: 'font-mono',
   primaryColor: 'blue',
   respectReducedMotion: true,
+  defaultDrawerSize: '50vw',
+  defaultDrawerPosition: 'right',
   headings: {
     fontFamily: 'font-sans',
     fontWeight: 'font-bold',

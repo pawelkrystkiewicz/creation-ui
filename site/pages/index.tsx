@@ -3,6 +3,11 @@ import '../index.css'
 const Home = () => {
   const elements = [
     {
+      title: 'Avatar',
+      description: 'Avatar component',
+      link: '/avatar',
+    },
+    {
       title: 'Button',
       description: 'Button component',
       link: '/button',
@@ -78,9 +83,19 @@ const Home = () => {
       link: '/modal',
     },
     {
+      title: 'Drawer',
+      description: 'Drawer component',
+      link: '/drawer',
+    },
+    {
       title: 'DatePicker',
       description: 'Date and Time Pickers',
       link: '/date-pickers',
+    },
+    {
+      title: 'StatusBadge',
+      description: '',
+      link: '/status-badge',
     },
   ]
 

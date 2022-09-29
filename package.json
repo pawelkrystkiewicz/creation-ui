@@ -75,6 +75,7 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "clsx": "^1.2.1",
     "flat": "^5.0.2",
+    "framer-motion": "^7.4.0",
     "git-last-commit": "^1.0.1",
     "husky": "^8.0.0",
     "mini-css-extract-plugin": "^2.6.1",

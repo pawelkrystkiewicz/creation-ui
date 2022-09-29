@@ -1,31 +1,5 @@
-import React from 'react'
-
-import {
-  Column,
-  Table,
-  useReactTable,
-  ColumnFiltersState,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getFacetedRowModel,
-  getFacetedUniqueValues,
-  getFacetedMinMaxValues,
-  getPaginationRowModel,
-  sortingFns,
-  getSortedRowModel,
-  FilterFn,
-  SortingFn,
-  ColumnDef,
-  flexRender,
-  FilterFns,
-  Row,
-} from '@tanstack/react-table'
-
-import {
-  RankingInfo,
-  rankItem,
-  compareItems,
-} from '@tanstack/match-sorter-utils'
+import { flexRender, Row } from '@tanstack/react-table'
+import './table.scss'
 
 interface RowCellProps {
   row: Row<any>

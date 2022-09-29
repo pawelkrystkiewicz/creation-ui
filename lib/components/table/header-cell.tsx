@@ -1,25 +1,8 @@
 import Icon from '@root/lib/components/icon'
-import {
-  Column,
-  Table,
-  useReactTable,
-  ColumnFiltersState,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getFacetedRowModel,
-  getFacetedUniqueValues,
-  getFacetedMinMaxValues,
-  getPaginationRowModel,
-  sortingFns,
-  getSortedRowModel,
-  FilterFn,
-  SortingFn,
-  ColumnDef,
-  flexRender,
-  FilterFns,
-} from '@tanstack/react-table'
+import { Column, flexRender, Table } from '@tanstack/react-table'
 import clsx from 'clsx'
 import React from 'react'
+import './table.scss'
 
 interface HeaderCellProps {
   header: any

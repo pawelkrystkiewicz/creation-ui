@@ -5,16 +5,25 @@ export const AVATAR_VARIANTS = ['circle', 'rounded', 'square'] as const
 
 export type AvatarVariant = typeof AVATAR_VARIANTS[number]
 
-export type Badge = { placement?: ElementPlacement } & (
-  | {
-      type: 'dot'
-      count: null
-    }
-  | {
-      type: 'count'
-      count: number
-    }
-)
+export type Badge = {
+  /**
+   * Vertical and horizontal placement of the badge
+   */
+  placement?: ElementPlacement
+  /**
+   * Notification badge pulsing?
+   */
+  pulse?: boolean
+} & {
+  /**
+   * Badge type
+   */
+  type: 'dot' | 'count'
+  /**
+   * Badge notifications count
+   */
+  count?: number
+}
 
 type AvatarProps = Omit<React.ComponentProps<'img'>, 'size'> & {
   /**
@@ -33,9 +42,5 @@ type AvatarProps = Omit<React.ComponentProps<'img'>, 'size'> & {
    * Notification badge
    */
   badge?: Badge
-  /**
-   * Notification badge pulsing?
-   */
-  badgePulse?: Badge
 }
 export default AvatarProps

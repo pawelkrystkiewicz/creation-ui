@@ -8,7 +8,8 @@ export type ModalProps = Omit<React.ComponentProps<'div'>, 'size'> & {
   size?: ElementSize
   children?: React.ReactNode
   open?: boolean
-  onClose: (value: boolean) => void
+  onClose?: (value?: boolean) => void
+  onOverlayClick?: () => void
 }
 
 export interface ModalTitleProps {

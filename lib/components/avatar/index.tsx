@@ -1,6 +1,8 @@
+import { useTheme } from '@root/lib/context/theme'
 import { ElementPlacement } from '@root/lib/types'
+import clsx from 'clsx'
 import { forwardRef } from 'react'
-import { selector } from './avatar.classes'
+import './avatar.scss'
 import AvatarProps from './avatar.types'
 
 const defaultPlacement: ElementPlacement = {
@@ -9,24 +11,36 @@ const defaultPlacement: ElementPlacement = {
 }
 
 const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
-  const classes = selector(props)
-
+  const theme = useTheme()
   return (
-    <div ref={ref} className={classes('wrapper')}>
-      <img {...props} className={classes('img')} />
+    <div ref={ref} className={'avatar--wrapper'}>
+      <img
+        {...props}
+        className={clsx(
+          'avatar--img',
+          `avatar--img-${props.size}`,
+          `avatar--img-${props.variant}`
+        )}
+      />
       {props.badge && (
         <>
-          <div className={classes('notifications')}>
+          <div
+            className={clsx(
+              'avatar--notifications',
+              `avatar--notifications-${props.badge?.placement?.horizontal}`,
+              `avatar--notifications-${props.badge?.placement?.vertical}`,
+              `avatar--notifications-${props.badge?.type}`
+            )}
+          >
             <span>{props.badge?.count}</span>
-            <span
-              className={selector({
-                ...props,
-                badge: {
-                  ...props.badge,
-                  placement: props.badge.placement ?? defaultPlacement,
-                },
-              })('badgePulse')}
-            />
+            {props.badge.pulse && (
+              <span
+                className={clsx(
+                  'avatar--pulse',
+                  `avatar--pulse-${props.badge?.type}`
+                )}
+              />
+            )}
           </div>
         </>
       )}

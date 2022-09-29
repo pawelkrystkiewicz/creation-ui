@@ -3,12 +3,6 @@ import clsx from 'clsx'
 import { ButtonGroupProps } from './button.types'
 import './button-group.scss'
 
-// prettier-ignore
-const commonStaticClasses: string[] = [
-  'inline-flex',
-  'button-group'
-]
-
 const ButtonGroup = ({
   color = settings.color,
   children,
@@ -16,7 +10,7 @@ const ButtonGroup = ({
   ...props
 }: ButtonGroupProps) => {
   return (
-    <div {...props} className={clsx(commonStaticClasses, className)}>
+    <div {...props} className={clsx('button-group', className)}>
       {children}
     </div>
   )

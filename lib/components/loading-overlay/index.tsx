@@ -1,17 +1,21 @@
 import Loader from '@root/lib/components/loader'
-import { selector } from './loading-overlay.classes'
+import { useTheme } from '@root/lib/context/theme'
+import clsx from 'clsx'
+import AnimateAppearance from '../animate-appearance'
+import '../index.scss'
 import { LoadingOverlayProps } from './loading-overlay.types'
 
-const LoadingOverlay = ({
-  active,
-  size = 'md',
-  ...props
-}: LoadingOverlayProps) => {
-  const classes = selector(props)
-  return active ? (
-    <div {...props} className={classes('overlay')}>
+const LoadingOverlay = ({ active, ...props }: LoadingOverlayProps) => {
+  const { zIndex, defaultSize } = useTheme()
+  const { size = defaultSize } = props
+  return (
+    <AnimateAppearance
+      isVisible={active}
+      {...props}
+      className={clsx(zIndex.overlays, 'overlay')}
+    >
       <Loader size={size} />
-    </div>
-  ) : null
+    </AnimateAppearance>
+  )
 }
 export default LoadingOverlay

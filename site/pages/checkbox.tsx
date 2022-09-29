@@ -8,6 +8,10 @@ const Home = () => {
       props: { size: 'sm', checked, label: 'Small' },
     },
     {
+      title: 'Required',
+      props: { size: 'sm', checked, label: 'Required', required: true },
+    },
+    {
       title: 'Medium',
       props: { size: 'md', checked, label: 'Medium' },
     },

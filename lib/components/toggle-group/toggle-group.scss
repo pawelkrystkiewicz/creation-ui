@@ -49,18 +49,5 @@
     uppercase
     shadow-none
     select-none;
-
-    &_read-only {
-      @apply element-read-only;
-    }
-    &_disabled {
-      @apply element-disabled;
-    }
-    &_active {
-      @apply element-active;
-    }
-    &_checked {
-      @apply element-selected;
-    }
   }
 }

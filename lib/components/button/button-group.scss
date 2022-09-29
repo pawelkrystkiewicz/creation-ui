@@ -1,5 +1,9 @@
 @import '../index.scss';
 
+.button-group{
+  @apply inline-flex;
+}
+
 .button-group > button:not(:first-child):not(:last-child) {
   border-radius: 0;
   border-right: none;
