@@ -1,13 +1,18 @@
+import { useTheme } from '@root/lib/context/theme'
+import clsx from 'clsx'
 import { TooltipProps } from './tooltip.types'
-import { twMerge } from 'tailwind-merge'
-import { selector } from './tooltip.classes'
-import React from 'react'
 
-const Tooltip = ({ className, children, content, ...props }: TooltipProps) => {
-  const styles = selector(props)
+const Tooltip = (props: TooltipProps) => {
+  const { defaultSize } = useTheme()
+
+  const { className, position = 'top', children, content, ...rest } = props
+
   return (
-    <div className={styles('wrapper')}>
-      <div className={twMerge(styles('tooltip'), className)} {...props}>
+    <div className={clsx('tooltip--wrapper group')}>
+      <div
+        className={clsx('tooltip', `tooltip--${position}`, className)}
+        {...props}
+      >
         {content}
       </div>
       {children}

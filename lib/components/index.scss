@@ -1,13 +1,8 @@
-@import url(https://fonts.bunny.net/css?family=plus-jakarta-sans:200,200i,300,300i,400,400i,500,600,800);
 /* @layer reset, defaults, patterns, components, utilities, overrides; */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-}
 
 .text-size {
   &--sm {
@@ -139,4 +134,95 @@ justify-center
 place-items-center
 select-none
 overflow-clip;
+}
+
+.tooltip {
+  &--wrapper {
+    @apply relative
+    max-w-fit;
+  }
+
+  @apply duration-200
+  ease-in
+  pointer-events-none
+  absolute
+  whitespace-nowrap
+  rounded
+  bg-black
+  px-2
+  py-1
+  text-white
+  opacity-0
+  transition
+  before:absolute
+  before:border-4
+  before:border-transparent
+  before:content-['']
+  group-hover:opacity-100;
+
+  &--top {
+    @apply before:top-full
+    -top-10
+    left-1/2
+    before:border-t-black
+    -translate-x-1/2
+    before:left-1/2
+    before:-translate-x-1/2;
+  }
+  &--bottom {
+    @apply top-full
+    mt-2
+    -translate-x-1/2
+    left-1/2
+    before:bottom-full
+    before:left-1/2
+    before:-translate-x-1/2
+    before:border-b-black;
+  }
+  &--left {
+    @apply right-full
+    mr-2
+    -translate-y-1/2
+    top-1/2
+    before:left-full
+    before:top-1/2
+    before:-translate-y-1/2
+    before:border-l-black;
+  }
+  &--right {
+    @apply ml-2
+    top-1/2
+    left-full
+    -translate-y-1/2
+    before:right-full
+    before:top-1/2
+    before:-translate-y-1/2
+    before:border-r-black;
+  }
+}
+
+.dialog {
+  @apply relative;
+  &-layer-1 {
+    @apply fixed inset-0 overflow-y-auto;
+  }
+
+  &-layer-2 {
+    @apply flex min-h-full items-center justify-center p-4 text-center ;
+  }
+
+  &-title {
+    @apply text-lg
+    font-medium
+    leading-6
+    text-gray-900;
+  }
+
+  &-panel {
+    @apply w-full max-w-md transform overflow-hidden rounded-xl bg-white p-6 text-left align-middle shadow-xl transition-all;
+  }
+
+  &-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-25;
+  }
 }

@@ -19,15 +19,47 @@ const TooltipPage = () => {
       size: 'lg' as ElementSize,
     },
   ]
+  const positions = [
+    {
+      label: 'Example 1',
+      position: 'top',
+    },
+    {
+      label: 'Example 1',
+      position: 'right',
+    },
+    {
+      label: 'Example 1',
+      position: 'bottom',
+    },
+    {
+      label: 'Example 1',
+      position: 'left',
+    },
+  ]
 
   return (
     <>
-      <div>
+      <div className='flex flex-col gap-10'>
         {examples.map(({ label, size }) => (
-          <Tooltip content={label}>
-            <Button size={size}>{label}</Button>
-          </Tooltip>
+          <div key={label}>
+            <div className='py-2 font-semibold'>{label}</div>
+            <Tooltip content={label}>
+              <Button size={size}>{label}</Button>
+            </Tooltip>
+          </div>
         ))}
+        {positions.map(({ label, position }) => {
+          const title = `${label} - ${position}`
+          return (
+            <div key={title}>
+              <div className='py-2 font-semibold'>{title}</div>
+              <Tooltip content={title} position={position as any}>
+                <Button>Button</Button>
+              </Tooltip>
+            </div>
+          )
+        })}
       </div>
     </>
   )

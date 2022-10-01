@@ -2,19 +2,11 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import Overlay from '../overlay'
 import { ModalProps, ModalTitleProps } from './modal.types'
-import './modal.scss'
+import '../index.scss'
 import clsx from 'clsx'
 import { useTheme } from '@root/lib/context/theme'
 
 const transitionProps = {
-  overlay: {
-    enter: 'ease-out duration-300',
-    enterFrom: 'opacity-0',
-    enterTo: 'opacity-100',
-    leave: 'ease-in duration-200',
-    leaveFrom: 'opacity-100',
-    leaveTo: 'opacity-0',
-  },
   modal: {
     enter: 'ease-out duration-300',
     enterFrom: 'opacity-0 scale-95',
@@ -30,7 +22,7 @@ const Modal = ({ onOverlayClick, ...props }: ModalProps) => {
   return (
     <>
       <Overlay visible={open} onClick={onOverlayClick} />
-      <Transition appear show={open} as={Fragment}>
+      <Transition appear={true} show={open} as={Fragment}>
         <Dialog
           as='div'
           open={open}
