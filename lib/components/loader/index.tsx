@@ -1,6 +1,6 @@
 import { useTheme } from '../../context/theme'
 import { LoaderProps } from './loader.types'
-import './loader.scss'
+import '../index.scss'
 import clsx from 'clsx'
 
 const Loader = (props: LoaderProps) => {

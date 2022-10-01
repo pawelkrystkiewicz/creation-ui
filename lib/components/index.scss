@@ -119,21 +119,21 @@
 
 .overlay {
   @apply absolute
-top-0
-bottom-0
-left-0
-right-0
-h-full
-w-full
-bg-gray-700/50
-transition
-duration-200
-ease-in
-flex
-justify-center
-place-items-center
-select-none
-overflow-clip;
+  top-0
+  bottom-0
+  left-0
+  right-0
+  h-full
+  w-full
+  bg-gray-700/50
+  transition
+  duration-200
+  ease-in
+  flex
+  justify-center
+  place-items-center
+  select-none
+  overflow-clip;
 }
 
 .tooltip {
@@ -208,7 +208,7 @@ overflow-clip;
   }
 
   &-layer-2 {
-    @apply flex min-h-full items-center justify-center p-4 text-center ;
+    @apply flex min-h-full items-center justify-center p-4 text-center;
   }
 
   &-title {
@@ -224,5 +224,168 @@ overflow-clip;
 
   &-overlay {
     @apply fixed inset-0 bg-black bg-opacity-25;
+  }
+}
+
+.loader {
+  @apply flex justify-center items-center select-none;
+
+  &-icon {
+    @apply mr-2 text-gray-200 animate-spin fill-blue-600;
+  }
+
+  &-icon--white {
+    @apply fill-white text-gray-300;
+  }
+
+  &-size {
+    &--sm {
+      @apply w-4 h-4;
+    }
+
+    &--md {
+      @apply w-5 h-5;
+    }
+
+    &--lg {
+      @apply w-6 h-6;
+    }
+  }
+}
+
+.toggle-group {
+  &--group {
+    @apply bg-gray-50 w-fit
+    rounded
+    relative
+    border
+    border-gray-200
+    flex
+    select-none;
+  }
+
+  &--options {
+    @apply flex flex-row flex-nowrap;
+  }
+
+  &--required {
+    @apply after:content-['*'] after:ml-0.5 after:text-red-500;
+  }
+
+  &--option {
+    @apply p-2
+    cursor-pointer
+    focus:outline-none
+    text-gray-900
+    hover:bg-gray-100
+    border-r
+    last:border-r-transparent
+    flex
+    flex-nowrap
+    items-center
+    justify-center
+    uppercase
+    shadow-none
+    select-none;
+
+    &_checked {
+      @apply bg-gray-300 #{!important};
+    }
+    &_disabled {
+      @apply opacity-25 cursor-not-allowed pointer-events-none;
+    }
+  }
+}
+
+
+.switch {
+  @apply bg-gray-300 translate-x-0
+  relative
+  inline-flex
+  shrink-0
+  cursor-pointer
+  rounded-full
+  border-2
+  border-transparent
+  transition-colors
+  duration-200
+  ease-in-out
+  focus:outline-none
+  focus-visible:ring-2
+  focus-visible:ring-white
+  focus-visible:ring-opacity-75;
+
+  &--sm {
+    @apply h-[22px] w-[42px];
+  }
+  &--md {
+    @apply h-[25px] w-[52px];
+  }
+  &--lg {
+    @apply h-[29px] w-[57px];
+  }
+
+  &-checked {
+    @apply bg-blue-500;
+
+    &--sm {
+      @apply translate-x-5;
+    }
+    &--md {
+      @apply translate-x-7;
+    }
+    &--lg {
+      @apply translate-x-7;
+    }
+  }
+
+  &--circle {
+    @apply
+    inline-block
+    transform
+    rounded-full
+    bg-white
+    shadow-lg
+    ring-0
+    transition
+    duration-200
+    ease-in-out;
+
+    &--sm {
+      @apply h-[18px] w-[18px];
+    }
+    &--md {
+      @apply h-[21px] w-[21px];
+    }
+    &--lg {
+      @apply h-[25px] w-[25px];
+    }
+  }
+}
+
+.status-badge {
+  @apply px-2
+  inline-flex
+  text-xs
+  leading-5
+  font-semibold
+  rounded-full
+  capitalize
+  w-fit
+  select-none;
+
+  @apply bg-gray-100 text-gray-800 border-gray-800;
+
+  &--success {
+    @apply bg-green-100 text-green-800;
+  }
+  &--active {
+    @apply bg-blue-100 text-blue-800;
+  }
+  &--error {
+    @apply bg-red-100 text-red-800;
+  }
+  &--warning {
+    @apply bg-amber-100 text-amber-800;
   }
 }

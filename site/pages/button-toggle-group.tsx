@@ -46,10 +46,12 @@ const Home = () => {
   const [value, setValue] = useState(options[1].value)
   const [style, setStyle] = useState(styling[1].value)
 
+  console.log(value)
+
   return (
     <>
-      <div className='flex flex-col gap-3'>
-        <h2>Date range</h2>
+      <div className='flex flex-col gap-10'>
+        <h2 className='py-3 font-bold text-xl'>Date range</h2>
         <ToggleGroup
           options={options}
           value={value}
@@ -57,7 +59,7 @@ const Home = () => {
           size='sm'
           title='Select a time period'
         />
-        {/* <ToggleGroup
+        <ToggleGroup
           options={options}
           value={value}
           onChange={setValue}
@@ -65,13 +67,31 @@ const Home = () => {
           title='Select a time period'
         />
         <ToggleGroup
-          options={options}
+          options={[
+            {
+              label: '3 days',
+              value: '3',
+            },
+            {
+              label: 'week',
+              value: '7',
+              disabled: true,
+            },
+            {
+              label: 'month',
+              value: '30',
+            },
+            {
+              label: 'year',
+              value: '365',
+            },
+          ]}
           value={value}
           onChange={setValue}
           size='lg'
           title='Select a time period'
           required={true}
-        /> */}
+        />
       </div>
       {/* <div className='flex flex-col gap-3'>
         <h2>Styles</h2>

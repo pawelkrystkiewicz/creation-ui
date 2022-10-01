@@ -1,7 +1,7 @@
 import { useTheme } from '@root/lib/context/theme'
 import clsx from 'clsx'
 import { StatusBadgeProps } from './status-badge.types'
-import './status-badge.scss'
+import '../index.scss'
 
 const StatusBadge = (props: StatusBadgeProps) => {
   const { defaultSize } = useTheme()

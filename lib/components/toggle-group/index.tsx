@@ -2,7 +2,7 @@ import { RadioGroup } from '@headlessui/react'
 import { useTheme } from '@root/lib/context/theme'
 import clsx from 'clsx'
 import { ToggleGroupOption, ToggleGroupProps } from './toggle-group.types'
-import './toggle-group.scss'
+import '../index.scss'
 
 const ToggleGroup = (props: ToggleGroupProps) => {
   const { defaultSize } = useTheme()
@@ -10,33 +10,28 @@ const ToggleGroup = (props: ToggleGroupProps) => {
 
   return (
     <div
-      className={clsx(
-        'toggle-group',
-        `form-element-spacing--${size}`,
-        `size-${size}`,
-        className
-      )}
+      className={clsx('form-element--wrapper', `text-size--${size}`, className)}
     >
+      <span
+        className={clsx(
+          'form-element--label',
+          `form-element--label-${size}`,
+          props.required && 'form-element--required'
+        )}
+      >
+        {title}
+      </span>
       <RadioGroup className={clsx('toggle-group--group', className)} {...rest}>
-        <RadioGroup.Label
-          className={clsx(
-            'toggle-group--title',
-            `toggle-group--title_${size}`,
-            props.required && 'toggle-group-title--required'
-          )}
-        >
-          {title}
-        </RadioGroup.Label>
         <div className={'toggle-group--options'}>
           {options.map(({ label, value, disabled }: ToggleGroupOption) => (
             <RadioGroup.Option
               key={value}
               value={value}
               disabled={disabled}
-              className={({ active, checked, disabled }) =>
+              className={({ checked, disabled }) =>
                 clsx(
                   'toggle-group--option',
-                  active && 'toggle-group--option_active',
+                  //active: not used
                   checked && 'toggle-group--option_checked',
                   disabled && 'toggle-group--option_disabled'
                 )
