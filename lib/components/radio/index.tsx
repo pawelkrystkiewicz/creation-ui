@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { ForwardedRef, forwardRef } from 'react'
 import { selector } from './radio.classes'
 import { RadioProps } from './radio.types'
-
+import '../index.scss'
 const Radio = forwardRef<HTMLInputElement, RadioProps>(
   (props, ref: ForwardedRef<HTMLInputElement>) => {
     const {

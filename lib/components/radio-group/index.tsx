@@ -1,7 +1,7 @@
 import { settings } from '@root/lib/components/settings'
 import { selector } from './radio-group.classes'
 import { RadioGroupProps } from './radio-group.types'
-
+import '../index.scss'
 // document.addEventListener("visibilitychange", () => {
 //   // it could be either hidden or visible
 //   document.title = document.visibilityState;

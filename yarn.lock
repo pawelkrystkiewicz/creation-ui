@@ -12202,6 +12202,17 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
+sass-loader@^10.2.0:
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-10.3.1.tgz#a45f0d1dd7ea90de7eb099239a18c83dea6e6341"
+  integrity sha512-y2aBdtYkbqorVavkC3fcJIUDGIegzDWPn3/LAFhsf3G+MzPKTJx37sROf5pXtUeggSVbNbmfj8TgRaSLMelXRA==
+  dependencies:
+    klona "^2.0.4"
+    loader-utils "^2.0.0"
+    neo-async "^2.6.2"
+    schema-utils "^3.0.0"
+    semver "^7.3.2"
+
 sass-loader@^12.4.0:
   version "12.6.0"
   resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-12.6.0.tgz#5148362c8e2cdd4b950f3c63ac5d16dbfed37bcb"
@@ -12210,7 +12221,7 @@ sass-loader@^12.4.0:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
-sass@^1.55.0:
+sass@^1.43.4, sass@^1.55.0:
   version "1.55.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.55.0.tgz#0c4d3c293cfe8f8a2e8d3b666e1cf1bff8065d1c"
   integrity sha512-Pk+PMy7OGLs9WaxZGJMn7S96dvlyVBwwtToX895WmCpAOr5YiJYEUJfiJidMuKb613z2xNWcXCHEuOvjZbqC6A==
@@ -12684,6 +12695,19 @@ storybook-addon-outline@^1.4.2:
     "@storybook/components" "~6.3.0"
     "@storybook/core-events" "~6.3.0"
     ts-dedent "^2.1.1"
+
+storybook-addon-sass-postcss@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/storybook-addon-sass-postcss/-/storybook-addon-sass-postcss-0.1.3.tgz#085640d42bfe563af5f45d71bea57b682cfef466"
+  integrity sha512-Jwi7KSx661hrFGO4q3jvMuvgObL8UdBYtvnKzXovBWyZoKsaji+sXKm6IpqGwy44R0To4dmobzZoW9q9rW3sWQ==
+  dependencies:
+    "@storybook/node-logger" "^6.1.14"
+    css-loader "^3.6.0"
+    postcss "^7.0.35"
+    postcss-loader "^4.2.0"
+    sass "^1.43.4"
+    sass-loader "^10.2.0"
+    style-loader "^1.3.0"
 
 storybook-addon-turbo-build@^1.1.0:
   version "1.1.0"

@@ -1,8 +1,8 @@
 import { useTheme } from '@root/lib/context/theme'
 import clsx from 'clsx'
-import AnimateAppearance from '../animate-appearance'
+import AnimatedDrawer from '../animate-appearance/drawer'
+import '../index.scss'
 import Overlay from '../overlay'
-import './drawer.scss'
 import { DrawerProps } from './drawer.types'
 
 const configHorizontal = {
@@ -30,7 +30,7 @@ const Drawer = ({ open, children, onOverlayClick, ...props }: DrawerProps) => {
   return (
     <>
       <Overlay visible={open} onClick={onOverlayClick} />
-      <AnimateAppearance
+      <AnimatedDrawer
         isVisible={open}
         animationProps={{
           initial: { [config.sizeKey]: -travelDistance },
@@ -41,7 +41,7 @@ const Drawer = ({ open, children, onOverlayClick, ...props }: DrawerProps) => {
         <div className={clsx('drawer', `drawer-${position}`, zIndex.modals)}>
           <div className='drawer-body'>{children}</div>
         </div>
-      </AnimateAppearance>
+      </AnimatedDrawer>
     </>
   )
 }

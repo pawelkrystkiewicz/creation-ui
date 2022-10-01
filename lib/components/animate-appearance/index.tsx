@@ -1,11 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion'
-
-interface AnimatePresenceProps {
-  isVisible?: boolean
-  children: React.ReactNode | React.ReactNode[]
-  animationProps?: React.ComponentProps<typeof motion.div>
-  className?: string
-}
+import { AnimatePresenceProps } from './animate-appearance.types'
 
 const AnimateAppearance = ({
   isVisible,

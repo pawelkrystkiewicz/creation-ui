@@ -1,13 +1,15 @@
 const path = require('path')
+// import '../lib/components/index.scss'
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 module.exports = {
   stories: [
     '../**/*stor(y|ies).@(js|ts|tsx|jsx|mdx)',
     '../**/*.stories.@(js|ts|tsx|jsx|mdx)',
     '../**/*.page.@(js|ts|tsx|jsx|mdx)',
-    '../components/**/*stor(y|ies).@(js|ts|tsx|jsx|mdx)',
-    '../components/**/*.stories.@(js|ts|tsx|jsx|mdx)',
-    '../components/**/*.page.@(js|ts|tsx|jsx|mdx)',
+    '../lib/**/*stor(y|ies).@(js|ts|tsx|jsx|mdx)',
+    '../lib/**/*.stories.@(js|ts|tsx|jsx|mdx)',
+    '../lib/**/*.page.@(js|ts|tsx|jsx|mdx)',
   ],
 
   addons: [
@@ -19,12 +21,6 @@ module.exports = {
     'storybook-addon-turbo-build',
     'storybook-addon-outline',
     '@storybook/addon-viewport',
-    {
-      name: 'storybook-addon-next',
-      options: {
-        nextConfigPath: path.resolve(__dirname, '../next.config.js'),
-      },
-    },
     // {
     //   name: '@storybook/addon-postcss',
     //   options: {
@@ -33,9 +29,21 @@ module.exports = {
     //     },
     //   },
     // },
+    {
+      name: 'storybook-addon-sass-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   framework: '@storybook/react',
   core: {
     builder: '@storybook/builder-webpack5',
+  },
+  webpackFinal: async (config, { configType }) => {
+    config.resolve.plugins = [new TsconfigPathsPlugin()]
+    return config
   },
 }
