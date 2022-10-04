@@ -1,30 +1,37 @@
+import ErrorText from '@components/shared/error'
+import { Listbox, Transition } from '@headlessui/react'
 import { settings } from '@root/lib/components/settings'
 import DropdownChevron from '@root/lib/components/shared/dropdown-chevron'
 import SelectOption from '@root/lib/components/shared/option'
-import { Listbox, Transition } from '@headlessui/react'
+import { useTheme } from '@root/lib/context/theme'
 import { useId } from '@root/lib/hooks/use-id'
+import clsx from 'clsx'
 import { Fragment } from 'react'
-import { selector } from './select.classes'
-
+import '../index.scss'
 import { SelectProps } from './select.types'
 
 const emptyValue = { id: 0, value: '' }
 
 const Select = (props: SelectProps) => {
+  const { defaultSize, zIndex } = useTheme()
   const {
     selectedOptionFormatter = settings.f.defaultOptionFormatter,
     optionComponent = SelectOption,
     helperText,
     error,
+    size = defaultSize,
   } = props
+  console.log(props.value)
 
-  const classes = selector(props)
   const componentId = useId(props.id)
 
   const Option = optionComponent
 
   return (
-    <div className={classes('wrapper')} id={componentId}>
+    <div
+      className={clsx('form-element--wrapper', `text-size--${size}`)}
+      id={componentId}
+    >
       <Listbox
         value={props.value}
         onChange={props.onChange}
@@ -32,15 +39,27 @@ const Select = (props: SelectProps) => {
         multiple={props.multiple}
       >
         {({ open }) => (
-          <div className='relative mt-1'>
+          <div className='dropdown--wrapper--input'>
             {props.label && (
-              <Listbox.Label className={classes('label')}>
+              <Listbox.Label
+                className={clsx(
+                  'form-element--label',
+                  `form-element--label-${size}`
+                )}
+              >
                 {props.label}
               </Listbox.Label>
             )}
-            <Listbox.Button className={classes('button')}>
-              <span className='block truncate'>{props.value}</span>
-              <span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
+            <Listbox.Button
+              className={clsx(
+                'form-element--input',
+                `form-element--input--${size}`,
+                'select--input',
+                'peer'
+              )}
+            >
+              <span className='select--value'>{props.value}&nbsp;</span>
+              <span className='dropdown--button'>
                 <DropdownChevron open={open} />
               </span>
             </Listbox.Button>
@@ -50,7 +69,9 @@ const Select = (props: SelectProps) => {
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
-              <Listbox.Options className={classes('options')}>
+              <Listbox.Options
+                className={clsx('dropdown--list', zIndex.dropdowns)}
+              >
                 {props.options?.map(option => (
                   <Listbox.Option key={option.id} value={option}>
                     {({ selected, active, disabled }) => (
@@ -70,16 +91,12 @@ const Select = (props: SelectProps) => {
           </div>
         )}
       </Listbox>
-      {helperText && <div className={classes('helperText')}>{helperText}</div>}
-      <span className={classes('error')}>
-        {error ?? settings.defaultTexts.invalidInput ?? ''}
-      </span>
+      <ErrorText error={error} />
     </div>
   )
 }
 
 Select.defaultProps = {
-  size: 'md',
   placeholder: 'Select',
   selectedOptionFormatter: settings.f.defaultOptionFormatter,
 }

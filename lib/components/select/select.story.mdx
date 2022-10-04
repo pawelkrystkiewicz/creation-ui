@@ -2,7 +2,7 @@ import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
 import Select from './'
 import Icon from '../icon'
 
-<Meta title="MDX/Select" component={Select} />
+<Meta title='MDX/Select' component={Select} />
 
 export const Template = args => <Select {...args} />
 export const options = [
@@ -17,12 +17,14 @@ export const options = [
 # Select
 
 <Story
-  name="Select"
+  name='Select'
   args={{
     options,
     fullwidth: true,
     label: 'Select',
-  }}>
+    value: options[0].value,
+  }}
+>
   {Template.bind({})}
 </Story>
 
@@ -40,30 +42,33 @@ Select as all the other components uses 3 basic sizes:
 
 <Canvas isColumn>
   <Story
-    name="Large"
+    name='Large'
     args={{
       options,
       label: 'Large',
       size: 'lg',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Medium"
+    name='Medium'
     args={{
       options,
       label: 'Medium',
       size: 'md',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Small"
+    name='Small'
     args={{
       options,
       label: 'Small',
       size: 'sm',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -80,30 +85,33 @@ Select can have different variants that will change their look:
 
 <Canvas isColumn>
   <Story
-    name="Contained"
+    name='Contained'
     args={{
       options,
       label: 'Contained',
       variant: 'contained',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Outlined"
+    name='Outlined'
     args={{
       options,
       label: 'Outlined',
       variant: 'outlined',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Text"
+    name='Text'
     args={{
       options,
       label: 'Text',
       variant: 'text',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -114,40 +122,44 @@ Select can have different variants that will change their look:
 
 <Canvas isColumn>
   <Story
-    name="Read only"
+    name='Read only'
     args={{
       options,
       label: 'Read only',
       readOnly: true,
       checked: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Required"
+    name='Required'
     args={{
       options,
       label: 'Required',
       required: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Disabled"
+    name='Disabled'
     args={{
       options,
       label: 'Disabled',
       disabled: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Error"
+    name='Error'
     args={{
       options,
       label: 'Error',
       error: 'Invalid input',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

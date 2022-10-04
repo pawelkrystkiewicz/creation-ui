@@ -1,5 +1,6 @@
 import Icon from '@root/lib/components/icon'
 import clsx from 'clsx'
+import '../index.scss'
 
 interface DropdownChevronProps {
   open?: boolean
@@ -8,10 +9,7 @@ interface DropdownChevronProps {
 const DropdownChevron = ({ open }: DropdownChevronProps) => (
   <Icon
     icon='expand_more'
-    className={clsx(
-      'text-gray-400 ease-in-out duration-300 hover:text-gray-800',
-      open && '-rotate-180'
-    )}
+    className={clsx('dropdown--chevron', open && 'dropdown--chevron-open')}
     aria-hidden='true'
   />
 )

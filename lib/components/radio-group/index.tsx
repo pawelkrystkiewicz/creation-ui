@@ -1,30 +1,37 @@
-import { settings } from '@root/lib/components/settings'
-import { selector } from './radio-group.classes'
 import { RadioGroupProps } from './radio-group.types'
 import '../index.scss'
-// document.addEventListener("visibilitychange", () => {
-//   // it could be either hidden or visible
-//   document.title = document.visibilityState;
-// });
+import ErrorText from '@components/shared/error'
+import clsx from 'clsx'
+import { useTheme } from '@root/lib/context/theme'
 
 const RadioGroupComponent = ({ children, ...props }: RadioGroupProps) => {
-  const { helperText, error, label } = props
-  const classes = selector(props)
+  const { defaultSize } = useTheme()
+  const { error, label, size = defaultSize } = props
+
   return (
-    <div className={classes('wrapper')}>
-      <span className={classes('label')}>{label}</span>
-      <div className={classes('children')}>{children}</div>
-      {helperText && <div className={classes('helperText')}>{helperText}</div>}
-      <span className={classes('error')}>
-        {error ?? settings.defaultTexts.invalidInput ?? ''}
+    <div
+      aria-disabled={props.disabled}
+      aria-readonly={props.readOnly}
+      className={clsx(
+        'form-element--wrapper',
+        props.disabled && 'form-element--disabled',
+        props.readOnly && 'form-element--read-only',
+        `text-size--${size}`
+      )}
+    >
+      <span
+        className={clsx(
+          props.required && 'form-element--required ',
+          'form-element--label',
+          `form-element--label-${size}`
+        )}
+      >
+        {label}
       </span>
+      <div className={'flex flex-col gap-2'}>{children}</div>
+      <ErrorText error={error} />
     </div>
   )
-}
-
-RadioGroupComponent.defaultProps = {
-  size: 'md',
-  orientation: 'vertical',
 }
 
 export default RadioGroupComponent

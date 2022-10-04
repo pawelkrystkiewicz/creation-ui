@@ -1,3 +1,4 @@
+import ErrorText from '@components/shared/error'
 import { settings } from '@root/lib/components/settings'
 import { useTheme } from '@root/lib/context/theme'
 import { useId } from '@root/lib/hooks/use-id'
@@ -37,14 +38,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           id={componentId}
-          className={clsx('peer', 'form-element--input', className)}
+          className={clsx('peer', 'form-element--input', `form-element--input--${size}`,className)}
           type={type}
           {...rest}
         />
         {loading && <Loader className='form-element--loader' />}
-        <span className={'form-element--error'}>
-          {error ?? settings.defaultTexts.invalidInput ?? ''}
-        </span>
+        <ErrorText error={error} />
       </div>
     )
   }

@@ -29,10 +29,9 @@
   &--input {
     @apply disabled:opacity-25
     disabled:cursor-not-allowed
-    read-only:cursor-not-allowed
     block
     w-full
-    shadow-sm
+    border
     rounded-md
     focus:ring
     focus:ring-opacity-50
@@ -44,16 +43,26 @@
       invalid:ring-red-200
       invalid:border-red-500;
     }
+
+    &--sm {
+      @apply h-8;
+    }
+
+    &--md {
+      @apply h-10;
+    }
+
+    &--lg {
+      @apply h-12;
+    }
   }
 
   &--checkbox {
     @apply disabled:opacity-25
     disabled:cursor-not-allowed
-    read-only:cursor-not-allowed
     rounded
     text-blue-600
     border-gray-300
-    shadow-sm
     focus:border-blue-300
     focus:ring
     focus:ring-offset-0
@@ -68,6 +77,29 @@
       @apply h-5 w-5;
     }
     &-lg {
+      @apply h-6 w-6;
+    }
+  }
+  &--radio {
+    @apply disabled:opacity-25
+    disabled:cursor-not-allowed
+    rounded-full
+    text-blue-600
+    border-gray-300
+    focus:border-blue-300
+    focus:ring
+    focus:ring-offset-0
+    focus:ring-blue-200
+    focus:ring-opacity-50
+    cursor-pointer;
+
+    &--sm {
+      @apply h-4 w-4;
+    }
+    &--md {
+      @apply h-5 w-5;
+    }
+    &--lg {
       @apply h-6 w-6;
     }
   }
@@ -100,7 +132,7 @@
   }
 
   &--error {
-    @apply invisible peer-invalid:visible text-red-600;
+    @apply text-red-600;
   }
 
   &--wrapper {
@@ -110,10 +142,13 @@
     }
   }
   &--read-only {
-    @apply cursor-not-allowed pointer-events-none;
+    @apply pointer-events-none cursor-not-allowed;
   }
   &--required {
     @apply after:content-['*'] after:ml-0.5 after:text-red-500;
+  }
+  &--disabled {
+    @apply opacity-25 cursor-not-allowed pointer-events-none;
   }
 }
 
@@ -290,7 +325,7 @@
 
     &_checked {
       @apply bg-gray-300
-       /*#{!important}*/;
+      /*#{!important}*/;
     }
     &_disabled {
       @apply opacity-25 cursor-not-allowed pointer-events-none;
@@ -410,5 +445,149 @@
   &-body {
     @apply overflow-auto h-full w-full;
     z-index: inherit;
+  }
+}
+
+.dropdown {
+  &--chevron {
+    @apply text-gray-400 ease-in-out duration-300 hover:text-gray-800;
+    &-open {
+      @apply rotate-180;
+    }
+  }
+  &--wrapper {
+    @apply w-full;
+
+    &--sm {
+      @apply h-10;
+    }
+    &--md {
+      @apply h-14;
+    }
+    &--lg {
+      @apply h-16;
+    }
+    &--input {
+      @apply relative mt-1;
+    }
+  }
+
+  &--option {
+    @apply py-2
+    px-4
+    relative
+    cursor-pointer
+    select-none
+    text-gray-900;
+  }
+
+  &--list {
+    @apply absolute
+    mt-2
+    max-h-60
+    min-w-fit
+    p-1
+    rounded-md
+    bg-white
+    text-base
+    shadow-lg
+    ring-1
+    ring-black
+    ring-opacity-5
+    focus:outline-none
+    w-full;
+
+    &--not-found {
+      @apply relative
+      cursor-default
+      text-center
+      select-none
+      py-2
+      px-4
+      text-gray-700;
+    }
+  }
+
+  &--button {
+    @apply absolute
+    inset-y-0
+    right-0
+    flex
+    items-center
+    pr-2
+    cursor-pointer;
+  }
+
+  &--option {
+    @apply truncate
+    font-normal
+    relative
+    cursor-pointer
+    select-none
+    text-gray-900
+    flex
+    w-full
+    items-center
+    rounded-md
+    px-2
+    py-0.5
+    mb-1;
+
+    &-active {
+      @apply bg-blue-100 text-inherit;
+    }
+
+    &-selected {
+      @apply bg-blue-500
+      font-medium
+      text-white;
+    }
+
+    &--multiple {
+      @apply absolute
+      inset-y-0
+      left-0
+      flex
+      items-center
+      pl-3
+      text-blue-400;
+
+      &-active {
+        @apply text-white;
+      }
+    }
+  }
+}
+
+.clear-content {
+  &--wrapper {
+    @apply absolute
+    inset-y-0
+    right-7
+    flex
+    items-center
+    pr-2;
+  }
+
+  &--button {
+    @apply cursor-pointer
+    text-gray-400
+    ease-in-out
+    duration-300
+  hover:text-gray-800
+   text-base;
+  }
+}
+
+.select {
+  &--input {
+    @apply relative
+    cursor-pointer
+    py-2
+    pl-3
+    pr-10;
+  }
+  &--value {
+    @apply block truncate text-left;
   }
 }

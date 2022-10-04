@@ -1,3 +1,4 @@
+import { ElementSize } from '@root/lib/types'
 import React from 'react'
 
 export type SelectOptionsType =
@@ -66,4 +67,5 @@ export interface SelectProps {
   highlightSearch?: boolean
 
   onChange?: (value: SelectOptionsType) => void
+  size?: ElementSize
 }

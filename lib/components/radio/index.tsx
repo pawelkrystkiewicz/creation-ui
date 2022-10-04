@@ -1,37 +1,50 @@
+import ErrorText from '@components/shared/error'
+import { useTheme } from '@root/lib/context/theme'
 import { useId } from '@root/lib/hooks/use-id'
 import clsx from 'clsx'
 import { ForwardedRef, forwardRef } from 'react'
-import { selector } from './radio.classes'
-import { RadioProps } from './radio.types'
 import '../index.scss'
+import { RadioProps } from './radio.types'
+
 const Radio = forwardRef<HTMLInputElement, RadioProps>(
   (props, ref: ForwardedRef<HTMLInputElement>) => {
+    const { defaultSize } = useTheme()
     const {
       helperText,
       error,
       label,
-      size = 'md',
+      size = defaultSize,
       className,
       id,
       ...rest
     } = props
     const componentId = useId(id)
-    const styles = selector(props)
+
     return (
-      <div className={styles('wrapper')}>
+      <div className={clsx(`text-size--${size}`, 'form-element--wrapper-row')}>
         <input
           ref={ref}
-          className={styles('input')}
+          className={clsx(
+            'peer',
+            'form-element--radio',
+            `form-element--radio--${size}`,
+            className
+          )}
           type='radio'
           name={componentId}
           id={componentId}
           {...rest}
         />
-        {label && (
-          <label className='inline-block text-gray-800' htmlFor={componentId}>
-            {label}
-          </label>
-        )}
+        <label
+          htmlFor={componentId}
+          className={clsx(
+            'form-element--label',
+            'form-element--label--checkbox'
+          )}
+        >
+          {label}
+        </label>
+        <ErrorText error={error} />
       </div>
     )
   }

@@ -1,3 +1,4 @@
+import ErrorText from '@components/shared/error'
 import { settings } from '@root/lib/components/settings'
 import { disabledStateClasses } from '@root/lib/components/shared-classes'
 import { useTheme } from '@root/lib/context/theme'
@@ -30,14 +31,17 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           <textarea
             ref={ref}
             id={componentId}
-            className={clsx('peer', 'resize', 'form-element--input', className)}
+            className={clsx(
+              'peer',
+              'resize',
+              'form-element--input',
+              className
+            )}
             {...props}
           />
         </div>
         {loading && <Loader className='form-element--loader' />}
-        <span className={'form-element--error'}>
-          {error ?? settings.defaultTexts.invalidInput ?? ''}
-        </span>
+        <ErrorText error={error} />
       </div>
     )
   }

@@ -1,4 +1,5 @@
 import SelectOption from '@root/lib/components/shared/option'
+import { ElementSize } from '@root/lib/types';
 import React from 'react'
 
 export type AutocompleteOptionsType =
@@ -90,4 +91,8 @@ export interface AutocompleteProps {
    */
   limit?: number
   getLimitText: (more: number) => string
+  /**
+   * Element size
+   */
+  size?: ElementSize
 }

@@ -8,13 +8,16 @@ import { useId } from '@root/lib/hooks/use-id'
 import clsx from 'clsx'
 import { flow, isEmpty } from 'lodash'
 import { ChangeEvent, Fragment, useState } from 'react'
-import { selector } from './autocomplete.classes'
 import {
   AutocompleteOptionsType,
   AutocompleteProps,
 } from './autocomplete.types'
+import { useTheme } from '@root/lib/context/theme'
+import '../index.scss'
+import ErrorText from '@components/shared/error'
 
 const Autocomplete = (props: AutocompleteProps) => {
+  const { defaultSize, zIndex } = useTheme()
   const {
     loadingText = 'Loading...',
     emptyText = 'Data is empty',
@@ -29,6 +32,7 @@ const Autocomplete = (props: AutocompleteProps) => {
     id,
     label,
     helperText,
+    size = defaultSize,
     error,
     ...rest
   } = props
@@ -51,7 +55,6 @@ const Autocomplete = (props: AutocompleteProps) => {
   const resetSearch = (): void => setQuery('')
   const clearSelection: React.MouseEventHandler<HTMLDivElement> = e =>
     flow(setSelected, resetSearch)(null)
-  const classes = selector(props)
 
   const isQuery = !isEmpty(query)
   const isSelected = !!selected
@@ -59,40 +62,40 @@ const Autocomplete = (props: AutocompleteProps) => {
   const Option = optionComponent
 
   return (
-    <div className={classes('wrapper')}>
-      <label htmlFor={componentId} className={classes('label')}>
+    <div className={clsx('form-element--wrapper', `text-size--${size}`)}>
+      <label
+        htmlFor={componentId}
+        className={clsx('form-element--label', `form-element--label-${size}`)}
+      >
         {label}
       </label>
       <Combobox value={selected} onChange={setSelected} nullable>
         {({ open }) => (
-          <div className='relative mt-1'>
-            <div className=''>
-              <Combobox.Input
-                id={componentId}
-                disabled={rest.disabled}
-                placeholder={placeholder}
-                displayValue={selectedOptionFormatter}
-                onChange={onSearchChange}
-                className={classes('input')}
-              />
-              {(isQuery || isSelected) && (
-                <div
-                  className='absolute inset-y-0 right-7 flex items-center pr-2 cursor-pointer'
-                  onClick={clearSelection}
-                >
-                  <Icon
-                    icon='close'
-                    className={clsx(
-                      'text-gray-400 ease-in-out duration-300 hover:text-gray-800 !text-base'
-                    )}
-                    aria-label={rest.clearText}
-                    title={rest.clearText}
-                  />
-                </div>
+          <div className='dropdown--wrapper--input'>
+            <Combobox.Input
+              id={componentId}
+              disabled={rest.disabled}
+              placeholder={placeholder}
+              displayValue={selectedOptionFormatter}
+              onChange={onSearchChange}
+              className={clsx(
+                'form-element--input',
+                `form-element--input--${size}`,
+                'peer relative'
               )}
-              <Combobox.Button className='absolute inset-y-0 right-0 flex items-center pr-2'>
-                <DropdownChevron open={open} />
-              </Combobox.Button>
+            />
+            <Combobox.Button className='dropdown--button'>
+              <DropdownChevron open={open} />
+            </Combobox.Button>
+            <div className='clear-content--wrapper' onClick={clearSelection}>
+              {(isQuery || isSelected) && (
+                <Icon
+                  icon='close'
+                  className={clsx('clear-content--button')}
+                  aria-label={rest.clearText}
+                  title={rest.clearText}
+                />
+              )}
             </div>
             {open && (
               <Transition
@@ -102,19 +105,18 @@ const Autocomplete = (props: AutocompleteProps) => {
                 leaveTo='opacity-0'
                 afterLeave={resetSearch}
               >
-                <Combobox.Options static className={classes('options')}>
+                <Combobox.Options
+                  static
+                  className={clsx('dropdown--list', zIndex.dropdowns)}
+                >
                   {!filteredOptions?.length ? (
-                    <div className='relative cursor-default text-center select-none py-2 px-4 text-gray-700'>
+                    <div className={'dropdown--list--not-found'}>
                       {notFoundText}
                       {/* OR create not found option */}
                     </div>
                   ) : (
                     filteredOptions?.map(option => (
-                      <Combobox.Option
-                        key={option.id}
-                        // className={({ selected, active }) => selector({ ...props, selected, active })('option')}
-                        value={option}
-                      >
+                      <Combobox.Option key={option.id} value={option}>
                         {({ selected, active, disabled }) => (
                           // @ts-ignore
                           <Option
@@ -134,10 +136,7 @@ const Autocomplete = (props: AutocompleteProps) => {
           </div>
         )}
       </Combobox>
-      {helperText && <div className={classes('helperText')}>{helperText}</div>}
-      <span className={classes('error')}>
-        {error ?? settings.defaultTexts.invalidInput ?? ''}
-      </span>
+      <ErrorText error={error} />
     </div>
   )
 }
