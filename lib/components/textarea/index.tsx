@@ -3,7 +3,7 @@ import { settings } from '@root/lib/components/settings'
 import { disabledStateClasses } from '@root/lib/components/shared-classes'
 import { useTheme } from '@root/lib/context/theme'
 import { useId } from '@root/lib/hooks/use-id'
-import { ElementSize } from '@root/lib/types'
+import { ElementSize } from '../../types'
 import clsx from 'clsx'
 import { ForwardedRef, forwardRef } from 'react'
 import '../index.scss'
@@ -31,12 +31,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           <textarea
             ref={ref}
             id={componentId}
-            className={clsx(
-              'peer',
-              'resize',
-              'form-element--input',
-              className
-            )}
+            className={clsx('peer', 'resize', 'form-element--input', className)}
             {...props}
           />
         </div>

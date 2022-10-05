@@ -1,4 +1,4 @@
-import { ElementPosition } from '@root/lib/types'
+import { ElementPosition } from '../../types'
 
 export interface TooltipProps {
   className?: string

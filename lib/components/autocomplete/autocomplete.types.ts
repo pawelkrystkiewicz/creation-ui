@@ -1,5 +1,4 @@
-import SelectOption from '@root/lib/components/shared/option'
-import { ElementSize } from '@root/lib/types';
+import { ElementSize } from '../../types'
 import React from 'react'
 
 export type AutocompleteOptionsType =

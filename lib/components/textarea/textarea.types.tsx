@@ -1,5 +1,5 @@
 import React from 'react'
-import { ElementSize, ElementVariants } from '@root/lib/types'
+import { ElementSize, ElementVariants } from '../../types'
 
 export type TextAreaProps = Omit<React.ComponentProps<'textarea'>, 'size'> & {
   /**

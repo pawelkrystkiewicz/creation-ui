@@ -38,7 +38,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           id={componentId}
-          className={clsx('peer', 'form-element--input', `form-element--input--${size}`,className)}
+          className={clsx(
+            'peer',
+            'form-element--input',
+            `form-element--input--${size}`,
+            className
+          )}
           type={type}
           {...rest}
         />

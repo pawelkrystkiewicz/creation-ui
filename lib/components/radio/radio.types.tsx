@@ -1,4 +1,4 @@
-import { ElementSize } from '@root/lib/types'
+import { ElementSize } from '../../types'
 import React from 'react'
 
 export type RadioProps = Omit<React.ComponentProps<'input'>, 'size'> & {

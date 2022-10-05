@@ -8,15 +8,7 @@ import { ButtonProps } from './button.types'
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    {
-      children,
-      loading,
-      iconLeft,
-      iconRight,
-      className,
-      id,
-      ...props
-    },
+    { children, loading, iconLeft, iconRight, className, id, ...props },
     ref
   ) => {
     const componentId = useId(id)

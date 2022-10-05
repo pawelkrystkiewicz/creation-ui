@@ -1,5 +1,5 @@
 import { useTheme } from '@root/lib/context/theme'
-import { ElementPlacement } from '@root/lib/types'
+import { ElementPlacement } from '../../types'
 import clsx from 'clsx'
 import { forwardRef } from 'react'
 import './avatar.scss'

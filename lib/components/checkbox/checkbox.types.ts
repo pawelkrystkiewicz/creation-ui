@@ -1,6 +1,7 @@
-import { ElementSize } from "@root/lib/types"
+import { ElementSize } from '../../types'
 
-export interface CheckboxProps extends Omit<React.ComponentProps<'input'>, 'size'> {
+export interface CheckboxProps
+  extends Omit<React.ComponentProps<'input'>, 'size'> {
   /**
    * The label for the checkbox.
    */

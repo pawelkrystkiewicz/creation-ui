@@ -21,11 +21,11 @@ if (!outDir) {
 }
 
 console.info(`Building packages ${name} into ${outDir}/`)
-
+const entryPointPath = '/lib/components/'
 export default [
   {
     external: ['react', 'react-dom'],
-    input: './lib/index.tsx',
+    input: `.${entryPointPath}index.tsx`,
     output: [
       {
         file: main,
@@ -65,7 +65,7 @@ export default [
     ],
   },
   {
-    input: `${outDir}/esm/index.d.ts`,
+    input: `${outDir}/esm${entryPointPath}index.d.ts`,
     output: [{ file: types, format: 'esm' }],
     external: [/\.s[ac]ss$/i],
     plugins: [

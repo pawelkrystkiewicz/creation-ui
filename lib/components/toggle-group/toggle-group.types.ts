@@ -1,4 +1,4 @@
-import { GetComponentProps } from '@root/lib/types'
+import { GetComponentProps } from '../../types'
 import { RadioGroup } from '@headlessui/react'
 
 export type ToggleGroupValue = string
