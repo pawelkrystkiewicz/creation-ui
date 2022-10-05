@@ -2,7 +2,6 @@ import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 import autoprefixer from 'autoprefixer'
-import path from 'path'
 import babel from 'rollup-plugin-babel'
 import copy from 'rollup-plugin-copy'
 import dts from 'rollup-plugin-dts'
@@ -26,7 +25,7 @@ console.info(`Building packages ${name} into ${outDir}/`)
 export default [
   {
     external: ['react', 'react-dom'],
-    input: './index.tsx',
+    input: './lib/index.tsx',
     output: [
       {
         file: main,
@@ -52,7 +51,7 @@ export default [
       postcss({
         plugins: [autoprefixer()],
         minimize: true,
-        inject: false,
+        inject: true,
         extract: true,
         sourceMap: true,
         config: {
@@ -66,16 +65,13 @@ export default [
     ],
   },
   {
-    input: `./plugin.js`,
-    output: [{ file: `${outDir}/plugin.js`, format: 'esm' }],
+    input: `${outDir}/esm/index.d.ts`,
+    output: [{ file: types, format: 'esm' }],
+    external: [/\.s[ac]ss$/i],
     plugins: [
-      resolve(),
-      external(),
-      commonjs(),
-      terser({ keep_classnames: true }),
+      dts(),
       progress(),
       visualizer(),
-      filesize(),
       copy({
         targets: [
           {
@@ -87,11 +83,5 @@ export default [
         copyOnce: true,
       }),
     ],
-  },
-  {
-    input: `${outDir}/esm/index.d.ts`,
-    output: [{ file: types, format: 'esm' }],
-    external: [/\.s[ac]ss$/i],
-    plugins: [dts(), progress(), visualizer()],
   },
 ]

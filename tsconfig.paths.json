@@ -4,7 +4,6 @@
     "rootDir": "./",
     "outDir": "./dist",
     "paths": {
-
       "@components": ["./lib/components"],
       "@components/*": ["./lib/components/*"],
       "@root": ["."],
@@ -15,8 +14,6 @@
       "@utils/*": ["./lib/utils/*"],
       "@hooks": ["./lib/hooks"],
       "@hooks/*": ["./lib/hooks/*"],
-      "@types": ["./types"],
-      "@types/*": ["./types/*"]
     }
   }
 }

@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import gitHash from '@root/git-hash.json'
-import { CommitInfo } from '@root/types/system'
+import { CommitInfo } from '@root/system'
 import Popover from './popover'
 
 interface VersionProps {
