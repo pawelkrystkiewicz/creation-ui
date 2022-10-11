@@ -14,8 +14,8 @@ const classes = {
   },
   bar: {
     base: [
-      'bg-blue-600',
-      'text-blue-100',
+      'bg-primary-600',
+      'text-primary-100',
       'text-center',
       'leading-none',
       'rounded-full',

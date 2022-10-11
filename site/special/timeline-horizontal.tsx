@@ -57,7 +57,7 @@ const TimelineHorizontal = ({
           )
         )}
         <div
-          className={clsx('bg-red-700/20 border-red-400 border-r-2 z-10')}
+          className={clsx('bg-error-700/20 border-error-400 border-r-2 z-10')}
           title={`Now: ${now}`}
           style={{
             gridColumn: `1 / ${nowGrid}`,

@@ -18,7 +18,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       rounded = theme.defaultRoundness,
       size = theme.defaultSize,
       variant = theme.defaultVariant,
-      color = theme.primaryColor,
+      color = 'primary',
     } = props
 
     const isContained = variant === 'contained'
@@ -32,7 +32,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={clsx(
           'button',
           'button-base',
-          `button-variant--${variant}`,
+          `button-variant--${variant}--${color}`,
           rounded === 'circle'
             ? `button-circle--${size}`
             : `button-size--${size}`,

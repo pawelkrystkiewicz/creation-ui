@@ -15,7 +15,7 @@ const Home = () => {
             className='grid grid-rows-2 gap-3
           place-items-center
            border w-24 h-24 p-3 rounded-md
-           hover:bg-blue-100
+           hover:bg-primary-100
 
            '
           >

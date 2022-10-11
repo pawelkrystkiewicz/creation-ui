@@ -21,8 +21,8 @@ export const baseInputClasses = [
   'border',
   'border-gray-300',
   'rounded-md',
-  'focus:ring-blue-500',
-  'focus:border-blue-500',
+  'focus:ring-primary-500',
+  'focus:border-primary-500',
   'w-full',
   'text-left',
 ]

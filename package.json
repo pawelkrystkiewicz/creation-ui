@@ -138,5 +138,9 @@
     "path": false,
     "os": false,
     "crypto": false
+  },
+  "dependencies": {
+    "react-spring": "^9.5.5",
+    "react-use": "^17.4.0"
   }
 }

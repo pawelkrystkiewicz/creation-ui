@@ -24,7 +24,7 @@ export const classes = {
   options: dropdownListClasses,
   label: {
     base: ['flex', 'items-center'],
-    required: ["after:content-['*']", 'after:ml-0.5', 'after:text-red-500'],
+    required: ["after:content-['*']", 'after:ml-0.5', 'after:text-error-500'],
     readOnly: readOnlyStateClasses,
     disabled: disabledStateClasses,
     size: {
@@ -41,7 +41,7 @@ export const classes = {
     size: sizes,
   },
   error: {
-    base: ['mt-2', 'invisible', 'peer-invalid:visible', 'text-red-600'],
+    base: ['mt-2', 'invisible', 'peer-invalid:visible', 'text-error-600'],
     required: [],
     readOnly: readOnlyStateClasses,
     disabled: disabledStateClasses,

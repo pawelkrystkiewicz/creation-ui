@@ -16,7 +16,7 @@ const theme: Theme = {
   leading: 'leading-normal',
   fontFamily: 'Plus Jakarta Sans, sans-serif',
   fontFamilyMonospace: 'font-mono',
-  primaryColor: 'blue',
+  primaryColor: 'primary',
   respectReducedMotion: true,
   defaultDrawerSize: '50vw',
   defaultDrawerPosition: 'right',

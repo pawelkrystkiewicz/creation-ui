@@ -2,11 +2,16 @@ import { Logo } from '@root/site/logo/logo'
 import { NavigationTitle } from '@root/site/navigation/navigation'
 import config from '@root/config'
 import { useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import { DarkModeSwitch } from '@components/dark-mode-toggle'
 
 const Header = () => {
   const location = useLocation()
   const isMain = location.pathname === '/'
-
+  const [isDarkMode, setDarkMode] = useState(false)
+  const toggleDarkMode = (checked: boolean) => {
+    setDarkMode(checked)
+  }
   return (
     <div className='mb-3'>
       {isMain ? (
@@ -20,6 +25,12 @@ const Header = () => {
       ) : (
         <NavigationTitle />
       )}
+      <DarkModeSwitch
+        className='absolute top-0 right-0 m-2'
+        checked={isDarkMode}
+        onChange={toggleDarkMode}
+        size={30}
+      />
     </div>
   )
 }

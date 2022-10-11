@@ -18,7 +18,7 @@ const PaginationBlock = ({
   <button
     className={clsx(
       'relative cursor-pointer inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50',
-      current && 'z-10 bg-blue-50 border-blue-500 text-blue-600',
+      current && 'z-10 bg-primary-50 border-primary-500 text-primary-600',
       disabled && 'pointer-events-none'
     )}
     {...props}

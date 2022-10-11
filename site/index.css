@@ -7,4 +7,5 @@
 
 html {
   font-family: 'Plus Jakarta Sans', sans-serif;
+  @apply bg-white dark:bg-slate-600;
 }

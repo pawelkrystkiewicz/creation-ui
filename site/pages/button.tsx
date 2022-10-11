@@ -1,9 +1,16 @@
 import ButtonGroup from '@root/lib/components/button/button.group'
 import Icon from '@root/lib/components/icon'
+import { COLORS } from '@root/lib/types'
 import Button from '../../lib/components/button'
 
 const Buttons = () => {
   const ButtonIcon = <Icon icon='search' />
+
+  const coloredButtons = COLORS.map(color => (
+    <Button color={color} className='capitalize'>
+      {color}
+    </Button>
+  ))
 
   const set = [
     {
@@ -12,13 +19,13 @@ const Buttons = () => {
       propsChanged: ['variant', 'size', 'color'],
       children: (
         <>
-          <Button loading size='lg' color={'blue'}>
+          <Button loading size='lg'>
             Hello
           </Button>
-          <Button loading variant='outlined' size='lg' color={'blue'}>
+          <Button loading variant='outlined' size='lg'>
             World
           </Button>
-          <Button loading variant='text' size='lg' color={'blue'}>
+          <Button loading variant='text' size='lg'>
             Enter
           </Button>
         </>
@@ -34,11 +41,17 @@ const Buttons = () => {
           <Button loading variant='outlined'>
             Click me
           </Button>
-          <Button loading variant='text' color={'red'}>
+          <Button loading variant='text'>
             Link
           </Button>
         </>
       ),
+    },
+    {
+      label: 'Colors',
+      size: 'md (default)',
+      propsChanged: ['color'],
+      children: coloredButtons,
     },
     {
       label: 'Loading with variants',

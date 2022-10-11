@@ -1,5 +1,5 @@
 import React from 'react'
-import { ElementColor, ElementSize, ElementVariants } from '../../types'
+import { Colors, ElementSize, ElementVariants } from '../../types'
 export type ButtonShape = 'default' | 'circle'
 
 export type ButtonProps = React.ComponentProps<'button'> & {
@@ -30,7 +30,7 @@ export type ButtonProps = React.ComponentProps<'button'> & {
   /**
    * Color of the button
    */
-  color?: ElementColor
+  color?: Colors
 }
 
 export type ButtonGroupProps = React.ComponentProps<'div'> & {}

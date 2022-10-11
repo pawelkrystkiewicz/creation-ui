@@ -20,6 +20,7 @@ export const ELEMENT_COLORS = [
   'yellow',
   'zinc',
 ]
+export const COLORS = ['primary', 'success', 'error', 'warning'] as const
 export const ELEMENT_STATUS = ['active', 'error', 'warning', 'success'] as const
 export const ELEMENT_SIZES = ['sm', 'md', 'lg'] as const
 export const ELEMENT_THEMES = ['dark', 'light'] as const
@@ -30,6 +31,7 @@ export const ELEMENT_PLACEMENT_HORIZONTAL = ['right', 'left'] as const
 export const ELEMENT_POSITION = ['top', 'bottom', 'right', 'left'] as const
 export const BREAKPOINTS = ['xs', 'sm', 'md', 'lg', 'xl', 'xl2'] as const
 
+export type Colors = typeof COLORS[number]
 export type Breakpoints = typeof BREAKPOINTS[number]
 export type ElementStatus = typeof ELEMENT_STATUS[number]
 export type ElementSize = typeof ELEMENT_SIZES[number]

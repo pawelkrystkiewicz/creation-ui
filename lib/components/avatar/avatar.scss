@@ -34,7 +34,7 @@
     rounded-full
     opacity-75
      animate-ping
-    bg-red-400
+    bg-error-400
     p-3;
     &-dot {
       @apply left-0 bottom-0 p-1.5;
@@ -45,8 +45,8 @@
     @apply -bottom-3
       -right-3
       rounded-full
-      bg-red-600
-      text-red-100
+      bg-error-600
+      text-error-100
       absolute
       p-1.5
       m-2
