@@ -1,22 +1,22 @@
 {
-  "shortHash": "b7bef7f",
-  "hash": "b7bef7f8bfef6edf2e2c2562ee8d1560bc1f639e",
-  "subject": "feat: add radio button (single)",
-  "sanitizedSubject": "feat-add-radio-button-single",
+  "shortHash": "9c6b7ce",
+  "hash": "9c6b7cecab59760432fa8fb897cf1c46de340a78",
+  "subject": "chore!: bump release version",
+  "sanitizedSubject": "chore-bump-release-version",
   "body": "",
-  "authoredOn": "1660565631",
-  "committedOn": "1660565720",
+  "authoredOn": "1665604026",
+  "committedOn": "1665604772",
   "author": {
-    "name": "pawelkrystkiewicz",
+    "name": "Paweł",
     "email": "pawelkrystkiewicz@outlook.com"
   },
   "committer": {
-    "name": "Pawel Krystkiewicz",
+    "name": "Paweł",
     "email": "pawelkrystkiewicz@outlook.com"
   },
   "notes": "",
   "branch": "master",
   "tags": [],
-  "version": "0.0.2",
-  "timestamp": "2022-08-15T12:24:15.898Z"
+  "version": "0.1.0",
+  "timestamp": "2022-10-12T20:00:01.850Z"
 }
