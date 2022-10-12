@@ -1,4 +1,4 @@
-import getShortUUID from '@root/utils/short-uuid'
+import getShortUUID from '@root/lib/utils/short-uuid'
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 
 const useIsomorphicEffect =

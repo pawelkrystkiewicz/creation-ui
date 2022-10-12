@@ -12,6 +12,10 @@ import progress from 'rollup-plugin-progress'
 import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
 import pkg from './package.json'
+import stories from './stories.paths.json'
+
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+
 
 const { main, module, types, name, styles, files } = pkg
 const outDir = files[0]
@@ -47,7 +51,12 @@ export default [
         babelHelpers: 'bundled',
       }),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
+      typescript({ tsconfig: './tsconfig.json' , exclude:[
+        ...stories,
+        './site/**/*',
+        './scripts',
+        './public',
+        ]}),
       postcss({
         plugins: [autoprefixer()],
         minimize: true,

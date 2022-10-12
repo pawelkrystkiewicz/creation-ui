@@ -1,23 +1,24 @@
-import { selector } from './progress-bar.classes'
+import { useTheme } from '@root/lib/context/theme'
+import clsx from 'clsx'
 import { ProgressBarProps } from './progress-bar.types'
+import './index.scss'
 
 const formatDisplayValueDefault = (value: number) => `${value}%`
 
 const ProgressBar = (props: ProgressBarProps) => {
+  const { defaultSize } = useTheme()
   const {
     value = 0,
     showValue = false,
     formatDisplayValue = formatDisplayValueDefault,
     className,
-    size = 'sm',
-    ...rest
+    size = defaultSize,
   } = props
-  const classes = selector(props)
 
   return (
-    <div className={classes('wrapper')} {...props}>
+    <div className={clsx('progress-bar--wrapper')} {...props}>
       <div
-        className={classes('bar')}
+        className={clsx('progress-bar--bar', `progress-bar--bar--${size}`)}
         style={{ width: formatDisplayValueDefault(value) }}
       >
         {showValue && formatDisplayValue(value)}

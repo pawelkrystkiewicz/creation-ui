@@ -10,8 +10,6 @@ import { Fragment } from 'react'
 import '../index.scss'
 import { SelectProps } from './select.types'
 
-const emptyValue = { id: 0, value: '' }
-
 const Select = (props: SelectProps) => {
   const { defaultSize, zIndex } = useTheme()
   const {
@@ -21,7 +19,6 @@ const Select = (props: SelectProps) => {
     error,
     size = defaultSize,
   } = props
-  console.log(props.value)
 
   const componentId = useId(props.id)
 
