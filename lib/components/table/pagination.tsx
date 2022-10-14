@@ -4,6 +4,7 @@ import Select from '@root/lib/components/select'
 import { Table } from '@tanstack/react-table'
 import clsx from 'clsx'
 import './table.scss'
+
 interface PaginationBlockProps extends React.ComponentProps<'button'> {
   current?: boolean
   disabled?: boolean
@@ -17,9 +18,9 @@ const PaginationBlock = ({
 }: PaginationBlockProps) => (
   <button
     className={clsx(
-      'relative cursor-pointer inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50',
-      current && 'z-10 bg-primary-50 border-primary-500 text-primary-600',
-      disabled && 'pointer-events-none'
+      'table--pagination',
+      current && 'table--pagination_current',
+      disabled && 'table--pagination_disabled'
     )}
     {...props}
   >
@@ -44,8 +45,6 @@ const PageSelectorButtons = ({
       variant='outlined'
       onClick={() => table.previousPage()}
       disabled={!table.getCanPreviousPage()}
-
-      // className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
     >
       {previous}
     </Button>
@@ -53,7 +52,6 @@ const PageSelectorButtons = ({
       variant='outlined'
       onClick={() => table.nextPage()}
       disabled={!table.getCanNextPage()}
-      // className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
     >
       {next}
     </Button>
@@ -168,7 +166,7 @@ const Pagination = ({
 
   return (
     <>
-      <div className='px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6'>
+      <div className='px-4 py-3 flex items-center justify-between sm:px-6'>
         <div className='flex-1 flex justify-between sm:hidden'>
           <a
             href='#'
@@ -185,7 +183,7 @@ const Pagination = ({
         </div>
         <div className='hidden sm:flex-1 sm:flex sm:items-center sm:justify-between'>
           <div>
-            <p className='text-sm text-gray-700'>
+            <p className='text-sm text-gray-700 dark:text-gray-200'>
               {texts?.summary
                 .replace('{currentPage}', (currentPageIdx + 1).toString())
                 .replace('{totalPages}', totalPages.toString())}

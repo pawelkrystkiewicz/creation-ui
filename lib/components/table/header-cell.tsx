@@ -11,18 +11,16 @@ interface HeaderCellProps {
 
 const HeaderCell = ({ header, table }: HeaderCellProps) => {
   return (
-    <th
-      colSpan={header.colSpan}
-      scope='col'
-      className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'
-    >
+    <th colSpan={header.colSpan} scope='col' className='table--header'>
       {header.isPlaceholder ? null : (
         <>
           <div
             {...{
               className: clsx(
-                header.column.getCanSort() ? 'cursor-pointer select-none' : '',
-                'flex items-center'
+                'table--header--cell',
+                header.column.getCanSort()
+                  ? 'table--header--cell--sortable'
+                  : ''
               ),
               onClick: header.column.getToggleSortingHandler(),
             }}
@@ -32,8 +30,10 @@ const HeaderCell = ({ header, table }: HeaderCellProps) => {
               <Icon
                 icon='straight'
                 className={clsx(
-                  'text-gray-400 ease-in-out duration-300 hover:text-gray-800',
-                  header.column.getIsSorted() === 'desc' && 'rotate-180'
+                  'table--header--sort-icon',
+
+                  header.column.getIsSorted() === 'desc' &&
+                    'table--header--sort-icon--desc'
                 )}
                 aria-hidden='true'
               />

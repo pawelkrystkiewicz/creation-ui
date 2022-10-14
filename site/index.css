@@ -5,7 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Adjusted Tahoma Fallback';
+  src: local(Tahoma);
+  size-adjust: 100%;
+  ascent-override: normal;
+  descent-override: normal;
+  line-gap-override: normal;
+}
+
 html {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Adjusted Tahoma Fallback', sans-serif;
   @apply bg-white dark:bg-slate-600;
 }

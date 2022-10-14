@@ -9,7 +9,7 @@ const RowCell = ({ row }: RowCellProps) => {
   return (
     <tr>
       {row.getVisibleCells().map(cell => (
-        <td className='px-6 py-4 whitespace-nowrap' key={cell.id}>
+        <td className='table--cell' key={cell.id}>
           {flexRender(cell.column.columnDef.cell, cell.getContext())}
         </td>
       ))}

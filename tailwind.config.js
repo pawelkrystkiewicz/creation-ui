@@ -3,7 +3,11 @@
 module.exports = {
   mode: 'jit',
   darkMode: 'class',
-  content: ['./site/**/*.{js,ts,jsx,tsx}', './site/pages/*.{js,ts,jsx,tsx}'],
+  content: [
+    './site/**/*.{js,ts,jsx,tsx}',
+    './site/pages/*.{js,ts,jsx,tsx}',
+    './lib/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {

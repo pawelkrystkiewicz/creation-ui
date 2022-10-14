@@ -3,7 +3,7 @@ import { NavigationTitle } from '@root/site/navigation/navigation'
 import config from '@root/config'
 import { useLocation } from 'react-router-dom'
 import { useState } from 'react'
-import { DarkModeSwitch } from '@components/dark-mode-toggle'
+import DarkModeToggle from '@components/dark-mode-toggle'
 
 const Header = () => {
   const location = useLocation()
@@ -25,7 +25,7 @@ const Header = () => {
       ) : (
         <NavigationTitle />
       )}
-      <DarkModeSwitch
+      <DarkModeToggle
         className='absolute top-0 right-0 m-2'
         checked={isDarkMode}
         onChange={toggleDarkMode}

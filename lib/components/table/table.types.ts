@@ -12,4 +12,5 @@ declare module '@tanstack/table-core' {
 
 export interface TableProps {
   table: Table<any>
+  className?: string
 }
