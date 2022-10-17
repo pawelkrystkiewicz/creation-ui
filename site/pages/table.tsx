@@ -2,6 +2,7 @@ import StatusBadge from '@root/lib/components/status-badge'
 import Table from '@root/lib/components/table'
 import data from '@root/lib/components/table/mock-data.json'
 import Pagination from '@root/lib/components/table/pagination'
+import _ from 'lodash'
 import { rankItem } from '@tanstack/match-sorter-utils'
 import {
   FilterFn,
@@ -14,7 +15,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import _ from 'lodash'
 
 type Person = {
   name: string
@@ -22,11 +22,11 @@ type Person = {
   department: string
   role: string
   email: string
+  image: string
   status: {
     value: string
     label: string
   }
-  image: string
 }
 
 const UserCell = ({ person }: { person: Person }) => (

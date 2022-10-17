@@ -1,7 +1,7 @@
 import ErrorText from '@components/shared/error'
 import { settings } from '@root/lib/components/settings'
 import { useTheme } from '@root/lib/context/theme'
-import { useId } from '@root/lib/hooks/use-id'
+import { useId } from '@root/lib/core/hooks/use-id'
 import clsx from 'clsx'
 import { ForwardedRef, forwardRef } from 'react'
 import '../index.scss'

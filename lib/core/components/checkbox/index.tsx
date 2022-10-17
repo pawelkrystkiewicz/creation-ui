@@ -1,4 +1,4 @@
-import { useId } from '@root/lib/hooks/use-id'
+import { useId } from '@root/lib/core/hooks/use-id'
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 import '../index.scss'

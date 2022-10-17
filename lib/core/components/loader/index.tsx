@@ -1,4 +1,4 @@
-import { useTheme } from '../../context/theme'
+import { useTheme } from '../../theme'
 import { LoaderProps } from './loader.types'
 import '../index.scss'
 import clsx from 'clsx'

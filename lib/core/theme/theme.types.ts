@@ -1,4 +1,4 @@
-import { AutocompleteOptionsType } from '@root/lib/components/autocomplete/autocomplete.types'
+import { AutocompleteOptionsType } from '../components/autocomplete/autocomplete.types'
 import {
   Breakpoints,
   ElementColor,
@@ -6,7 +6,7 @@ import {
   ElementSize,
   ElementTheme,
   ElementVariants,
-} from '../../types'
+} from '../types'
 
 export type Theme = {
   theme: ElementTheme

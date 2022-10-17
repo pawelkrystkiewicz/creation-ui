@@ -1,6 +1,6 @@
 import Loader from '@root/lib/components/loader'
 import { useTheme } from '@root/lib/context/theme'
-import { useId } from '@root/lib/hooks/use-id'
+import { useId } from '@root/lib/core/hooks/use-id'
 import clsx from 'clsx'
 import React from 'react'
 import './button.scss'

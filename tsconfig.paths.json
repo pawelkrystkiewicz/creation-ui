@@ -4,16 +4,20 @@
     "rootDir": "./",
     "outDir": "./dist",
     "paths": {
-      "@components": ["./lib/components"],
-      "@components/*": ["./lib/components/*"],
       "@root": ["."],
       "@root/*": ["./*"],
       "@tests": ["./tests"],
       "@tests/*": ["./tests/*"],
-      "@utils": ["./lib/utils"],
-      "@utils/*": ["./lib/utils/*"],
-      "@hooks": ["./lib/hooks"],
-      "@hooks/*": ["./lib/hooks/*"]
+      "@lib/ui": ["./lib/ui/"],
+      "@lib/ui/*": ["./lib/ui/*"],
+      "@lib/core": ["./lib/core/"],
+      "@lib/core/*": ["./lib/core/*"],
+      "@lib/tables": ["./lib/tables/"],
+      "@lib/tables/*": ["./lib/tables/*"],
+      "@lib/date-picker": ["./lib/date-picker/"],
+      "@lib/date-picker/*": ["./lib/date-picker/*"],
+      "@lib/transfer-list": ["./lib/transfer-list/"],
+      "@lib/transfer-list/*": ["./lib/transfer-list/*"]
     }
   }
 }
