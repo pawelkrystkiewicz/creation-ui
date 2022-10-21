@@ -1,4 +1,4 @@
-import DatePicker from '@root/lib/components/date-picker'
+import DatePicker from '@cui/date-picker'
 import { NavigationTitle } from '@root/site/navigation/navigation'
 
 import { useEffect, useState } from 'react'

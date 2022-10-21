@@ -1,9 +1,14 @@
 {
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
+    "outDir": "build",
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -16,7 +21,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "declaration": true,
-    "declarationDir": "./dist/types.d.ts",
+    "declarationDir": "build",
     "emitDeclarationOnly": true,
     "noEmit": false,
     "noEmitOnError": false
@@ -26,6 +31,8 @@
       "path": "./tsconfig.node.json"
     }
   ],
-  "include": ["./"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "build",
+  ]
 }

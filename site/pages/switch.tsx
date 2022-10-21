@@ -1,4 +1,4 @@
-import Switch from '@root/lib/components/switch'
+import Switch from '@cui/core/components/switch'
 import { useState } from 'react'
 
 const Home = () => {

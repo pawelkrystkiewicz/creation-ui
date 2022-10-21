@@ -1,5 +1,5 @@
-import Icon from '@root/lib/components/icon'
-import { icons } from '@root/lib/components/icon/list-of-icons'
+import Icon from '@cui/core/components/icon'
+import { icons } from '@cui/core/components/icon/list-of-icons'
 import { NavigationTitle } from '@root/site/navigation/navigation'
 
 const Home = () => {

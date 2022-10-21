@@ -1,5 +1,4 @@
-import Input from '@root/lib/components/input'
-import { NavigationTitle } from '@root/site/navigation/navigation'
+import Input from '@cui/core/components/input'
 
 import { useState } from 'react'
 

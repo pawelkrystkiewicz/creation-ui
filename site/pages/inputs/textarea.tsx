@@ -1,6 +1,6 @@
-import Input from '@root/lib/components/input'
+import Input from '@cui/core/components/input'
 import { NavigationTitle } from '@root/site/navigation/navigation'
-import TextArea from '@root/lib/components/textarea'
+import TextArea from '@cui/core/components/textarea'
 
 import { useState } from 'react'
 

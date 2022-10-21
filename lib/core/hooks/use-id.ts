@@ -1,5 +1,5 @@
-import getShortUUID from '@root/lib/utils/short-uuid'
 import React, { useState, useEffect, useLayoutEffect } from 'react'
+import { getShortUUID } from '../utils'
 
 const useIsomorphicEffect =
   typeof document !== 'undefined' ? useLayoutEffect : useEffect
@@ -19,5 +19,7 @@ function useClientId() {
 
 const getReactId = () => useReactId() ?? ''
 
-export const useId = (providedId?: string) =>
+const useId = (providedId?: string) =>
   providedId ?? (getReactId() || useClientId())
+
+export default useId

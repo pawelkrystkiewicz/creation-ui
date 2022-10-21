@@ -1,7 +1,7 @@
-import StatusBadge from '@root/lib/components/status-badge'
-import Table from '@root/lib/components/table'
-import data from '@root/lib/components/table/mock-data.json'
-import Pagination from '@root/lib/components/table/pagination'
+import StatusBadge from '@cui/core/components/status-badge'
+import Table from '@cui/core/components/table'
+import data from '@cui/core/components/table/mock-data.json'
+import Pagination from '@cui/core/components/table/pagination'
 import _ from 'lodash'
 import { rankItem } from '@tanstack/match-sorter-utils'
 import {

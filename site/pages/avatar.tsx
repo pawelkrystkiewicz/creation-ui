@@ -1,4 +1,4 @@
-import Avatar from '@root/lib/components/avatar'
+import Avatar from '@cui/core/components/avatar'
 
 const Home = () => {
   const src =

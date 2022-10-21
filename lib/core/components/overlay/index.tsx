@@ -1,4 +1,4 @@
-import { useTheme } from '@root/lib/context/theme'
+import { useTheme } from '@cui/core/theme'
 import clsx from 'clsx'
 import AnimateAppearance from '../animate-appearance'
 import './overlay.scss'

@@ -1,6 +1,6 @@
-import Icon from '@root/lib/components/icon'
+import Icon from '@cui/core/components/icon'
 import clsx from 'clsx'
-import '../index.scss'
+import '@cui/core/styles/index.scss'
 
 interface DropdownChevronProps {
   open?: boolean

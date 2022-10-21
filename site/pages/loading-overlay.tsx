@@ -1,4 +1,4 @@
-import LoadingOverlay from '@root/lib/components/loading-overlay'
+import LoadingOverlay from '@cui/core/components/loading-overlay'
 import { NavigationTitle } from '@root/site/navigation/navigation'
 
 const Home = () => {

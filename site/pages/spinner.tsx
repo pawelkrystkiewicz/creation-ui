@@ -1,4 +1,4 @@
-import Loader from '@root/lib/components/loader'
+import Loader from '@cui/core/components/loader'
 import { NavigationTitle } from '@root/site/navigation/navigation'
 
 const Home = () => {

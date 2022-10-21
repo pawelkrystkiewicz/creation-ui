@@ -1,7 +1,7 @@
-import ButtonGroup from '@root/lib/components/button/button.group'
-import Icon from '@root/lib/components/icon'
-import { COLORS } from '@root/lib/types'
-import Button from '../../lib/components/button'
+import ButtonGroup from '@cui/core/components/button/button.group'
+import Icon from '@cui/core/components/icon'
+import { COLORS } from '@cui/core/types'
+import { Button } from '@cui/core/components'
 
 const Buttons = () => {
   const ButtonIcon = <Icon icon='search' />

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useLocalStorage } from 'react-use'
+import { ElementTheme } from '@cui/core/types'
 
 export const defaultProperties = {
   dark: {
@@ -49,7 +50,7 @@ export interface Props extends SVGProps {
   sunColor?: string
 }
 
-const DarkModeToggle: React.FC<Props> = ({
+const DarkModeToggle = ({
   onChange,
   children,
   checked = false,
@@ -59,9 +60,12 @@ const DarkModeToggle: React.FC<Props> = ({
   sunColor = 'black',
   style,
   ...rest
-}) => {
+}: Props) => {
   const [id, setId] = React.useState(0)
-  const [theme, setTheme, clearLS] = useLocalStorage('theme', 'light')
+  const [theme, setTheme, _clearLS] = useLocalStorage<ElementTheme>(
+    'theme',
+    'light'
+  )
 
   React.useEffect(() => {
     REACT_TOGGLE_DARK_MODE_GLOBAL_ID += 1
@@ -98,7 +102,6 @@ const DarkModeToggle: React.FC<Props> = ({
   const toggle = () => onChange(!checked)
 
   React.useEffect(() => {
-    console.log(checked, theme)
     !checked ? setTheme('dark') : setTheme('light')
 
     if (
@@ -106,8 +109,10 @@ const DarkModeToggle: React.FC<Props> = ({
       (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
       document.documentElement.classList.add('dark')
+      setTheme('dark')
     } else {
       document.documentElement.classList.remove('dark')
+      setTheme('light')
     }
   }, [checked])
 

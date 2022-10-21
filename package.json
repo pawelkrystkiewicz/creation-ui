@@ -1,18 +1,18 @@
 {
   "version": "0.1.1",
-  "name": "@pawelkrystkiewicz/creation-ui",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
-  "styles": "dist/index.css",
+  "name": "creation-ui",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/index.d.ts",
+  "styles": "build/index.css",
   "files": [
-    "dist"
+    "build"
   ],
   "scripts": {
     "start": "vite --port=3000",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "build:lib": "rm -rf ./dist && NODE_ENV=production rollup -c",
+    "build:lib": "rm -rf ./build && NODE_ENV=production rollup -c",
     "start:prod": "next start",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook",
@@ -25,9 +25,9 @@
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.16",
     "postcss-loader": "^7.0.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.1.8",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",

@@ -1,5 +1,5 @@
-import Button from '@root/lib/components/button'
-import Drawer from '@root/lib/components/drawer'
+import Button from '@cui/core/components/button'
+import Drawer from '@cui/core/components/drawer'
 import { useState } from 'react'
 
 const DrawerPage = () => {

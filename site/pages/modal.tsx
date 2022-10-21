@@ -1,5 +1,5 @@
-import Modal from '@root/lib/components/modal'
-import Button from '@root/lib/components/button'
+import Modal from '@cui/core/components/modal'
+import Button from '@cui/core/components/button'
 
 import { useState } from 'react'
 

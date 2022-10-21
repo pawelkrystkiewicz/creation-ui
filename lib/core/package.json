@@ -1,0 +1,26 @@
+{
+  "name": "@cui/core",
+  "version": "0.1.0",
+  "description": "Core component of Creation UI package",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "author": "Paweł Krystkiewicz <pawelkrystkiewicz@outlook.com>",
+  "sideEffects": false,
+  "homepage": "https://creation-ui.dev/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawelkrystkiewicz/gemini-ui.git",
+    "directory": "lib/core"
+  },
+  "peerDependencies": {
+    "@cui/core": "^0.1.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@cui/core": "0.1.0"
+  },
+  "devDependencies": {}
+}

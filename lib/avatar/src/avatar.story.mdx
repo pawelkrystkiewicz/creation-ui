@@ -1,0 +1,188 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import Avatar from './'
+
+<Meta title="MDX/Avatar" component={Avatar} />
+
+export const Template = args => <Avatar {...args} />
+export const defaultProps = {
+  variant: 'circle',
+  size: 'sm',
+  src: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=250&q=80',
+  alt: 'avatar',
+}
+
+# Avatar
+
+<br />
+
+<Story
+  name="Avatar"
+  args={{
+    ...defaultProps,
+  }}>
+  {Template.bind({})}
+</Story>
+
+<br />
+
+## Sizes
+
+Avatar comes in 3 different shapes and as all the other components uses 3 basic sizes:
+
+- `sm`
+- `md`
+- `lg`
+
+<br />
+
+## Circle
+
+<Canvas>
+  <Story
+    name="Large"
+    args={{
+      ...defaultProps,
+      size: 'lg',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Medium"
+    args={{
+      ...defaultProps,
+      size: 'md',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Small"
+    args={{
+      ...defaultProps,
+      size: 'sm',
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Rounded
+
+<Canvas>
+  <Story
+    name="Rounded LG"
+    args={{
+      ...defaultProps,
+      variant: 'rounded',
+      size: 'lg',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Rounded MD"
+    args={{
+      ...defaultProps,
+      variant: 'rounded',
+      size: 'md',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Rounded SM"
+    args={{
+      ...defaultProps,
+      variant: 'rounded',
+      size: 'sm',
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Square
+
+<Canvas>
+  <Story
+    name="Square LG"
+    args={{
+      ...defaultProps,
+      variant: 'square',
+      size: 'lg',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Square MD"
+    args={{
+      ...defaultProps,
+      variant: 'square',
+      size: 'md',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Square SM"
+    args={{
+      ...defaultProps,
+      variant: 'square',
+      size: 'sm',
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## With notification badge
+
+<Canvas>
+  <Story
+    name="With dot notifications"
+    args={{
+      ...defaultProps,
+      variant: 'circle',
+      size: 'sm',
+      badge: { type: 'dot', placement: { horizontal: 'right', vertical: 'top' } },
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With 5 notifications"
+    args={{
+      ...defaultProps,
+      variant: 'circle',
+      size: 'md',
+      badge: { type: 'count', count: 5, placement: { horizontal: 'right', vertical: 'top' } },
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With 99 notifications"
+    args={{
+      ...defaultProps,
+      variant: 'square',
+      size: 'md',
+      badge: { type: 'count', count: 99, placement: { horizontal: 'left', vertical: 'bottom' } },
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With 99 notifications pulsing"
+    args={{
+      ...defaultProps,
+      variant: 'square',
+      size: 'md',
+      badgePulse: true,
+      badge: { type: 'count', count: 99, placement: { horizontal: 'left', vertical: 'top' }, pulse: true },
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With dot notifications pulsing"
+    args={{
+      ...defaultProps,
+      variant: 'circle',
+      size: 'sm',
+      badgePulse: true,
+      badge: { type: 'dot', pulse: true, placement: { horizontal: 'right', vertical: 'top' } },
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Avatar} />

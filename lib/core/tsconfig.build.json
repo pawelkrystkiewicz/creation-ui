@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "outDir": "build",
+    "rootDir": "src"
+  },
+  "exclude": [
+    "src/**/*.spec.ts*",
+    "src/**/*.test.ts*",
+    "src/**/*.stor(y|ies).ts*"
+  ]
+}

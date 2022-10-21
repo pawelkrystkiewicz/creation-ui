@@ -1,5 +1,5 @@
 import { Logo } from '@root/site/logo/logo'
-import { Version } from '@components/version'
+import { Version } from '@cui/core/components/version'
 import config from '@root/config'
 
 const Footer = () => (

@@ -2,7 +2,6 @@
   "compilerOptions": {
     "baseUrl": "./",
     "rootDir": "./",
-    "outDir": "./dist",
     "paths": {
       "@root": ["."],
       "@root/*": ["./*"],
@@ -11,13 +10,7 @@
       "@lib/ui": ["./lib/ui/"],
       "@lib/ui/*": ["./lib/ui/*"],
       "@lib/core": ["./lib/core/"],
-      "@lib/core/*": ["./lib/core/*"],
-      "@lib/tables": ["./lib/tables/"],
-      "@lib/tables/*": ["./lib/tables/*"],
-      "@lib/date-picker": ["./lib/date-picker/"],
-      "@lib/date-picker/*": ["./lib/date-picker/*"],
-      "@lib/transfer-list": ["./lib/transfer-list/"],
-      "@lib/transfer-list/*": ["./lib/transfer-list/*"]
+      "@lib/core/*": ["./lib/core/*"]
     }
   }
 }

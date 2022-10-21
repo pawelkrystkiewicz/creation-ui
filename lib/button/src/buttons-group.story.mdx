@@ -1,0 +1,100 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import ButtonGroup from './button.group'
+import Button from './'
+import Icon from '../icon'
+
+<Meta title="MDX/ButtonGroup" component={ButtonGroup} />
+
+export const Template = args => <ButtonGroup {...args} />
+
+export const Buttons = args => (
+  <>
+    <Button {...args}>1</Button>
+    <Button {...args}>2</Button>
+    <Button {...args}>3</Button>
+  </>
+)
+
+# ButtonGroup
+
+This is a simple wrapper for buttons.
+
+<Story
+  name="ButtonGroup"
+  args={{
+    children: <Buttons />,
+  }}>
+  {Template.bind({})}
+</Story>
+
+<br />
+
+## Sizes
+
+Each button needs to have set size:
+
+- `sm`
+- `md`
+- `lg`
+
+<br />
+
+<Canvas>
+  <Story
+    name="Large"
+    args={{
+      children: <Buttons size={'lg'} />,
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Medium"
+    args={{
+      children: <Buttons size={'md'} />,
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Small"
+    args={{
+      children: <Buttons size={'sm'} />,
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Variants
+
+ButtonGroup can have different variants that will change their look:
+
+- `contained`
+- `outlined`
+- `text`
+
+<br />
+
+<Canvas>
+  <Story
+    name="Contained"
+    args={{
+      children: <Buttons variant={'contained'} />,
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Outlined"
+    args={{
+      children: <Buttons variant={'outlined'} />,
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Text"
+    args={{
+      children: <Buttons variant={'text'} />,
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={ButtonGroup} />
