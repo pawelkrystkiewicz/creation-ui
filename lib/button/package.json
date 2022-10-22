@@ -4,7 +4,7 @@
   "description": "Button component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",
-  "types": "lib/index.d.ts",
+  "types": "index.d.ts",
   "license": "MIT",
   "author": "Paweł Krystkiewicz <pawelkrystkiewicz@outlook.com>",
   "sideEffects": false,

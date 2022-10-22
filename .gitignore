@@ -14,6 +14,7 @@
 
 # production
 /build/*
+*/build/*
 /dist/*
 .rollup.cache/*
 .parcel-cache/*
@@ -38,3 +39,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+rollup.results.json
