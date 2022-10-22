@@ -1,5 +1,5 @@
-import StatusBadge from '@cui/core/components/status-badge'
-import { ElementSize } from '@cui/core/types'
+import { ElementSize } from '@cui/core'
+import { StatusBadge } from 'lib/status-badge'
 
 const DrawerPage = () => {
   const statuses = ['success', 'warning', 'error', 'active', undefined]

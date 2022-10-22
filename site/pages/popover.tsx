@@ -1,6 +1,4 @@
-import Loader from '@cui/core/components/loader'
-import { NavigationTitle } from '@root/site/navigation/navigation'
-import Popover from '@cui/core/components/popover'
+import Popover from '@cui/popover/popover'
 
 const Home = () => {
   const Body = () => <div>Hello World</div>

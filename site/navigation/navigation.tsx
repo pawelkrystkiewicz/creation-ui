@@ -1,6 +1,6 @@
-import Icon from '@cui/core/components/icon'
-import { Link, useLocation, useNavigation } from 'react-router-dom'
-import Button from '@cui/core/components/button'
+import { Button } from '@cui/button'
+import { Icon } from '@cui/core'
+import { Link, useLocation } from 'react-router-dom'
 
 export const NavigationTitle = () => {
   const location = useLocation()

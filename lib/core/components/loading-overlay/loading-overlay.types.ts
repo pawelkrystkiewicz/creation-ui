@@ -1,4 +1,4 @@
-import { ElementSize } from '@cui/core/types'
+import { ElementSize } from '@cui/core'
 
 export interface LoadingOverlayProps {
   active?: boolean

@@ -1,5 +1,5 @@
-import Icon from '@cui/core/components/icon'
-import { AutocompleteOptionsType, SelectOptionsType } from '@cui/core/types'
+import { Icon } from '@cui/core'
+import { AutocompleteOptionsType, SelectOptionsType } from '@cui/core'
 import clsx from 'clsx'
 import '../../index.scss'
 

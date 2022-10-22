@@ -1,7 +1,4 @@
-import StatusBadge from '@cui/core/components/status-badge'
-import Table from '@cui/core/components/table'
-import data from '@cui/core/components/table/mock-data.json'
-import Pagination from '@cui/core/components/table/pagination'
+import data from '../mock-data.json'
 import _ from 'lodash'
 import { rankItem } from '@tanstack/match-sorter-utils'
 import {
@@ -15,6 +12,10 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
+import { StatusBadge } from 'lib/status-badge'
+import Table from '@cui/table/table'
+import Pagination from '@cui/table/pagination'
+
 
 type Person = {
   name: string

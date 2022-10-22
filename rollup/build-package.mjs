@@ -2,6 +2,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 import autoprefixer from 'autoprefixer'
+import path from 'path'
 import babel from 'rollup-plugin-babel'
 import filesize from 'rollup-plugin-filesize'
 import external from 'rollup-plugin-peer-deps-external'
@@ -10,24 +11,21 @@ import progress from 'rollup-plugin-progress'
 import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
 import { getPackageOut, getPackageRoot } from './get-directories.mjs'
-import stories from '../stories.paths.json'
-import path from 'path'
 
 export default function RollupBuildPackage(name) {
   const root = getPackageRoot(name)
   const out = getPackageOut(name)
-
   const { main, module } = require(path.join(root, 'package.json'))
 
   return {
     external: ['react', 'react-dom'],
-    input: path.join(root, 'src', 'index.ts'),
+    input: path.join(root, 'index.ts'),
     output: [
-      {
-        file: path.join(out, main),
-        format: 'cjs',
-        sourcemap: true,
-      },
+      // {
+      //   file: path.join(out, main),
+      //   format: 'cjs',
+      //   sourcemap: true,
+      // },
       {
         file: path.join(out, module),
         format: 'esm',
@@ -44,8 +42,8 @@ export default function RollupBuildPackage(name) {
       }),
       commonjs(),
       typescript({
-        tsconfig: './tsconfig.json',
-        exclude: [...stories, './site/**/*', './scripts', './public'],
+        tsconfig: './tsconfig.build.json',
+        include: ['./lib/core/*', `./lib/${name}/*`],
       }),
       postcss({
         plugins: [autoprefixer()],

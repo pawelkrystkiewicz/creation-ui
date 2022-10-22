@@ -1,9 +1,9 @@
-import { Logo } from '@root/site/logo/logo'
-import { NavigationTitle } from '@root/site/navigation/navigation'
-import config from '@root/config'
-import { useLocation } from 'react-router-dom'
+import { DarkModeToggle } from '@cui/core/components'
 import { useState } from 'react'
-import DarkModeToggle from '@cui/core/components/dark-mode-toggle'
+import { useLocation } from 'react-router-dom'
+import config from 'site/config'
+import { Logo } from 'site/logo/logo'
+import { NavigationTitle } from 'site/navigation/navigation'
 
 const Header = () => {
   const location = useLocation()

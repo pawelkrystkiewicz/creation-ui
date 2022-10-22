@@ -1,6 +1,5 @@
-import Icon from '@cui/core/components/icon'
-import ToggleGroup from '@cui/core/components/toggle-group'
-import { ToggleGroupOption } from '@cui/core/components/toggle-group/toggle-group.types'
+import { Icon } from '@cui/core'
+import { ToggleGroup, ToggleGroupOption } from '@cui/toggle-group'
 
 import { useState } from 'react'
 

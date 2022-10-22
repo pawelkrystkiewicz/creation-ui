@@ -1,4 +1,4 @@
-import { ElementSize } from '@cui/core/types'
+import { ElementSize } from '@cui/core'
 import clsx from 'clsx'
 
 type LogoSizes = ElementSize | 'xl'

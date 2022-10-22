@@ -1,4 +1,3 @@
-import { AutocompleteOptionsType } from '../components/autocomplete/autocomplete.types'
 import {
   Breakpoints,
   ElementColor,
@@ -6,7 +5,8 @@ import {
   ElementSize,
   ElementTheme,
   ElementVariants,
-} from '../types'
+  AutocompleteOptionsType,
+} from '@cui/core'
 
 export type Theme = {
   theme: ElementTheme

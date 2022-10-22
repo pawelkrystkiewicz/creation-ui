@@ -1,7 +1,6 @@
+import gitHash from '../../../../git-hash.json'
 import clsx from 'clsx'
-import gitHash from '@root/git-hash.json'
-import { CommitInfo } from '@root/system'
-import Popover from '../popover'
+import { CommitInfo } from 'system'
 
 interface VersionProps {
   classNameOverride?: string
@@ -15,6 +14,7 @@ export const Version = ({ classNameOverride }: VersionProps) => {
   const date = new Date(timestamp)
 
   const datePL = date.toLocaleString('pl', {})
+
   const [month, day, year] = [
     date.getMonth(),
     date.getDate(),

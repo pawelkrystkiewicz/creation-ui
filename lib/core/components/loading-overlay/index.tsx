@@ -1,21 +1,15 @@
-import Loader from '@cui/core/components/loader'
-import { useTheme } from '@cui/core/theme'
+import { Loader, useTheme } from '@cui/core'
 import clsx from 'clsx'
-import AnimateAppearance from '../animate-appearance'
-import '@cui/core/styles/index.scss'
+import '@cui/core/src/styles/index.scss'
 import { LoadingOverlayProps } from './loading-overlay.types'
 
 const LoadingOverlay = ({ active, ...props }: LoadingOverlayProps) => {
   const { zIndex, defaultSize } = useTheme()
   const { size = defaultSize } = props
-  return (
-    <AnimateAppearance
-      isVisible={active}
-      {...props}
-      className={clsx(zIndex.overlays, 'overlay')}
-    >
+  return active ? (
+    <div {...props} className={clsx(zIndex.overlays, 'overlay')}>
       <Loader size={size} />
-    </AnimateAppearance>
-  )
+    </div>
+  ) : null
 }
 export default LoadingOverlay

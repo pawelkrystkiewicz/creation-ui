@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useLocalStorage } from 'react-use'
-import { ElementTheme } from '@cui/core/types'
+import { ElementTheme } from '@cui/core'
 
 export const defaultProperties = {
   dark: {

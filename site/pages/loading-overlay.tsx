@@ -1,5 +1,4 @@
-import LoadingOverlay from '@cui/core/components/loading-overlay'
-import { NavigationTitle } from '@root/site/navigation/navigation'
+import { LoadingOverlay } from "@cui/core/components"
 
 const Home = () => {
   const active = true

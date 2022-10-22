@@ -1,7 +1,0 @@
-export { default as DarkModeToggle } from './dark-mode-toggle'
-export { default as Icon } from './icon'
-export { default as Loader } from './loader'
-export { default as LoaderOverlay } from './loading-overlay'
-export { default as DropdownChevron } from './shared/dropdown-chevron'
-export { default as Option } from './shared/option'
-export { default as ErrorText } from './shared/error-text'

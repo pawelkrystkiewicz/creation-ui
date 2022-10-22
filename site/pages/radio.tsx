@@ -1,6 +1,6 @@
-import { NavigationTitle } from '@root/site/navigation/navigation'
-import Radio from '@cui/core/components/radio'
-import { ElementSize } from '@cui/core/types'
+import { ElementSize } from '@cui/core'
+import Radio from '@cui/radio/radio'
+
 
 const Home = () => {
   const examples = [

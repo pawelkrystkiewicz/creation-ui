@@ -1,4 +1,4 @@
-import Checkbox from '@cui/core/components/checkbox'
+import { Checkbox } from '@cui/checkbox'
 
 const Home = () => {
   const checked = true

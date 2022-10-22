@@ -1,6 +1,6 @@
-import { events } from '@root/site/special/fakeData'
-import TimelineHorizontal from '@root/site/special/timeline-horizontal'
-import { Schedule, TimelineEvent } from '@root/site/special/types'
+import { events } from 'site/special/fakeData'
+import TimelineHorizontal from 'site/special/timeline-horizontal'
+import { Schedule, TimelineEvent } from 'site/special/types'
 
 const Home = () => {
   const timelineEvents: TimelineEvent[] = events.map(

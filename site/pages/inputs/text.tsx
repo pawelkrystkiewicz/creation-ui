@@ -1,4 +1,4 @@
-import Input from '@cui/core/components/input'
+import { Input } from 'lib/input'
 
 import { useState } from 'react'
 

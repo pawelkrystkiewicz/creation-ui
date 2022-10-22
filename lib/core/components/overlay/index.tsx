@@ -1,6 +1,5 @@
-import { useTheme } from '@cui/core/theme'
+import { useTheme } from '@cui/core'
 import clsx from 'clsx'
-import AnimateAppearance from '../animate-appearance'
 import './overlay.scss'
 
 interface OverlayProps {
@@ -10,13 +9,13 @@ interface OverlayProps {
 
 const Overlay = ({ visible, onClick }: OverlayProps) => {
   const { zIndex } = useTheme()
-  return (
-    <AnimateAppearance isVisible={visible}>
+  return visible ? (
+    <div>
       <div className={clsx('overlay', zIndex.overlays)} onClick={onClick}>
         &nbsp;
       </div>
-    </AnimateAppearance>
-  )
+    </div>
+  ) : null
 }
 
 export default Overlay

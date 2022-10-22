@@ -1,5 +1,5 @@
-import Loader from '@cui/core/components/loader'
-import { NavigationTitle } from '@root/site/navigation/navigation'
+import { Loader } from "@cui/core/components"
+
 
 const Home = () => {
   const variants = [

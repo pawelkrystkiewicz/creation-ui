@@ -1,8 +1,8 @@
-import { NavigationTitle } from '@root/site/navigation/navigation'
-import Tooltip from '@cui/core/components/tooltip'
-import { ElementSize } from '@cui/core/types'
 
-import Button from '@cui/core/components/button'
+import { Button } from '@cui/button'
+import { ElementSize } from '@cui/core'
+import { Tooltip } from 'lib/tooltip'
+
 
 const TooltipPage = () => {
   const examples = [

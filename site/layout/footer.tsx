@@ -1,6 +1,6 @@
-import { Logo } from '@root/site/logo/logo'
 import { Version } from '@cui/core/components/version'
-import config from '@root/config'
+import { Logo } from 'site/logo/logo'
+import config from '../config'
 
 const Footer = () => (
   <footer className='flex py-3 w-full items-center justify-center border-t absolute bottom-0 -z-0'>
