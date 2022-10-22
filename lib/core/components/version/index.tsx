@@ -1,16 +1,15 @@
-import gitHash from '../../../../git-hash.json'
 import clsx from 'clsx'
-import { CommitInfo } from 'system'
+import { CommitInfo } from '@cui/core'
 
 interface VersionProps {
   classNameOverride?: string
+  gitHash: CommitInfo
 }
 
 const zeroPad = (n: number) => n.toString().padStart(2, '0')
 
-export const Version = ({ classNameOverride }: VersionProps) => {
-  const { shortHash, hash, version, timestamp } =
-    gitHash as unknown as CommitInfo
+export const Version = ({ classNameOverride, gitHash }: VersionProps) => {
+  const { shortHash, hash, version, timestamp } = gitHash
   const date = new Date(timestamp)
 
   const datePL = date.toLocaleString('pl', {})

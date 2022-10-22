@@ -8,7 +8,7 @@ import {
   passThrough,
   useTheme,
 } from '@cui/core'
-import '@cui/core/src/styles/index.scss'
+import '@cui/core/styles/index.scss'
 import { Combobox, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import { flow, isEmpty } from 'lodash'

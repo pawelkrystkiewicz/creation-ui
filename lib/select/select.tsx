@@ -6,7 +6,7 @@ import {
   useTheme,
   passThrough,
 } from '@cui/core'
-import '@cui/core/src/styles/index.scss'
+import '@cui/core/styles/index.scss'
 import { Listbox, Transition } from '@headlessui/react'
 
 import clsx from 'clsx'

@@ -4,15 +4,14 @@
     "composite": true,
   },
   "exclude": [
-    "node_modules",
     "build",
     "vite.config.ts",
-    "./site/**/*",
-    "./scripts",
-    "./public",
-    "./lib/**/*",
-    "../**/*stor(y|ies).@(js|ts|tsx|jsx|mdx)",
-    "../**/*.stories.@(js|ts|tsx|jsx|mdx)",
-    "../**/*.page.@(js|ts|tsx|jsx|mdx)",
+    "site",
+    "scripts",
+    "public",
+    "lib",
+    "./**/*stor(y|ies).@(js|ts|tsx|jsx|mdx)",
+    "./**/*.stories.@(js|ts|tsx|jsx|mdx)",
+    "./**/*.page.@(js|ts|tsx|jsx|mdx)",
   ]
 }

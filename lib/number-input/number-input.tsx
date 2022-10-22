@@ -1,5 +1,5 @@
 import { Input, InputProps } from '@cui/input'
-import '@cui/core/src/styles/index.scss'
+import '@cui/core/styles/index.scss'
 import { forwardRef } from 'react'
 
 const NumberInput = forwardRef<HTMLInputElement, InputProps>((props, ref) => {

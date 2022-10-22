@@ -1,5 +1,5 @@
 import { useTheme } from '@cui/core'
-import '@cui/core/src/styles/index.scss'
+import '@cui/core/styles/index.scss'
 import { RadioGroup } from '@headlessui/react'
 import clsx from 'clsx'
 import { ToggleGroupOption, ToggleGroupProps } from './toggle-group.types'

@@ -6,4 +6,3 @@ export { default as Overlay } from './overlay'
 export { default as DropdownChevron } from './shared/dropdown-chevron'
 export { default as ErrorText } from './shared/error-text'
 export { default as SelectOption } from './shared/option'
-

@@ -10,7 +10,8 @@ import postcss from 'rollup-plugin-postcss'
 import progress from 'rollup-plugin-progress'
 import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
-import { getPackageOut, getPackageRoot } from './get-directories.mjs'
+import { getPackageOut, getPackageRoot } from '../helpers/get-directories.mjs'
+import GetTSConfig from '../helpers/get-tsconfig.mjs'
 
 export default function RollupBuildPackage(name) {
   const root = getPackageRoot(name)
@@ -24,6 +25,7 @@ export default function RollupBuildPackage(name) {
       // {
       //   file: path.join(out, main),
       //   format: 'cjs',
+      //   exports: 'named',
       //   sourcemap: true,
       // },
       {
@@ -41,19 +43,14 @@ export default function RollupBuildPackage(name) {
         babelHelpers: 'bundled',
       }),
       commonjs(),
-      typescript({
-        tsconfig: './tsconfig.build.json',
-        include: ['./lib/core/*', `./lib/${name}/*`],
-      }),
+      typescript(GetTSConfig(name)),
       postcss({
         plugins: [autoprefixer()],
         minimize: true,
         inject: true,
         extract: true,
         sourceMap: true,
-        config: {
-          path: './postcss.config.js',
-        },
+        config: { path: './postcss.config.js' },
       }),
       terser({ keep_classnames: true }),
       progress(),

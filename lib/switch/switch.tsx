@@ -1,7 +1,7 @@
 import { Switch as HSwitch } from '@headlessui/react'
 import { useTheme } from '@cui/core'
 import clsx from 'clsx'
-import '@cui/core/src/styles/index.scss'
+import '@cui/core/styles/index.scss'
 import { SwitchProps } from './switch.types'
 
 const Switch = ({ checked, ...props }: SwitchProps) => {

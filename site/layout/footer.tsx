@@ -1,6 +1,7 @@
 import { Version } from '@cui/core/components/version'
 import { Logo } from 'site/logo/logo'
 import config from '../config'
+import gitHash from '../../git-hash.json'
 
 const Footer = () => (
   <footer className='flex py-3 w-full items-center justify-center border-t absolute bottom-0 -z-0'>
@@ -11,7 +12,7 @@ const Footer = () => (
     >
       <Logo size='sm' /> {config.createdBy} &copy; {new Date().getFullYear()}
     </a>
-    <Version />
+    <Version gitHash={gitHash} />
   </footer>
 )
 

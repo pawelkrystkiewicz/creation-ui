@@ -1,7 +1,7 @@
 import { Icon } from '@cui/core'
 import { AutocompleteOptionsType, SelectOptionsType } from '@cui/core'
 import clsx from 'clsx'
-import '../../index.scss'
+import '../../styles/index.scss'
 
 interface SelectOptionProps {
   option: SelectOptionsType | AutocompleteOptionsType

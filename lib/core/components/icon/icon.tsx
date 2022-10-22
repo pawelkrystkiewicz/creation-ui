@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import './icon.css'
+import './icon.scss'
 import { IconProps } from './icon.type'
 
 const Icon = ({ icon, className }: IconProps) => (

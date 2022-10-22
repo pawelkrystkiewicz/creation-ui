@@ -3,9 +3,10 @@ import copy from 'rollup-plugin-copy'
 import dts from 'rollup-plugin-dts'
 import progress from 'rollup-plugin-progress'
 import visualizer from 'rollup-plugin-visualizer'
-import { getPackageOut } from './get-directories.mjs'
-import config from './config.mjs'
+import { getPackageOut } from '../helpers/get-directories.mjs'
+import config from '../config.mjs'
 import typescript from '@rollup/plugin-typescript'
+import GetTSConfig from '../helpers/get-tsconfig.mjs'
 
 export default function RollupCopyFiles(name) {
   const out = getPackageOut(name)
@@ -22,10 +23,7 @@ export default function RollupCopyFiles(name) {
     external: [/\.s[ac]ss$/i],
     plugins: [
       dts(),
-      typescript({
-        tsconfig: './tsconfig.build.json',
-        include: ['./lib/core/**/*', `./lib/${name}/**/*`],
-      }),
+      typescript(GetTSConfig(name)),
       progress(),
       visualizer(),
       copy({
