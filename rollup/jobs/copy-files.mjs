@@ -13,8 +13,7 @@ export default function RollupCopyFiles(name) {
   const externals = (require(config.directories.externals) || []).filter(
     e => !e.includes(name)
   )
-  const deletePath = path.join('lib', name, 'build', 'lib/*')
-  console.log(deletePath)
+
   return {
     input: path.join(
       out,
