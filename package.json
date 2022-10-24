@@ -10,9 +10,10 @@
   ],
   "scripts": {
     "start": "vite --port=3000",
-    "build": "tsc && vite build",
+    "build:site": "tsc && vite build",
     "preview": "vite preview",
-    "build:lib": "yarn tsc && NODE_ENV=production node --max-old-space-size=8192 node_modules/rollup/dist/bin/rollup -c",
+    "build": "yarn tsc && NODE_ENV=production node --max-old-space-size=8192 node_modules/rollup/dist/bin/rollup -c && yarn build:clean-up",
+    "build:clean-up": "node ./rollup/clean-up.mjs",
     "start:prod": "next start",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook",
