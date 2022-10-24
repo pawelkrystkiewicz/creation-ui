@@ -1,4 +1,4 @@
-import { useTheme } from '@cui/core'
+import { useTheme } from '../../theme'
 import clsx from 'clsx'
 import './overlay.scss'
 

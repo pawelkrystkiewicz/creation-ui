@@ -1,6 +1,15 @@
 export default function GetTSConfig(name) {
   return {
-    tsconfig: './tsconfig.build.json',
-    include: ['./lib/core/**/*', `./lib/${name}/*`],
+    tsconfig: './tsconfig.json',
+    exclude: [
+      'build',
+      'vite.config.ts',
+      'site',
+      'scripts',
+      'public',
+      'lib'
+    ],
+
+    include: [`lib/${name}/**/*.ts*`],
   }
 }

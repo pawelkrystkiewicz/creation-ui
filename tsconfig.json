@@ -2,6 +2,7 @@
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "outDir": "build",
+    "rootDir": "./",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": [
@@ -30,9 +31,5 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
   ]
 }

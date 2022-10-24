@@ -1,8 +1,5 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "composite": true,
-  },
   "exclude": [
     "build",
     "vite.config.ts",
@@ -10,8 +7,5 @@
     "scripts",
     "public",
     "lib",
-    "./**/*stor(y|ies).@(js|ts|tsx|jsx|mdx)",
-    "./**/*.stories.@(js|ts|tsx|jsx|mdx)",
-    "./**/*.page.@(js|ts|tsx|jsx|mdx)",
   ]
 }

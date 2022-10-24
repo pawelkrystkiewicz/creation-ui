@@ -10,7 +10,9 @@ import GetTSConfig from '../helpers/get-tsconfig.mjs'
 
 export default function RollupCopyFiles(name) {
   const out = getPackageOut(name)
-
+  const externals = (require(config.directories.externals) || []).filter(
+    e => !e.includes(name)
+  )
   return {
     input: path.join(
       out,
@@ -20,7 +22,7 @@ export default function RollupCopyFiles(name) {
       'index.d.ts'
     ),
     output: [{ file: path.join(out, '/index.d.ts'), format: 'esm' }],
-    external: [/\.s[ac]ss$/i],
+    external: [/\.s[ac]ss$/i, ...externals],
     plugins: [
       dts(),
       typescript(GetTSConfig(name)),

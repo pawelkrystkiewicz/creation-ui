@@ -6,7 +6,7 @@ import {
   ElementTheme,
   ElementVariants,
   AutocompleteOptionsType,
-} from '@cui/core'
+} from '../types'
 
 export type Theme = {
   theme: ElementTheme

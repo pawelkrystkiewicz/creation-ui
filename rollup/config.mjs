@@ -3,5 +3,6 @@ export default {
     out: 'build',
     packages: 'lib',
     abs: '../',
+    externals: './rollup/externals.json',
   },
 }

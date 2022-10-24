@@ -10,24 +10,22 @@ import postcss from 'rollup-plugin-postcss'
 import progress from 'rollup-plugin-progress'
 import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
+import config from '../config.mjs'
 import { getPackageOut, getPackageRoot } from '../helpers/get-directories.mjs'
 import GetTSConfig from '../helpers/get-tsconfig.mjs'
 
 export default function RollupBuildPackage(name) {
   const root = getPackageRoot(name)
   const out = getPackageOut(name)
-  const { main, module } = require(path.join(root, 'package.json'))
+  const { module } = require(path.join(root, 'package.json'))
+  const externals = (require(config.directories.externals) || []).filter(
+    e => !e.includes(name)
+  )
 
   return {
-    external: ['react', 'react-dom'],
+    external: ['react', 'react-dom', ...externals],
     input: path.join(root, 'index.ts'),
     output: [
-      // {
-      //   file: path.join(out, main),
-      //   format: 'cjs',
-      //   exports: 'named',
-      //   sourcemap: true,
-      // },
       {
         file: path.join(out, module),
         format: 'esm',

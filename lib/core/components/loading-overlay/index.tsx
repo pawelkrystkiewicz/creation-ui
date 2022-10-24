@@ -1,6 +1,7 @@
-import { Loader, useTheme } from '@cui/core'
+import { Loader } from '../'
+import { useTheme } from '../../theme'
 import clsx from 'clsx'
-import '@cui/core/styles/index.scss'
+import '../../styles/index.scss'
 import { LoadingOverlayProps } from './loading-overlay.types'
 
 const LoadingOverlay = ({ active, ...props }: LoadingOverlayProps) => {

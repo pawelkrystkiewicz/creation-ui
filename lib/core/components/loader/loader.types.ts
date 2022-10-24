@@ -1,4 +1,4 @@
-import { ElementSize } from '@cui/core'
+import { ElementSize } from '../../types'
 
 export interface LoaderProps {
   /**

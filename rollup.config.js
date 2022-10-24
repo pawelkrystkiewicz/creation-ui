@@ -15,7 +15,6 @@ const storeData = (data, path) => {
   }
 }
 
-
 if (!packages) {
   throw new Error(`No packages found in ${PACKAGES_DIR} directory`)
 }
@@ -24,12 +23,14 @@ console.info(
   `Building ${packages.length} packages for ${rootPkgJson.name} v${rootPkgJson.version}...`
 )
 
+const externals = packages.map(p => `@cui/${p}`)
+
+// save list of current packages
+storeData(externals, config.directories.externals)
+
 const buildOptions = _.flow(
   _.partialRight(_.map, PackageBuilder),
   _.flattenDeep
 )(packages)
-
-storeData(buildOptions, './rollup.results.json')
-
 
 export default buildOptions
