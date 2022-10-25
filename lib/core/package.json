@@ -1,6 +1,6 @@
 {
   "name": "@creation-ui/core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Core component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",
