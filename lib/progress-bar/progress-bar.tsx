@@ -1,4 +1,4 @@
-import { useTheme } from '@cui/core'
+import { useTheme } from '@creation-ui/core'
 import clsx from 'clsx'
 import { ProgressBarProps } from './progress-bar.types'
 import './index.scss'

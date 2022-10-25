@@ -1,4 +1,4 @@
-# @cui/autocomplete
+# @creation-ui/autocomplete
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/autocomplete
+yarn add @creation-ui/core @creation-ui/autocomplete
 
 # With npm
-npm install @cui/core @cui/autocomplete
+npm install @creation-ui/core @creation-ui/autocomplete
 ```
 
 ## License

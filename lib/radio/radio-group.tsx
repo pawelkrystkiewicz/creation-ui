@@ -1,5 +1,5 @@
-import { ErrorText, useTheme } from '@cui/core'
-import '@cui/core/styles/index.scss'
+import { ErrorText, useTheme } from '@creation-ui/core'
+import '@creation-ui/core/styles/index.scss'
 import clsx from 'clsx'
 import { RadioGroupProps } from './radio-group.types'
 

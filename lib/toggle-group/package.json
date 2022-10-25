@@ -1,5 +1,5 @@
 {
-  "name": "@cui/toggle-group",
+  "name": "@creation-ui/toggle-group",
   "version": "0.1.0",
   "description": "Toggle-group component of Creation UI package",
   "main": "cjs/index.js",
@@ -15,7 +15,7 @@
     "directory": "lib/toggle-group"
   },
   "peerDependencies": {
-    "@cui/core": "0.1.1",
+    "@creation-ui/core": "0.1.1",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",
     "postcss-loader": "^7.0.1",
@@ -27,7 +27,7 @@
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {
-    "@cui/core": "0.1.0"
+    "@creation-ui/core": "0.1.0"
   },
   "devDependencies": {}
 }

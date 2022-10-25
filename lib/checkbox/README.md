@@ -1,4 +1,4 @@
-# @cui/checkbox
+# @creation-ui/checkbox
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/checkbox
+yarn add @creation-ui/core @creation-ui/checkbox
 
 # With npm
-npm install @cui/core @cui/checkbox
+npm install @creation-ui/core @creation-ui/checkbox
 ```
 
 ## License

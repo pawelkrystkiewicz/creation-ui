@@ -1,5 +1,5 @@
-import { ErrorText, useId, useTheme } from '@cui/core'
-import '@cui/core/styles/index.scss'
+import { ErrorText, useId, useTheme } from '@creation-ui/core'
+import '@creation-ui/core/styles/index.scss'
 import clsx from 'clsx'
 import { ForwardedRef, forwardRef } from 'react'
 import { RadioProps } from './radio.types'

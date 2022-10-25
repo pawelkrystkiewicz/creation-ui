@@ -1,4 +1,4 @@
-# @cui/tooltip
+# @creation-ui/tooltip
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/tooltip
+yarn add @creation-ui/core @creation-ui/tooltip
 
 # With npm
-npm install @cui/core @cui/tooltip
+npm install @creation-ui/core @creation-ui/tooltip
 ```
 
 ## License

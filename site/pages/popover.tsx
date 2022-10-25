@@ -1,4 +1,4 @@
-import Popover from '@cui/popover/popover'
+import Popover from '@creation-ui/popover/popover'
 
 const Home = () => {
   const Body = () => <div>Hello World</div>

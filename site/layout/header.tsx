@@ -1,4 +1,4 @@
-import { DarkModeToggle } from '@cui/core/components'
+import { DarkModeToggle } from '@creation-ui/core/components'
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import config from 'site/config'

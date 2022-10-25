@@ -1,4 +1,4 @@
-# @cui/status-badge
+# @creation-ui/status-badge
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/status-badge
+yarn add @creation-ui/core @creation-ui/status-badge
 
 # With npm
-npm install @cui/core @cui/status-badge
+npm install @creation-ui/core @creation-ui/status-badge
 ```
 
 ## License

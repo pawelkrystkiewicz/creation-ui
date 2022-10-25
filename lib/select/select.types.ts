@@ -1,4 +1,4 @@
-import { ElementSize, SelectOptionsType } from '@cui/core'
+import { ElementSize, SelectOptionsType } from '@creation-ui/core'
 import React from 'react'
 
 export interface SelectProps {

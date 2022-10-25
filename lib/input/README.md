@@ -1,4 +1,4 @@
-# @cui/input
+# @creation-ui/input
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/input
+yarn add @creation-ui/core @creation-ui/input
 
 # With npm
-npm install @cui/core @cui/input
+npm install @creation-ui/core @creation-ui/input
 ```
 
 ## License

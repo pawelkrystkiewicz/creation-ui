@@ -1,5 +1,5 @@
-import { useId, useTheme } from '@cui/core'
-import '@cui/core/styles/index.scss'
+import { useId, useTheme } from '@creation-ui/core'
+import '@creation-ui/core/styles/index.scss'
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 import { CheckboxProps } from './checkbox.types'

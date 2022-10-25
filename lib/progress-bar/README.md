@@ -1,4 +1,4 @@
-# @cui/progress-bar
+# @creation-ui/progress-bar
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/progress-bar
+yarn add @creation-ui/core @creation-ui/progress-bar
 
 # With npm
-npm install @cui/core @cui/progress-bar
+npm install @creation-ui/core @creation-ui/progress-bar
 ```
 
 ## License

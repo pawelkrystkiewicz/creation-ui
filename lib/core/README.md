@@ -1,4 +1,4 @@
-# @cui/core
+# @creation-ui/core
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core
+yarn add @creation-ui/core
 
 # With npm
-npm install @cui/core
+npm install @creation-ui/core
 ```
 
 ## License

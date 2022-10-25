@@ -1,4 +1,4 @@
-import { Checkbox } from '@cui/checkbox'
+import { Checkbox } from '@creation-ui/checkbox'
 
 const Home = () => {
   const checked = true

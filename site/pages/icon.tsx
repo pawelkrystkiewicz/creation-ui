@@ -1,4 +1,4 @@
-import { Icon, icons } from '@cui/core'
+import { Icon, icons } from '@creation-ui/core'
 
 
 const Home = () => {

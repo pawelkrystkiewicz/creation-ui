@@ -8,7 +8,7 @@ export default function UpdatePeerDependencies(name) {
   let base = config.dependencies.common
 
   //filter out circular deps
-  base = base.filter(dep => dep !== `@cui/${name}`)
+  base = base.filter(dep => dep !== `@creation-ui/${name}`)
 
   if (config.dependencies[name]) {
     base = base.concat(config.dependencies[name])
@@ -27,7 +27,7 @@ export default function UpdatePeerDependencies(name) {
     .map(dep =>
       list[dep]
         ? { [dep]: list[dep] }
-        : dep.includes('@cui')
+        : dep.includes('@creation-ui')
         ? { [dep]: version }
         : null
     )

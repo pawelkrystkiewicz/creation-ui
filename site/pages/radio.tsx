@@ -1,5 +1,5 @@
-import { ElementSize } from '@cui/core'
-import Radio from '@cui/radio/radio'
+import { ElementSize } from '@creation-ui/core'
+import Radio from '@creation-ui/radio/radio'
 
 
 const Home = () => {

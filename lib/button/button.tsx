@@ -1,4 +1,4 @@
-import { Loader, useId, useTheme } from '@cui/core'
+import { Loader, useId, useTheme } from '@creation-ui/core'
 import clsx from 'clsx'
 import React from 'react'
 import './button.scss'

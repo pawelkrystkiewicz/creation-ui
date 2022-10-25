@@ -1,5 +1,5 @@
-import { Button, ButtonGroup } from '@cui/button'
-import { COLORS, Icon } from '@cui/core'
+import { Button, ButtonGroup } from '@creation-ui/button'
+import { COLORS, Icon } from '@creation-ui/core'
 
 const Buttons = () => {
   const ButtonIcon = <Icon icon='search' />

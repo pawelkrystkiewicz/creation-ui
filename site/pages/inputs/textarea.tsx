@@ -1,5 +1,5 @@
 
-import TextArea from '@cui/textarea/textarea'
+import TextArea from '@creation-ui/textarea/textarea'
 import { useState } from 'react'
 
 const Home = () => {

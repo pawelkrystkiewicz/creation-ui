@@ -1,4 +1,4 @@
-import { ElementSize } from '@cui/core'
+import { ElementSize } from '@creation-ui/core'
 import React from 'react'
 
 export type ModalProps = Omit<React.ComponentProps<'div'>, 'size'> & {

@@ -7,8 +7,8 @@ import {
   ErrorText,
   passThrough,
   useTheme,
-} from '@cui/core'
-import '@cui/core/styles/index.scss'
+} from '@creation-ui/core'
+import '@creation-ui/core/styles/index.scss'
 import { Combobox, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import flow from 'lodash/flow'

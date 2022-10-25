@@ -1,4 +1,4 @@
-import { ElementSize } from '@cui/core'
+import { ElementSize } from '@creation-ui/core'
 import { StatusBadge } from 'lib/status-badge'
 
 const DrawerPage = () => {

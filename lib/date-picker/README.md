@@ -1,4 +1,4 @@
-# @cui/date-picker
+# @creation-ui/date-picker
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/date-picker
+yarn add @creation-ui/core @creation-ui/date-picker
 
 # With npm
-npm install @cui/core @cui/date-picker
+npm install @creation-ui/core @creation-ui/date-picker
 ```
 
 ## License

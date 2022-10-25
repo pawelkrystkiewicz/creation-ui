@@ -1,7 +1,7 @@
-import { useTheme } from '@cui/core'
+import { useTheme } from '@creation-ui/core'
 import clsx from 'clsx'
 import { StatusBadgeProps } from './status-badge.types'
-import '@cui/core/styles/index.scss'
+import '@creation-ui/core/styles/index.scss'
 
 const StatusBadge = (props: StatusBadgeProps) => {
   const { defaultSize } = useTheme()

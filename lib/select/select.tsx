@@ -5,8 +5,8 @@ import {
   useId,
   useTheme,
   passThrough,
-} from '@cui/core'
-import '@cui/core/styles/index.scss'
+} from '@creation-ui/core'
+import '@creation-ui/core/styles/index.scss'
 import { Listbox, Transition } from '@headlessui/react'
 
 import clsx from 'clsx'

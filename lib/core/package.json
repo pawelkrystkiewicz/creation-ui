@@ -1,5 +1,5 @@
 {
-  "name": "@cui/core",
+  "name": "@creation-ui/core",
   "version": "0.1.0",
   "description": "Core component of Creation UI package",
   "main": "cjs/index.js",

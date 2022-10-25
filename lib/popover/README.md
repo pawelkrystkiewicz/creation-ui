@@ -1,4 +1,4 @@
-# @cui/popover
+# @creation-ui/popover
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/popover
+yarn add @creation-ui/core @creation-ui/popover
 
 # With npm
-npm install @cui/core @cui/popover
+npm install @creation-ui/core @creation-ui/popover
 ```
 
 ## License

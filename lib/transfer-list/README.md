@@ -1,4 +1,4 @@
-# @cui/transfer-list
+# @creation-ui/transfer-list
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/transfer-list
+yarn add @creation-ui/core @creation-ui/transfer-list
 
 # With npm
-npm install @cui/core @cui/transfer-list
+npm install @creation-ui/core @creation-ui/transfer-list
 ```
 
 ## License

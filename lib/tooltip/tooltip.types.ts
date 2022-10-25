@@ -1,4 +1,4 @@
-import { ElementPosition } from '@cui/core'
+import { ElementPosition } from '@creation-ui/core'
 
 export interface TooltipProps {
   className?: string

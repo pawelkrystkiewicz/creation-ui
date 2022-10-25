@@ -7,7 +7,7 @@ export default {
   },
   dependencies: {
     common: [
-      '@cui/core',
+      '@creation-ui/core',
       'autoprefixer',
       'clsx',
       'postcss-loader',
@@ -19,15 +19,15 @@ export default {
       'tailwindcss',
     ],
     table: [
-      '@cui/button',
-      '@cui/select',
+      '@creation-ui/button',
+      '@creation-ui/select',
       '@tanstack/match-sorter-utils',
       '@tanstack/react-table',
     ],
     autocomplete: ['@headlessui/react', 'lodash'],
     select: ['@headlessui/react'],
     modal: ['@headlessui/react'],
-    'number-input': ['@cui/input'],
+    'number-input': ['@creation-ui/input'],
     popover: ['@headlessui/react'],
   },
 }

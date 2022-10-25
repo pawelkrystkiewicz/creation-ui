@@ -1,5 +1,5 @@
 {
-  "name": "@cui/popover",
+  "name": "@creation-ui/popover",
   "version": "0.1.0",
   "description": "Popover component of Creation UI package",
   "main": "cjs/index.js",
@@ -15,7 +15,7 @@
     "directory": "lib/popover"
   },
   "peerDependencies": {
-    "@cui/core": "0.1.1",
+    "@creation-ui/core": "0.1.1",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",
     "postcss-loader": "^7.0.1",
@@ -28,7 +28,7 @@
     "@headlessui/react": "^1.7.0"
   },
   "dependencies": {
-    "@cui/core": "0.1.0"
+    "@creation-ui/core": "0.1.0"
   },
   "devDependencies": {}
 }

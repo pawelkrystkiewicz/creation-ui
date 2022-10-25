@@ -13,8 +13,8 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 import { StatusBadge } from 'lib/status-badge'
-import Table from '@cui/table/table'
-import Pagination from '@cui/table/pagination'
+import Table from '@creation-ui/table/table'
+import Pagination from '@creation-ui/table/pagination'
 
 
 type Person = {

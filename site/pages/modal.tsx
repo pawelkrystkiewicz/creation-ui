@@ -1,5 +1,5 @@
-import Modal from '@cui/modal/modal'
-import Button from '@cui/button/button'
+import Modal from '@creation-ui/modal/modal'
+import Button from '@creation-ui/button/button'
 
 import { useState } from 'react'
 

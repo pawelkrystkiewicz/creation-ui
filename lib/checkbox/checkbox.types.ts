@@ -1,4 +1,4 @@
-import { ElementSize } from '@cui/core'
+import { ElementSize } from '@creation-ui/core'
 
 export interface CheckboxProps
   extends Omit<React.ComponentProps<'input'>, 'size'> {

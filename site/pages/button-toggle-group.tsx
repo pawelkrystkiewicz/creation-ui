@@ -1,5 +1,5 @@
-import { Icon } from '@cui/core'
-import { ToggleGroup, ToggleGroupOption } from '@cui/toggle-group'
+import { Icon } from '@creation-ui/core'
+import { ToggleGroup, ToggleGroupOption } from '@creation-ui/toggle-group'
 
 import { useState } from 'react'
 

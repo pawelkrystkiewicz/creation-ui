@@ -1,4 +1,4 @@
-# @cui/textarea
+# @creation-ui/textarea
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/textarea
+yarn add @creation-ui/core @creation-ui/textarea
 
 # With npm
-npm install @cui/core @cui/textarea
+npm install @creation-ui/core @creation-ui/textarea
 ```
 
 ## License

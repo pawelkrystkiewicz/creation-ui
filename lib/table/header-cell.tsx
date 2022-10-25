@@ -1,4 +1,4 @@
-import { Icon } from '@cui/core'
+import { Icon } from '@creation-ui/core'
 import { Column, flexRender, Table } from '@tanstack/react-table'
 import clsx from 'clsx'
 import React from 'react'

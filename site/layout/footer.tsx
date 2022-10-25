@@ -1,4 +1,4 @@
-import { Version } from '@cui/core/components/version'
+import { Version } from '@creation-ui/core/components/version'
 import { Logo } from 'site/logo/logo'
 import config from '../config'
 import gitHash from '../../git-hash.json'

@@ -1,4 +1,4 @@
-import { DatePicker } from '@cui/date-picker'
+import { DatePicker } from '@creation-ui/date-picker'
 
 import { useEffect, useState } from 'react'
 

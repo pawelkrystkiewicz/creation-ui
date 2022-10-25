@@ -1,4 +1,4 @@
-import { Loader } from "@cui/core/components"
+import { Loader } from "@creation-ui/core/components"
 
 
 const Home = () => {

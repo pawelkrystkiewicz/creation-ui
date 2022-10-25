@@ -1,5 +1,5 @@
 import React from 'react'
-import { AutocompleteOptionsType, ElementSize } from '@cui/core'
+import { AutocompleteOptionsType, ElementSize } from '@creation-ui/core'
 
 export interface AutocompleteProps {
   /**

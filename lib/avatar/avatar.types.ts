@@ -1,5 +1,5 @@
 import React from 'react'
-import { ElementPlacement, ElementSize } from '@cui/core'
+import { ElementPlacement, ElementSize } from '@creation-ui/core'
 
 export const AVATAR_VARIANTS = ['circle', 'rounded', 'square'] as const
 

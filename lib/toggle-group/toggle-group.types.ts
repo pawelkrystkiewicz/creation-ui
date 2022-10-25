@@ -1,4 +1,4 @@
-import { GetComponentProps } from '@cui/core'
+import { GetComponentProps } from '@creation-ui/core'
 import { RadioGroup } from '@headlessui/react'
 
 export type ToggleGroupValue = string

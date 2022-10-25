@@ -1,4 +1,4 @@
-import { Avatar } from '@cui/avatar'
+import { Avatar } from '@creation-ui/avatar'
 
 const Home = () => {
   const src =

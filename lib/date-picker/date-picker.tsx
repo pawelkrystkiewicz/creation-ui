@@ -1,4 +1,4 @@
-import { Icon } from '@cui/core'
+import { Icon } from '@creation-ui/core'
 import clsx from 'clsx'
 import ReactDatePicker from 'react-datepicker'
 import './date-picker.scss'

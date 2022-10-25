@@ -1,4 +1,4 @@
-# @cui/toggle-group
+# @creation-ui/toggle-group
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/toggle-group
+yarn add @creation-ui/core @creation-ui/toggle-group
 
 # With npm
-npm install @cui/core @cui/toggle-group
+npm install @creation-ui/core @creation-ui/toggle-group
 ```
 
 ## License

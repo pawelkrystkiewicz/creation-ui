@@ -1,5 +1,5 @@
-import { Button } from '@cui/button'
-import { Drawer } from '@cui/drawer'
+import { Button } from '@creation-ui/button'
+import { Drawer } from '@creation-ui/drawer'
 import { useState } from 'react'
 
 const DrawerPage = () => {

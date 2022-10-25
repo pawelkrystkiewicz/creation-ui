@@ -1,4 +1,4 @@
-# @cui/switch
+# @creation-ui/switch
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)
@@ -7,10 +7,10 @@ Component of Creation UI package
 
 ```bash
 # With yarn
-yarn add @cui/core @cui/switch
+yarn add @creation-ui/core @creation-ui/switch
 
 # With npm
-npm install @cui/core @cui/switch
+npm install @creation-ui/core @creation-ui/switch
 ```
 
 ## License

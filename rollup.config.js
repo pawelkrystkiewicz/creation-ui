@@ -38,7 +38,7 @@ packages.forEach(UpdatePeerDependencies)
 console.info('Done!')
 
 //Generate and save list of current components
-const externals = packages.map(p => `@cui/${p}`)
+const externals = packages.map(p => `@creation-ui/${p}`)
 storeData(externals, config.directories.externals)
 
 // Build packages

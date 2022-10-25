@@ -1,6 +1,6 @@
 
-import { Button } from '@cui/button'
-import { ElementSize } from '@cui/core'
+import { Button } from '@creation-ui/button'
+import { ElementSize } from '@creation-ui/core'
 import { Tooltip } from 'lib/tooltip'
 
 
