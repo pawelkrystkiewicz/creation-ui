@@ -37,6 +37,7 @@ export default function UpdatePeerDependencies(name) {
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))
 
   pkg.peerDependencies = dependencies
+  pkg.version = version
 
   fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
 }

@@ -1,6 +1,6 @@
 {
   "name": "@creation-ui/table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Table component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",

@@ -3,13 +3,14 @@ import copy from 'rollup-plugin-copy'
 import dts from 'rollup-plugin-dts'
 import progress from 'rollup-plugin-progress'
 import visualizer from 'rollup-plugin-visualizer'
-import { getPackageOut } from '../helpers/get-directories.mjs'
+import { getPackageOut, getPackageRoot } from '../helpers/get-directories.mjs'
 import config from '../config.mjs'
 import typescript from '@rollup/plugin-typescript'
 import GetTSConfig from '../helpers/get-tsconfig.mjs'
 
 export default function RollupCopyFiles(name) {
   const out = getPackageOut(name)
+  const root = getPackageRoot(name)
   const externals = (require(config.directories.externals) || []).filter(
     e => !e.includes(name)
   )
@@ -47,6 +48,13 @@ export default function RollupCopyFiles(name) {
                 name,
                 'index.css.map'
               ),
+            ],
+            dest: out,
+          },
+          {
+            src: [
+              path.join(root, 'package.json'),
+              path.join(root, 'README.md'),
             ],
             dest: out,
           },
