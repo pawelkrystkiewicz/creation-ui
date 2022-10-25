@@ -20,7 +20,8 @@
     "amend": "git commit --amend --no-edit",
     "git:last-hash": "node ./scripts/get-last-git-hash.mjs",
     "nuke": "rm -rf node_modules yarn.lock && yarn",
-    "prettify": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "prettify": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "publish": "sh publish-all.sh"
   },
   "peerDependencies": {
     "@headlessui/react": "^1.7.0",
