@@ -15,7 +15,7 @@
     "directory": "lib/select"
   },
   "peerDependencies": {
-    "@creation-ui/core": "0.1.1",
+    "@creation-ui/core": "0.1.2",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",
     "postcss-loader": "^7.0.1",
@@ -27,8 +27,6 @@
     "tailwindcss": "^3.1.8",
     "@headlessui/react": "^1.7.0"
   },
-  "dependencies": {
-    "@creation-ui/core": "0.1.0"
-  },
+
   "devDependencies": {}
 }
