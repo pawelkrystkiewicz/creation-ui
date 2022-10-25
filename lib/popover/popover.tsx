@@ -1,7 +1,7 @@
 import * as UI from '@headlessui/react'
 import clsx from 'clsx'
 import { Fragment } from 'react'
-import '@creation-ui/core/styles/index.scss'
+import '@creation-ui/core/esm/index.css'
 
 interface PopoverProps {
   className?: string

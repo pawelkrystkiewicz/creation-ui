@@ -1,5 +1,5 @@
 import { useTheme, Overlay } from '@creation-ui/core'
-import '@creation-ui/core/styles/index.scss'
+import '@creation-ui/core/esm/index.css'
 import clsx from 'clsx'
 import { DrawerProps } from './drawer.types'
 

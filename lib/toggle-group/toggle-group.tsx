@@ -1,5 +1,5 @@
 import { useTheme } from '@creation-ui/core'
-import '@creation-ui/core/styles/index.scss'
+import '@creation-ui/core/esm/index.css'
 import { RadioGroup } from '@headlessui/react'
 import clsx from 'clsx'
 import { ToggleGroupOption, ToggleGroupProps } from './toggle-group.types'

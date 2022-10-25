@@ -6,7 +6,7 @@ import {
   useTheme,
   passThrough,
 } from '@creation-ui/core'
-import '@creation-ui/core/styles/index.scss'
+import '@creation-ui/core/esm/index.css'
 import { Listbox, Transition } from '@headlessui/react'
 
 import clsx from 'clsx'

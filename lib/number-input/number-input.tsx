@@ -1,5 +1,5 @@
 import { Input, InputProps } from '@creation-ui/input'
-import '@creation-ui/core/styles/index.scss'
+import '@creation-ui/core/esm/index.css'
 import { forwardRef } from 'react'
 
 const NumberInput = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
