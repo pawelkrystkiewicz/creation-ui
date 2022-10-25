@@ -11,7 +11,8 @@ import {
 import '@cui/core/styles/index.scss'
 import { Combobox, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-import { flow, isEmpty } from 'lodash'
+import flow from 'lodash/flow'
+import isEmpty from 'lodash/isEmpty'
 import React, { ChangeEvent, Fragment, useState } from 'react'
 import { AutocompleteProps } from './autocomplete.types'
 
