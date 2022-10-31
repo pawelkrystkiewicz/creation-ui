@@ -38,7 +38,7 @@ export default function UpdatePeerDependencies(name) {
 
   pkg.peerDependencies = dependencies
   pkg.version = version
-  pkg.publishConfig = { registry: 'https://npm.pkg.github.com' }
+  pkg.publishConfig = { registry: 'https://r.privjs.com' }
 
   fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
 }

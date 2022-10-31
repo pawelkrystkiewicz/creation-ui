@@ -28,6 +28,6 @@
   },
   "devDependencies": {},
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://r.privjs.com"
   }
 }
