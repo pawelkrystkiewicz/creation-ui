@@ -152,5 +152,8 @@
   },
   "directories": {
     "lib": "lib"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
