@@ -37,8 +37,5 @@
     "sass": "^1.55.0",
     "clsx": "^1.2.1"
   },
-  "devDependencies": {},
-  "publishConfig": {
-    "registry": "https://r.privjs.com"
-  }
+  "devDependencies": {}
 }

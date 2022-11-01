@@ -30,8 +30,5 @@
     "@tanstack/match-sorter-utils": "^8.1.1",
     "@tanstack/react-table": "^8.5.13"
   },
-  "devDependencies": {},
-  "publishConfig": {
-    "registry": "https://r.privjs.com"
-  }
+  "devDependencies": {}
 }

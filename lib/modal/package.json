@@ -27,8 +27,5 @@
     "tailwindcss": "^3.1.8",
     "@headlessui/react": "^1.7.0"
   },
-  "devDependencies": {},
-  "publishConfig": {
-    "registry": "https://r.privjs.com"
-  }
+  "devDependencies": {}
 }

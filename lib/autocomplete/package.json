@@ -38,8 +38,5 @@
   "keywords": [
     "autocomplete",
     "select"
-  ],
-  "publishConfig": {
-    "registry": "https://r.privjs.com"
-  }
+  ]
 }

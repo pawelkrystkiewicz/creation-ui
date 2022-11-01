@@ -152,8 +152,5 @@
   },
   "directories": {
     "lib": "lib"
-  },
-  "publishConfig": {
-    "registry": "https://r.privjs.com"
   }
 }
