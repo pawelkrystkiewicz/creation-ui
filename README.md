@@ -20,7 +20,7 @@ Component sizes:
 - `md`
 - `lg`
 
-# List of components
+# Contents
 
 ## Core
 - Hooks
@@ -29,7 +29,7 @@ Component sizes:
 - DarkModeToggle
 
 
-
+## Packages
 @creation-ui/core
 @creation-ui/input
 @creation-ui/avatar
@@ -57,3 +57,24 @@ Component sizes:
 @creation-ui/table
 @creation-ui/schedule
 @creation-ui/timeline
+
+
+## Installation
+Using npm via terminal
+>  npm login --registry https://r.privjs.com
+
+>  npm i -S react-gradient-progress --registry https://r.privjs.com
+
+Using CI/CD environments such as Netlify, Zeit, Travis CI, etc.
+Add `.npmrc` file to your project root with the following line:
+```
+ //r.privjs.com/:_authToken=${NPM_TOKEN}
+ ```
+
+Set environment variable NPM_TOKEN with your PrivJs Token in your preferred CI/CD environment
+That's all
+Tutorial:
+[Netlify](https://answers.netlify.com/t/support-guide-using-private-npm-modules-on-netlify/795),
+[GH Actions](https://blog.bitsrc.io/install-npm-private-packages-in-ci-cd-with-github-actions-746db95017cc),
+[NPM](https://docs.npmjs.com/using-private-packages-in-a-ci-cd-workflow)
+
