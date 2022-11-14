@@ -1,7 +1,7 @@
 
 import { Button } from '@creation-ui/button'
 import { ElementSize } from '@creation-ui/core'
-import { Tooltip } from 'lib/tooltip'
+import { Tooltip } from 'packages/tooltip'
 
 
 const TooltipPage = () => {

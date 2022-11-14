@@ -63,7 +63,7 @@
     "@storybook/builder-webpack5": "^6.5.10",
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/react": "^6.5.10",
-    "@storybook/testing-library": "^0.0.13",
+    "@storybook/testing-packagesrary": "^0.0.13",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
@@ -86,6 +86,7 @@
     "framer-motion": "^7.4.0",
     "git-last-commit": "^1.0.1",
     "husky": "^8.0.0",
+    "lerna": "^6.0.3",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss": "^8.4.16",
     "postcss-loader": "^7.0.1",
@@ -108,7 +109,6 @@
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-tailwindcss": "^1.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-ts": "^3.0.2",
     "rollup-plugin-typescript-path-mapping": "^1.0.2",
     "rollup-plugin-typescript-paths": "^1.4.0",
     "rollup-plugin-visualizer": "^5.8.1",
@@ -151,6 +151,9 @@
     "crypto": false
   },
   "directories": {
-    "lib": "lib"
-  }
+    "packages": "packages"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

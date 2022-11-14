@@ -14,7 +14,7 @@
 
 # production
 /build/*
-lib/*/build
+packages/*/build
 /dist/*
 .rollup.cache/*
 .parcel-cache/*

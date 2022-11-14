@@ -12,7 +12,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import { StatusBadge } from 'lib/status-badge'
+import { StatusBadge } from 'packages/status-badge'
 import Table from '@creation-ui/table/table'
 import Pagination from '@creation-ui/table/pagination'
 

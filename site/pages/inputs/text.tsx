@@ -1,4 +1,4 @@
-import { Input } from 'lib/input'
+import { Input } from 'packages/input'
 
 import { useState } from 'react'
 
