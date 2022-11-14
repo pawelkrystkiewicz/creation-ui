@@ -1,6 +1,7 @@
 {
   "version": "0.1.0",
   "name": "creation-ui",
+  "private": true,
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
   "types": "build/index.d.ts",
@@ -63,7 +64,7 @@
     "@storybook/builder-webpack5": "^6.5.10",
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/react": "^6.5.10",
-    "@storybook/testing-packagesrary": "^0.0.13",
+    "@storybook/testing-library": "^0.0.13",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
