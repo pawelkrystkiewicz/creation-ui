@@ -3,9 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html,
-body {
-  @apply text-gray-800 dark:text-gray-200;
+
+@layer base {
+  :root {
+    --color-primary: 0 125 255;
+    --color-success: 0 196 140;
+    --color-warning: 255 169 64;
+    --color-error: 255 77 79;
+  }
 }
 
 .text-size {
