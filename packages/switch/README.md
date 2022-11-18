@@ -1,4 +1,5 @@
 # @creation-ui/switch
+
 Component of Creation UI package
 
 [View Documentation](https://creation-ui.dev/)

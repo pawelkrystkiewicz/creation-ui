@@ -1,7 +1,6 @@
 import { ElementSize } from '@creation-ui/core'
 import Radio from '@creation-ui/radio/radio'
 
-
 const Home = () => {
   const examples = [
     {

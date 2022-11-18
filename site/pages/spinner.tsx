@@ -1,5 +1,4 @@
-import { Loader } from "@creation-ui/core/components"
-
+import { Loader } from '@creation-ui/core/components'
 
 const Home = () => {
   const variants = [

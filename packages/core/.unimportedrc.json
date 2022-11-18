@@ -1,0 +1,9 @@
+{
+  "ignoreUnresolved": [],
+  "ignoreUnused": [],
+  "ignoreUnimported": [
+    "build/esm/index.js",
+    "components/version/index.tsx",
+    "rollup.config.js"
+  ]
+}

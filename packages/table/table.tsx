@@ -4,7 +4,7 @@ import RowCell from './row-cell'
 import './table.scss'
 import { TableProps } from './table.types'
 
-const Table = ({ table,className }: TableProps) => {
+const Table = ({ table, className }: TableProps) => {
   return (
     <div className={clsx('table--level-1', className)}>
       <div className='table--level-2'>
