@@ -2,7 +2,7 @@ public
 *rollup*
 .storybook
 .vscode
-lib/
+packages/
 site/
 scripts
 .env

@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/packages/**/node_modules
 /.pnp
 .pnp.js
 
@@ -14,9 +15,10 @@
 
 # production
 /build/*
-lib/*/build
+packages/*/build
 /dist/*
 .rollup.cache/*
+/packages/**/.rollup.cache/*
 .parcel-cache/*
 stats.html
 

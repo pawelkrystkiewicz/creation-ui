@@ -11,7 +11,7 @@ export default function CleanUp() {
 }
 
 const deleteLibPath = name => {
-  fs.rmSync(path.join(getPackageOut(name), 'lib'), {
+  fs.rmSync(path.join(getPackageOut(name), 'packages'), {
     recursive: true,
     force: true,
   })

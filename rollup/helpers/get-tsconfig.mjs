@@ -7,9 +7,8 @@ export default function GetTSConfig(name) {
       'site',
       'scripts',
       'public',
-      'lib'
+      'packages',
     ],
-
-    include: [`lib/${name}/**/*.ts*`],
+    include: [`packages/${name}/**/*.ts*`],
   }
 }

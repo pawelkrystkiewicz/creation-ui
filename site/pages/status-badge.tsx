@@ -1,5 +1,5 @@
 import { ElementSize } from '@creation-ui/core'
-import { StatusBadge } from 'lib/status-badge'
+import { StatusBadge } from 'packages/status-badge'
 
 const DrawerPage = () => {
   const statuses = ['success', 'warning', 'error', 'active', undefined]

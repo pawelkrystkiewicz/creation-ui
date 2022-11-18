@@ -1,6 +1,5 @@
 import { Icon, icons } from '@creation-ui/core'
 
-
 const Home = () => {
   return (
     <>

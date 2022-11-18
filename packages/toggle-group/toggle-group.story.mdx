@@ -1,0 +1,116 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import ToggleGroup from './'
+import { Icon } from '@creation-ui/core'
+
+<Meta title="MDX/ToggleGroup" component={ToggleGroup} />
+
+export const Template = args => <ToggleGroup {...args} />
+export const options = [
+  {
+    label: '3 days',
+    value: '3',
+  },
+  {
+    label: 'week',
+    value: '7',
+  },
+  {
+    label: 'month',
+    value: '30',
+  },
+  {
+    label: 'year',
+    value: '365',
+  },
+]
+
+export const defaultProps = {
+  title: 'Date range',
+  size: 'sm',
+  options,
+  value: '30',
+}
+
+# ToggleGroup
+
+This is a group toggler
+
+<br />
+
+<Story
+  name="Main"
+  args={{
+    ...defaultProps,
+  }}>
+  {Template.bind({})}
+</Story>
+
+<br />
+
+## Sizes
+
+Each button needs to have set size:
+
+- `sm`
+- `md`
+- `lg`
+
+<br />
+
+<Canvas isColumn>
+  <Story
+    name="Large"
+    args={{
+      ...defaultProps,
+      size: 'lg',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Medium"
+    args={{
+      ...defaultProps,
+      size: 'md',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Small"
+    args={{
+      ...defaultProps,
+      size: 'sm',
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## With icon
+
+<Story
+  name="ToggleGroup"
+  args={{
+    ...defaultProps,
+    value: 'format_align_center',
+    options: [
+      {
+        label: <Icon icon="format_align_left" />,
+        value: 'format_align_left',
+      },
+      {
+        label: <Icon icon="format_align_center" />,
+        value: 'format_align_center',
+      },
+      {
+        label: <Icon icon="format_align_right" />,
+        value: 'format_align_right',
+      },
+      {
+        label: <Icon icon="format_align_justify" />,
+        value: 'format_align_justify',
+      },
+    ],
+  }}>
+  {Template.bind({})}
+</Story>
+
+<ArgsTable of={ToggleGroup} />

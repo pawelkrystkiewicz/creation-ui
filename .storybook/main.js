@@ -1,6 +1,5 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const stories = require('../stories.paths.json')
-
 module.exports = {
   stories,
   addons: [
@@ -28,5 +27,8 @@ module.exports = {
   webpackFinal: async (config, { configType }) => {
     config.resolve.plugins = [new TsconfigPathsPlugin()]
     return config
+  },
+  docsPage: {
+    docs: 'automatic',
   },
 }

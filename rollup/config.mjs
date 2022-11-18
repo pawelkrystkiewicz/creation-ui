@@ -1,7 +1,7 @@
 export default {
   directories: {
     out: 'build',
-    packages: 'lib',
+    packages: 'packages',
     abs: '../',
     externals: './rollup/externals.json',
   },

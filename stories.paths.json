@@ -2,7 +2,7 @@
   "../**/*stor(y|ies).@(js|ts|tsx|jsx|mdx)",
   "../**/*.stories.@(js|ts|tsx|jsx|mdx)",
   "../**/*.page.@(js|ts|tsx|jsx|mdx)",
-  "../lib/**/*stor(y|ies).@(js|ts|tsx|jsx|mdx)",
-  "../lib/**/*.stories.@(js|ts|tsx|jsx|mdx)",
-  "../lib/**/*.page.@(js|ts|tsx|jsx|mdx)"
+  "../packages/**/*stor(y|ies).@(js|ts|tsx|jsx|mdx)",
+  "../packages/**/*.stories.@(js|ts|tsx|jsx|mdx)",
+  "../packages/**/*.page.@(js|ts|tsx|jsx|mdx)"
 ]

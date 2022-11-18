@@ -1,5 +1,4 @@
-import '../lib/components/index.scss'
-//import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
+import '../packages/core/syles/index.scss'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

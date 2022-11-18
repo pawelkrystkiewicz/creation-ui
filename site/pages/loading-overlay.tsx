@@ -1,4 +1,4 @@
-import { LoadingOverlay } from "@creation-ui/core/components"
+import { LoadingOverlay } from '@creation-ui/core/components'
 
 const Home = () => {
   const active = true
