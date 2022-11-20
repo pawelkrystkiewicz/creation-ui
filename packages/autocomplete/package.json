@@ -77,7 +77,8 @@
   },
   "scripts": {
     "build": "yarn tsc && rollup -c",
-    "publish": "npm publish --registry https://registry.npmjs.org --access public"
+    "publish": "npm publish --registry https://registry.npmjs.org --access public",
+    "test:npmignore": "npm pack --dry-run"
   },
   "keywords": [
     "autocomplete",

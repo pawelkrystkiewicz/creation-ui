@@ -79,6 +79,7 @@
   },
   "scripts": {
     "build": "yarn tsc && rollup -c",
-    "publish": "npm publish --registry https://r.privjs.com --access restricted"
+    "publish": "npm publish --registry https://r.privjs.com --access restricted",
+    "test:npmignore": "npm pack --dry-run"
   }
 }

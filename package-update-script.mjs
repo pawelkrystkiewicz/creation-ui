@@ -89,6 +89,8 @@ const updatePackageJson = async (name, pkgPath) => {
     isPro ? PRIVJS : NPM
   } --access ${isPro ? 'restricted' : 'public'}`
 
+  pkg.scripts['test:npmignore'] = 'npm pack --dry-run'
+
   fs.writeFileSync(
     path.join(pkgPath, 'package.json'),
     JSON.stringify(pkg, null, 2)
