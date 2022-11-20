@@ -25,7 +25,7 @@
     "copy": "zsh ./scripts/shell/copy-file-to-each-subdir.sh",
     "git:force-update": "git push -f origin",
     "script:update": "node ./scripts/package-update-script.mjs",
-    "version": "lerna version --conventional-commits"
+    "next-version": "lerna version --conventional-commits"
   },
   "peerDependencies": {
     "@headlessui/react": "^1.7.0",
