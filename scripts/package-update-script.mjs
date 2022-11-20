@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import pro from './pro-packages.json' assert { type: 'json' }
+import pro from '../pro-packages.json' assert { type: 'json' }
 
 const devDependencies = {
   '@creation-ui/core': '*',
@@ -57,6 +57,8 @@ const NPM = 'https://registry.npmjs.org'
  * 4.remove publishConfig from free packages
  */
 
+const COPY_BASIC_FILES = 'cp package.json README.md CHANGELOG.md ./build'
+
 const updateTailwindConfig = async pkgPath => {
   const content = `
   const path = require('path')
@@ -88,6 +90,8 @@ const updatePackageJson = async (name, pkgPath) => {
   pkg.scripts.publish = `npm publish --registry ${
     isPro ? PRIVJS : NPM
   } --access ${isPro ? 'restricted' : 'public'}`
+
+  pkg.scripts.build = `yarn tsc && rollup -c && ${COPY_BASIC_FILES}`
 
   pkg.scripts['test:npmignore'] = 'npm pack --dry-run'
 

@@ -70,7 +70,7 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "build": "yarn tsc && rollup -c",
+    "build": "yarn tsc && rollup -c && cp package.json README.md CHANGELOG.md ./build",
     "publish": "npm publish --registry https://registry.npmjs.org --access public",
     "test:npmignore": "npm pack --dry-run"
   },
