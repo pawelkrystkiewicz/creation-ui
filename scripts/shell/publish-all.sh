@@ -4,4 +4,4 @@ function runCommand() {
     for d in ./packages/* ; do /bin/zsh -c "(cd "$d/build" && "$@")"; done
 }
 
-runCommand "npm publish"
+runCommand "yarn _publish"

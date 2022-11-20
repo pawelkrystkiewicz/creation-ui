@@ -87,7 +87,7 @@ const updatePackageJson = async (name, pkgPath) => {
   }
 
   pkg.publishConfig = { registry: isPro ? PRIVJS : NPM }
-  pkg.scripts.publish = `npm publish --registry ${
+  pkg.scripts['_publish'] = `npm publish --registry ${
     isPro ? PRIVJS : NPM
   } --access ${isPro ? 'restricted' : 'public'}`
 
