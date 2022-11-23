@@ -9,6 +9,12 @@
       "@root/*": [
         "./*"
       ],
+      "@creation-ui/core": [
+        "./packages/core"
+      ],
+      "@creation-ui/core/*": [
+        "./packages/core/*"
+      ],
     }
   }
 }

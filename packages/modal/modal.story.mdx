@@ -1,24 +1,23 @@
-import { useState } from 'react'
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import Modal from './'
-import Radio from '../radio'
-import { ModalProps } from './modal.types'
+import { Modal } from './'
 
-<Meta title="MDX/Modal" component={Modal} />
+<Meta title='MDX/Modal' component={Modal} />
 
 export const Template = args => {
   return (
     <div>
       <Modal open={true} {...args}>
-        <div className="mt-2">
-          <p className="text-sm text-gray-500">
-            Your payment has been successfully submitted. We've sent you an email with all of the details of your order.
+        <div className='mt-2'>
+          <p className='text-sm text-gray-500'>
+            Your payment has been successfully submitted. We've sent you an
+            email with all of the details of your order.
           </p>
         </div>
-        <div className="mt-4">
+        <div className='mt-4'>
           <button
-            type="button"
-            className="inline-flex justify-center rounded-md border border-transparent bg-primary-100 px-4 py-2 text-sm font-medium text-primary-900 hover:bg-primary-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2">
+            type='button'
+            className='inline-flex justify-center rounded-md border border-transparent bg-primary-100 px-4 py-2 text-sm font-medium text-primary-900 hover:bg-primary-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2'
+          >
             Got it, thanks!
           </button>
         </div>
@@ -29,10 +28,10 @@ export const Template = args => {
 
 # Modal
 
-<Story name="Main">{Template.bind({})}</Story>
+<Story name='Main'>{Template.bind({})}</Story>
 
 <Canvas isColumn>
-  <Story name="Modal">{Template.bind({})}</Story>
+  <Story name='Modal'>{Template.bind({})}</Story>
 </Canvas>
 
 <ArgsTable of={Modal} />

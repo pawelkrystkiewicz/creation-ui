@@ -1,16 +1,15 @@
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const stories = require('../stories.paths.json')
 module.exports = {
   stories,
   addons: [
-    '@storybook/addon-links',
+    '@storybook/addon-a11y',
+    // '@storybook/addon-actions',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-a11y',
+    '@storybook/addon-links',
     'storybook-dark-mode',
-    'storybook-addon-turbo-build',
+    // '@storybook/addon-viewport',
     'storybook-addon-outline',
-    '@storybook/addon-viewport',
     {
       name: 'storybook-addon-sass-postcss',
       options: {
@@ -22,13 +21,13 @@ module.exports = {
   ],
   framework: '@storybook/react',
   core: {
-    builder: '@storybook/builder-webpack5',
+    builder: '@storybook/builder-vite',
   },
-  webpackFinal: async (config, { configType }) => {
-    config.resolve.plugins = [new TsconfigPathsPlugin()]
-    return config
+  features: {
+    storyStoreV7: true,
+    previewMdx2: true,
   },
-  docsPage: {
-    docs: 'automatic',
-  },
+  // docsPage: {
+  //   docs: 'automatic',
+  // },
 }

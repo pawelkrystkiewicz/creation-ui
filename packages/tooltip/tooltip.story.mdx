@@ -1,20 +1,20 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import Tooltip from './'
+import { Tooltip } from './'
 import { Icon } from '@creation-ui/core'
 
-<Meta title="MDX/Tooltip" component={Tooltip} />
+<Meta title='MDX/Tooltip' component={Tooltip} />
 
 export const Template = args => (
   <Tooltip {...args}>
-    <div className="m-20">Text</div>
+    <div className='m-20'>Text</div>
   </Tooltip>
 )
 
 export const defaultProps = {
   content: (
-    <div className="flex">
+    <div className='flex'>
       Hello&nbsp;
-      <Icon icon="info" className="text-xs" />
+      <Icon icon='info' className='text-xs' />
     </div>
   ),
   placement: 'top',
@@ -27,10 +27,11 @@ Tooltip component
 <br />
 
 <Story
-  name="Main"
+  name='Main'
   args={{
     ...defaultProps,
-  }}>
+  }}
+>
   {Template.bind({})}
 </Story>
 
@@ -49,31 +50,35 @@ Each button needs to have set size:
 
 <Canvas>
   <Story
-    name="Top"
+    name='Top'
     args={{
       ...defaultProps,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Bottom"
+    name='Bottom'
     args={{
       ...defaultProps,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Left"
+    name='Left'
     args={{
       ...defaultProps,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Right"
+    name='Right'
     args={{
       ...defaultProps,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

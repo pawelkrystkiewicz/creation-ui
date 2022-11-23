@@ -1,14 +1,13 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import RadioGroup from './'
-import Radio from '../radio'
+import { Radio, RadioGroup } from './'
 
-<Meta title="MDX/RadioGroup" component={RadioGroup} />
+<Meta title='MDX/RadioGroup' component={RadioGroup} />
 
 export const Template = args => (
   <RadioGroup {...args}>
-    <Radio label="Option 1" checked/>
-    <Radio label="Option 2" />
-    <Radio label="Option 3" />
+    <Radio label='Option 1' checked />
+    <Radio label='Option 2' />
+    <Radio label='Option 3' />
   </RadioGroup>
 )
 
@@ -16,7 +15,7 @@ export const Template = args => (
 
 <br />
 
-<Story name="RadioGroup">{Template.bind({ label: 'Radio Group' })}</Story>
+<Story name='RadioGroup'>{Template.bind({ label: 'Radio Group' })}</Story>
 
 <br />
 
@@ -32,27 +31,30 @@ RadioGroup as all the other components uses 3 basic sizes:
 
 <Canvas isColumn>
   <Story
-    name="Large"
+    name='Large'
     args={{
       label: 'Large',
       size: 'lg',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Medium"
+    name='Medium'
     args={{
       label: 'Medium',
       size: 'md',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Small"
+    name='Small'
     args={{
       label: 'Small',
       size: 'sm',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -61,30 +63,33 @@ RadioGroup as all the other components uses 3 basic sizes:
 
 <Canvas isColumn>
   <Story
-    name="Large Horizontal"
+    name='Large Horizontal'
     args={{
       label: 'Large',
       orientation: 'horizontal',
       size: 'lg',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Medium Horizontal"
+    name='Medium Horizontal'
     args={{
       label: 'Medium',
       orientation: 'horizontal',
       size: 'md',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Small Horizontal"
+    name='Small Horizontal'
     args={{
       label: 'Small',
       orientation: 'horizontal',
       size: 'sm',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -95,28 +100,31 @@ RadioGroup as all the other components uses 3 basic sizes:
 
 <Canvas>
   <Story
-    name="Read only"
+    name='Read only'
     args={{
       label: 'Read only',
       readOnly: 'true',
       checked: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Required"
+    name='Required'
     args={{
       label: 'Required',
       required: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Disabled"
+    name='Disabled'
     args={{
       label: 'Disabled',
       disabled: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

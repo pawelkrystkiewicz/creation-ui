@@ -1,7 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import TextArea from './'
+import { TextArea } from './'
 
-<Meta title="MDX/TextArea" component={TextArea} />
+<Meta title='MDX/TextArea' component={TextArea} />
 
 export const Template = args => <TextArea {...args} />
 export const defaultProps = {
@@ -15,18 +15,19 @@ export const defaultProps = {
 # TextArea
 
 ## TODO
+
 - [ ] Allow to change resize directions by props
 - [ ] minRows
 - [ ] maxRows
 
-
 <br />
 
 <Story
-  name="TextArea"
+  name='TextArea'
   args={{
     ...defaultProps,
-  }}>
+  }}
+>
   {Template.bind({})}
 </Story>
 
@@ -44,30 +45,33 @@ TextArea as all the other components uses 3 basic sizes:
 
 <Canvas isColumn>
   <Story
-    name="Large"
+    name='Large'
     args={{
       ...defaultProps,
       label: 'Large',
       size: 'lg',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Medium"
+    name='Medium'
     args={{
       ...defaultProps,
       label: 'Medium',
       size: 'md',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Small"
+    name='Small'
     args={{
       ...defaultProps,
       label: 'Small',
       size: 'sm',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -78,33 +82,36 @@ TextArea as all the other components uses 3 basic sizes:
 
 <Canvas>
   <Story
-    name="Read only"
+    name='Read only'
     args={{
       ...defaultProps,
       label: 'Read only',
       readOnly: 'true',
       checked: true,
       value: 'I am read only',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Required"
+    name='Required'
     args={{
       ...defaultProps,
       label: 'Required',
       required: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Disabled"
+    name='Disabled'
     args={{
       ...defaultProps,
       label: 'Disabled',
       placeholder: 'I am disabled, you cannot edit me',
       disabled: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

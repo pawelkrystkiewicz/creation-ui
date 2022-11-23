@@ -1,7 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import Switch from './'
+import { Switch } from './'
 
-<Meta title="MDX/Switch" component={Switch} />
+<Meta title='MDX/Switch' component={Switch} />
 
 export const Template = args => <Switch {...args} />
 export const defaultProps = {
@@ -14,10 +14,11 @@ export const defaultProps = {
 <br />
 
 <Story
-  name="Switch"
+  name='Switch'
   args={{
     ...defaultProps,
-  }}>
+  }}
+>
   {Template.bind({})}
 </Story>
 
@@ -35,27 +36,30 @@ Switch as all the other components uses 3 basic sizes:
 
 <Canvas isColumn>
   <Story
-    name="Large"
+    name='Large'
     args={{
       ...defaultProps,
       size: 'lg',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Medium"
+    name='Medium'
     args={{
       ...defaultProps,
       size: 'md',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Small"
+    name='Small'
     args={{
       ...defaultProps,
       size: 'sm',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -64,12 +68,13 @@ Switch as all the other components uses 3 basic sizes:
 
 <Canvas>
   <Story
-    name="Read only"
+    name='Read only'
     args={{
       ...defaultProps,
       readOnly: 'true',
       checked: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -78,11 +83,12 @@ Switch as all the other components uses 3 basic sizes:
 
 <Canvas>
   <Story
-    name="Required"
+    name='Required'
     args={{
       ...defaultProps,
       required: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -91,11 +97,12 @@ Switch as all the other components uses 3 basic sizes:
 
 <Canvas>
   <Story
-    name="Disabled"
+    name='Disabled'
     args={{
       ...defaultProps,
       disabled: true,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

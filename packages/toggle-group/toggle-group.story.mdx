@@ -1,8 +1,8 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import ToggleGroup from './'
+import { ToggleGroup } from './'
 import { Icon } from '@creation-ui/core'
 
-<Meta title="MDX/ToggleGroup" component={ToggleGroup} />
+<Meta title='MDX/ToggleGroup' component={ToggleGroup} />
 
 export const Template = args => <ToggleGroup {...args} />
 export const options = [
@@ -38,10 +38,11 @@ This is a group toggler
 <br />
 
 <Story
-  name="Main"
+  name='Main'
   args={{
     ...defaultProps,
-  }}>
+  }}
+>
   {Template.bind({})}
 </Story>
 
@@ -59,27 +60,30 @@ Each button needs to have set size:
 
 <Canvas isColumn>
   <Story
-    name="Large"
+    name='Large'
     args={{
       ...defaultProps,
       size: 'lg',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Medium"
+    name='Medium'
     args={{
       ...defaultProps,
       size: 'md',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Small"
+    name='Small'
     args={{
       ...defaultProps,
       size: 'sm',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -87,29 +91,30 @@ Each button needs to have set size:
 ## With icon
 
 <Story
-  name="ToggleGroup"
+  name='ToggleGroup'
   args={{
     ...defaultProps,
     value: 'format_align_center',
     options: [
       {
-        label: <Icon icon="format_align_left" />,
+        label: <Icon icon='format_align_left' />,
         value: 'format_align_left',
       },
       {
-        label: <Icon icon="format_align_center" />,
+        label: <Icon icon='format_align_center' />,
         value: 'format_align_center',
       },
       {
-        label: <Icon icon="format_align_right" />,
+        label: <Icon icon='format_align_right' />,
         value: 'format_align_right',
       },
       {
-        label: <Icon icon="format_align_justify" />,
+        label: <Icon icon='format_align_justify' />,
         value: 'format_align_justify',
       },
     ],
-  }}>
+  }}
+>
   {Template.bind({})}
 </Story>
 

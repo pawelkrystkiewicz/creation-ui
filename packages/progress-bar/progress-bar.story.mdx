@@ -1,7 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
-import ProgressBar from './'
+import { ProgressBar } from './'
 
-<Meta title="MDX/ProgressBar" component={ProgressBar} />
+<Meta title='MDX/ProgressBar' component={ProgressBar} />
 
 export const Template = args => <ProgressBar {...args} />
 export const defaultProps = {
@@ -14,10 +14,11 @@ export const defaultProps = {
 <br />
 
 <Story
-  name="ProgressBar"
+  name='ProgressBar'
   args={{
     ...defaultProps,
-  }}>
+  }}
+>
   {Template.bind({})}
 </Story>
 
@@ -35,27 +36,30 @@ ProgressBar as all the other components uses 3 basic sizes:
 
 <Canvas isColumn>
   <Story
-    name="Large"
+    name='Large'
     args={{
       ...defaultProps,
       size: 'lg',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Medium"
+    name='Medium'
     args={{
       ...defaultProps,
       size: 'md',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
   <Story
-    name="Small"
+    name='Small'
     args={{
       ...defaultProps,
       size: 'sm',
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -64,12 +68,13 @@ ProgressBar as all the other components uses 3 basic sizes:
 
 <Canvas>
   <Story
-    name="Show value"
+    name='Show value'
     args={{
       ...defaultProps,
       showValue: true,
       value: 67,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -78,13 +83,14 @@ ProgressBar as all the other components uses 3 basic sizes:
 
 <Canvas>
   <Story
-    name="Custom formatter"
+    name='Custom formatter'
     args={{
       ...defaultProps,
       showValue: true,
       value: 45,
       formatDisplayValue: v => `Progress: ${v}/100`,
-    }}>
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
