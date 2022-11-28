@@ -1,1 +1,7 @@
-["table", "transfer-list", "schedule", "schedule-timeline"]
+[
+  "table",
+  "transfer-list",
+  "schedule",
+  "schedule-timeline",
+  "docs"
+]
