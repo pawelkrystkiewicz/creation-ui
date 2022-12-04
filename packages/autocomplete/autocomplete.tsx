@@ -40,6 +40,7 @@ const Autocomplete = (props: AutocompleteProps) => {
   const [selected, setSelected] = useState<AutocompleteOptionsType>(null)
   const [query, setQuery] = useState<string>('')
 
+  /* Filtering the options based on the query. */
   const filteredOptions =
     query === ''
       ? options
@@ -141,6 +142,7 @@ const Autocomplete = (props: AutocompleteProps) => {
   )
 }
 
+/* Setting the default props for the component. */
 Autocomplete.defaultProps = {
   size: 'md',
   placeholder: 'Select',

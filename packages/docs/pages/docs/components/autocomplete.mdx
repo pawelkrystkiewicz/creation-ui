@@ -1,0 +1,36 @@
+# Autocomplete
+
+## Instalation
+
+import { Tab, Tabs } from 'nextra-theme-docs'
+import { SCRIPTS_TABS } from '../../../constants'
+
+<Tabs items={SCRIPTS_TABS}>
+  <Tab>
+    ```bash copy yarn add @creation-ui/core @creation-ui/autocomplete ```
+  </Tab>
+  <Tab>```bash copy npm i @creation-ui/core @creation-ui/autocomplete ```</Tab>
+</Tabs>
+
+## Usage
+
+```ts copy
+import { Autocomplete } from '@creation-ui/autocomplete'
+```
+
+```ts copy
+
+const options = [
+  { value: 'apple', label: 'Apple' },
+  { value: 'banana', label: 'Banana' },
+  { value: 'orange', label: 'Orange' },
+  { value: 'pear', label: 'Pear' },
+  { value: 'pineapple', label: 'Pineapple' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'watermelon', label: 'Watermelon' },
+]
+
+<Autocomplete/>
+
+
+```

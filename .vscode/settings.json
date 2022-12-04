@@ -15,5 +15,6 @@
       "pattern": "pages/index.tsx"
     }
   ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "docwriter.style": "Auto-detect"
 }

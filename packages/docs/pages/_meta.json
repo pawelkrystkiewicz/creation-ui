@@ -1,0 +1,22 @@
+{
+  "index": {
+    "title": "Creation UI",
+    "type": "page",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "docs": {
+    "title": "Documentation",
+    "type": "page"
+  },
+  "-- More --": {
+    "type": "separator",
+    "title": "More"
+  },
+  "about link": {
+    "title": "About",
+    "href": "/about"
+  }
+}
