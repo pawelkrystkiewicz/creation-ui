@@ -7,7 +7,6 @@
   "types": "build/index.d.ts",
   "styles": "build/index.css",
   "scripts": {
-    "start": "vite --port=3000",
     "build:site": "tsc && vite build",
     "preview": "vite preview",
     "build-depr": "yarn tsc && NODE_ENV=production node --max-old-space-size=8192 node_modules/rollup/dist/bin/rollup -c && yarn build:clean-up",
@@ -25,11 +24,13 @@
     "git:force-update": "git push -f origin",
     "script:update": "node ./scripts/package-update-script.mjs",
     "next-version": "lerna version --conventional-commits",
-    "postpublish": "zsh scripts/shell/remove-build.sh"
+    "postpublish": "zsh scripts/shell/remove-build.sh",
+    "docs": "cd packages/docs && yarn start",
+    "docs:build": "cd packages/docs && yarn build"
   },
   "peerDependencies": {
-    "@headlessui/react": "latest",
-    "@headlessui/tailwindcss": "latest",
+    "@headlessui/react": "*",
+    "@headlessui/tailwindcss": "*",
     "@tanstack/match-sorter-utils": "^8.1.1",
     "@tanstack/react-table": "^8.5.13",
     "autoprefixer": "^10.4.12",
@@ -37,11 +38,11 @@
     "lodash": "^4.17.21",
     "postcss": "^8.4.16",
     "postcss-loader": "^7.0.1",
-    "react": "latest",
-    "react-datepicker": "latest",
-    "react-dom": "latest",
+    "react": "*",
+    "react-datepicker": "*",
+    "react-dom": "*",
     "sass": "^1.55.0",
-    "tailwindcss": "latest"
+    "tailwindcss": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -93,7 +94,7 @@
     "react-router-dom": "6",
     "react-spring": "^9.5.5",
     "react-use": "^17.4.0",
-    "rollup": "^3.3.0",
+    "rollup": "^3.6.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -131,10 +132,10 @@
   },
   "homepage": "https://github.com/pawelkrystkiewicz/gemini-ui#readme",
   "browser": {
+    "crypto": false,
     "fs": false,
-    "path": false,
     "os": false,
-    "crypto": false
+    "path": false
   },
   "directories": {
     "packages": "packages"
@@ -142,5 +143,5 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {}
+  "packageManager": "yarn@3.3.0"
 }

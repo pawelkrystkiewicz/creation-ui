@@ -31,9 +31,11 @@
     "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
-    "@creation-ui/core": "*",
     "@babel/core": "^7.18.10",
     "@babel/preset-react": "^7.18.6",
+    "@creation-ui/button": "*",
+    "@creation-ui/core": "*",
+    "@creation-ui/select": "*",
     "@headlessui/react": "^1.7.0",
     "@headlessui/tailwindcss": "^0.1.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -55,7 +57,7 @@
     "react-router-dom": "6",
     "react-spring": "^9.5.5",
     "react-use": "^17.4.0",
-    "rollup": "^3.3.0",
+    "rollup": "^3.6.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
