@@ -1,6 +1,5 @@
 import { useTheme } from '../../theme'
 import clsx from 'clsx'
-import './overlay.scss'
 
 interface OverlayProps {
   visible?: boolean

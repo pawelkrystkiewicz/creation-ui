@@ -1,6 +1,5 @@
 import { Icon } from '../'
 import clsx from 'clsx'
-import '../../styles/index.scss'
 
 interface DropdownChevronProps {
   open?: boolean

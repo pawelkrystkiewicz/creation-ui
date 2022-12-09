@@ -29,7 +29,7 @@ export const Logo = ({ size = 'sm', className }: LogoProps) => (
       'rounded-full',
       className,
       sizeMap[size],
-      'border border-slate-100'
+      'border border-zinc-100'
     )}
   />
 )

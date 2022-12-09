@@ -1,7 +1,6 @@
 import { Icon } from '../'
 import { AutocompleteOptionsType, SelectOptionsType } from '../../types'
 import clsx from 'clsx'
-import '../../styles/index.scss'
 
 interface SelectOptionProps {
   option: SelectOptionsType | AutocompleteOptionsType
@@ -12,13 +11,9 @@ interface SelectOptionProps {
 }
 
 const SelectOption = (props: SelectOptionProps) => {
-  const {
-    selected,
-    active,
-    option: { value },
-    multiple,
-  } = props
-
+  const { selected, active, option, multiple } = props
+  const value = typeof option === 'object' ? option.value : option
+  console.log(option, value)
   return (
     <>
       <span

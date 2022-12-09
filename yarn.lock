@@ -1497,27 +1497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@creation-ui/autocomplete@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/autocomplete@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    "@headlessui/react": ^1.7.0
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    lodash: ^4.17.21
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: f059bbd7ffc6f13d64e2344ecc3165231120d9203108142c4822967c8f67cc6f8a4c73e0ed6d5f616006c81ded6d904171ef39d06cf016135f7ca3c43206c504
-  languageName: node
-  linkType: hard
-
-"@creation-ui/autocomplete@workspace:packages/autocomplete":
+"@creation-ui/autocomplete@*, @creation-ui/autocomplete@workspace:packages/autocomplete":
   version: 0.0.0-use.local
   resolution: "@creation-ui/autocomplete@workspace:packages/autocomplete"
   dependencies:
@@ -1579,25 +1559,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/avatar@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/avatar@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: 9fecd1899e573ab71b1d17df085a82f77c4afdaabd49321bec85b233067c4072f44cc9c4c9306adff9cf8767bd2fbf9f6809bb0b9ffb8b2a2c88c14b061b412f
-  languageName: node
-  linkType: hard
-
-"@creation-ui/avatar@workspace:packages/avatar":
+"@creation-ui/avatar@*, @creation-ui/avatar@workspace:packages/avatar":
   version: 0.0.0-use.local
   resolution: "@creation-ui/avatar@workspace:packages/avatar"
   dependencies:
@@ -1717,43 +1679,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/button@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/button@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: f7b3208cbecbe03f2161b75d1ad2303153bb1e3374d5167412e9663c4ae8bdcd7cdf96eabbdbe5c2d99fd515f7b33d7aca73f6bad1d897d333a8ef82c09fefbc
-  languageName: node
-  linkType: hard
-
-"@creation-ui/checkbox@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/checkbox@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: 21406c36b4423d38ee7f9eb78c6a3af6464ee8b9658dea487b5860764e54005241f9ece64da22ed360cc9c404caba559a59eb540c736ced38dde30f71d6c6e21
-  languageName: node
-  linkType: hard
-
-"@creation-ui/checkbox@workspace:packages/checkbox":
+"@creation-ui/checkbox@*, @creation-ui/checkbox@workspace:packages/checkbox":
   version: 0.0.0-use.local
   resolution: "@creation-ui/checkbox@workspace:packages/checkbox"
   dependencies:
@@ -1871,42 +1797,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/core@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/core@npm:0.2.1"
-  peerDependencies:
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.2.4
-  checksum: 362a0d8559dd925f2540e50f539b3a902fd85d2eb056fc89a124ce022b59999dfb91b476dcd6bd3393ee3f5d6f9383c2b53d57732750c808b2237bff8e5ddf32
-  languageName: node
-  linkType: hard
-
-"@creation-ui/date-picker@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/date-picker@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: dbfda9f46ffa632c3a94c597382b8294bb64ab7b2684868446be9ee87302a5d13bac02fee73c4e27a53bb1e7d4ca42a00544bb04e1f85a981be5fc350e221a2c
-  languageName: node
-  linkType: hard
-
-"@creation-ui/date-picker@workspace:packages/date-picker":
+"@creation-ui/date-picker@*, @creation-ui/date-picker@workspace:packages/date-picker":
   version: 0.0.0-use.local
   resolution: "@creation-ui/date-picker@workspace:packages/date-picker"
   dependencies:
@@ -1970,22 +1861,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@creation-ui/docs@workspace:packages/docs"
   dependencies:
-    "@creation-ui/autocomplete": latest
-    "@creation-ui/avatar": latest
-    "@creation-ui/button": latest
-    "@creation-ui/checkbox": latest
-    "@creation-ui/core": latest
-    "@creation-ui/date-picker": latest
-    "@creation-ui/drawer": latest
-    "@creation-ui/input": latest
-    "@creation-ui/modal": latest
-    "@creation-ui/popover": latest
-    "@creation-ui/progress-bar": latest
-    "@creation-ui/radio": latest
-    "@creation-ui/select": latest
-    "@creation-ui/switch": latest
-    "@creation-ui/toggle-group": latest
-    "@creation-ui/tooltip": latest
+    "@creation-ui/autocomplete": "*"
+    "@creation-ui/avatar": "*"
+    "@creation-ui/button": "*"
+    "@creation-ui/checkbox": "*"
+    "@creation-ui/core": "*"
+    "@creation-ui/date-picker": "*"
+    "@creation-ui/drawer": "*"
+    "@creation-ui/input": "*"
+    "@creation-ui/modal": "*"
+    "@creation-ui/popover": "*"
+    "@creation-ui/progress-bar": "*"
+    "@creation-ui/radio": "*"
+    "@creation-ui/select": "*"
+    "@creation-ui/switch": "*"
+    "@creation-ui/toggle-group": "*"
+    "@creation-ui/tooltip": "*"
     "@types/node": 18.11.10
     "@types/react": 18.0.26
     "@types/react-dom": 18.0.9
@@ -2006,25 +1897,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/drawer@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/drawer@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: baa214f0ac8db748c87192c1a47f88e5f867613a6341750bcb09b0ce5c013cfcb4a1b620ce68303409479d08c99b1f7691630c0883f6bfccc1898685abd31ad3
-  languageName: node
-  linkType: hard
-
-"@creation-ui/drawer@workspace:packages/drawer":
+"@creation-ui/drawer@*, @creation-ui/drawer@workspace:packages/drawer":
   version: 0.0.0-use.local
   resolution: "@creation-ui/drawer@workspace:packages/drawer"
   dependencies:
@@ -2084,25 +1957,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/input@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/input@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: b4c9e8ed1a320594fd6e2202d19d1c59cbd6d6e5df5fd4364a211b3548429bb59aaa9a2119f34a08f846ebe0ac9d468f8de776aae03a367795f9b85d29eb74b5
-  languageName: node
-  linkType: hard
-
-"@creation-ui/input@workspace:packages/input":
+"@creation-ui/input@*, @creation-ui/input@workspace:packages/input":
   version: 0.0.0-use.local
   resolution: "@creation-ui/input@workspace:packages/input"
   dependencies:
@@ -2162,26 +2017,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/modal@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/modal@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    "@headlessui/react": ^1.7.0
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: 27e317919f84c4f1cbc2c9259095603e53ab117c14ec191678cbc8d6ab3b815b62c9702bb9ac989a58d657b93652fb6d1a12363ceae8dbc92bd2fa339fa0e85a
-  languageName: node
-  linkType: hard
-
-"@creation-ui/modal@workspace:packages/modal":
+"@creation-ui/modal@*, @creation-ui/modal@workspace:packages/modal":
   version: 0.0.0-use.local
   resolution: "@creation-ui/modal@workspace:packages/modal"
   dependencies:
@@ -2303,26 +2139,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/popover@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/popover@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    "@headlessui/react": ^1.7.0
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: 1065e849d8bd8246b80ecd567bc7c01c1d31bbe81fac51e6689f0fba014eb212fed61c54dedc7275ebacd30e1c38f1cd487a2770c7819865c27ebc172ef473ea
-  languageName: node
-  linkType: hard
-
-"@creation-ui/popover@workspace:packages/popover":
+"@creation-ui/popover@*, @creation-ui/popover@workspace:packages/popover":
   version: 0.0.0-use.local
   resolution: "@creation-ui/popover@workspace:packages/popover"
   dependencies:
@@ -2383,25 +2200,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/progress-bar@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/progress-bar@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: 9d1753eefa201d4c096bacdd484ec4e773a405393ddd08c952e10decd327b86232007b998612d7eb234f7d903b16b2b66b30740dd4f7a428337656bb0148d5ef
-  languageName: node
-  linkType: hard
-
-"@creation-ui/progress-bar@workspace:packages/progress-bar":
+"@creation-ui/progress-bar@*, @creation-ui/progress-bar@workspace:packages/progress-bar":
   version: 0.0.0-use.local
   resolution: "@creation-ui/progress-bar@workspace:packages/progress-bar"
   dependencies:
@@ -2461,25 +2260,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/radio@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/radio@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: 035000f4d598b4ed60aa17fbb355a2534ca2b0a555781ee58344e75a0971dff802f997db9ef41d1c87a858e427daf8f780031bebc5071f935c49302c6d9bbb05
-  languageName: node
-  linkType: hard
-
-"@creation-ui/radio@workspace:packages/radio":
+"@creation-ui/radio@*, @creation-ui/radio@workspace:packages/radio":
   version: 0.0.0-use.local
   resolution: "@creation-ui/radio@workspace:packages/radio"
   dependencies:
@@ -2600,25 +2381,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/select@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/select@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    "@headlessui/react": ^1.7.0
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: 0d962f3b1557b9812fdc3d14a51dd0e3a29f91a43feeef38cfc0b61958ee63d6bedf7b67f43b4df7f55eac703e85ac78be2927ef8c4e0e175304e169d8c9d97a
-  languageName: node
-  linkType: hard
-
 "@creation-ui/status-badge@workspace:packages/status-badge":
   version: 0.0.0-use.local
   resolution: "@creation-ui/status-badge@workspace:packages/status-badge"
@@ -2679,25 +2441,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/switch@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/switch@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: a6898b859e2e1f85dc4759207c230314ea108255a436c36d33bb8990f20cfbbd44553ae2be3384e87431a023ae915f3e1272298b58be46b46ae9fbe21cd6bc73
-  languageName: node
-  linkType: hard
-
-"@creation-ui/switch@workspace:packages/switch":
+"@creation-ui/switch@*, @creation-ui/switch@workspace:packages/switch":
   version: 0.0.0-use.local
   resolution: "@creation-ui/switch@workspace:packages/switch"
   dependencies:
@@ -2883,25 +2627,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/toggle-group@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/toggle-group@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: cc70b1228f4aecb1163c8c3a4b2af3a8acf105abb83952650e169ee67fdb6562031b3a89506c806ac20313ec1be9f24008d9d10a48558a06ccd2a3b3283eff59
-  languageName: node
-  linkType: hard
-
-"@creation-ui/toggle-group@workspace:packages/toggle-group":
+"@creation-ui/toggle-group@*, @creation-ui/toggle-group@workspace:packages/toggle-group":
   version: 0.0.0-use.local
   resolution: "@creation-ui/toggle-group@workspace:packages/toggle-group"
   dependencies:
@@ -2961,25 +2687,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@creation-ui/tooltip@npm:latest":
-  version: 0.2.1
-  resolution: "@creation-ui/tooltip@npm:0.2.1"
-  peerDependencies:
-    "@creation-ui/core": "*"
-    autoprefixer: ^10.4.12
-    clsx: ^1.2.1
-    postcss: ^8.4.16
-    postcss-loader: ^7.0.1
-    react: ^16.8.0
-    react-datepicker: ^4.8.0
-    react-dom: ^16.8.0
-    sass: ^1.55.0
-    tailwindcss: ^3.1.8
-  checksum: 0c8e86ea579142149777dc4cd456986a4cdb3edf5897069f03b64ddb7079514d45af8afd31fb89c8fa00e62e3435b8f2275f3a2b9df53f46fc191eec375e5f3f
-  languageName: node
-  linkType: hard
-
-"@creation-ui/tooltip@workspace:packages/tooltip":
+"@creation-ui/tooltip@*, @creation-ui/tooltip@workspace:packages/tooltip":
   version: 0.0.0-use.local
   resolution: "@creation-ui/tooltip@workspace:packages/tooltip"
   dependencies:

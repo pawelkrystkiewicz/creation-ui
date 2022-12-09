@@ -7,6 +7,7 @@ const withNextra = require('nextra')({
 const nextraConfig = withNextra({
   reactStrictMode: true,
   swcMinify: true,
+  experimental: { externalDir: true },
 })
 
 module.exports = nextraConfig

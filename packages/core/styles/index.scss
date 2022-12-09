@@ -1,8 +1,16 @@
 /* @layer reset, defaults, patterns, components, utilities, overrides; */
+@import './icon.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+$z-index-base: 1;
+$z-index-dropdowns: 200;
+$z-index-tooltips: 400;
+$z-index-overlays: 600;
+$z-index-modals: 800;
+$z-index-notifications: 1000;
 
 @layer base {
   :root {
@@ -28,6 +36,7 @@
 }
 
 .form-element {
+  z-index: $z-index-base;
   @apply disabled:opacity-25
   disabled:cursor-not-allowed;
 
@@ -44,12 +53,12 @@
     rounded-md
     focus:ring
     focus:ring-opacity-50
-    bg-white
-    border-gray-300
-    dark:bg-gray-500
-    dark:border-gray-400
+    bg-transparent
+    border-zinc-300
+    dark:border-zinc-400
     invalid:ring-error-200
-    invalid:border-error;
+    invalid:border-error
+    dark:bg-zinc-900;
     &:focus {
       @apply border-primary-300 ring-primary-200
       invalid:ring-error-200
@@ -74,7 +83,7 @@
     disabled:cursor-not-allowed
     rounded
     text-primary-500
-    border-gray-300
+    border-zinc-300
     focus:border-primary-300
     focus:ring
     focus:ring-offset-0
@@ -97,7 +106,7 @@
     disabled:cursor-not-allowed
     rounded-full
     text-primary-500
-    border-gray-300
+    border-zinc-300
     focus:border-primary-300
     focus:ring
     focus:ring-offset-0
@@ -117,14 +126,14 @@
   }
 
   &--iem-selected {
-    @apply bg-gray-300/50;
+    @apply bg-zinc-300/50;
   }
 
   &--label {
     @apply peer-required:after:content-['*']
     peer-required:after:ml-0.5
     peer-required:after:text-error
-   select-none;
+   select-none block;
 
     &--checkbox {
       @apply inline-flex items-center cursor-pointer;
@@ -172,7 +181,7 @@
   right-0
   h-full
   w-full
-  bg-gray-700/50
+  bg-zinc-700/50
   transition
   duration-200
   ease-in
@@ -195,7 +204,7 @@
   absolute
   whitespace-nowrap
   rounded
-  bg-black
+  bg-zinc-900
   px-2
   py-1
   text-white
@@ -211,7 +220,7 @@
     @apply before:top-full
     -top-10
     left-1/2
-    before:border-t-black
+    before:border-t-zinc-900
     -translate-x-1/2
     before:left-1/2
     before:-translate-x-1/2;
@@ -224,7 +233,7 @@
     before:bottom-full
     before:left-1/2
     before:-translate-x-1/2
-    before:border-b-black;
+    before:border-b-zinc-900;
   }
   &--left {
     @apply right-full
@@ -234,7 +243,7 @@
     before:left-full
     before:top-1/2
     before:-translate-y-1/2
-    before:border-l-black;
+    before:border-l-zinc-900;
   }
   &--right {
     @apply ml-2
@@ -244,7 +253,7 @@
     before:right-full
     before:top-1/2
     before:-translate-y-1/2
-    before:border-r-black;
+    before:border-r-zinc-900;
   }
 }
 
@@ -269,7 +278,7 @@
   }
 
   &-overlay {
-    @apply fixed inset-0 bg-black bg-opacity-25;
+    @apply fixed inset-0 bg-zinc-900 bg-opacity-25;
   }
 }
 
@@ -277,11 +286,11 @@
   @apply flex justify-center items-center select-none;
 
   &-icon {
-    @apply mr-2 text-gray-200 animate-spin fill-primary-500;
+    @apply mr-2 text-zinc-200 animate-spin fill-primary-500;
   }
 
   &-icon--white {
-    @apply fill-white text-gray-300;
+    @apply fill-white text-zinc-300;
   }
 
   &-size {
@@ -301,11 +310,11 @@
 
 .toggle-group {
   &--group {
-    @apply bg-gray-50 w-fit
+    @apply bg-zinc-50 w-fit
     rounded
     relative
     border
-    border-gray-200
+    border-zinc-200
     flex
     select-none;
   }
@@ -322,8 +331,8 @@
     @apply p-2
     cursor-pointer
     focus:outline-none
-    text-gray-900
-    hover:bg-gray-100
+    text-zinc-900
+    hover:bg-zinc-100
     border-r
     last:border-r-transparent
     flex
@@ -335,7 +344,7 @@
     select-none;
 
     &_checked {
-      @apply bg-gray-300
+      @apply bg-zinc-300
       /*#{!important}*/;
     }
     &_disabled {
@@ -345,7 +354,7 @@
 }
 
 .switch {
-  @apply bg-gray-300 translate-x-0
+  @apply bg-zinc-300 translate-x-0
   relative
   inline-flex
   shrink-0
@@ -419,7 +428,7 @@
   w-fit
   select-none;
 
-  @apply bg-gray-100 text-gray-800 border-gray-800;
+  @apply bg-zinc-100 text-zinc-800 border-zinc-800;
 
   &--success {
     @apply bg-success-100 text-success-600;
@@ -461,7 +470,7 @@
 
 .dropdown {
   &--chevron {
-    @apply text-gray-400 ease-in-out duration-300 hover:text-gray-800;
+    @apply text-zinc-400 ease-in-out duration-300 hover:text-zinc-800;
     &-open {
       @apply rotate-180;
     }
@@ -479,7 +488,8 @@
       @apply h-16;
     }
     &--input {
-      @apply relative mt-1;
+      @apply relative
+      mt-1;
     }
   }
 
@@ -489,10 +499,12 @@
     relative
     cursor-pointer
     select-none
-    text-gray-900;
+    text-zinc-900
+    dark:text-zinc-100;
   }
 
   &--list {
+    z-index: $z-index-dropdowns;
     @apply absolute
     mt-2
     max-h-60
@@ -500,10 +512,11 @@
     p-1
     rounded-md
     bg-white
+    dark:bg-zinc-800
     text-base
     shadow-lg
     ring-1
-    ring-black
+    ring-zinc-900
     ring-opacity-5
     focus:outline-none
     w-full;
@@ -515,7 +528,8 @@
       select-none
       py-2
       px-4
-      text-gray-700;
+      text-zinc-700
+      dark:text-zinc-300;
     }
   }
 
@@ -535,7 +549,7 @@
     relative
     cursor-pointer
     select-none
-    text-gray-900
+    text-zinc-900
     flex
     w-full
     items-center
@@ -545,13 +559,14 @@
     mb-1;
 
     &-active {
-      @apply bg-primary-100 text-inherit;
+      @apply bg-primary-100 text-inherit dark:text-zinc-900;
     }
 
     &-selected {
       @apply bg-primary-500
-      font-medium
-      text-white;
+      hover:bg-primary-600
+      text-white
+      dark:text-white;
     }
 
     &--multiple {
@@ -564,7 +579,7 @@
       text-primary-400;
 
       &-active {
-        @apply text-white;
+        @apply text-white dark:text-zinc-400;
       }
     }
   }
@@ -582,10 +597,10 @@
 
   &--button {
     @apply cursor-pointer
-    text-gray-400
+    text-zinc-400
     ease-in-out
     duration-300
-  hover:text-gray-800
+  hover:text-zinc-800
    text-base;
   }
 }
@@ -601,4 +616,22 @@
   &--value {
     @apply block truncate text-left;
   }
+}
+
+.overlay {
+  @apply absolute
+  top-0
+  bottom-0
+  left-0
+  right-0
+  h-full
+  w-full
+  bg-zinc-700/50
+  transition
+  duration-200
+  ease-in
+  flex
+  justify-center
+  place-items-center
+  overflow-clip;
 }

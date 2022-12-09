@@ -22,7 +22,17 @@
       "react/next",
       "react-dom/next",
       "mdx"
-    ]
+    ],
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@components": ["./components"],
+      "@examples/*": ["./components/examples/*"],
+      "@examples": ["./components/examples"],
+      "@pages/*": ["./pages/*"],
+      "@pages": ["./pages"],
+    }
   },
   "include": [
     "next-env.d.ts",

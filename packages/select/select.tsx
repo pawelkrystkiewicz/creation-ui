@@ -1,12 +1,11 @@
 import {
   DropdownChevron,
   ErrorText,
+  passThrough,
   SelectOption,
   useId,
   useTheme,
-  passThrough,
 } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import { Listbox, Transition } from '@headlessui/react'
 
 import clsx from 'clsx'
@@ -14,18 +13,15 @@ import { Fragment } from 'react'
 import { SelectProps } from './select.types'
 
 const Select = (props: SelectProps) => {
-  const { defaultSize, zIndex } = useTheme()
-  const {
-    selectedOptionFormatter = passThrough,
-    optionComponent = SelectOption,
-    helperText,
-    error,
-    size = defaultSize,
-  } = props
+  const { defaultSize } = useTheme()
+  const { optionComponent = SelectOption, error, size = defaultSize } = props
 
   const componentId = useId(props.id)
 
   const Option = optionComponent
+
+  const value =
+    typeof props.value === 'object' ? props.value.value : props.value
 
   return (
     <div
@@ -58,7 +54,7 @@ const Select = (props: SelectProps) => {
                 'peer'
               )}
             >
-              <span className='select--value'>{props.value}&nbsp;</span>
+              <span className='select--value'>{value}&nbsp;</span>
               <span className='dropdown--button'>
                 <DropdownChevron open={open} />
               </span>
@@ -69,9 +65,7 @@ const Select = (props: SelectProps) => {
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
-              <Listbox.Options
-                className={clsx('dropdown--list', zIndex.dropdowns)}
-              >
+              <Listbox.Options className={clsx('dropdown--list')}>
                 {props.options?.map(option => (
                   <Listbox.Option key={option.id} value={option}>
                     {({ selected, active, disabled }) => (

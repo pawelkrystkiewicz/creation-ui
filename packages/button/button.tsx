@@ -1,7 +1,7 @@
 import { Loader, useId, useTheme } from '@creation-ui/core'
 import clsx from 'clsx'
 import React from 'react'
-import './button.scss'
+// import './button.scss'
 import { ButtonProps } from './button.types'
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(

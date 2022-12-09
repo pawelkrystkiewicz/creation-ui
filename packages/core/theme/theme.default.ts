@@ -45,11 +45,11 @@ const theme: Theme = {
   },
   zIndex: {
     base: 'z-0',
-    dropdowns: 'z-10',
-    tooltips: 'z-20',
-    overlays: 'z-30',
-    modals: 'z-40',
-    notifications: 'z-50',
+    dropdowns: 'z-[200]',
+    tooltips: 'z-[400]',
+    overlays: 'z-[600]',
+    modals: 'z-[800]',
+    notifications: 'z-[1000]',
   },
   f: {
     getLimitTextDefault: more => `+${more}`,
