@@ -42,7 +42,7 @@ import { Description } from '@components/typography'
 In this example, we are using the `multiple` prop to allow selecting multiple options.
 
 <br />
-<SelectMultipleExample />
+<SelectMultipleExample clearable clearableButtonText='Clear selection' />
 <br />
 Because of the usage of the Listbox component under the hood, the `value` and `onChange`
 props change the signature:{' '}
@@ -62,6 +62,8 @@ const [selection, setSelection] = useState<Option | never>()
 
   return (
     <Select
+      clearable
+      clearableButtonText="Clear selection"
       options={options}
       label={'With error'}
       value={selection}

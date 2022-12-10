@@ -3,6 +3,8 @@ import {
   ErrorText,
   passThrough,
   SelectOption,
+  SelectOptionsType,
+  ClearButton,
   useId,
   useTheme,
 } from '@creation-ui/core'
@@ -12,17 +14,70 @@ import clsx from 'clsx'
 import { Fragment } from 'react'
 import { SelectProps } from './select.types'
 
+const formatOptionValue = (value: SelectOptionsType | string) =>
+  typeof value === 'object' ? value.value : value
+
+interface MultipleEllipsisFormatter {
+  value: string
+  hidden: number
+  total: number
+}
+
+const getTruncatedMultipleValues = (
+  values: SelectOptionsType[],
+  limit: number
+): MultipleEllipsisFormatter => {
+  if (values.length <= limit) {
+    return {
+      value: values.map(formatOptionValue).join(', '),
+      hidden: 0,
+      total: values.length,
+    }
+  }
+  const sliced = values.slice(0, limit)
+  const value: string = values.slice(0, limit).map(formatOptionValue).join(', ')
+
+  return {
+    value,
+    hidden: values.length - sliced.length,
+    total: values.length,
+  }
+}
+
 const Select = (props: SelectProps) => {
   const { defaultSize } = useTheme()
-  const { optionComponent = SelectOption, error, size = defaultSize } = props
+  const {
+    optionComponent = SelectOption,
+    error,
+    size = defaultSize,
+    multiple,
+    clearable,
+    clearButtonText,
+  } = props
+
+  const limit = 2 //move to theme
 
   const componentId = useId(props.id)
 
   const Option = optionComponent
 
-  const value =
-    typeof props.value === 'object' ? props.value.value : props.value
+  let value: string = ''
+  let truncated: MultipleEllipsisFormatter
 
+  if (multiple) {
+    truncated = getTruncatedMultipleValues(props.value, limit)
+    value = truncated!.value
+  } else {
+    value = formatOptionValue(props.value)
+  }
+
+  const onClear = (e: any) => {
+    e.preventDefault?.()
+    e.stopPropagation?.()
+    props.onChange?.(multiple ? [] : undefined)
+  }
+
+  console.log(props.value)
   return (
     <div
       className={clsx('form-element--wrapper', `text-size--${size}`)}
@@ -54,7 +109,24 @@ const Select = (props: SelectProps) => {
                 'peer'
               )}
             >
-              <span className='select--value'>{value}&nbsp;</span>
+              <span className='select--value'>
+                {value}&nbsp;
+                {multiple && truncated.hidden > 0 && (
+                  <span className='select--value-hidden'>
+                    +{truncated.hidden}
+                  </span>
+                )}
+              </span>
+              <span
+                title={clearButtonText}
+                onClick={onClear}
+                className={clsx(
+                  clearable && !!value ? 'block' : 'hidden',
+                  'dropdown--button--clear'
+                )}
+              >
+                <ClearButton />
+              </span>
               <span className='dropdown--button'>
                 <DropdownChevron open={open} />
               </span>

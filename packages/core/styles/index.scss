@@ -60,7 +60,10 @@ $z-index-notifications: 1000;
     invalid:border-error
     dark:bg-zinc-900;
     &:focus {
-      @apply border-primary-300 ring-primary-200
+      @apply border-primary-300
+      ring-primary-200
+      dark:border-primary-400
+      dark:ring-primary-300
       invalid:ring-error-200
       invalid:border-error;
     }
@@ -493,23 +496,15 @@ $z-index-notifications: 1000;
     }
   }
 
-  &--option {
-    @apply py-2
-    px-4
-    relative
-    cursor-pointer
-    select-none
-    text-zinc-900
-    dark:text-zinc-100;
-  }
-
   &--list {
     z-index: $z-index-dropdowns;
     @apply absolute
     mt-2
-    max-h-60
+    max-h-52
+    overflow-y-auto
+    px-1
+    py-2
     min-w-fit
-    p-1
     rounded-md
     bg-white
     dark:bg-zinc-800
@@ -538,13 +533,27 @@ $z-index-notifications: 1000;
     inset-y-0
     right-0
     flex
+    text-xl
+    font-extrabold
     items-center
     pr-2
+    cursor-pointer;
+  }
+  &--button--clear {
+    @apply absolute
+    inset-y-0
+    right-0
+    flex
+    text-xl
+    font-extrabold
+    items-center
+    pr-7
     cursor-pointer;
   }
 
   &--option {
     @apply truncate
+    dark:text-zinc-100
     font-normal
     relative
     cursor-pointer
@@ -570,16 +579,20 @@ $z-index-notifications: 1000;
     }
 
     &--multiple {
-      @apply absolute
-      inset-y-0
-      left-0
-      flex
-      items-center
-      pl-3
-      text-primary-400;
+      @apply flex gap-2;
 
-      &-active {
-        @apply text-white dark:text-zinc-400;
+      &-icon {
+        @apply font-extrabold
+        text-xl
+        opacity-0;
+
+        &-selected {
+          @apply text-primary-500
+          opacity-100;
+        }
+        &-active {
+          @apply opacity-50;
+        }
       }
     }
   }
@@ -609,12 +622,19 @@ $z-index-notifications: 1000;
   &--input {
     @apply relative
     cursor-pointer
-    py-2
     pl-3
     pr-10;
   }
   &--value {
     @apply block truncate text-left;
+
+    &-hidden {
+      @apply border border-primary-400
+      bg-primary-400
+      bg-opacity-50
+
+      rounded-full px-2;
+    }
   }
 }
 
@@ -634,4 +654,8 @@ $z-index-notifications: 1000;
   justify-center
   place-items-center
   overflow-clip;
+}
+
+.clear-button {
+  @apply text-zinc-400  hover:text-error-500;
 }
