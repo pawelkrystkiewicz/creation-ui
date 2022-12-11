@@ -1,6 +1,8 @@
+import { ELEMENT_SIZES } from '@creation-ui/core'
 import { Select, SelectProps } from '@creation-ui/select'
 import { DocumentedProperty } from 'models/system'
 import React, { useState } from 'react'
+import { ListOrTypes } from 'utils/list-or-types'
 import { options } from './data'
 
 type Option = typeof options[0]
@@ -54,7 +56,7 @@ export const properties: DocumentedProperty[] = [
   },
   {
     name: 'size',
-    type: 'sm | md | lg ',
+    type: ListOrTypes([...ELEMENT_SIZES]),
     defaultValue: 'md',
     description: 'Size of element',
   },

@@ -1,5 +1,6 @@
 /* @layer reset, defaults, patterns, components, utilities, overrides; */
 @import './icon.scss';
+@import './avatar.scss';
 
 @tailwind base;
 @tailwind components;
@@ -429,7 +430,9 @@ $z-index-notifications: 1000;
   rounded-full
   capitalize
   w-fit
-  select-none;
+  select-none
+  justify-center
+  items-center;
 
   @apply bg-zinc-100 text-zinc-800 border-zinc-800;
 
@@ -444,6 +447,16 @@ $z-index-notifications: 1000;
   }
   &--warning {
     @apply bg-warning-100 text-warning-600;
+  }
+
+  &--sm {
+    @apply text-xs px-2;
+  }
+  &--md {
+    @apply h-5 px-3 text-sm;
+  }
+  &--lg {
+    @apply py-0.5 px-3 text-base font-bold;
   }
 }
 

@@ -1,7 +1,6 @@
 import { useTheme } from '@creation-ui/core'
 import clsx from 'clsx'
 import { StatusBadgeProps } from './status-badge.types'
-import '@creation-ui/core/esm/index.css'
 
 const StatusBadge = (props: StatusBadgeProps) => {
   const { defaultSize } = useTheme()
@@ -11,7 +10,7 @@ const StatusBadge = (props: StatusBadgeProps) => {
     <span
       className={clsx(
         'status-badge',
-        `text-size--${size}`,
+        `status-badge--${size}`,
         status && `status-badge--${status}`
       )}
     >
