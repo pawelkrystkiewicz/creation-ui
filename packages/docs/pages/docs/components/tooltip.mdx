@@ -1,3 +1,49 @@
-# Creation UI
+import { Tooltip } from '@creation-ui/tooltip'
+import { Container } from '@components/container'
+import { properties, TooltipExample } from '@examples/tooltip'
+import { UnfoldVariants } from '@components/unfold-variants'
+import { ELEMENT_POSITION, ELEMENT_SIZES } from '@creation-ui/core'
+import PropsTable from '@components/props-table'
+import { ListOrTypes } from 'utils/list-or-types'
 
-Hello, world!
+export const list = ListOrTypes([...ELEMENT_POSITION])
+
+# Tooltip
+
+```tsx copy
+import { Tooltip } from '@creation-ui/tooltip'
+import { Button } from '@creation-ui/button'
+
+export const TooltipExample = ({ ...props }: TooltipProps) => {
+  return (
+    <Tooltip {...props} content='This is important button' position='bottom'>
+      <Button variant='contained'>Submit</Button>
+    </Tooltip>
+  )
+}
+```
+
+For this component demo remember to hover over the button to see the tooltip component
+
+<Container>
+  <TooltipExample />
+</Container>
+
+## Position
+
+This component supports the `position` prop with values `left`, `top`, `bottom`, `right`.
+
+<UnfoldVariants
+  component={TooltipExample}
+  variants={['left', 'top', 'bottom', 'right']}
+  prop='position'
+  nameProp='content'
+/>
+
+## Component API
+
+<PropsTable
+  properties={properties}
+  name='Tooltip'
+  description='Tooltip component props.'
+/>
