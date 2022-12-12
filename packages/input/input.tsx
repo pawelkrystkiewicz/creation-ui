@@ -1,5 +1,4 @@
 import { ErrorText, useTheme, useId, Loader } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import clsx from 'clsx'
 import { ForwardedRef, forwardRef } from 'react'
 import { InputProps } from './input.types'

@@ -42,7 +42,8 @@
     "react-datepicker": "*",
     "react-dom": "*",
     "sass": "^1.55.0",
-    "tailwindcss": "*"
+    "tailwindcss": "*",
+    "class-variance-authority": "^0.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -143,5 +144,8 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "yarn@3.3.0"
+  "packageManager": "yarn@3.3.0",
+  "dependencies": {
+    "class-variance-authority": "^0.4.0"
+  }
 }

@@ -1,5 +1,4 @@
 import { ErrorText, Loader, useId, useTheme } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import clsx from 'clsx'
 import { ForwardedRef, forwardRef } from 'react'
 import { TextAreaProps } from './textarea.types'

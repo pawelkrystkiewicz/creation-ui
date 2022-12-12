@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import React, { Children } from 'react'
 
 interface ContainerProps {
   children?: React.ReactNode
@@ -8,10 +9,11 @@ interface ContainerProps {
 
 type ContainerVariants = 'row' | 'column'
 
-const classes: Record<ContainerVariants | 'base', string[]> = {
+const classes: Record<ContainerVariants | 'base' | 'centered', string[]> = {
   base: ['flex', 'my-10'],
-  column: ['flex-col', 'items-center', 'gap-5'],
-  row: ['justify-center', 'place-items-center', 'gap-5'],
+  column: ['flex-col', 'items-center', 'gap-10'],
+  row: ['place-items-center', 'justify-between', 'max-w-3xl', 'mx-auto'],
+  centered: ['justify-center', 'place-items-center', 'gap-5'],
 }
 
 export const Container = ({
@@ -19,8 +21,12 @@ export const Container = ({
   className,
   variant = 'row',
   ...props
-}: ContainerProps) => (
-  <div className={clsx(classes.base, classes[variant], className)} {...props}>
-    {children}
-  </div>
-)
+}: ContainerProps) => {
+  const count = Children.count(children)
+  const v = count > 1 ? variant : 'centered'
+  return (
+    <div className={clsx(classes.base, classes[v], className)} {...props}>
+      {children}
+    </div>
+  )
+}

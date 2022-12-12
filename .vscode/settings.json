@@ -20,5 +20,11 @@
     }
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "docwriter.style": "Auto-detect"
+  "docwriter.style": "Auto-detect",
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "cva\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
+  ]
 }

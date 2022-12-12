@@ -8891,6 +8891,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-variance-authority@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "class-variance-authority@npm:0.4.0"
+  peerDependencies:
+    typescript: ">= 4.5.5 < 5"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 86037e5baa231a0c36a6dc2f260f6c18daa66bdccb6f4c1baee7112abd3dd2a11f412cfb3a0377b65357cc41ec6cb2f9cc70e9f64275109703fd6839ed50a450
+  languageName: node
+  linkType: hard
+
 "classnames@npm:^2.2.6":
   version: 2.3.2
   resolution: "classnames@npm:2.3.2"
@@ -9597,6 +9609,7 @@ __metadata:
     autoprefixer: ^10.4.12
     babel-loader: ^8.2.5
     babel-plugin-module-resolver: ^4.1.0
+    class-variance-authority: ^0.4.0
     clsx: ^1.2.1
     flat: ^5.0.2
     git-last-commit: ^1.0.1
