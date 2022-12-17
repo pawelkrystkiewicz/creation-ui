@@ -1,5 +1,4 @@
 import { Overlay, useTheme } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import { Dialog, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import { Fragment } from 'react'
@@ -15,9 +14,8 @@ const transitionProps = {
     leaveTo: 'opacity-0 scale-95',
   },
 }
-const Modal = ({ onOverlayClick, ...props }: ModalProps) => {
-  const { children, className, onClose, open, ...rest } = props
-  const { zIndex } = useTheme()
+const Modal = (props: ModalProps) => {
+  const { children, className, onClose, onOverlayClick, open, ...rest } = props
   return (
     <>
       <Overlay visible={open} onClick={onOverlayClick} />
@@ -25,7 +23,7 @@ const Modal = ({ onOverlayClick, ...props }: ModalProps) => {
         <Dialog
           as='div'
           open={open}
-          className={clsx('dialog', zIndex.modals, className)}
+          className={clsx('dialog', className)}
           onClose={onClose as any}
           {...rest}
         >

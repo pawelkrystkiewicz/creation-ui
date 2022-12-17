@@ -3,7 +3,10 @@
 module.exports = {
   mode: 'jit',
   darkMode: 'class',
-  content: ['./packages/**/*.{js,ts,jsx,tsx,html,mdx,css,scss}'],
+  content: [
+    './packages/**/*.{js,ts,jsx,tsx,html,mdx,css,scss}',
+    './**/*.{js,ts,jsx,tsx,html,mdx,css,scss}',
+  ],
   theme: {
     extend: {
       colors: {

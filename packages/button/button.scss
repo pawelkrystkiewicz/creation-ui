@@ -5,13 +5,13 @@
     @apply opacity-50 cursor-not-allowed pointer-events-none;
   }
 
-  @apply flex gap-2
+  @apply inline-flex gap-2
   flex-nowrap
   rounded-md
   items-center
   cursor-pointer
   select-none
-  justify-center;
+  ;
 
   &-size {
     &--sm {

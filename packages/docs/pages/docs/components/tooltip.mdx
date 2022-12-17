@@ -5,10 +5,13 @@ import { UnfoldVariants } from '@components/unfold-variants'
 import { ELEMENT_POSITION, ELEMENT_SIZES } from '@creation-ui/core'
 import PropsTable from '@components/props-table'
 import { ListOrTypes } from 'utils/list-or-types'
+import { Callout } from 'nextra-theme-docs'
 
 export const list = ListOrTypes([...ELEMENT_POSITION])
 
 # Tooltip
+
+<Callout>Component is visible after hovering over the trigger element.</Callout>
 
 ```tsx copy
 import { Tooltip } from '@creation-ui/tooltip'
@@ -22,8 +25,6 @@ export const TooltipExample = ({ ...props }: TooltipProps) => {
   )
 }
 ```
-
-For this component demo remember to hover over the button to see the tooltip component
 
 <Container>
   <TooltipExample />

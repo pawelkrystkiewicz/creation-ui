@@ -34,6 +34,7 @@
     "@tanstack/match-sorter-utils": "^8.1.1",
     "@tanstack/react-table": "^8.5.13",
     "autoprefixer": "^10.4.12",
+    "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "lodash": "^4.17.21",
     "postcss": "^8.4.16",
@@ -42,8 +43,7 @@
     "react-datepicker": "*",
     "react-dom": "*",
     "sass": "^1.55.0",
-    "tailwindcss": "*",
-    "class-variance-authority": "^0.4.0"
+    "tailwindcss": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -146,6 +146,7 @@
   ],
   "packageManager": "yarn@3.3.0",
   "dependencies": {
-    "class-variance-authority": "^0.4.0"
+    "class-variance-authority": "^0.4.0",
+    "react-stick": "^5.0.3"
   }
 }

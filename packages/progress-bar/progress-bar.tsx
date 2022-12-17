@@ -1,7 +1,6 @@
 import { useTheme } from '@creation-ui/core'
 import clsx from 'clsx'
 import { ProgressBarProps } from './progress-bar.types'
-import './index.scss'
 
 const formatDisplayValueDefault = (value: number) => `${value}%`
 
@@ -16,7 +15,7 @@ const ProgressBar = (props: ProgressBarProps) => {
   } = props
 
   return (
-    <div className={clsx('progress-bar--wrapper')} {...props}>
+    <div className={clsx('progress-bar--wrapper', className)} {...props}>
       <div
         className={clsx('progress-bar--bar', `progress-bar--bar--${size}`)}
         style={{ width: formatDisplayValueDefault(value) }}

@@ -40,7 +40,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         <>{loading ? <Loader size={size} white={isContained} /> : null}</>
         <>{iconLeft}</>
-        <>{children}</>
+        <span>{children}</span>
         <>{iconRight}</>
       </button>
     )

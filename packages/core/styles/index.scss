@@ -263,6 +263,8 @@ $z-index-notifications: 1000;
 
 .dialog {
   @apply relative;
+  z-index: $z-index-modals;
+
   &-layer-1 {
     @apply fixed inset-0 overflow-y-auto;
   }
@@ -278,7 +280,15 @@ $z-index-notifications: 1000;
   }
 
   &-panel {
-    @apply w-full max-w-md transform overflow-hidden rounded-xl bg-white p-6 text-left align-middle shadow-xl transition-all;
+    @apply w-full
+    max-w-md transform overflow-hidden rounded-xl
+    bg-zinc-50
+    dark:bg-zinc-900
+    p-6
+    text-left
+    align-middle
+    shadow-xl
+    transition-all;
   }
 
   &-overlay {
@@ -461,9 +471,11 @@ $z-index-notifications: 1000;
 }
 
 .drawer {
+  z-index: $z-index-modals;
   @apply shadow-2xl
-    bg-white
-    absolute;
+  bg-zinc-50
+  dark:bg-zinc-900
+  absolute;
 
   &-bottom {
     @apply bottom-0 w-full h-full md:h-1/2;
@@ -472,7 +484,7 @@ $z-index-notifications: 1000;
     @apply top-0 w-full h-full md:h-1/2;
   }
   &-right {
-    @apply top-0 right-0 h-full w-full md:w-1/2;
+    @apply top-0 right-0 bottom-0 h-full w-full md:w-1/2;
   }
   &-left {
     @apply top-0  left-0 h-full w-full md:w-1/2;
@@ -480,7 +492,6 @@ $z-index-notifications: 1000;
 
   &-body {
     @apply overflow-auto h-full w-full;
-    z-index: inherit;
   }
 }
 
@@ -652,6 +663,7 @@ $z-index-notifications: 1000;
 }
 
 .overlay {
+  z-index: $z-index-overlays;
   @apply absolute
   top-0
   bottom-0
@@ -671,4 +683,26 @@ $z-index-notifications: 1000;
 
 .clear-button {
   @apply text-zinc-400  hover:text-error-500;
+}
+
+.progress-bar--wrapper {
+  @apply text-xs w-full bg-zinc-200 rounded-full dark:bg-zinc-700;
+}
+
+.progress-bar--bar {
+  @apply bg-primary-500
+  text-primary-100
+  text-center
+  leading-none
+  rounded-full;
+
+  &--sm {
+    @apply p-1;
+  }
+  &--md {
+    @apply p-2;
+  }
+  &--lg {
+    @apply p-3;
+  }
 }

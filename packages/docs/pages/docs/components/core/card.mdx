@@ -1,0 +1,54 @@
+# Card
+
+import PropsTable from '@components/props-table'
+
+import { Card } from '@creation-ui/core'
+import { Button } from '@creation-ui/button'
+
+```tsx copy
+import { Card } from '@creation-ui/core'
+import { Button } from '@creation-ui/button'
+
+const Example = () => (
+  <Card>
+    <h5 className='text-zinc-900 text-xl leading-tight font-medium mb-2'>
+      New Post
+    </h5>
+    <p className='text-zinc-700 text-base mb-4'>
+      This is the preview of your content
+    </p>
+    <Button>Edit</Button>
+  </Card>
+)
+```
+
+<Card>
+  <h5 className='text-zinc-900 text-xl leading-tight font-medium mb-2'>
+    New Post
+  </h5>
+  <p className='text-zinc-700 text-base mb-4'>
+    This is the preview of your content
+  </p>
+  <Button>Edit</Button>
+</Card>
+
+## Component API
+
+<PropsTable
+  properties={[
+    {
+      name: 'children',
+      type: 'ReactNode',
+      description: 'The content of the card.',
+    },
+    {
+      name: 'className',
+      type: 'string',
+      description: 'The class name of the card.',
+
+    },
+
+]}
+name='Card'
+description={'Card properties'}
+/>

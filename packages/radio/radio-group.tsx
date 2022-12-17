@@ -1,5 +1,4 @@
 import { ErrorText, useTheme } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import clsx from 'clsx'
 import { RadioGroupProps } from './radio-group.types'
 
