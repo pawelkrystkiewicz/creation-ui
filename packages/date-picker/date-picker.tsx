@@ -1,7 +1,6 @@
 import { Icon } from '@creation-ui/core'
 import clsx from 'clsx'
 import ReactDatePicker from 'react-datepicker'
-import './date-picker.scss'
 import { DatePickerProps } from './date-picker.types'
 
 const iconClasses = 'w-5 h-5 text-gray-600 cursor-pointer'
