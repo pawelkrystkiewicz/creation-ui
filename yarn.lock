@@ -1518,6 +1518,8 @@ __metadata:
     babel-loader: ^8.2.5
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
+    lodash.flow: ^3.5.0
+    lodash.isempty: ^4.4.0
     postcss: ^8.4.16
     postcss-loader: ^7.0.1
     react: 18.1.0
@@ -6934,7 +6936,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.14.167":
+"@types/lodash@npm:^4.14.167, @types/lodash@npm:^4.14.191":
   version: 4.14.191
   resolution: "@types/lodash@npm:4.14.191"
   checksum: ba0d5434e10690869f32d5ea49095250157cae502f10d57de0a723fd72229ce6c6a4979576f0f13e0aa9fbe3ce2457bfb9fa7d4ec3d6daba56730a51906d1491
@@ -9566,6 +9568,7 @@ __metadata:
     "@tanstack/match-sorter-utils": ^8.1.1
     "@tanstack/react-table": ^8.5.13
     "@types/flat": ^5.0.2
+    "@types/lodash": ^4.14.191
     "@types/node": 17.0.35
     "@types/react": latest
     "@types/react-datepicker": ^4.4.2
@@ -9581,6 +9584,8 @@ __metadata:
     git-last-commit: ^1.0.1
     husky: ^8.0.0
     lerna: ^6.0.3
+    lodash.flow: ^3.5.0
+    lodash.isempty: ^4.4.0
     mini-css-extract-plugin: ^2.6.1
     postcss: ^8.4.16
     postcss-loader: ^7.0.1
@@ -14843,6 +14848,20 @@ __metadata:
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: a3f527d22c548f43ae31c861ada88b2637eb48ac6aa3eb56e82d44917971b8aa96fbb37aa60efea674dc4ee8c42074f90f7b1f772e9db375435f6c83a19b3bc6
+  languageName: node
+  linkType: hard
+
+"lodash.flow@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "lodash.flow@npm:3.5.0"
+  checksum: a9a62ad344e3c5a1f42bc121da20f64dd855aaafecee24b1db640f29b88bd165d81c37ff7e380a7191de6f70b26f5918abcebbee8396624f78f3618a0b18634c
+  languageName: node
+  linkType: hard
+
+"lodash.isempty@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "lodash.isempty@npm:4.4.0"
+  checksum: a8118f23f7ed72a1dbd176bf27f297d1e71aa1926288449cb8f7cef99ba1bc7527eab52fe7899ab080fa1dc150aba6e4a6367bf49fa4e0b78da1ecc095f8d8c5
   languageName: node
   linkType: hard
 

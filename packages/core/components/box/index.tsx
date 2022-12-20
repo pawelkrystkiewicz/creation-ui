@@ -1,11 +1,11 @@
 import { cva } from 'class-variance-authority'
 
-interface CardProps {
+interface BoxProps {
   children: React.ReactNode
   className?: string
 }
 
-const card = cva([], {
+const box = cva([], {
   variants: {
     body: {
       base: ['flex', 'justify-center'],
@@ -24,10 +24,10 @@ const card = cva([], {
   },
 })
 
-export const Card = ({ children, className }: CardProps) => {
+export const Box = ({ children, className }: BoxProps) => {
   return (
-    <div className={card({ body: 'base', className })}>
-      <div className={card({ content: 'base' })}>{children}</div>
+    <div className={box({ body: 'base', className })}>
+      <div className={box({ content: 'base' })}>{children}</div>
     </div>
   )
 }

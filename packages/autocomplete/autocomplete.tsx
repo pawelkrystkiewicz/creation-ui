@@ -1,18 +1,17 @@
 import {
-  AutocompleteOptionsType,
   DropdownChevron,
+  ErrorText,
+  formatOptionValue,
+  getTruncatedMultipleValues,
   Icon,
+  MultipleEllipsisFormatter,
+  passThrough,
   SelectOption,
   useId,
-  ErrorText,
-  passThrough,
   useTheme,
 } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import { Combobox, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-import flow from 'lodash/flow'
-import isEmpty from 'lodash/isEmpty'
 import React, { ChangeEvent, Fragment, useState } from 'react'
 import { AutocompleteProps } from './autocomplete.types'
 
@@ -34,10 +33,11 @@ const Autocomplete = (props: AutocompleteProps) => {
     helperText,
     size = defaultSize,
     error,
+    onChange,
+    limit = 3,
     ...rest
   } = props
 
-  const [selected, setSelected] = useState<AutocompleteOptionsType>(null)
   const [query, setQuery] = useState<string>('')
 
   /* Filtering the options based on the query. */
@@ -54,30 +54,53 @@ const Autocomplete = (props: AutocompleteProps) => {
   const onSearchChange = (e: ChangeEvent<HTMLInputElement>) =>
     setQuery(e.target.value)
   const resetSearch = (): void => setQuery('')
-  const clearSelection: React.MouseEventHandler<HTMLDivElement> = e =>
-    flow(setSelected, resetSearch)(null)
+  const clearSelection: React.MouseEventHandler<HTMLDivElement> = e => {
+    onChange?.(null)
+    resetSearch()
+  }
 
-  const isQuery = !isEmpty(query)
-  const isSelected = !!selected
+  const formatter = (args: any) => {
+    let displayValue: string = ''
+    let truncated: MultipleEllipsisFormatter
+
+    if (multiple) {
+      truncated = getTruncatedMultipleValues(args, limit)
+      displayValue = truncated!.value
+    } else {
+      displayValue = formatOptionValue(args)
+    }
+
+    return displayValue
+  }
+
+  const isQuery = query.trim().length > 0
+  const isSelected = !!props.value
   const componentId = useId(id)
   const Option = optionComponent
 
+  const value = multiple ? (!!props.value ? props.value : []) : props.value
+
   return (
-    <div className={clsx('form-element--wrapper', `text-size--${size}`)}>
+    <div className={clsx('form-element form-element--wrapper', `text-size--${size}`)}>
       <label
         htmlFor={componentId}
         className={clsx('form-element--label', `form-element--label-${size}`)}
       >
         {label}
       </label>
-      <Combobox value={selected} onChange={setSelected} nullable>
+      <Combobox
+        value={value}
+        onChange={onChange}
+        nullable={clearable as any}
+        multiple={multiple as any}
+      >
         {({ open }) => (
           <div className='dropdown--wrapper--input'>
             <Combobox.Input
               id={componentId}
               disabled={rest.disabled}
               placeholder={placeholder}
-              displayValue={selectedOptionFormatter}
+              displayValue={formatter}
               onChange={onSearchChange}
               className={clsx(
                 'form-element--input',

@@ -1,10 +1,12 @@
 import {
+  ClearButton,
   DropdownChevron,
   ErrorText,
+  formatOptionValue,
+  getTruncatedMultipleValues,
+  MultipleEllipsisFormatter,
   passThrough,
   SelectOption,
-  SelectOptionsType,
-  ClearButton,
   useId,
   useTheme,
 } from '@creation-ui/core'
@@ -13,36 +15,6 @@ import { Listbox, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import { Fragment } from 'react'
 import { SelectProps } from './select.types'
-
-const formatOptionValue = (value: SelectOptionsType | string) =>
-  typeof value === 'object' ? value.value : value
-
-interface MultipleEllipsisFormatter {
-  value: string
-  hidden: number
-  total: number
-}
-
-const getTruncatedMultipleValues = (
-  values: SelectOptionsType[],
-  limit: number
-): MultipleEllipsisFormatter => {
-  if (values.length <= limit) {
-    return {
-      value: values.map(formatOptionValue).join(', '),
-      hidden: 0,
-      total: values.length,
-    }
-  }
-  const sliced = values.slice(0, limit)
-  const value: string = values.slice(0, limit).map(formatOptionValue).join(', ')
-
-  return {
-    value,
-    hidden: values.length - sliced.length,
-    total: values.length,
-  }
-}
 
 const Select = (props: SelectProps) => {
   const { defaultSize } = useTheme()
@@ -77,7 +49,6 @@ const Select = (props: SelectProps) => {
     props.onChange?.(multiple ? [] : undefined)
   }
 
-  console.log(props.value)
   return (
     <div
       className={clsx('form-element--wrapper', `text-size--${size}`)}

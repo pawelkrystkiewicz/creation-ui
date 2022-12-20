@@ -1,3 +1,32 @@
-# Icons
+import { Container } from '@components/container'
 
-Material icons
+# Clear button
+
+Used in dropdowns to clear input content.
+
+## Usage
+
+```tsx copy
+import { ClearButton } from '@creation-ui/core'
+
+<ClearButton />
+```
+
+### Props definition
+
+```tsx copy
+interface ClearButtonProps {
+  onClick?: () => void
+}
+```
+
+import { ClearButton } from '@creation-ui/core'
+
+<Container>
+  <ClearButton onClick={()=>console.log('Close me')}/>
+</Container>
+
+
+## Component API
+
+Props of the `ClearButton` are the same as those of an [`Icon`](/docs/components/icons#component-api)

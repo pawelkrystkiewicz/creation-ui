@@ -1,16 +1,16 @@
-# Card
+# Box
 
 import PropsTable from '@components/props-table'
 
-import { Card } from '@creation-ui/core'
+import { Box } from '@creation-ui/core'
 import { Button } from '@creation-ui/button'
 
 ```tsx copy
-import { Card } from '@creation-ui/core'
+import { Box } from '@creation-ui/core'
 import { Button } from '@creation-ui/button'
 
 const Example = () => (
-  <Card>
+  <Box>
     <h5 className='text-zinc-900 text-xl leading-tight font-medium mb-2'>
       New Post
     </h5>
@@ -18,11 +18,13 @@ const Example = () => (
       This is the preview of your content
     </p>
     <Button>Edit</Button>
-  </Card>
+  </Box>
 )
 ```
 
-<Card>
+Box is simple container with padding used among other places as Popover content wrapper
+
+<Box>
   <h5 className='text-zinc-900 text-xl leading-tight font-medium mb-2'>
     New Post
   </h5>
@@ -30,7 +32,7 @@ const Example = () => (
     This is the preview of your content
   </p>
   <Button>Edit</Button>
-</Card>
+</Box>
 
 ## Component API
 
@@ -39,16 +41,16 @@ const Example = () => (
     {
       name: 'children',
       type: 'ReactNode',
-      description: 'The content of the card.',
+      description: 'The content of the Box.',
     },
     {
       name: 'className',
       type: 'string',
-      description: 'The class name of the card.',
+      description: 'The class name of the Box.',
 
     },
 
 ]}
-name='Card'
-description={'Card properties'}
+name='Box'
+description={'Box properties'}
 />

@@ -58,6 +58,7 @@ const OptionMultiple = ({
 const SelectOption = (props: SelectOptionProps) => {
   const { selected, active, option, multiple } = props
   const value = typeof option === 'object' ? option.value : option
+  console.log(value)
 
   return !multiple ? (
     <OptionSingle active={active} selected={selected}>
@@ -71,3 +72,5 @@ const SelectOption = (props: SelectOptionProps) => {
 }
 
 export default SelectOption
+
+

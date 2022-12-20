@@ -1,9 +1,13 @@
-import * as React from 'react'
+import React, { useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useLocalStorage } from 'react-use'
 import { ElementTheme } from '../../'
+import {
+  AnimationProperties,
+  DarkModeToggleProps,
+} from './dark-mode-toggle.type'
 
-export const defaultProperties = {
+export const defaultProperties: AnimationProperties = {
   dark: {
     circle: {
       r: 9,
@@ -39,17 +43,6 @@ export const defaultProperties = {
 
 let REACT_TOGGLE_DARK_MODE_GLOBAL_ID = 0
 
-type SVGProps = Omit<React.HTMLAttributes<HTMLOrSVGElement>, 'onChange'>
-export interface Props extends SVGProps {
-  onChange: (checked: boolean) => void
-  checked: boolean
-  style?: React.CSSProperties
-  size?: number | string
-  animationProperties?: typeof defaultProperties
-  moonColor?: string
-  sunColor?: string
-}
-
 const DarkModeToggle = ({
   onChange,
   children,
@@ -60,12 +53,9 @@ const DarkModeToggle = ({
   sunColor = 'black',
   style,
   ...rest
-}: Props) => {
+}: DarkModeToggleProps) => {
   const [id, setId] = React.useState(0)
-  const [theme, setTheme, _clearLS] = useLocalStorage<ElementTheme>(
-    'theme',
-    'light'
-  )
+  const [theme, setTheme, _clearLS] = useLocalStorage<ElementTheme>('theme')
 
   React.useEffect(() => {
     REACT_TOGGLE_DARK_MODE_GLOBAL_ID += 1
@@ -99,22 +89,36 @@ const DarkModeToggle = ({
     config: animationProperties.springConfig,
   })
 
-  const toggle = () => onChange(!checked)
+  const handleThemeChange = (theme: 'dark' | 'light') => {
+    theme === 'dark'
+      ? document.documentElement.classList.add('dark')
+      : document.documentElement.classList.remove('dark')
+    setTheme(theme)
+  }
 
-  React.useEffect(() => {
-    !checked ? setTheme('dark') : setTheme('light')
+  const toggle = () => {
+    // checked = dark
+    // !checked = light
+    const nextValue = checked ? 'light' : 'dark'
+    handleThemeChange(nextValue)
+    onChange?.(!checked)
+  }
 
+  useEffect(() => {
     if (
       theme === 'dark' ||
       (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
-      document.documentElement.classList.add('dark')
-      setTheme('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      setTheme('light')
+      handleThemeChange('dark')
     }
-  }, [checked])
+  }, [checked, theme])
+
+  useEffect(() => {
+    console.log(checked, theme)
+    if (!theme) {
+      toggle()
+    }
+  }, [])
 
   const uniqueMaskId = `circle-mask-${id}`
 

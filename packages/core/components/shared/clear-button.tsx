@@ -1,16 +1,13 @@
-import { Icon } from '..'
 import clsx from 'clsx'
+import { Icon, IconProps } from '..'
 
-interface ClearButtonProps {
-  onClick?: () => void
-}
-
-const ClearButton = ({ onClick }: ClearButtonProps) => (
+const ClearButton = ({ onClick, className, icon, ...props }: IconProps) => (
   <Icon
     icon='close'
     onClick={onClick}
-    className={clsx('clear-button')}
+    className={clsx('clear-button', className)}
     aria-hidden='true'
+    {...props}
   />
 )
 

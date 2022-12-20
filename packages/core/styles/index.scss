@@ -683,7 +683,7 @@ $z-index-notifications: 1000;
 }
 
 .clear-button {
-  @apply text-zinc-400  hover:text-error-500;
+  @apply text-zinc-400  hover:text-error-500 cursor-pointer select-none;
 }
 
 .progress-bar--wrapper {
