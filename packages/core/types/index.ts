@@ -97,3 +97,10 @@ export interface MultipleEllipsisFormatter {
   hidden: number
   total: number
 }
+
+export interface SharedClassName {
+  /**
+   * Classes to be added to the component
+   */
+  className?: string | string[]
+}

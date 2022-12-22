@@ -28,14 +28,41 @@ export const openProp: DocumentedProperty = {
   defaultValue: 'false',
 }
 
+//TODO: change to open and remove
+export const openPropAsActive: DocumentedProperty = {
+  description: 'Is component visible',
+  name: 'active',
+  type: 'boolean',
+  defaultValue: 'false',
+}
+
 export const elementTypeProp: DocumentedProperty = {
   description: 'ElementType of the component',
   name: 'as',
   type: 'React.ElementType',
   defaultValue: 'h3',
 }
+
 export const childrenProp: DocumentedProperty = {
   description: 'Children to be rendered inside the component',
   name: 'children',
   type: 'React.ReactNode',
+}
+
+export const classNameProps: DocumentedProperty = {
+  description: 'Class names to add to wrapper component',
+  name: 'className',
+  type: 'string | string[]',
+}
+
+export const loaderWhiteProp: DocumentedProperty = {
+  name: 'white',
+  type: 'boolean',
+  description: 'Use white loader? E.g. to contrast background color',
+}
+
+export const onClickCallback: DocumentedProperty = {
+  name: 'onClick',
+  type: '() => void',
+  description: 'Callback function called on element click',
 }

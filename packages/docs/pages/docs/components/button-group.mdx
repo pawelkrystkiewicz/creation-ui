@@ -1,74 +1,83 @@
 # Button Group
 
 ```tsx copy
-import { Button } from '@creation-ui/button'
+import { Button, ButtonProps, ButtonGroup } from '@creation-ui/button'
 
-<Button size='md'>Click me</Button>
+interface ButtonGroupExampleProps {
+  options?: string[]
+  variant?: ButtonProps['variant']
+}
+
+export const ButtonGroupExample = ({
+  options,
+  variant,
+}: ButtonGroupExampleProps) => {
+  return (
+    <ButtonGroup>
+      {options?.map(option => (
+        <Button variant={variant}>{option}</Button>
+      ))}
+    </ButtonGroup>
+  )
+}
 ```
 
-import { Button } from '@creation-ui/button'
+import { Button, ButtonGroup } from '@creation-ui/button'
 import { Icon } from '@creation-ui/core'
-import { Container } from '@components/container'
+import { Container, properties } from '@components/container'
+import { ButtonGroupExample } from '@examples/button-group'
+import PropsTable from '@components/props-table'
+
+`div` wrapper for buttons.
 
 <Container>
-  <Button>Click me</Button>
+  <ButtonGroupExample options={[1, 2, 3]} />
 </Container>
 
-## Sizes
-
-This component supports `size` prop with values `sm`, `md`, `lg`:
-
-<Container>
-  <Button size='lg'>Click me</Button>
-  <Button size='md'>Click me</Button>
-  <Button size='sm'>Click me</Button>
-</Container>
-
-## Variants
-
-Button can have different variants that will change their look:
-
-<br />
-
-<Container>
-  <Button children='Contained' variant='contained'>
-    Contained
-  </Button>
-  <Button children='Outlined' variant='outlined'>
-    Outlined
-  </Button>
-  <Button children='Text' variant='text'>
-    Text
-  </Button>
-</Container>
-
-## Icons
-
-Button can have icons set on both left and right ends as well as loading indicator on right (will override icon):
-
-<br />
-
-<Container>
-  <Button iconLeft={<Icon icon='account_circle' />}>
-    Left icon
-  </Button>
-  <Button iconRight={<Icon icon='account_circle' />}>Icon right</Button>
-
-</Container>
-
-## Loading state
-
-Button can be in loading state, which will disable it and show loading indicator on right:
+## Togglable options
 
 ```tsx copy
-import { Button } from '@creation-ui/button'
-
-<Button loading={true}>Loading</Button>
+<ButtonGroupExample
+  options={[
+    <Icon icon='format_align_left' />,
+    <Icon icon='format_align_center' />,
+    <Icon icon='format_align_right' />,
+  ]}
+  variant='outlined'
+/>
 ```
 
 <Container>
-  <Button loading={true}>Loading</Button>
-  <Button loading={true} iconLeft={<Icon icon='account_circle' />}>
-    Loading
-  </Button>
+  <ButtonGroupExample
+    options={[
+      <Icon icon='format_align_left' />,
+      <Icon icon='format_align_center' />,
+      <Icon icon='format_align_right' />,
+    ]}
+    variant='outlined'
+  />
 </Container>
+
+## More than 3 options
+
+<Container>
+  <ButtonGroupExample
+    options={[
+      <Icon icon='format_align_left' />,
+      <Icon icon='format_align_center' />,
+      <Icon icon='format_align_right' />,
+      <Icon icon='format_align_justify' />,
+    ]}
+    variant='outlined'
+
+/>
+
+</Container>
+
+## Component API
+
+<PropsTable
+  properties={properties}
+  name='ButtonGroup'
+  description={'ButtonGroup component props'}
+/>

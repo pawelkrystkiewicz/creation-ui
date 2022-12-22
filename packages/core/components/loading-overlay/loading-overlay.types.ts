@@ -1,7 +1,7 @@
-import { ElementSize } from '../../'
+import { LoaderProps } from '../loader/loader.types'
+import { OverlayProps } from '../overlay/overlay.types'
 
-export interface LoadingOverlayProps {
-  active?: boolean
-  onClick?: any
-  size?: ElementSize
-}
+export interface LoadingOverlayProps extends
+ //
+ LoaderProps,
+ OverlayProps {}
