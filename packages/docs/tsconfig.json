@@ -34,6 +34,8 @@
       "@pages": ["./pages"],
       "@models/*": ["./models/*"],
       "@models": ["./models"],
+      "@root/*": ["./*"],
+      "@root": ["./"],
     }
   },
   "include": [
@@ -42,7 +44,7 @@
     "**/*.tsx",
     "theme.config.tsx",
     "pages/index.msx"
-, "components/examples/button.tsx"  ],
+, "components/examples/button.tsx", "components/examples/select-option.tsx"  ],
   "exclude": [
     "node_modules"
   ]

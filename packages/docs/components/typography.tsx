@@ -1,17 +1,16 @@
 import React, { ElementType } from 'react'
 
 interface HeaderProps {
-  as?: ElementType
   children: React.ReactNode
+  as?: ElementType
   href?: string
-  'aria-label': string
+  'aria-label'?: string
 }
 
 export const Header = ({
   children,
   as: Tag = 'h1',
   href,
-
   ...props
 }: HeaderProps) => (
   <Tag className='heading group whitespace-pre-wrap mt-3' {...props}>
