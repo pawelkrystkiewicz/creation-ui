@@ -16,7 +16,7 @@ import React, { ChangeEvent, Fragment, useState } from 'react'
 import { AutocompleteProps } from './autocomplete.types'
 
 const Autocomplete = (props: AutocompleteProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const {
     loadingText = 'Loading...',
     emptyText = 'Data is empty',
@@ -112,7 +112,7 @@ const Autocomplete = (props: AutocompleteProps) => {
                 'form-element--input',
                 `form-element--input--${size}`,
                 'relative',
-                'peer',
+                'peer'
               )}
             />
             <Combobox.Button className='dropdown--button'>
@@ -159,7 +159,6 @@ const Autocomplete = (props: AutocompleteProps) => {
                     ))
                   )}
                 </Combobox.Options>
-                
               </Transition>
             )}
           </div>

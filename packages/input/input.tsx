@@ -5,7 +5,7 @@ import { InputProps } from './input.types'
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (props, ref: ForwardedRef<HTMLInputElement>) => {
-    const { defaultSize } = useTheme()
+    const { size: defaultSize } = useTheme()
     const {
       loading,
       helperText,

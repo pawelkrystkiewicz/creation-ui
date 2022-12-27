@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { SwitchProps } from './switch.types'
 
 const Switch = ({ checked, ...props }: SwitchProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const { size = defaultSize, required, readOnly } = props
 
   return (

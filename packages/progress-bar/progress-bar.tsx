@@ -5,7 +5,7 @@ import { ProgressBarProps } from './progress-bar.types'
 const formatDisplayValueDefault = (value: number) => `${value}%`
 
 const ProgressBar = (props: ProgressBarProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const {
     value = 0,
     showValue = false,

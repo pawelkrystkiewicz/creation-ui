@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { ToggleGroupOption, ToggleGroupProps } from './toggle-group.types'
 
 const ToggleGroup = (props: ToggleGroupProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const { size = defaultSize, options, className, title, ...rest } = props
 
   return (

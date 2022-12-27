@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { StatusBadgeProps } from './status-badge.types'
 
 const StatusBadge = (props: StatusBadgeProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const { label, status, size = defaultSize } = props
 
   return (

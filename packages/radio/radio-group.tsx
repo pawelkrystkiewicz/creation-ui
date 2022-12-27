@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { RadioGroupProps } from './radio-group.types'
 
 const RadioGroupComponent = ({ children, ...props }: RadioGroupProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const { error, label, size = defaultSize } = props
 
   return (

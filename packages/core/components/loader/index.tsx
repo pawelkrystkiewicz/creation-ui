@@ -3,7 +3,7 @@ import { LoaderProps } from './loader.types'
 import clsx from 'clsx'
 
 const Loader = (props: LoaderProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const { size = defaultSize, className, white } = props
 
   return (

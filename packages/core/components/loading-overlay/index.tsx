@@ -8,7 +8,7 @@ const LoadingOverlay = ({
   className,
   ...props
 }: LoadingOverlayProps) => {
-  const { zIndex, defaultSize } = useTheme()
+  const { zIndex, size: defaultSize } = useTheme()
   const { size = defaultSize, white } = props
   return active ? (
     <div {...props} className={clsx(zIndex.overlays, 'overlay', className)}>

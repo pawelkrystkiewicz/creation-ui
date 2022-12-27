@@ -17,7 +17,7 @@ import { Fragment } from 'react'
 import { SelectProps } from './select.types'
 
 const Select = (props: SelectProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const {
     optionComponent = SelectOption,
     error,

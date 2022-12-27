@@ -5,7 +5,7 @@ import { RadioProps } from './radio.types'
 
 const Radio = forwardRef<HTMLInputElement, RadioProps>(
   (props, ref: ForwardedRef<HTMLInputElement>) => {
-    const { defaultSize } = useTheme()
+    const { size: defaultSize } = useTheme()
     const {
       helperText,
       error,

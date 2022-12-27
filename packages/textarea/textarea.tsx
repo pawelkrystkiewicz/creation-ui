@@ -5,7 +5,7 @@ import { TextAreaProps } from './textarea.types'
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (props, ref: ForwardedRef<HTMLTextAreaElement>) => {
-    const { defaultSize } = useTheme()
+    const { size: defaultSize } = useTheme()
     const { error, label, size = defaultSize, className, id, loading } = props
     const componentId = useId(id)
 
