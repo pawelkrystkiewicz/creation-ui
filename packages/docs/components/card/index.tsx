@@ -62,12 +62,13 @@ export function Card({
       <span
         className={cn(
           styles.title,
+          'group',
           'gap-2 p-4 text-gray-700 dark:text-zinc-200',
           'hover:text-gray-900 dark:hover:text-zinc-50',
           'items-center'
         )}
       >
-        {icon}
+        <span className='group-hover:-rotate-[360deg] ease-in-out duration-1000'>{icon}</span>
         {title}
       </span>
     </Link>

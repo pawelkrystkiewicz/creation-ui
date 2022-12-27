@@ -1,12 +1,17 @@
-import { ELEMENT_SIZES, ELEMENT_STATUS } from '@creation-ui/core'
+import { ELEMENT_POSITION, ELEMENT_SIZES, ELEMENT_STATUS } from '@creation-ui/core'
 import { DocumentedProperty } from 'models/system'
 import { ListOrTypes } from 'utils/list-or-types'
 
+export const positionProp: DocumentedProperty = {
+  name: 'position',
+  type: ListOrTypes([...ELEMENT_POSITION]),
+  description: 'Position of the element',
+}
 export const sizeProp: DocumentedProperty = {
   name: 'size',
   type: ListOrTypes([...ELEMENT_SIZES]),
   defaultValue: 'md',
-  description: 'Size of element',
+  description: 'Size of the element',
 }
 
 export const labelProp: DocumentedProperty = {

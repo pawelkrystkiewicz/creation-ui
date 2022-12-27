@@ -1,64 +1,30 @@
 import {
   Breakpoints,
-  ElementColor,
   ElementPosition,
   ElementSize,
   ElementTheme,
-  ElementVariants,
   AutocompleteOptionsType,
+  ElementVariants,
+  ElementColor,
 } from '../types'
 
-export type Theme = {
-  theme: ElementTheme
-  /**
-   * @default 'ltr'
-   * rtl is not supported yet
-   */
-  dir: 'ltr' | 'rtl'
-  focusRing: boolean
-  dates: {
-    format: string
-    locale: string
-  }
-  /**
-   * "white" color HEX
-   */
-  white: string
-  /**
-   * "black" color HEX
-   */
-  black: string
-  defaultRoundness: string
-  defaultSize: ElementSize
-  defaultDrawerSize: number | string
-  defaultDrawerPosition: ElementPosition
-  defaultVariant: ElementVariants
+type ThemeColors = {
+  primary: string
+  success: string
+  warning: string
+  error: string
+}
+
+type ThemeDrawers = {
+  size: number | string
+  position: ElementPosition
+}
+
+type ThemeFont = {
   leading: string
   fontFamily: string
   fontFamilyMonospace: string
-  primaryColor: ElementColor
-  respectReducedMotion: boolean
-  headings: {
-    fontFamily: string
-    fontWeight: string
-    sizes: Record<Headings, HeadingConfig>
-  }
-  breakpoints: Record<Breakpoints, number>
-  defaultTexts: {
-    invalidInput: string
-  }
-  zIndex: {
-    base: string
-    dropdowns: string
-    tooltips: string
-    overlays: string
-    modals: string
-    notifications: string
-  }
-  f: {
-    getLimitTextDefault: (more: number) => string
-    defaultOptionFormatter: (option?: AutocompleteOptionsType) => string
-  }
+  fontWeight: string
 }
 
 export type Headings = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
@@ -69,7 +35,49 @@ export type HeadingConfig = {
   fontWeight?: string
 }
 
+type ThemeHeading = {
+  fontFamily: string
+  fontWeight: string
+  sizes: Record<Headings, HeadingConfig>
+}
+
+type ThemeTexts = {
+  invalidInput: string
+}
+
+type ThemeZIndex = {
+  base: string
+  dropdowns: string
+  tooltips: string
+  overlays: string
+  modals: string
+  notifications: string
+}
+
+type ThemeHelpers = {
+  getLimitText: (more: number) => string
+  optionFormatter: (option?: AutocompleteOptionsType) => string
+}
+
+type ThemeDisplayDirection = 'ltr' | 'rtl'
+
+export type ThemeProps = {
+  colors: ThemeColors
+  dir: ThemeDisplayDirection
+  drawers: ThemeDrawers
+  focusRing: boolean
+  font: ThemeFont
+  headings: ThemeHeading
+  helpers: ThemeHelpers
+  respectReducedMotion: boolean
+  roundness: string
+  size: ElementSize
+  texts: ThemeTexts
+  theme: ElementTheme
+  zIndex: ThemeZIndex
+}
+
 export interface ThemeProviderProps {
   children?: React.ReactNode
-  value: Theme
+  theme: ThemeProps
 }
