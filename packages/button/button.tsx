@@ -14,9 +14,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     // get the default values from theme
     const {
-      rounded = theme.defaultRoundness,
-      size = theme.defaultSize,
-      variant = theme.defaultVariant,
+      rounded = theme.roundness,
+      size = theme.size,
+      variant = 'contained',
       color = 'primary',
     } = props
 
