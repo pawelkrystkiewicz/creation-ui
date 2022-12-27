@@ -1,5 +1,5 @@
 import { Button } from '@creation-ui/button'
-import { Card } from '@creation-ui/core'
+import { Box } from '@creation-ui/core'
 import { PopoverProps } from '@creation-ui/popover'
 import { DocumentedProperty } from 'models/system'
 import dynamic from 'next/dynamic'
@@ -23,15 +23,15 @@ export const PopoverExample = ({ ...props }: PopoverProps) => {
       open={open}
       position='bottom center'
       node={
-        <Card className='m-1 shadow-2xl bg-white dark:bg-zinc-900 dark:text-white rounded-lg'>
-          <h5 className='text-zinc-900 text-xl leading-tight font-medium mb-2'>
+        <Box className='m-1 shadow-2xl'>
+          <h5 className='text-xl leading-tight font-medium mb-2'>
             New Post
           </h5>
-          <p className='text-zinc-700 text-base mb-4'>
+          <p className='text-base mb-4'>
             This is the preview of your content
           </p>
           <Button onClick={handleClose}>Close</Button>
-        </Card>
+        </Box>
       }
       {...props}
     >

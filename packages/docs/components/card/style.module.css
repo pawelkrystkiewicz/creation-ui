@@ -24,7 +24,7 @@
 .card .title {
   display: flex;
   font-weight: 600;
-  align-items: flex-start;
+
 }
 
 :global(.dark) .card svg {

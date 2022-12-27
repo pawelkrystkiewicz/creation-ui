@@ -51,7 +51,11 @@ const Select = (props: SelectProps) => {
 
   return (
     <div
-      className={clsx('form-element--wrapper', `text-size--${size}`)}
+      className={clsx(
+        'form-element',
+        'form-element--wrapper',
+        `text-size--${size}`
+      )}
       id={componentId}
     >
       <Listbox

@@ -7,7 +7,7 @@
 @tailwind components;
 @tailwind utilities;
 
-$z-index-base: 1;
+$z-index-base: inherit;
 $z-index-dropdowns: 200;
 $z-index-tooltips: 400;
 $z-index-overlays: 600;
@@ -61,6 +61,7 @@ $z-index-notifications: 1000;
     invalid:ring-error-200
     invalid:border-error
     dark:bg-zinc-900;
+
     &:focus {
       @apply border-primary-300
       ring-primary-200
@@ -106,6 +107,7 @@ $z-index-notifications: 1000;
       @apply h-6 w-6;
     }
   }
+
   &--radio {
     @apply disabled:opacity-25
     disabled:cursor-not-allowed
@@ -527,7 +529,7 @@ $z-index-notifications: 1000;
     mt-2
     max-h-52
     overflow-y-auto
-    px-1
+    px-2
     py-2
     min-w-fit
     rounded-md
@@ -654,11 +656,15 @@ $z-index-notifications: 1000;
     @apply block truncate text-left;
 
     &-hidden {
-      @apply border border-primary-400
-      bg-primary-400
-      bg-opacity-50
-
-      rounded-full px-2;
+      @apply border
+      border-primary-400
+      bg-primary-300/50
+      text-primary-500
+      dark:border-primary-700
+      dark:text-primary-700
+      dark:bg-primary-200
+      rounded-full
+      px-2;
     }
   }
 }

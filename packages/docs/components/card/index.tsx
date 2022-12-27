@@ -3,27 +3,26 @@ import Link from 'next/link'
 
 import styles from './style.module.css'
 
+export interface CardProps {
+  children?: React.ReactNode
+  style?: React.CSSProperties
+  icon?: React.ReactNode
+  arrow?: boolean
+  image?: string
+
+  title: string
+  href: string
+}
+
 export function Card({
   children,
   title,
   icon,
   image,
-  arrow,
-  demo,
+  arrow = false,
   href,
   ...props
-}) {
-  const animatedArrow = arrow ? (
-    <span
-      className={cn(
-        'transition-transform duration-75',
-        'group-hover:translate-x-[2px]'
-      )}
-    >
-      →
-    </span>
-  ) : null
-
+}: CardProps) {
   if (image) {
     return (
       <Link
@@ -44,10 +43,7 @@ export function Card({
           )}
         >
           {icon}
-          <span className="flex gap-1">
-            {title}
-            {animatedArrow}
-          </span>
+          <span className='flex gap-1'>{title}</span>
         </span>
       </Link>
     )
@@ -67,26 +63,32 @@ export function Card({
         className={cn(
           styles.title,
           'gap-2 p-4 text-gray-700 dark:text-zinc-200',
-          'hover:text-gray-900 dark:hover:text-zinc-50'
+          'hover:text-gray-900 dark:hover:text-zinc-50',
+          'items-center'
         )}
       >
         {icon}
         {title}
-        {animatedArrow}
       </span>
     </Link>
   )
 }
 
-export function Cards({ children, num, ...props }) {
+interface CardsCollectionProps {
+  children?: React.ReactNode
+  num?: number
+  style?: React.CSSProperties
+}
+
+export function Cards({ children, num = 3, ...props }: CardsCollectionProps) {
   return (
     <div
       className={cn(styles.cards, 'mt-4 gap-4')}
       {...props}
       style={
         {
-          '--rows': num || 3,
-          ...props.style
+          '--rows': num,
+          ...props.style,
         } as any
       }
     >

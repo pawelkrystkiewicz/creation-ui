@@ -16,7 +16,7 @@ import React, { ChangeEvent, Fragment, useState } from 'react'
 import { AutocompleteProps } from './autocomplete.types'
 
 const Autocomplete = (props: AutocompleteProps) => {
-  const { defaultSize, zIndex } = useTheme()
+  const { defaultSize } = useTheme()
   const {
     loadingText = 'Loading...',
     emptyText = 'Data is empty',
@@ -81,7 +81,13 @@ const Autocomplete = (props: AutocompleteProps) => {
   const value = multiple ? (!!props.value ? props.value : []) : props.value
 
   return (
-    <div className={clsx('form-element form-element--wrapper', `text-size--${size}`)}>
+    <div
+      className={clsx(
+        'form-element',
+        'form-element--wrapper',
+        `text-size--${size}`
+      )}
+    >
       <label
         htmlFor={componentId}
         className={clsx('form-element--label', `form-element--label-${size}`)}
@@ -105,7 +111,8 @@ const Autocomplete = (props: AutocompleteProps) => {
               className={clsx(
                 'form-element--input',
                 `form-element--input--${size}`,
-                'peer relative'
+                'relative',
+                'peer',
               )}
             />
             <Combobox.Button className='dropdown--button'>
@@ -129,10 +136,7 @@ const Autocomplete = (props: AutocompleteProps) => {
                 leaveTo='opacity-0'
                 afterLeave={resetSearch}
               >
-                <Combobox.Options
-                  static
-                  className={clsx('dropdown--list', zIndex.dropdowns)}
-                >
+                <Combobox.Options static className={clsx('dropdown--list')}>
                   {!filteredOptions?.length ? (
                     <div className={'dropdown--list--not-found'}>
                       {notFoundText}
@@ -155,6 +159,7 @@ const Autocomplete = (props: AutocompleteProps) => {
                     ))
                   )}
                 </Combobox.Options>
+                
               </Transition>
             )}
           </div>

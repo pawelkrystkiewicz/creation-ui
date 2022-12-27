@@ -3,12 +3,20 @@ import { cva } from 'class-variance-authority'
 interface BoxProps {
   children: React.ReactNode
   className?: string
+  border?: boolean
 }
 
 const box = cva([], {
   variants: {
     body: {
-      base: ['flex', 'justify-center'],
+      base: [
+        'flex',
+        'justify-center',
+        'bg-zinc-50',
+        'dark:bg-zinc-900',
+        'dark:text-zinc-50',
+        'rounded-lg',
+      ],
     },
     content: {
       base: [
@@ -21,12 +29,16 @@ const box = cva([], {
         'dark:text-gray-50',
       ],
     },
+    border: {
+      true: ['border', 'border-zinc-100', 'dark:border-zinc-800'],
+      false: [],
+    },
   },
 })
 
-export const Box = ({ children, className }: BoxProps) => {
+export const Box = ({ children, className, border = true }: BoxProps) => {
   return (
-    <div className={box({ body: 'base', className })}>
+    <div className={box({ body: 'base', className, border })}>
       <div className={box({ content: 'base' })}>{children}</div>
     </div>
   )

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
-import { Logo } from './components/logo'
-import { BASE_URL, TITLE, TITLE_SHORT } from 'constants'
+import { BASE_URL, TITLE, TITLE_SHORT } from '@root/constants'
+import { Logo } from '@components/logo'
 import Footer from '@components/footer'
 
 export default {
@@ -36,21 +36,22 @@ export default {
   useNextSeoProps: function SEO() {
     const { pathname } = useRouter()
     const { frontMatter } = useConfig()
-    let section = TITLE
+    let title = TITLE
 
-    if (pathname === '/') {
-      section = TITLE
-    }
     if (pathname === '/docs') {
-      section = TITLE_SHORT
+      return
     }
 
-    const defaultTitle = frontMatter.overrideTitle || section
+    if (pathname.includes('/docs/')) {
+      title = TITLE_SHORT
+    }
+
+    const defaultTitle = frontMatter.overrideTitle || title
 
     return {
       description: frontMatter.description,
       defaultTitle,
-      titleTemplate: `%s – ${section}`,
+      titleTemplate: `%s – ${title}`,
     }
   },
   footer: {

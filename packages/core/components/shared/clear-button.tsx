@@ -1,7 +1,11 @@
 import clsx from 'clsx'
 import { Icon, IconProps } from '..'
 
-const ClearButton = ({ onClick, className, icon, ...props }: IconProps) => (
+const ClearButton = ({
+  onClick,
+  className,
+  ...props
+}: Omit<IconProps, 'icon'>) => (
   <Icon
     icon='close'
     onClick={onClick}

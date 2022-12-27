@@ -20,7 +20,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     const componentId = useId(id)
 
     return (
-      <div className={clsx(`text-size--${size}`, 'form-element--wrapper')}>
+      <div
+        className={clsx(
+          //
+          'form-element',
+          'form-element--wrapper',
+          `text-size--${size}`
+        )}
+      >
         <label
           htmlFor={componentId}
           className={clsx(
@@ -34,9 +41,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={componentId}
           className={clsx(
-            'peer',
             'form-element--input',
             `form-element--input--${size}`,
+            'peer',
             className
           )}
           type={type}
