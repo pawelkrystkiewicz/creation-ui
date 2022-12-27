@@ -9,6 +9,7 @@ export default function Footer() {
       <span>{new Date().getFullYear()} &copy;</span>
       <a
         href={BASE_URL}
+        rel="noreferrer"
         target='_blank'
         className='flex place-items-center gap-2'
       >

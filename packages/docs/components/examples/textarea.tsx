@@ -15,7 +15,7 @@ export const TextAreaExample = (props: TextAreaExampleProps) => {
     if (props.value) {
       setValue(props.value as any)
     }
-  }, [])
+  }, [props.value])
 
   return (
     <div key={props.key} className='flex flex-col gap-5'>

@@ -13,7 +13,7 @@ export const ButtonGroupExample = ({
   return (
     <ButtonGroup>
       {options?.map(option => (
-        <Button variant={variant}>{option}</Button>
+        <Button variant={variant} key={option}>{option}</Button>
       ))}
     </ButtonGroup>
   )

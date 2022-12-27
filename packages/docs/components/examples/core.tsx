@@ -49,7 +49,12 @@ export const cards = [
 export const CardsList = () => (
   <Cards>
     {cards.map(({ title, ...card }) => (
-      <Card {...card} href={getUrl(title)} title={getTitle(title)} />
+      <Card
+        {...card}
+        key={title}
+        href={getUrl(title)}
+        title={getTitle(title)}
+      />
     ))}
   </Cards>
 )
