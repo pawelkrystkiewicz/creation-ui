@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/pawelkrystkiewicz/creation-ui/compare/v0.3.0...v0.3.1) (2022-12-28)
+
+
+### Bug Fixes
+
+* :bug: build errors ([c6bfbeb](https://github.com/pawelkrystkiewicz/creation-ui/commit/c6bfbeb533eb5e185215b767498a0b7b5392aa32))
+
 ## [0.3.0](https://github.com/pawelkrystkiewicz/creation-ui/compare/v0.2.1...v0.3.0) (2022-12-28)
 
 
