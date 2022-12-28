@@ -1,6 +1,6 @@
 {
   "name": "@creation-ui/autocomplete",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Autocomplete component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",

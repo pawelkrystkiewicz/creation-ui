@@ -1,6 +1,6 @@
 {
   "name": "@creation-ui/drawer",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Drawer component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",
