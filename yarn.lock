@@ -381,7 +381,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -407,7 +407,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -444,7 +444,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -470,7 +470,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -505,7 +505,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -531,7 +531,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -566,7 +566,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -592,7 +592,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -626,7 +626,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -652,7 +652,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.9.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     autoprefixer: ^10.4.12
@@ -686,7 +686,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -712,7 +712,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -747,7 +747,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -773,7 +773,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -808,7 +808,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -834,7 +834,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -869,7 +869,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -895,7 +895,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -931,7 +931,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -957,7 +957,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -993,7 +993,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1019,7 +1019,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -1054,7 +1054,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1080,7 +1080,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -1115,7 +1115,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1141,7 +1141,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -1177,7 +1177,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1203,7 +1203,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -1238,7 +1238,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1264,7 +1264,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -1301,7 +1301,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1327,7 +1327,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/button": "*"
@@ -1366,7 +1366,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1392,7 +1392,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -1427,7 +1427,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1453,7 +1453,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -1488,7 +1488,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1514,7 +1514,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -1549,7 +1549,7 @@ __metadata:
     "@types/react-dom": 18.0.5
     "@types/uuid": ^8.3.4
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     clsx: ^1.2.1
     postcss: ^8.4.16
@@ -1575,7 +1575,7 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.8.3
+    typescript: 4.9.4
     uuid: ^8.3.2
   peerDependencies:
     "@creation-ui/core": "*"
@@ -4624,18 +4624,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-loader@npm:^8.2.5":
-  version: 8.3.0
-  resolution: "babel-loader@npm:8.3.0"
+"babel-loader@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "babel-loader@npm:9.1.0"
   dependencies:
-    find-cache-dir: ^3.3.1
-    loader-utils: ^2.0.0
-    make-dir: ^3.1.0
-    schema-utils: ^2.6.5
+    find-cache-dir: ^3.3.2
+    schema-utils: ^4.0.0
   peerDependencies:
-    "@babel/core": ^7.0.0
-    webpack: ">=2"
-  checksum: d48bcf9e030e598656ad3ff5fb85967db2eaaf38af5b4a4b99d25618a2057f9f100e6b231af2a46c1913206db506115ca7a8cbdf52c9c73d767070dae4352ab5
+    "@babel/core": ^7.12.0
+    webpack: ">=5"
+  checksum: 774758febd1e8ca804abcae3b8f65634330dc688837424d0946f06d1386914de43435cce691710fa144eccdf1292cf883439ac3598ce7320916acfaaa2372641
   languageName: node
   linkType: hard
 
@@ -5624,7 +5622,7 @@ __metadata:
     "@types/uuid": ^8.3.4
     "@vitejs/plugin-react": ^2.1.0
     autoprefixer: ^10.4.12
-    babel-loader: ^8.2.5
+    babel-loader: ^9.1.0
     babel-plugin-module-resolver: ^4.1.0
     class-variance-authority: ^0.4.0
     clsx: ^1.2.1
@@ -5659,7 +5657,7 @@ __metadata:
     storybook-dark-mode: ^1.1.3-canary.150.4195.0
     tailwindcss: ^3.1.8
     ts-loader: ^9.4.1
-    typescript: 4.9.3
+    typescript: 4.9.4
     uuid: ^8.3.2
     vite: ^3.1.3
     vite-plugin-next-react-router: ^0.6.2
@@ -6764,7 +6762,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:^3.3.1":
+"find-cache-dir@npm:^3.3.2":
   version: 3.3.2
   resolution: "find-cache-dir@npm:3.3.2"
   dependencies:
@@ -8604,7 +8602,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-dir@npm:^3.0.0, make-dir@npm:^3.0.2, make-dir@npm:^3.1.0":
+"make-dir@npm:^3.0.0, make-dir@npm:^3.0.2":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
   dependencies:
@@ -11522,8 +11520,8 @@ react@latest:
   linkType: hard
 
 "rollup@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "rollup@npm:3.6.0"
+  version: 3.9.0
+  resolution: "rollup@npm:3.9.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -11531,7 +11529,7 @@ react@latest:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 9aefeddf54623cefdbf9d3f75ac4c3e68f08a4e7f0685ac70c49acbc7963307eb80492c519c76010e15af429d40086ab3b3301add09cb8da892bdf89c605cd52
+  checksum: b0ce4baa8db8ee77ab096a4e066b20fb0719efb9cbd84f230838517d35bf159311487112852cfa687126896b58084c8e6cb9ab222f7559c4b6138ca693d63439
   languageName: node
   linkType: hard
 
@@ -11678,7 +11676,7 @@ react@latest:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^2.6.5, schema-utils@npm:^2.7.0":
+"schema-utils@npm:^2.7.0":
   version: 2.7.1
   resolution: "schema-utils@npm:2.7.1"
   dependencies:
@@ -12901,17 +12899,17 @@ react@latest:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.8.3":
-  version: 4.8.3
-  resolution: "typescript@npm:4.8.3"
+"typescript@npm:4.9.4":
+  version: 4.9.4
+  resolution: "typescript@npm:4.9.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 8286a5edcaf3d68e65c451aa1e7150ad1cf53ee0813c07ec35b7abdfdb10f355ecaa13c6a226a694ae7a67785fd7eeebf89f845da0b4f7e4a35561ddc459aba0
+  checksum: e782fb9e0031cb258a80000f6c13530288c6d63f1177ed43f770533fdc15740d271554cdae86701c1dd2c83b082cea808b07e97fd68b38a172a83dbf9e0d0ef9
   languageName: node
   linkType: hard
 
-"typescript@npm:4.9.3, typescript@npm:^3 || ^4":
+"typescript@npm:^3 || ^4":
   version: 4.9.3
   resolution: "typescript@npm:4.9.3"
   bin:
@@ -12921,17 +12919,17 @@ react@latest:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.8.3#~builtin<compat/typescript>":
-  version: 4.8.3
-  resolution: "typescript@patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=aae4e6"
+"typescript@patch:typescript@4.9.4#~builtin<compat/typescript>":
+  version: 4.9.4
+  resolution: "typescript@patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=d73830"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 2222d2382fb3146089b1d27ce2b55e9d1f99cc64118f1aba75809b693b856c5d3c324f052f60c75b577947fc538bc1c27bad0eb76cbdba9a63a253489504ba7e
+  checksum: 37f6e2c3c5e2aa5934b85b0fddbf32eeac8b1bacf3a5b51d01946936d03f5377fe86255d4e5a4ae628fd0cd553386355ad362c57f13b4635064400f3e8e05b9d
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.9.3#~builtin<compat/typescript>, typescript@patch:typescript@^3 || ^4#~builtin<compat/typescript>":
+"typescript@patch:typescript@^3 || ^4#~builtin<compat/typescript>":
   version: 4.9.3
   resolution: "typescript@patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"
   bin:
