@@ -11520,8 +11520,8 @@ react@latest:
   linkType: hard
 
 "rollup@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "rollup@npm:3.6.0"
+  version: 3.9.0
+  resolution: "rollup@npm:3.9.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -11529,7 +11529,7 @@ react@latest:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 9aefeddf54623cefdbf9d3f75ac4c3e68f08a4e7f0685ac70c49acbc7963307eb80492c519c76010e15af429d40086ab3b3301add09cb8da892bdf89c605cd52
+  checksum: b0ce4baa8db8ee77ab096a4e066b20fb0719efb9cbd84f230838517d35bf159311487112852cfa687126896b58084c8e6cb9ab222f7559c4b6138ca693d63439
   languageName: node
   linkType: hard
 
