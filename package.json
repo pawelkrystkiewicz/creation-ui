@@ -9,9 +9,8 @@
   "scripts": {
     "build": "yarn tsc && yarn build:packages",
     "build:packages": "npx lerna run build",
+    "publish:packages": "npx lerna run publish",
     "start:prod": "next start",
-    "sb": "start-storybook dev -p 6006",
-    "build:sb": "storybook build",
     "amend": "git commit --amend --no-edit",
     "git:last-hash": "node ./scripts/get-last-git-hash.mjs",
     "nuke": "rm -rf node_modules yarn.lock && yarn cache clean --all && yarn",
@@ -21,9 +20,7 @@
     "git:force-update": "git push -f origin",
     "script:update": "node ./scripts/package-update-script.mjs",
     "next-version": "lerna version --conventional-commits",
-    "postpublish": "zsh scripts/shell/remove-build.sh",
-    "docs": "cd packages/docs && yarn start",
-    "docs:build": "cd packages/docs && yarn build"
+    "postpublish": "zsh scripts/shell/remove-build.sh"
   },
   "peerDependencies": {
     "@headlessui/react": "*",
