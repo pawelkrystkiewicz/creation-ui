@@ -64,7 +64,7 @@
     "@types/uuid": "^8.3.4",
     "@vitejs/plugin-react": "^2.1.0",
     "autoprefixer": "^10.4.12",
-    "babel-loader": "^8.2.5",
+    "babel-loader": "^9.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
