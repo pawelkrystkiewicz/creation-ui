@@ -15,11 +15,11 @@
     "git:last-hash": "node ./scripts/get-last-git-hash.mjs",
     "nuke": "rm -rf node_modules yarn.lock && yarn cache clean --all && yarn",
     "prettify": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "_publish": "zsh ./scripts/shell/publish-all.sh && postpublish",
     "copy": "zsh ./scripts/shell/copy-file-to-each-subdir.sh",
     "git:force-update": "git push -f origin",
     "script:update": "node ./scripts/package-update-script.mjs",
     "next-version": "lerna version --conventional-commits",
+    "_publish": "zsh ./scripts/shell/publish-all.sh && postpublish",
     "postpublish": "zsh scripts/shell/remove-build.sh"
   },
   "peerDependencies": {
