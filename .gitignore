@@ -47,3 +47,5 @@ rollup.results.json
 .docz
 .yarn*
 .yarn/*
+
+.pnp.*
