@@ -9,7 +9,7 @@
   "scripts": {
     "build": "yarn tsc && yarn build:packages",
     "build:packages": "npx lerna run build",
-    "publish:packages": "yarn script:update && npx lerna run _publish",
+    "publish:packages": "yarn script:update && yarn _publish",
     "start:prod": "next start",
     "amend": "git commit --amend --no-edit",
     "git:last-hash": "node ./scripts/get-last-git-hash.mjs",
@@ -20,7 +20,7 @@
     "script:update": "node ./scripts/package-update-script.mjs",
     "next-version": "lerna version --conventional-commits",
     "_publish": "zsh ./scripts/shell/publish-all.sh && postpublish",
-    "postpublish": "zsh scripts/shell/remove-build.sh"
+    "postpublish": "zsh ./scripts/shell/remove-build.sh"
   },
   "peerDependencies": {
     "@headlessui/react": "*",
