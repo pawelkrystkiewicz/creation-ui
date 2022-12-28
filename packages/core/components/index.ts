@@ -1,4 +1,4 @@
-export { default as DarkModeToggle } from './dark-mode-toggle'
+export { default as DarkModeToggle } from './dark-mode-toggle/dark-mode-toggle'
 export { default as Loader } from './loader'
 export { default as LoadingOverlay } from './loading-overlay'
 export { default as Overlay } from './overlay'
