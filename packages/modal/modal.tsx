@@ -18,7 +18,7 @@ const Modal = (props: ModalProps) => {
   const { children, className, onClose, onOverlayClick, open, ...rest } = props
   return (
     <>
-      <Overlay visible={open} onClick={onOverlayClick} />
+      <Overlay active={open} onClick={onOverlayClick} />
       <Transition appear={true} show={open} as={Fragment}>
         <Dialog
           as='div'

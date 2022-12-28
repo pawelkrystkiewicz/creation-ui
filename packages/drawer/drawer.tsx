@@ -16,10 +16,10 @@ const transitionProps = {
 }
 
 const Drawer = ({ open, children, onOverlayClick, ...props }: DrawerProps) => {
-  const { defaultDrawerPosition, defaultDrawerSize } = useTheme()
+  const { drawers } = useTheme()
   const {
-    size = defaultDrawerSize,
-    position = defaultDrawerPosition,
+    size = drawers.size,
+    position = drawers.position,
     onClose,
 
     ...rest
@@ -27,7 +27,7 @@ const Drawer = ({ open, children, onOverlayClick, ...props }: DrawerProps) => {
 
   return (
     <>
-      <Overlay visible={open} onClick={onOverlayClick} />
+      <Overlay active={open} onClick={onOverlayClick} />
       <Transition appear={true} show={open} as={Fragment}>
         <Dialog
           as='div'
