@@ -119,9 +119,9 @@
   "author": "Pawel Krystkiewicz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pawelkrystkiewicz/gemini-ui/issues"
+    "url": "https://github.com/pawelkrystkiewicz/creation-ui.git"
   },
-  "homepage": "https://github.com/pawelkrystkiewicz/gemini-ui#readme",
+  "homepage": "https://creation-ui.com",
   "browser": {
     "crypto": false,
     "fs": false,

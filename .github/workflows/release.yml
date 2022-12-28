@@ -1,0 +1,40 @@
+on:
+  push:
+    branches:
+      - master
+name: release-please
+permissions: {}
+jobs:
+  release-please:
+    permissions:
+      contents: write # to create release commit (google-github-actions/release-please-action)
+      pull-requests: write # to create release PR (google-github-actions/release-please-action)
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          token: ${{ secrets.CHANGELOG_RELEASE_TOKEN }}
+          release-type: node
+          package-name: creation-ui
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - run: yarn
+      - run: yarn build
+      - name: build release
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git remote add gh-token "https://${{secrets.CHANGELOG_RELEASE_TOKEN}}@github.com/pawelkrystkiewicz/creation-ui.git"
+          git checkout -b release
+          ls
+          git add -f ./build
+          git commit -a -m 'chore: ${{ steps.release.outputs.tag_name }} release'
+          git push origin +release
+          git tag -a ${{ steps.release.outputs.tag_name }}-release -m 'chore: ${{ steps.release.outputs.tag_name }} release'
+          git push origin ${{ steps.release.outputs.tag_name }}-release
+        if: ${{ steps.release.outputs.release_created }}
+
