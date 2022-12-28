@@ -1,6 +1,6 @@
 {
   "name": "@creation-ui/toggle-group",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Toggle-group component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",
