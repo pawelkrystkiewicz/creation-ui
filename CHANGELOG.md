@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.0](https://github.com/pawelkrystkiewicz/creation-ui/compare/v0.2.1...v0.3.0) (2022-12-28)
+
+
+### Features
+
+* add cva, add docs for switch, input and textarea ([be9bf12](https://github.com/pawelkrystkiewicz/creation-ui/commit/be9bf12917dfb0241c9ce2eee64d09adb513d573))
+* add docs ([6154da1](https://github.com/pawelkrystkiewicz/creation-ui/commit/6154da1737252971b53772db5051bfc3632ee323))
+* add docs for avatar, button, status badge ([43a61d7](https://github.com/pawelkrystkiewicz/creation-ui/commit/43a61d7ed8dbbc9d3b25eb68998eb21605f38fdc))
+* add docs to core elements ([4d97cc8](https://github.com/pawelkrystkiewicz/creation-ui/commit/4d97cc879bc4c56c25ff5faf9db4ae8746390a1d))
+* add documentation for select component and fix some issues ([e1158ad](https://github.com/pawelkrystkiewicz/creation-ui/commit/e1158ad6ca140a588fe377e921a7f4c76e693a8e))
+* add nextra as docs ([6a4080b](https://github.com/pawelkrystkiewicz/creation-ui/commit/6a4080bf00729403aabee73fc42220822c3b0e7b))
+* add popover with react-stick ([fbd859f](https://github.com/pawelkrystkiewicz/creation-ui/commit/fbd859ff6c48af0546a2e923d7da17a0cd580f3d))
+* add quick start guide ([5d0af6f](https://github.com/pawelkrystkiewicz/creation-ui/commit/5d0af6f1fd61a45cd929858edacd63f5cb1eb22c))
+* add release-please version ([40c5cfc](https://github.com/pawelkrystkiewicz/creation-ui/commit/40c5cfccf6c5b2e073f86dc0cf22d4b36686862a))
+* add tooltip docs ([c55ca1b](https://github.com/pawelkrystkiewicz/creation-ui/commit/c55ca1b1d9f7e922636de90d6e8c6a319e05024c))
+* cards for core.mdx ([ecd0937](https://github.com/pawelkrystkiewicz/creation-ui/commit/ecd09378033a0250af1ed5aed4a4ca59cc4ab284))
+* customize nextra ([4a38a65](https://github.com/pawelkrystkiewicz/creation-ui/commit/4a38a65745f767926298cd3bab846317e3b3c669))
+* date picker example ([07a5e06](https://github.com/pawelkrystkiewicz/creation-ui/commit/07a5e06ff54a55cee7a4638a3bbba7a056964702))
+* docs for button-group, loader, loading-overlay ([a32c7d5](https://github.com/pawelkrystkiewicz/creation-ui/commit/a32c7d581ec6435a0659888f390ab2da90264184))
+* option docs ([1a56fe5](https://github.com/pawelkrystkiewicz/creation-ui/commit/1a56fe5b7b4d0bcfb1a390f932856c602f7f7d00))
+* remove site folder, kinda fix docs ([2d0ccda](https://github.com/pawelkrystkiewicz/creation-ui/commit/2d0ccdaaea86035fd738dc46bdef6f0a9cce5698))
+* theme docs ([2cfc860](https://github.com/pawelkrystkiewicz/creation-ui/commit/2cfc860f7a8a99c114b0b89e7cc4c3f28d28a936))
+* update select component styles ([77dea03](https://github.com/pawelkrystkiewicz/creation-ui/commit/77dea0341e34db7bc5665def0ba99c77038e1c8b))
+
+
+### Bug Fixes
+
+* build errors ([173cad9](https://github.com/pawelkrystkiewicz/creation-ui/commit/173cad97e8aaecda9998d013e40542c2743414d4))
+* docs build issues ([df957ba](https://github.com/pawelkrystkiewicz/creation-ui/commit/df957ba3a15b532e5784e4c0e668f796363a9eda))
+* packages build errors ([14c3aa4](https://github.com/pawelkrystkiewicz/creation-ui/commit/14c3aa428c81d7a89123e052ac4f7c613f17e03e))
+* rename theme prop ([d4a988f](https://github.com/pawelkrystkiewicz/creation-ui/commit/d4a988f713d4a279afa9cb575970711faf795e4f))
+
 ## [0.2.1](https://github.com/pawelkrystkiewicz/creation-ui/compare/v0.2.0...v0.2.1) (2022-11-20)
 
 **Note:** Version bump only for package creation-ui
