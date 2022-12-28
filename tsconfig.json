@@ -21,7 +21,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "declaration": true,
-    "declarationMap": true,
+
     "declarationDir": "build",
     "emitDeclarationOnly": true,
     "noEmit": false,

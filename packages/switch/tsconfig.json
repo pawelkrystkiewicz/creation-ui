@@ -17,7 +17,7 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "declaration": true, "declarationMap": true,
+    "declaration": true,
     "declarationDir": "build",
     "emitDeclarationOnly": true,
     "noEmit": false,
