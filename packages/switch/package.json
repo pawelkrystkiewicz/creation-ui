@@ -1,6 +1,6 @@
 {
   "name": "@creation-ui/switch",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Switch component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/preset-react": "^7.18.6",
-    "@creation-ui/core": "*",
+    "@creation-ui/core": "^0.3.3",
     "@headlessui/react": "^1.7.0",
     "@headlessui/tailwindcss": "^0.1.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",

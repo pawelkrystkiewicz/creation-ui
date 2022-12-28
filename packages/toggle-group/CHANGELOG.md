@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/pawelkrystkiewicz/creation-ui/compare/v0.3.1...v0.3.3) (2022-12-28)
+
+**Note:** Version bump only for package @creation-ui/toggle-group
+
+
+
+
+
 ## [0.2.1](https://github.com/pawelkrystkiewicz/creation-ui/compare/v0.2.0...v0.2.1) (2022-11-20)
 
 **Note:** Version bump only for package @creation-ui/toggle-group
