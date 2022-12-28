@@ -1,6 +1,6 @@
 {
   "name": "@creation-ui/date-picker",
-  "version": "0.3.3",
+  "version": "0.3.2",
   "description": "Date Picker component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",

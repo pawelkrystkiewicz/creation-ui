@@ -1,6 +1,6 @@
 {
   "name": "@creation-ui/progress-bar",
-  "version": "0.3.3",
+  "version": "0.3.2",
   "description": "Progress Bar component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",
