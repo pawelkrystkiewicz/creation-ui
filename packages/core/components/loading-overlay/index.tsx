@@ -1,15 +1,18 @@
 import { Loader } from '../'
 import { useTheme } from '../../theme'
 import clsx from 'clsx'
-import '../../styles/index.scss'
 import { LoadingOverlayProps } from './loading-overlay.types'
 
-const LoadingOverlay = ({ active, ...props }: LoadingOverlayProps) => {
-  const { zIndex, defaultSize } = useTheme()
-  const { size = defaultSize } = props
+const LoadingOverlay = ({
+  active,
+  className,
+  ...props
+}: LoadingOverlayProps) => {
+  const { zIndex, size: defaultSize } = useTheme()
+  const { size = defaultSize, white } = props
   return active ? (
-    <div {...props} className={clsx(zIndex.overlays, 'overlay')}>
-      <Loader size={size} />
+    <div {...props} className={clsx(zIndex.overlays, 'overlay', className)}>
+      <Loader size={size} white={white} />
     </div>
   ) : null
 }

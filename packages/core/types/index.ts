@@ -58,6 +58,7 @@ export type AutocompleteOptionsType =
   | { id: string | number; value: string | number | null }
   | any
   | null
+  | undefined
 
 export type SelectOptionsType =
   | {
@@ -89,4 +90,17 @@ export type CommitInfo = {
   tags: string[]
   version: string
   timestamp: string
+}
+
+export interface MultipleEllipsisFormatter {
+  value: string
+  hidden: number
+  total: number
+}
+
+export interface SharedClassName {
+  /**
+   * Classes to be added to the component
+   */
+  className?: string | string[]
 }

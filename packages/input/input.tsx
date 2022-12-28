@@ -1,12 +1,11 @@
 import { ErrorText, useTheme, useId, Loader } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import clsx from 'clsx'
 import { ForwardedRef, forwardRef } from 'react'
 import { InputProps } from './input.types'
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (props, ref: ForwardedRef<HTMLInputElement>) => {
-    const { defaultSize } = useTheme()
+    const { size: defaultSize } = useTheme()
     const {
       loading,
       helperText,
@@ -21,7 +20,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     const componentId = useId(id)
 
     return (
-      <div className={clsx(`text-size--${size}`, 'form-element--wrapper')}>
+      <div
+        className={clsx(
+          //
+          'form-element',
+          'form-element--wrapper',
+          `text-size--${size}`
+        )}
+      >
         <label
           htmlFor={componentId}
           className={clsx(
@@ -35,9 +41,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={componentId}
           className={clsx(
-            'peer',
             'form-element--input',
             `form-element--input--${size}`,
+            'peer',
             className
           )}
           type={type}

@@ -1,25 +1,28 @@
-import { Theme } from './theme.types'
+import { ThemeProps } from './theme.types'
 
-const theme: Theme = {
+const theme: ThemeProps = {
   theme: 'light',
   dir: 'ltr',
   focusRing: true,
-  dates: {
-    format: 'DD-MM-YYYY',
-    locale: 'en',
+  colors: {
+    primary: '#007DFF',
+    success: '#00C48C',
+    warning: '#FFA940',
+    error: '#FF4D4F',
   },
-  white: '#fff',
-  black: '#000',
-  defaultRoundness: 'rounded-md',
-  defaultSize: 'md',
-  defaultVariant: 'contained',
-  leading: 'leading-normal',
-  fontFamily: 'Plus Jakarta Sans, sans-serif',
-  fontFamilyMonospace: 'font-mono',
-  primaryColor: 'primary',
+  roundness: 'rounded-md',
+  size: 'md',
+  font: {
+    leading: 'leading-normal',
+    fontFamily: 'Plus Jakarta Sans, sans-serif',
+    fontFamilyMonospace: 'font-mono',
+    fontWeight: 'font-bold',
+  },
   respectReducedMotion: true,
-  defaultDrawerSize: '50vw',
-  defaultDrawerPosition: 'right',
+  drawers: {
+    size: '50vw',
+    position: 'right',
+  },
   headings: {
     fontFamily: 'font-sans',
     fontWeight: 'font-bold',
@@ -32,28 +35,20 @@ const theme: Theme = {
       h6: { fontSize: 'text-xl', leading: 'leading-normal' },
     },
   },
-  breakpoints: {
-    xs: 640,
-    sm: 768,
-    md: 768,
-    lg: 1024,
-    xl: 1280,
-    xl2: 1536,
-  },
-  defaultTexts: {
+  texts: {
     invalidInput: 'Input invalid',
   },
   zIndex: {
     base: 'z-0',
-    dropdowns: 'z-10',
-    tooltips: 'z-20',
-    overlays: 'z-30',
-    modals: 'z-40',
-    notifications: 'z-50',
+    dropdowns: 'z-[200]',
+    tooltips: 'z-[400]',
+    overlays: 'z-[600]',
+    modals: 'z-[800]',
+    notifications: 'z-[1000]',
   },
-  f: {
-    getLimitTextDefault: more => `+${more}`,
-    defaultOptionFormatter: option => (option?.value ? `${option.value}` : ''),
+  helpers: {
+    getLimitText: more => `+${more}`,
+    optionFormatter: option => (option?.value ? `${option.value}` : ''),
   },
 }
 

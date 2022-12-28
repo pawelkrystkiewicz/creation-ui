@@ -44,3 +44,6 @@ next-env.d.ts
 rollup.results.json
 
 .env
+.docz
+.yarn*
+.yarn/*

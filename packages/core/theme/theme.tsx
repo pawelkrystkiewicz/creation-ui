@@ -1,11 +1,11 @@
 import { createContext, useContext } from 'react'
 import theme from './theme.default'
-import { Theme, ThemeProviderProps } from './theme.types'
+import { ThemeProps, ThemeProviderProps } from './theme.types'
 
-export const ThemeCtx = createContext<Theme>(theme)
+export const ThemeCtx = createContext<ThemeProps>(theme)
 
-export const ThemeProvider = ({ children, value }: ThemeProviderProps) => {
-  return <ThemeCtx.Provider value={value}>{children}</ThemeCtx.Provider>
+export const Theme = ({ children, theme }: ThemeProviderProps) => {
+  return <ThemeCtx.Provider value={theme}>{children}</ThemeCtx.Provider>
 }
 
 export const useTheme = () => {

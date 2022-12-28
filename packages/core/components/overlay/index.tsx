@@ -1,17 +1,12 @@
 import { useTheme } from '../../theme'
 import clsx from 'clsx'
-import './overlay.scss'
+import { OverlayProps } from './overlay.types'
 
-interface OverlayProps {
-  visible?: boolean
-  onClick?: () => void
-}
-
-const Overlay = ({ visible, onClick }: OverlayProps) => {
+const Overlay = ({ active, onClick, className }: OverlayProps) => {
   const { zIndex } = useTheme()
-  return visible ? (
+  return active ? (
     <div>
-      <div className={clsx('overlay', zIndex.overlays)} onClick={onClick}>
+      <div className={clsx('overlay', zIndex.overlays, className)} onClick={onClick}>
         &nbsp;
       </div>
     </div>

@@ -1,11 +1,10 @@
 import { useId, useTheme } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 import { CheckboxProps } from './checkbox.types'
 
 const Checkbox = (props: CheckboxProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const {
     size = defaultSize,
     id,

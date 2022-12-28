@@ -2,7 +2,7 @@ import { ElementSize } from '@creation-ui/core'
 
 export interface ProgressBarProps {
   /**
-   * How large should the button be?
+   * How large should the element be?
    */
   size?: ElementSize
   /**
@@ -18,7 +18,7 @@ export interface ProgressBarProps {
    */
   showValue?: boolean
   /**
-   * Function to format the value of the progress bar.ł
+   * Function to format the value of the progress bar.
    */
   formatDisplayValue: (value: number) => string
 }

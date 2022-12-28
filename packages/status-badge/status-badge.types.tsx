@@ -12,5 +12,5 @@ export interface StatusBadgeProps {
   /**
    * Contents
    */
-  label: string
+  label?: string
 }

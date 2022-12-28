@@ -1,11 +1,10 @@
 import { Switch as HSwitch } from '@headlessui/react'
 import { useTheme } from '@creation-ui/core'
 import clsx from 'clsx'
-import '@creation-ui/core/esm/index.css'
 import { SwitchProps } from './switch.types'
 
 const Switch = ({ checked, ...props }: SwitchProps) => {
-  const { defaultSize } = useTheme()
+  const { size: defaultSize } = useTheme()
   const { size = defaultSize, required, readOnly } = props
 
   return (

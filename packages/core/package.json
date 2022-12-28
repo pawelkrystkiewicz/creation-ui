@@ -1,6 +1,6 @@
 {
   "name": "@creation-ui/core",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Core component of Creation UI package",
   "main": "cjs/index.js",
   "module": "esm/index.js",
@@ -17,6 +17,7 @@
   },
   "peerDependencies": {
     "autoprefixer": "^10.4.12",
+    "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "postcss": "^8.4.16",
     "postcss-loader": "^7.0.1",
@@ -50,7 +51,7 @@
     "react-router-dom": "6",
     "react-spring": "^9.5.5",
     "react-use": "^17.4.0",
-    "rollup": "^3.3.0",
+    "rollup": "^3.6.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -66,14 +67,15 @@
     "storybook-dark-mode": "^1.1.0",
     "tailwindcss": "^3.1.8",
     "ts-loader": "^9.4.1",
-    "typescript": "4.8.3",
+    "typescript": "4.9.3",
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "build": "yarn tsc && rollup -c",
-    "publish": "npm publish --registry https://registry.npmjs.org --access public"
+    "build": "yarn tsc && rollup -c && cp package.json README.md CHANGELOG.md ./build",
+    "publish": "npm publish --registry https://registry.npmjs.org --access public",
+    "test:npmignore": "npm pack --dry-run",
+    "_publish": "npm publish --registry https://registry.npmjs.org --access public"
   },
-  "dependencies": {},
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   }

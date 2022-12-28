@@ -1,5 +1,5 @@
-import React from 'react'
 import { AutocompleteOptionsType, ElementSize } from '@creation-ui/core'
+import React from 'react'
 
 export interface AutocompleteProps {
   /**
@@ -95,4 +95,6 @@ export interface AutocompleteProps {
    * Element size
    */
   size?: ElementSize
+
+  onChange?: (value: AutocompleteOptionsType) => void
 }

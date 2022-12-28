@@ -1,7 +1,7 @@
 import { Loader, useId, useTheme } from '@creation-ui/core'
 import clsx from 'clsx'
 import React from 'react'
-import './button.scss'
+// import './button.scss'
 import { ButtonProps } from './button.types'
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -14,9 +14,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     // get the default values from theme
     const {
-      rounded = theme.defaultRoundness,
-      size = theme.defaultSize,
-      variant = theme.defaultVariant,
+      rounded = theme.roundness,
+      size = theme.size,
+      variant = 'contained',
       color = 'primary',
     } = props
 
@@ -40,7 +40,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         <>{loading ? <Loader size={size} white={isContained} /> : null}</>
         <>{iconLeft}</>
-        <>{children}</>
+        <span>{children}</span>
         <>{iconRight}</>
       </button>
     )

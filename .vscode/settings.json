@@ -13,7 +13,18 @@
       "language": "typescriptreact",
       "scheme": "file",
       "pattern": "pages/index.tsx"
+    },
+    {
+      "language": "mdx",
+      "scheme": "file"
     }
   ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "docwriter.style": "Auto-detect",
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "cva\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
+  ]
 }

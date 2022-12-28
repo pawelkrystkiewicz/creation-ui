@@ -1,11 +1,6 @@
-import { ElementSize } from '@creation-ui/core'
 import React from 'react'
 
-export type ModalProps = Omit<React.ComponentProps<'div'>, 'size'> & {
-  /**
-   * How large should the button be?
-   */
-  size?: ElementSize
+export type ModalProps = React.ComponentProps<'div'> & {
   children?: React.ReactNode
   open?: boolean
   onClose?: (value?: boolean) => void

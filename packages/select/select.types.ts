@@ -45,7 +45,7 @@ export interface SelectProps {
   /**
    * Current value to display
    */
-  value?: SelectOptionsType
+  value?: SelectOptionsType | SelectOptionsType[]
   // flags
   /**
    * Is disabled
@@ -55,8 +55,14 @@ export interface SelectProps {
    * Allow selection of multiple value
    */
   multiple?: boolean
+
   highlightSearch?: boolean
 
   onChange?: (value: SelectOptionsType) => void
+
   size?: ElementSize
+
+  clearable?: boolean
+
+  clearButtonText?: string
 }

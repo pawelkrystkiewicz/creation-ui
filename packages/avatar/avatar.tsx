@@ -1,11 +1,8 @@
 import clsx from 'clsx'
 import { forwardRef } from 'react'
-import { useTheme } from '@creation-ui/core'
-import './avatar.scss'
 import AvatarProps from './avatar.types'
 
 const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
-  const theme = useTheme()
   return (
     <div ref={ref} className={'avatar--wrapper'}>
       <img

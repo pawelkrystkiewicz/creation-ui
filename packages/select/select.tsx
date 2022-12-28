@@ -1,12 +1,15 @@
 import {
+  ClearButton,
   DropdownChevron,
   ErrorText,
+  formatOptionValue,
+  getTruncatedMultipleValues,
+  MultipleEllipsisFormatter,
+  passThrough,
   SelectOption,
   useId,
   useTheme,
-  passThrough,
 } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import { Listbox, Transition } from '@headlessui/react'
 
 import clsx from 'clsx'
@@ -14,22 +17,45 @@ import { Fragment } from 'react'
 import { SelectProps } from './select.types'
 
 const Select = (props: SelectProps) => {
-  const { defaultSize, zIndex } = useTheme()
+  const { size: defaultSize } = useTheme()
   const {
-    selectedOptionFormatter = passThrough,
     optionComponent = SelectOption,
-    helperText,
     error,
     size = defaultSize,
+    multiple,
+    clearable,
+    clearButtonText,
   } = props
+
+  const limit = 2 //move to theme
 
   const componentId = useId(props.id)
 
   const Option = optionComponent
 
+  let value: string = ''
+  let truncated: MultipleEllipsisFormatter
+
+  if (multiple) {
+    truncated = getTruncatedMultipleValues(props.value, limit)
+    value = truncated!.value
+  } else {
+    value = formatOptionValue(props.value)
+  }
+
+  const onClear = (e: any) => {
+    e.preventDefault?.()
+    e.stopPropagation?.()
+    props.onChange?.(multiple ? [] : undefined)
+  }
+
   return (
     <div
-      className={clsx('form-element--wrapper', `text-size--${size}`)}
+      className={clsx(
+        'form-element',
+        'form-element--wrapper',
+        `text-size--${size}`
+      )}
       id={componentId}
     >
       <Listbox
@@ -58,7 +84,24 @@ const Select = (props: SelectProps) => {
                 'peer'
               )}
             >
-              <span className='select--value'>{props.value}&nbsp;</span>
+              <span className='select--value'>
+                {value}&nbsp;
+                {multiple && truncated.hidden > 0 && (
+                  <span className='select--value-hidden'>
+                    +{truncated.hidden}
+                  </span>
+                )}
+              </span>
+              <span
+                title={clearButtonText}
+                onClick={onClear}
+                className={clsx(
+                  clearable && !!value ? 'block' : 'hidden',
+                  'dropdown--button--clear'
+                )}
+              >
+                <ClearButton />
+              </span>
               <span className='dropdown--button'>
                 <DropdownChevron open={open} />
               </span>
@@ -69,9 +112,7 @@ const Select = (props: SelectProps) => {
               leaveFrom='opacity-100'
               leaveTo='opacity-0'
             >
-              <Listbox.Options
-                className={clsx('dropdown--list', zIndex.dropdowns)}
-              >
+              <Listbox.Options className={clsx('dropdown--list')}>
                 {props.options?.map(option => (
                   <Listbox.Option key={option.id} value={option}>
                     {({ selected, active, disabled }) => (

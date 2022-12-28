@@ -1,12 +1,11 @@
 import { ErrorText, Loader, useId, useTheme } from '@creation-ui/core'
-import '@creation-ui/core/esm/index.css'
 import clsx from 'clsx'
 import { ForwardedRef, forwardRef } from 'react'
 import { TextAreaProps } from './textarea.types'
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (props, ref: ForwardedRef<HTMLTextAreaElement>) => {
-    const { defaultSize } = useTheme()
+    const { size: defaultSize } = useTheme()
     const { error, label, size = defaultSize, className, id, loading } = props
     const componentId = useId(id)
 

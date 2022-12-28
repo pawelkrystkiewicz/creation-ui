@@ -1,10 +1,7 @@
-import { useTheme } from '@creation-ui/core'
 import clsx from 'clsx'
 import { TooltipProps } from './tooltip.types'
 
 const Tooltip = (props: TooltipProps) => {
-  const { defaultSize } = useTheme()
-
   const { className, position = 'top', children, content, ...rest } = props
 
   return (
