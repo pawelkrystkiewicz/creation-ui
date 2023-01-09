@@ -62,7 +62,7 @@
     "@types/react-datepicker": "^4.4.2",
     "@types/react-dom": "latest",
     "@types/uuid": "^8.3.4",
-    "@vitejs/plugin-react": "^2.1.0",
+    "@vitejs/plugin-react": "^3.0.1",
     "autoprefixer": "^10.4.12",
     "babel-loader": "^9.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
